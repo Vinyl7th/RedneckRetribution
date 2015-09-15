@@ -22,15 +22,15 @@ TagManager:
   - 
   - Player
   - Player_Bullets
+  - Enemy
+  - Enemy_Bullets
   - 
+  - Overlay
+  - Traps
+  - Particle_Splatter
+  - Particles
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player_Collectables
   - 
   - 
   - 
