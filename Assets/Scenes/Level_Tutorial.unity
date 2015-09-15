@@ -354,9 +354,9 @@ BoxCollider2D:
   m_GameObject: {fileID: 1577703439}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -.5}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
 --- !u!1001 &1796624298
@@ -402,6 +402,18 @@ Prefab:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 156064, guid: 2405a63040ff0494d876970e04f42e4e, type: 2}
+    - target: {fileID: 5018144, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 410410, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 152744, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
   m_IsPrefabParent: 0
@@ -465,7 +477,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -486,7 +498,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2028464171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -.0500000007, z: -10}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
