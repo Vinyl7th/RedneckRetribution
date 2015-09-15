@@ -346,6 +346,17 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 152744, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
   m_PrefabInternal: {fileID: 1796624298}
+--- !u!114 &1577703440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1577703439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb58720ec497be04da4068e08d46f246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &1577703444
 BoxCollider2D:
   m_ObjectHideFlags: 0
