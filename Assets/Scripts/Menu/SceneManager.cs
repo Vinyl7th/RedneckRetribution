@@ -7,11 +7,11 @@ public class SceneManager : MonoBehaviour
     [SerializeField]
     Button[] buttons = new Button[7];
     [SerializeField]
-    
+    AudioSource src;
 
     int btnIndex = 0;
     float btnTimer = 0;
-    float sounddelay = 2;
+    float sounddelay = 0.5f;
     // Use this for initialization
     void Start ()
     {
@@ -27,7 +27,7 @@ public class SceneManager : MonoBehaviour
             if (btnIndex > 5)
                 btnIndex = 0;
             btnTimer = 0;
-            gameObject.GetComponent<AudioSource>().Play();
+            src.Play();
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -35,15 +35,20 @@ public class SceneManager : MonoBehaviour
             if (btnIndex < 0)
                 btnIndex = 5;
             btnTimer = 0;
-            gameObject.GetComponent<AudioSource>().Play();
+            src.Play();
         }
-
+     
         if (Input.GetKeyDown(KeyCode.Return))
         {
 
-            gameObject.GetComponent<AudioSource>().Play();
+           
             buttons[btnIndex].image.color = Color.green;
-            ExecuteEvents.Execute(buttons[btnIndex].gameObject, null, ExecuteEvents.submitHandler);
+
+
+            StartCoroutine(DelayedLoad());
+                    
+            
+           
         }
 
         GUI.FocusControl(buttons[btnIndex].name);
@@ -66,37 +71,123 @@ public class SceneManager : MonoBehaviour
     }
 
 
-
-  
-
-
-
-   public void switchToGame()
+    IEnumerator DelayedLoad()
     {
-        gameObject.GetComponent<AudioSource>().Play();
+        //Play the clip once
+        src.Play();
+
+        //Wait until clip finish playing
+        yield return new WaitForSeconds(0.4f);
+
+        //Load scene here
+        ExecuteEvents.Execute(buttons[btnIndex].gameObject, null, ExecuteEvents.submitHandler);
+
+    }
+
+    IEnumerator DelayedLoad1()
+    {
+        //Play the clip once
+        src.Play();
+
+        //Wait until clip finish playing
+        yield return new WaitForSeconds(0.3f);
+
+        //Load scene here
+        Application.Quit();
+
+    }
+
+    IEnumerator DelayedLoad2()
+    {
+        //Play the clip once
+        src.Play();
+
+        //Wait until clip finish playing
+        yield return new WaitForSeconds(0.3f);
+
+        //Load scene here
         Application.LoadLevel("Level_Main");
+
+    }
+    IEnumerator DelayedLoad3()
+    {
+        //Play the clip once
+        src.Play();
+
+        //Wait until clip finish playing
+        yield return new WaitForSeconds(0.4f);
+
+        //Load scene here
+        Application.LoadLevel("Level_Tutorial");
+
+    }
+    IEnumerator DelayedLoad4()
+    {
+        //Play the clip once
+        src.Play();
+
+        //Wait until clip finish playing
+        yield return new WaitForSeconds(0.4f);
+
+        //Load scene here
+        Application.LoadLevel("Menu_Credits");
+
+    }
+    IEnumerator DelayedLoad5()
+    {
+        //Play the clip once
+        src.Play();
+
+        //Wait until clip finish playing
+        yield return new WaitForSeconds(0.4f);
+
+        //Load scene here
+        Application.LoadLevel("Menu_HowToPlay");
+
+    }
+    IEnumerator DelayedLoad6()
+    {
+        //Play the clip once
+        src.Play();
+
+        //Wait until clip finish playing
+        yield return new WaitForSeconds(0.4f);
+
+        //Load scene here
+        Application.LoadLevel("Menu_Options");
+
+    }
+
+    public void switchToGame()
+    {
+        StartCoroutine(DelayedLoad2());
+       
     }
 
     public void switchToTutorial()
     {
-        gameObject.GetComponent<AudioSource>().Play();
-        Application.LoadLevel("Level_Tutorial");
+        StartCoroutine(DelayedLoad3());
+        
     }
     public void switchToCredits()
     {
-        gameObject.GetComponent<AudioSource>().Play();
-        Application.LoadLevel("Menu_Credits");
+        StartCoroutine(DelayedLoad4());
+       
     }
     public void switchToHTP()
     {
-        gameObject.GetComponent<AudioSource>().Play();
-        Application.LoadLevel("Menu_HowToPlay");
+        StartCoroutine(DelayedLoad5());
+        
     }
     public void switchToOptions()
     {
-        gameObject.GetComponent<AudioSource>().Play();
-        Application.LoadLevel("Menu_Options");
+        StartCoroutine(DelayedLoad6());
+       
     }
 
-
+    public void ExitGame()
+    {
+        StartCoroutine(DelayedLoad1());
+        
+    }
 }

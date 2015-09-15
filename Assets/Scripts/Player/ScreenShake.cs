@@ -10,11 +10,18 @@ public class ScreenShake : MonoBehaviour
     [SerializeField]
     Camera mainCamera;
 
+
+    void Start()
+    {
+        originalCameraPosition = mainCamera.transform.position;
+    }
+
+
     public void screenShakeOnShoot()
     {
 
-        shakeAmt = Random.Range(0.0f, 0.025f);
-        InvokeRepeating("CameraShake", 0, .01f);
+        shakeAmt = Random.Range(0.0f, 0.09f);
+        InvokeRepeating("CameraShake", 0, 0.001f);
         Invoke("StopShaking", 0.3f);
 
     }
@@ -26,7 +33,8 @@ public class ScreenShake : MonoBehaviour
             float quakeAmt = Random.value * shakeAmt * 2 - shakeAmt;
             Vector3 pp = mainCamera.transform.position;
             pp.y += quakeAmt;
-            pp.x += quakeAmt; 
+            pp.x += quakeAmt;
+            pp.z = -10;
             mainCamera.transform.position = pp;
         }
     }
