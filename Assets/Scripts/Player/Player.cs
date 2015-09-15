@@ -44,8 +44,15 @@ public class Player : MonoBehaviour
             if (gun)
             {
                 gun.SendMessage("ShootGun", elementalType);
+                
+
             }
         }
+        else
+       
+
+
+
         if (Input.GetButtonDown("Use"))
         {
             if (currRune)

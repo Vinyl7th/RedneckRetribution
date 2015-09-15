@@ -357,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb58720ec497be04da4068e08d46f246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 2028464175}
 --- !u!61 &1577703444
 BoxCollider2D:
   m_ObjectHideFlags: 0
