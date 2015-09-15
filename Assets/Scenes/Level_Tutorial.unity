@@ -357,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb58720ec497be04da4068e08d46f246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 2028464175}
 --- !u!61 &1577703444
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -407,7 +408,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 410410, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11462820, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: bullet

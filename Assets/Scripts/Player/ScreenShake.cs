@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ScreeShake : MonoBehaviour
+public class ScreenShake : MonoBehaviour
 {
 
     Vector3 originalCameraPosition;
 
     float shakeAmt = 0;
+    [SerializeField]
+    Camera mainCamera;
 
-    public Camera mainCamera;
-
-    void screenShakeOnShoot()
+    public void screenShakeOnShoot()
     {
 
         shakeAmt = Random.Range(0.0f, 0.025f);
@@ -26,7 +26,7 @@ public class ScreeShake : MonoBehaviour
             float quakeAmt = Random.value * shakeAmt * 2 - shakeAmt;
             Vector3 pp = mainCamera.transform.position;
             pp.y += quakeAmt;
-            pp.x += quakeAmt; \
+            pp.x += quakeAmt; 
             mainCamera.transform.position = pp;
         }
     }
