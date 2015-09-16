@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SMG : MonoBehaviour
+public class ShotGUn : MonoBehaviour
 {
     public GameObject bullet;
     Transform thePlayer;
@@ -80,7 +80,7 @@ public class SMG : MonoBehaviour
     void ShootGun(int type)
     {
 
-        if (fireRate >= 0.04f)
+        if (fireRate >= 0.5f)
         {
             switch (element)
             {
@@ -91,12 +91,14 @@ public class SMG : MonoBehaviour
                     bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0, 0);
                     break;
             }
-            bullet.GetComponent<Bullet>().SetDamage(20);
-            Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
+            for (int i = 0; i < 15; i++)
+            {
+                Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
+
+            }
             fireRate = 0;
         }
 
     }
 
 }
-

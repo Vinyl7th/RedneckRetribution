@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SMG : MonoBehaviour
+public class Sniper : MonoBehaviour
 {
+
     public GameObject bullet;
     Transform thePlayer;
     Transform Reticule;
@@ -80,7 +81,7 @@ public class SMG : MonoBehaviour
     void ShootGun(int type)
     {
 
-        if (fireRate >= 0.04f)
+        if (fireRate >= 1.00f)
         {
             switch (element)
             {
@@ -91,12 +92,10 @@ public class SMG : MonoBehaviour
                     bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0, 0);
                     break;
             }
-            bullet.GetComponent<Bullet>().SetDamage(20);
+
             Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
             fireRate = 0;
         }
 
     }
-
 }
-

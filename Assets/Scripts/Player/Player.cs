@@ -44,11 +44,11 @@ public class Player : MonoBehaviour
             if (gun)
             {
                 gun.SendMessage("ShootGun", elementalType);
-                GetComponent<ScreenShake>().screenShakeOnShoot();
+                //GetComponent<ScreenShake>().screenShakeOnShoot();
 
             }
         }
-       
+
 
 
 
@@ -64,12 +64,14 @@ public class Player : MonoBehaviour
 
                 if (C_Object.tag == "Weapon")
                 {
-                    C_Object.GetComponent<SMG>().currWeapon = true; ;
+                    if (gun)
+                        gun.SendMessage("ChangeCurrent");
+                    C_Object.SendMessage("ChangeCurrent");
                     gun = C_Object;
                     standingOnObject = false;
                     C_Object = null;
                 }
-               else if (C_Object.tag == "Rune")
+                else if (C_Object.tag == "Rune")
                 {
                     C_Object.GetComponent<Rune>().current = true;
                     currRune = C_Object;
