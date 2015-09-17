@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SMG : MonoBehaviour
-{
+public class AssaltRifle : MonoBehaviour {
+
     public GameObject bullet;
     Transform thePlayer;
     Transform Reticule;
@@ -10,6 +10,9 @@ public class SMG : MonoBehaviour
     Vector3 pos;
     float angle;
     float fireRate = 0.0f;
+    bool Burst =true;
+    int count = 0;
+    float timer = 0.0f;
     int element;
     bool isRight;
     public bool currWeapon = false;
@@ -27,6 +30,8 @@ public class SMG : MonoBehaviour
         if (currWeapon)
             MoveGun();
         fireRate += Time.deltaTime;
+        if (!Burst)
+            timer += Time.deltaTime;
         element = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().elementalType;
 
     }
@@ -79,8 +84,10 @@ public class SMG : MonoBehaviour
     }
     void ShootGun(int type)
     {
+        if(Burst)
+        {
 
-        if (fireRate >= 0.04f)
+        if (fireRate >= 0.09f)
         {
             switch (element)
             {
@@ -91,12 +98,26 @@ public class SMG : MonoBehaviour
                     bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0, 0);
                     break;
             }
-            bullet.GetComponent<Bullet>().SetDamage(20);
+           
             Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
+                count++;
+                if (count == 5)
+                    Burst = false;
             fireRate = 0;
         }
+            
+        }
+        else
+        {
+           if(timer >= 0.5f)
+            {
+                count = 0;
+                Burst = true;
+                timer = 0;
+            }
+            
 
+        }
+        
     }
-
 }
-
