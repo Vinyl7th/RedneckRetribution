@@ -122,5 +122,7 @@ public class Player_Type_Resist : MonoBehaviour {
         incDamage = _damage;
         float def = 1.0f - pDefense;
         incDamage = incDamage * def;
+
+        gameObject.GetComponent<PlayerStats>().TakeDamage(incDamage);
     }
 }

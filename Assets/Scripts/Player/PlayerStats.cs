@@ -5,6 +5,10 @@ public class PlayerStats : MonoBehaviour {
 
     // Player Stats
     public float pDefense = 0.0f;
+    public float pHealthMax = 0.0f;
+    public float pHealthCurr = 0.0f;
+
+    public bool pIsAlive = true;
 
 
 
@@ -18,4 +22,11 @@ public class PlayerStats : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void TakeDamage(float _damage)
+    {
+        pHealthCurr -= _damage;
+        if (pHealthCurr <= 0.0f)
+            pIsAlive = false;
+    }
 }
