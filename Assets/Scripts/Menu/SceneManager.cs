@@ -11,7 +11,7 @@ public class SceneManager : MonoBehaviour
 
     int btnIndex = 0;
     float btnTimer = 0;
-    float sounddelay = 0.5f;
+    
     // Use this for initialization
     void Start ()
     {
