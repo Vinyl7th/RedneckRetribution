@@ -12,7 +12,7 @@ GameObject:
   - 212: {fileID: 21268308}
   - 114: {fileID: 11458426}
   m_Layer: 0
-  m_Name: Rune
+  m_Name: FireRune
   m_TagString: Rune
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShotGUn : MonoBehaviour
+public class ShotGun : MonoBehaviour
 {
     public GameObject bullet;
     Transform thePlayer;
