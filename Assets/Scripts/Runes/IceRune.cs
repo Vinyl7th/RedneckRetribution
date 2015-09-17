@@ -32,7 +32,7 @@ public class IceRune : MonoBehaviour
             transform.position = thePlayer.position;
         }
             timer += Time.deltaTime;
-        if (charges == 0)
+        if (charges == 0 && !active)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().RuneDestroyed();
             Destroy(gameObject);
