@@ -325,6 +325,7 @@ GameObject:
   - 212: {fileID: 1691736980}
   - 50: {fileID: 1691736979}
   - 61: {fileID: 1691736978}
+  - 114: {fileID: 1691736982}
   m_Layer: 0
   m_Name: IceAura
   m_TagString: Untagged
@@ -399,6 +400,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1691736982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1691736977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091a52bdf859d2c4185fcb3d542ddcde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1796624298
 Prefab:
   m_ObjectHideFlags: 0
