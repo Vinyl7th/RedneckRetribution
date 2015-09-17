@@ -3,12 +3,13 @@ using System.Collections;
 
 public class Aiming : MonoBehaviour {
 
-	public Transform thePlayer;
+    public GameObject thePlayer;
     
 	// Use this for initialization
 	void Start ()
 	{
 		Cursor.visible = false;
+        thePlayer = GameObject.FindWithTag("Player");
         
 	}
 	
