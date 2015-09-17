@@ -17,7 +17,7 @@ public class IceAura : MonoBehaviour
     {
 
         // randomize particle duration
-            deathTime = Random.Range(0.5f, 1.0f);
+            deathTime = Random.Range(0.9f, 1.0f);
 
         theRigidBody = GetComponent<Rigidbody2D>();
         x = transform.position.x;
