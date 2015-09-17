@@ -73,15 +73,21 @@ public class Player : MonoBehaviour
                 }
                 else if (C_Object.tag == "Rune")
                 {
-                    C_Object.GetComponent<Rune>().current = true;
+                    if (currRune)
+                        currRune.SendMessage("ChangeCurrent");
+                    C_Object.SendMessage("ChangeCurrent");
                     currRune = C_Object;
                     standingOnObject = false;
                     C_Object = null;
-                    elementalType = currRune.GetComponent<Rune>().GetElement();
+                    //elementalType = currRune.GetComponent<Rune>().GetElement();
                 }
             }
         }
 
+    }
+    public void SetElement(int _in)
+    {
+        elementalType = _in;
     }
     void OnTriggerEnter2D(Collider2D col)
     {
