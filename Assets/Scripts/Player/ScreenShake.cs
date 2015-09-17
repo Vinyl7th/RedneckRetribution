@@ -20,9 +20,11 @@ public class ScreenShake : MonoBehaviour
     public void screenShakeOnShoot()
     {
 
-        shakeAmt = Random.Range(0.0f, 0.09f);
-        InvokeRepeating("CameraShake", 0, 0.001f);
-        Invoke("StopShaking", 0.3f);
+        shakeAmt = Random.Range(-0.05f, 0.05f);
+        InvokeRepeating("CameraShake", 0, 0.01f);
+        Invoke("StopShaking",0.5f);
+       // CameraShake();
+       // StopShaking();
 
     }
 
@@ -33,6 +35,7 @@ public class ScreenShake : MonoBehaviour
             float quakeAmt = Random.value * shakeAmt * 2 - shakeAmt;
             Vector3 pp = mainCamera.transform.position;
             pp.y += quakeAmt;
+            quakeAmt = Random.value * shakeAmt * 2 - shakeAmt;
             pp.x += quakeAmt;
             pp.z = -10;
             mainCamera.transform.position = pp;
