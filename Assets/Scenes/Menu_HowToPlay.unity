@@ -1012,7 +1012,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Here is an example of what passive items look like
+  m_Text: Here is an example of what pa rune look like
 --- !u!222 &1990955758
 CanvasRenderer:
   m_ObjectHideFlags: 0
