@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AssaltRifle : MonoBehaviour {
+public class AssaltRifle : MonoBehaviour
+{
 
     public GameObject bullet;
     Transform thePlayer;
@@ -10,7 +11,7 @@ public class AssaltRifle : MonoBehaviour {
     Vector3 pos;
     float angle;
     float fireRate = 0.0f;
-    bool Burst =true;
+    bool Burst = true;
     int count = 0;
     float timer = 0.0f;
     int element;
@@ -84,40 +85,43 @@ public class AssaltRifle : MonoBehaviour {
     }
     void ShootGun(int type)
     {
-        if(Burst)
+        if (Burst)
         {
 
-        if (fireRate >= 0.09f)
-        {
-            switch (element)
+            if (fireRate >= 0.09f)
             {
-                case 0:
-                    bullet.GetComponent<SpriteRenderer>().color = new Color(.90f, .90f, .90f);
-                    break;
-                case 1:
-                    bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0, 0);
-                    break;
-            }
-           
-            Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
+                switch (element)
+                {
+                    case 0:
+                        bullet.GetComponent<SpriteRenderer>().color = new Color(.90f, .90f, .90f);
+                        break;
+                    case 1:
+                        bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0, 0);
+                        break;
+                    case 2:
+                        bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 1.0f);
+                        break;
+                }
+
+                Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
                 count++;
                 if (count == 5)
                     Burst = false;
-            fireRate = 0;
-        }
-            
+                fireRate = 0;
+            }
+
         }
         else
         {
-           if(timer >= 0.5f)
+            if (timer >= 0.5f)
             {
                 count = 0;
                 Burst = true;
                 timer = 0;
             }
-            
+
 
         }
-        
+
     }
 }

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BackToMenu : MonoBehaviour {
     [SerializeField]
-    AudioSource src;
+    //AudioSource src;
 	// Use this for initialization
 	void Start () {
 	
@@ -16,23 +16,14 @@ public class BackToMenu : MonoBehaviour {
 
 
 
-    IEnumerator DelayedLoad()
-    {
-        //Play the clip once
-        src.Play();
 
-        //Wait until clip finish playing
-        yield return new WaitForSeconds(0.3f);
-
-        //Load scene here
-        Application.LoadLevel("Menu_Main");
-
-    }
 
 
 
     public void backToMenu()
     {
-        StartCoroutine(DelayedLoad());
+        // StartCoroutine(DelayedLoad());
+
+        Application.LoadLevel("Menu_Main");
     }
 }
