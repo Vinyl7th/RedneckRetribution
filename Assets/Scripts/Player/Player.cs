@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     public bool standingOnObject;
     GameObject gun;
-    GameObject currRune;
+    public GameObject currRune;
     GameObject C_Object;
     // Use this for initialization
     void Start()
@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
             if (gun)
             {
                 gun.SendMessage("ShootGun", elementalType);
-                GetComponent<ScreenShake>().screenShakeOnShoot();
+                
 
             }
         }
