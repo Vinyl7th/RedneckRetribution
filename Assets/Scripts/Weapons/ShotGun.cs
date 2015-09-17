@@ -90,6 +90,9 @@ public class ShotGun : MonoBehaviour
                 case 1:
                     bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0, 0);
                     break;
+                case 2:
+                    bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 1.0f);
+                    break;
             }
             for (int i = 0; i < 15; i++)
             {
