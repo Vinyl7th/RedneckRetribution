@@ -62,7 +62,7 @@ public class OptionsScript : MonoBehaviour {
 
     public void FullScreen()
     {
-        gameObject.GetComponent<AudioSource>().Play();
+        //gameObject.GetComponent<AudioSource>().Play();
         Screen.fullScreen = !Screen.fullScreen;
     }
 
