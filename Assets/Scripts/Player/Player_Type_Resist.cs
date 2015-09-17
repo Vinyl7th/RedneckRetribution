@@ -33,7 +33,7 @@ public class Player_Type_Resist : MonoBehaviour {
     {
         // Set player stats
         pDefense = gameObject.GetComponent<PlayerStats>().pDefense;
-        pRuneType = gameObject.GetComponent<Player>().currRune.GetComponent<Rune>().GetElement();
+        pRuneType = gameObject.GetComponent<Player>().elementalType;
 
         // Set damage to 0
         incDamage = 0.0f;
