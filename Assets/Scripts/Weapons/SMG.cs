@@ -90,6 +90,9 @@ public class SMG : MonoBehaviour
                 case 1:
                     bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0, 0);
                     break;
+                case 2:
+                    bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 1.0f);
+                    break;
             }
             bullet.GetComponent<Bullet>().SetDamage(20);
             Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
