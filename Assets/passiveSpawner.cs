@@ -61,28 +61,28 @@ public class passiveSpawner : MonoBehaviour {
         switch (passChoice)
         {
             case 0:
-                thePlayer.SendMessage("addHealth", 100);
+               // thePlayer.GetComponent<PlayerStats>().pMaxHealth += 100;
                
                 break;
             case 1:
-                thePlayer.SendMessage("addDamage", 0.05f);
-               
+               // thePlayer.GetComponent<PlayerStats>().pDamage += 0.05f;
+
                 break;
             case 2:
-                thePlayer.SendMessage("addMSpeed", 0.5);
+               // thePlayer.GetComponent<PlayerStats>().pMoveSpeed += 0.5f;
              
                 break;
             case 3:
-                thePlayer.SendMessage("addMSpeed", 0.5);
+               // thePlayer.GetComponent<PlayerStats>().pDefense += 0.05f;
              
                 break;
             case 4:
-                thePlayer.SendMessage("addMSpeed", 0.5);
-                
+                //thePlayer.GetComponent<PlayerStats>().pLifeSteal += 0.01f;
+
                 break;
             case 5:
-                thePlayer.SendMessage("addMSpeed", 0.5);
-               
+                //thePlayer.GetComponent<PlayerStats>().pAttackSpeed += 0.2f;
+
                 break;
         }
     }
