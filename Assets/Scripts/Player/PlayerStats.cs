@@ -4,9 +4,14 @@ using System.Collections;
 public class PlayerStats : MonoBehaviour {
 
     // Player Stats
-    public float pDefense = 0.0f;
+    
     public float pHealthMax = 0.0f;
     public float pHealthCurr = 0.0f;
+    public float pAttack = 0.0f;
+    public float pDefense = 0.0f;
+    public float pAttackSpeed = 0.0f;
+    public float pMoveSpeed = 0.0f;
+    public float pLifeSteal = 0.0f;
 
     public bool pIsAlive = true;
 
