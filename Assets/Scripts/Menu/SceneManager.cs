@@ -18,9 +18,10 @@ public class SceneManager : MonoBehaviour
 
         soundController.sfxValue = PlayerPrefs.GetFloat("sfxVolume");
         soundController.musicValue = PlayerPrefs.GetFloat("musicVolume");
-       // Debug.Log(PlayerPrefs.GetFloat("sfxVolume"));
+        // Debug.Log(PlayerPrefs.GetFloat("sfxVolume"));
         //Debug.Log(PlayerPrefs.GetFloat("musicVolume"));
         //Debug.Log(src.volume);
+        src.volume = soundController.sfxValue;
         if (soundController.sfxValue == 0f && soundController.musicValue == 0f && PlayerPrefs.GetInt("hassaved") != 1)
         {
             soundController.sfxValue = 0.5f;
@@ -31,6 +32,8 @@ public class SceneManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+
+        src.volume = soundController.sfxValue;
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             btnIndex++;
