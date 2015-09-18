@@ -37,6 +37,10 @@ public class PauseMenu : MonoBehaviour {
         {
             isPaused = !isPaused;
         }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Application.LoadLevel("Menu_Main");
+        }
 	}
 
     
