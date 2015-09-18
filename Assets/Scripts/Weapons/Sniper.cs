@@ -94,6 +94,9 @@ public class Sniper : MonoBehaviour
                 case 2:
                     bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 1.0f);
                     break;
+                case 3:
+                    bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f);
+                    break;
             }
 
             Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);

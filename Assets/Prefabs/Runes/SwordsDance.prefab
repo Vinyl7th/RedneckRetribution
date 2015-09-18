@@ -1,43 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &156064
+--- !u!1 &157090
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 469456}
-  - 61: {fileID: 6119026}
-  - 212: {fileID: 21215444}
-  - 50: {fileID: 5058588}
-  - 114: {fileID: 11452636}
+  - 4: {fileID: 410176}
+  - 212: {fileID: 21228336}
+  - 61: {fileID: 6168594}
+  - 114: {fileID: 11410194}
+  - 50: {fileID: 5019032}
   m_Layer: 9
-  m_Name: SMG_BULLET
+  m_Name: SwordsDance
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &469456
+--- !u!4 &410176
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156064}
+  m_GameObject: {fileID: 157090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.76999998, y: 1.57000005, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: .0599999987, y: -3.51999998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5058588
+--- !u!50 &5019032
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156064}
+  m_GameObject: {fileID: 157090}
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
@@ -47,37 +47,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &6119026
+--- !u!61 &6168594
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156064}
+  m_GameObject: {fileID: 157090}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.00408816338, y: -.000731468201}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .158532679, y: .153322935}
---- !u!114 &11452636
+  m_Size: {x: .875, y: 1}
+--- !u!114 &11410194
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156064}
+  m_GameObject: {fileID: 157090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d84bf3ec6034f949aabc487696a8963, type: 3}
+  m_Script: {fileID: 11500000, guid: d407553eee125eb40b772e81f515fe65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
---- !u!212 &21215444
+--- !u!212 &21228336
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156064}
+  m_GameObject: {fileID: 157090}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -96,8 +95,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a6a08257951548418c7a4876cd4b696, type: 3}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6f76cd7ed43df0743b71313b695bd60e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -106,18 +105,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalScale.y
-      value: 2
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 156064}
+  m_RootGameObject: {fileID: 157090}
   m_IsPrefabParent: 1
