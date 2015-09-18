@@ -4,9 +4,9 @@ using UnityEngine.UI;
 public class OptionsScript : MonoBehaviour {
 
     [SerializeField]
-    static float sfxVolume = 0.0f;
+    public static float sfxVolume = soundController.sfxValue;
     [SerializeField]
-    static float musicVolume = 0.0f;
+    public static float musicVolume = soundController.musicValue;
     [SerializeField]
     Slider sfxSlider = null;
     [SerializeField]
@@ -21,6 +21,7 @@ public class OptionsScript : MonoBehaviour {
     {
         sfxSlider.value = soundController.sfxValue;
         musicSlider.value = soundController.musicValue;
+        
     }
 	
 	// Update is called once per frame
@@ -67,11 +68,12 @@ public class OptionsScript : MonoBehaviour {
     }
 
 
-    void SaveFile()
+    public void SaveFile()
     {
-        PlayerPrefs.SetFloat("sfxVolume", soundController.sfxValue);
-        PlayerPrefs.SetFloat("sfxVolume", soundController.musicValue);
-
+        PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
+        PlayerPrefs.SetFloat("musicVolume", musicVolume);
+        PlayerPrefs.SetInt("hassaved", 1);
+        Debug.Log("button pressed");
     }
 
 }
