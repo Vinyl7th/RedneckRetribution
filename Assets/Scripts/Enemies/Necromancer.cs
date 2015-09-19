@@ -51,9 +51,16 @@ public class Necromancer : MonoBehaviour {
         
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void RecieveDamage(float _dmg)
+    {
+        hitPoints -= _dmg;
+        changeColor = true;
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         if(!offCoolDown)
             delayCastFireball += Time.deltaTime;
@@ -64,7 +71,7 @@ public class Necromancer : MonoBehaviour {
         {
             //start the delaytimer and change the enemy's color to red
             delayColorChanger += Time.deltaTime;
-            gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0, 0);
 
             //after the color is red change the color back to its normal color
             //and change the bool back to false

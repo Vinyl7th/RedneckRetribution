@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FakeEnemies : MonoBehaviour
 {
-   public  int hp = 1000;
+   public  float hp = 1000;
     // Use this for initialization
     void Start()
     {
@@ -16,8 +16,10 @@ public class FakeEnemies : MonoBehaviour
         if (hp <= 0)
             GameObject.Destroy(gameObject);
     }
-    public void TakeDamage(int dmg)
+
+    public void RecieveDamage(float _dmg)
     {
-        hp -= dmg;
+        hp -= _dmg;
+
     }
 }

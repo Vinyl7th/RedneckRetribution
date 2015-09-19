@@ -15,12 +15,13 @@ public class skeleton : MonoBehaviour {
     Color baseColor;
     bool changeColor;
     float delayColorChanger;
+    float healthRegenTimer = 0.0f;
 
     bool regenHealth;
 
 
     //basic varible to hold the skeletons stats
-    float aggroRange,
+    public float aggroRange,
            moveSpeed,
            maxHealth,
            hitPoints;
@@ -52,13 +53,19 @@ public class skeleton : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        healthRegenTimer += Time.deltaTime;
 
         if (regenHealth == true && hitPoints < maxHealth)
         {
-            if (hitPoints < maxHealth)
-                hitPoints += 50;
-            if (hitPoints >= maxHealth)
-                hitPoints = maxHealth;
+            if (healthRegenTimer >= 0.5f)
+            {
+                if (hitPoints < maxHealth)
+                    hitPoints += 50;
+                if (hitPoints >= maxHealth)
+                    hitPoints = maxHealth;
+
+                healthRegenTimer = 0.0f;
+            }
         }
 
         //  if enemy took damage  
@@ -67,11 +74,12 @@ public class skeleton : MonoBehaviour {
         {
             //start the delaytimer and change the enemy's color to red
             delayColorChanger += Time.deltaTime;
-            gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+            Color newColor = new Color(1.0f, 0, 0);
+            gameObject.GetComponent<SpriteRenderer>().color = newColor; 
 
             //after the color is red change the color back to its normal color
             //and change the bool back to false
-            if (delayColorChanger >= 0.5f)
+            if (delayColorChanger >= 0.1f)
             {
                 gameObject.GetComponent<SpriteRenderer>().color = baseColor;
                 delayColorChanger = 0.0f;
@@ -91,7 +99,7 @@ public class skeleton : MonoBehaviour {
     }
 
     //Function that passes the amount damage the enemy needs to receive
-    public void ReceiveDamage(float _dmg)
+    public void RecieveDamage(float _dmg)
     {
         hitPoints -= _dmg;
         changeColor = true;
@@ -132,10 +140,17 @@ public class skeleton : MonoBehaviour {
     }
 
     //Checks if the enemy is within range of the necro's aura
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "NecroAura")
+        {
             regenHealth = true;
+        }
+
+        if(other.gameObject.tag == "Player")
+        {
+            other.SendMessage("TakePhysicalDamage", 50);
+        }
 
     }
 

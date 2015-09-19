@@ -12,6 +12,7 @@ GameObject:
   - 212: {fileID: 21215444}
   - 50: {fileID: 5058588}
   - 114: {fileID: 11452636}
+  - 114: {fileID: 11405854}
   m_Layer: 9
   m_Name: SMG_BULLET
   m_TagString: Bullet
@@ -60,6 +61,18 @@ BoxCollider2D:
   m_Offset: {x: -.00408816338, y: -.000731468201}
   serializedVersion: 2
   m_Size: {x: .158532679, y: .153322935}
+--- !u!114 &11405854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aef48f4daf7faf46a3dc2007c1cc6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletType: 3
 --- !u!114 &11452636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +129,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bulletType
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

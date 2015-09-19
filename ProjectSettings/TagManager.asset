@@ -13,6 +13,7 @@ TagManager:
   - Rune
   - Passive
   - NecroAura
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - Particles
   - 
   - Player_Collectables
-  - 
+  - NecroAura
   - 
   - 
   - 
