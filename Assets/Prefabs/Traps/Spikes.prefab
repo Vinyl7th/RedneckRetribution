@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 421226}
   - 212: {fileID: 21297428}
   - 58: {fileID: 5837976}
+  - 114: {fileID: 11493024}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Enemy
@@ -42,6 +43,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .5
+--- !u!114 &11493024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1206e4af1f7815945890965d84b74ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21297428
 SpriteRenderer:
   m_ObjectHideFlags: 1
