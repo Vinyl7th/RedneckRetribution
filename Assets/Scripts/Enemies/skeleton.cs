@@ -3,17 +3,29 @@ using System.Collections;
 
 public class skeleton : MonoBehaviour {
 
+    //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer,
-               spawnCounter;
+               killCounter;
+
+    
 
 
+
+    //varibles for the visual feedback when the skeleton takes damage
     Color baseColor;
     bool changeColor;
     float delayColorChanger;
 
+    bool regenHealth;
+
+
+    //basic varible to hold the skeletons stats
     float aggroRange,
            moveSpeed,
+           maxHealth,
            hitPoints;
+           
+
 
     // Use this for initialization
     void Start()
@@ -21,21 +33,33 @@ public class skeleton : MonoBehaviour {
         // At the start make the thePlayer gameobject the player with tag
         thePlayer = GameObject.FindWithTag("Player");
 
+        
+
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
         changeColor = false;
         delayColorChanger = 0.0f;
 
+        regenHealth = false;
         // Set the Enemy's Movement Speed, Hitpoints, and aggrorange
         aggroRange = 10.0f;
         moveSpeed = 4.2f;
         hitPoints = 2000.0f;
+        maxHealth = hitPoints;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (regenHealth == true && hitPoints < maxHealth)
+        {
+            if (hitPoints < maxHealth)
+                hitPoints += 50;
+            if (hitPoints >= maxHealth)
+                hitPoints = maxHealth;
+        }
 
         //  if enemy took damage  
 
@@ -67,7 +91,7 @@ public class skeleton : MonoBehaviour {
     }
 
     //Function that passes the amount damage the enemy needs to receive
-    public void receiveDamage(float _dmg)
+    public void ReceiveDamage(float _dmg)
     {
         hitPoints -= _dmg;
         changeColor = true;
@@ -94,16 +118,32 @@ public class skeleton : MonoBehaviour {
             float enemyX = gameObject.transform.position.x;
             float enemyY = gameObject.transform.position.y;
 
+            //chase player
             if (playerX > enemyX)        // enemy move right
-                moveEnemy.x += moveSpeed;
+                moveEnemy.x = moveSpeed;
             if (playerX < enemyX)        // enemy move left
-                moveEnemy.x -= moveSpeed;
+                moveEnemy.x = -moveSpeed;
             if (playerY > enemyY)        // enemy move up
-                moveEnemy.y += moveSpeed;
+                moveEnemy.y = moveSpeed;
             if (playerY < enemyY)        // enemy move down
-                moveEnemy.y -= moveSpeed;
+                moveEnemy.y = -moveSpeed;
         }
         gameObject.GetComponent<Rigidbody2D>().velocity = moveEnemy;
+    }
+
+    //Checks if the enemy is within range of the necro's aura
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "NecroAura")
+            regenHealth = true;
+
+    }
+
+    //Check if the enemy leaves the range of the necro's aura
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "NecroAura")
+            regenHealth = false;
     }
 
 }

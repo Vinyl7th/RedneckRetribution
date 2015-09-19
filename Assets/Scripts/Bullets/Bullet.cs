@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
     float bulletSpeed;
     float accuracy;
     float displayDelay = 0.0f;
-    public int damage;
+    public float damage;
     GameObject thePlayer;
     Vector3 playerPos;
     Transform reticule;
