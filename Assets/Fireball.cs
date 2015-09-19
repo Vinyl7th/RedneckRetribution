@@ -44,7 +44,7 @@ public class Fireball : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.SendMessage("TakeFireDamage", damage);
+            other.gameObject.SendMessage("TakeFireDamage", 75);
             Destroy(gameObject);
         }
 
