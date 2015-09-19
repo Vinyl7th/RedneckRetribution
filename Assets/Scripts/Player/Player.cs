@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-    float moveSpeed = 4;
+    [SerializeField]
+    float moveSpeed = 8;
     public int elementalType = 0;
     Vector2 moveVelocity;
 
