@@ -5,11 +5,13 @@ public class CameraFollow : MonoBehaviour {
 
     public bool followPlayer = false;
     GameObject thePlayer;
-
+    [SerializeField]
+    AudioSource src;
 	// Use this for initialization
 	void Start ()
     {
         thePlayer = GameObject.FindWithTag("Player");
+        src.volume = soundController.musicValue;
 	}
 	
 	// Update is called once per frame
