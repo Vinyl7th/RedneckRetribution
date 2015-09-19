@@ -75,7 +75,7 @@ public class Necromancer : MonoBehaviour {
 
             //after the color is red change the color back to its normal color
             //and change the bool back to false
-            if (delayColorChanger >= 0.5f)
+            if (delayColorChanger >= 0.1f)
             {
                 gameObject.GetComponent<SpriteRenderer>().color = baseColor;
                 delayColorChanger = 0.0f;
