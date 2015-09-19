@@ -20,6 +20,7 @@ public class PlayerStats : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        pDefense = 0;
 	
 	}
 	
@@ -32,6 +33,9 @@ public class PlayerStats : MonoBehaviour {
     {
         pHealthCurr -= _damage;
         if (pHealthCurr <= 0.0f)
+        {
+            pHealthCurr = 0.0f;
             pIsAlive = false;
+        }
     }
 }
