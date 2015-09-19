@@ -2,12 +2,14 @@
 using System.Collections;
 
 public class passiveSpawner : MonoBehaviour {
+    [SerializeField]
     Sprite[] sprites = new Sprite[6];
     [SerializeField]
     int passChoice = 0;
     [SerializeField]
     GameObject thePlayer;
-
+    [SerializeField]
+    AudioSource src;
     // 0 = health
     // 1 = damage
     // 2 = move speed
@@ -18,6 +20,7 @@ public class passiveSpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        src.volume = soundController.sfxValue;
         passChoice = Random.Range(0, 5);
         thePlayer = GameObject.FindWithTag("Player");
         switch (passChoice)
@@ -56,35 +59,44 @@ public class passiveSpawner : MonoBehaviour {
 	}
 
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        switch (passChoice)
+
+        
+        if (col.gameObject.tag == "Player")
         {
-            case 0:
-               // thePlayer.GetComponent<PlayerStats>().pMaxHealth += 100;
-               
-                break;
-            case 1:
-               // thePlayer.GetComponent<PlayerStats>().pDamage += 0.05f;
+            src.Play();
+            switch (passChoice)
+            {
+                case 0:
+                    thePlayer.GetComponent<PlayerStats>().pHealthMax += 100;
 
-                break;
-            case 2:
-               // thePlayer.GetComponent<PlayerStats>().pMoveSpeed += 0.5f;
-             
-                break;
-            case 3:
-               // thePlayer.GetComponent<PlayerStats>().pDefense += 0.05f;
-             
-                break;
-            case 4:
-                //thePlayer.GetComponent<PlayerStats>().pLifeSteal += 0.01f;
+                    break;
+                case 1:
+                    thePlayer.GetComponent<PlayerStats>().pAttack += 0.05f;
 
-                break;
-            case 5:
-                //thePlayer.GetComponent<PlayerStats>().pAttackSpeed += 0.2f;
+                    break;
+                case 2:
+                    thePlayer.GetComponent<PlayerStats>().pMoveSpeed += 0.5f;
 
-                break;
+                    break;
+                case 3:
+                    thePlayer.GetComponent<PlayerStats>().pDefense += 0.05f;
+
+                    break;
+                case 4:
+                    thePlayer.GetComponent<PlayerStats>().pLifeSteal += 0.01f;
+
+                    break;
+                case 5:
+                    thePlayer.GetComponent<PlayerStats>().pAttackSpeed += 0.2f;
+
+                    break;
+            }
+
+            
         }
+        Destroy(gameObject);
     }
 
 }
