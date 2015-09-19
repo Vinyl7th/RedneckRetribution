@@ -1,67 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &150140
+--- !u!1 &166372
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 487580}
-  - 61: {fileID: 6198592}
-  - 212: {fileID: 21268308}
-  - 114: {fileID: 11458426}
+  - 4: {fileID: 480144}
+  - 212: {fileID: 21202116}
+  - 61: {fileID: 6180916}
+  - 114: {fileID: 11429820}
   m_Layer: 0
-  m_Name: Rune
+  m_Name: PoisonRune
   m_TagString: Rune
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &487580
+--- !u!4 &480144
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150140}
+  m_GameObject: {fileID: 166372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.38333642, y: 1.03898203, z: 0}
+  m_LocalPosition: {x: 2.58999991, y: -2.5999999, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6198592
+--- !u!61 &6180916
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150140}
+  m_GameObject: {fileID: 166372}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
---- !u!114 &11458426
+  m_Size: {x: 1.046875, y: 1}
+--- !u!114 &11429820
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150140}
+  m_GameObject: {fileID: 166372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04917fa9f914ebc4792baf90f27fa456, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e17ac8dbff7f2a429258d7ec41103a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   current: 0
-  orbitingFire: {fileID: 197324, guid: d71115911a230aa4eacdc93956d43eb4, type: 2}
---- !u!212 &21268308
+  swordsDance: {fileID: 157090, guid: c5e207659ab829f43b27a13d2d64dc51, type: 2}
+--- !u!212 &21202116
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150140}
+  m_GameObject: {fileID: 166372}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ba40153f46407e34885d38576395e113, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a7ebfe8f98f5ae43a1d8d56c3718d8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -88,16 +88,8 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: orbitingFire
-      value: 
-      objectReference: {fileID: 197324, guid: d71115911a230aa4eacdc93956d43eb4, type: 2}
-    - target: {fileID: 0}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 150140}
+  m_RootGameObject: {fileID: 166372}
   m_IsPrefabParent: 1

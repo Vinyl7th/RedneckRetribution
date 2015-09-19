@@ -6,7 +6,7 @@ public class OrbitingFire : MonoBehaviour
     float timer = 0.0f;
     Transform thePlayer;
     Vector3 position;
-
+   
     // Use this for initialization
     void Start()
     {
