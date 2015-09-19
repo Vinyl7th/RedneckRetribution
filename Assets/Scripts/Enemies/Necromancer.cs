@@ -22,6 +22,7 @@ public class Necromancer : MonoBehaviour {
     float aggroRange,
            runAway,
            moveSpeed,
+           maxHealth,
            hitPoints,
            fireDelay,
            delayCastFireball;
@@ -48,6 +49,7 @@ public class Necromancer : MonoBehaviour {
         moveSpeed = 3f;
         hitPoints = 3500.0f;
         runAway = 5;
+        maxHealth = hitPoints;
         
 
     }
