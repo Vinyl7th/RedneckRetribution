@@ -9,7 +9,13 @@ public class FireRune : MonoBehaviour
     Transform thePlayer;
     Vector3 offSet;
     public GameObject orbitingFire;
-   
+    public GameObject moltenWake;
+
+
+    float firespawnCooldown;
+    int firespawned = 0;
+    int firemax = 70;
+    bool active;
     // Use this for initialization
     void Start()
     {
@@ -24,6 +30,8 @@ public class FireRune : MonoBehaviour
     {
         if (current)
             transform.position = thePlayer.position;
+        if (active)
+            MoltenWake();
         if (charges == 0)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().RuneDestroyed();
@@ -33,6 +41,7 @@ public class FireRune : MonoBehaviour
     public void OnUse()
     {
         Orbitingfire();
+        MoltenWake();
     }
     public void ChangeCurrent()
     {
@@ -56,6 +65,24 @@ public class FireRune : MonoBehaviour
         offSet.x = thePlayer.position.x + 3;
         Instantiate(orbitingFire, offSet, thePlayer.rotation);
         charges--;
+    }
+    void MoltenWake()
+    {
+        firespawnCooldown += Time.deltaTime;
+        active = true;
+        if (firespawned == firemax)
+        {
+            active = false;
+            firespawned = 0;
+            charges--;
+        }
+        if (firespawnCooldown >= 0.1f)
+        {
+            Instantiate(moltenWake, thePlayer.transform.position, thePlayer.transform.rotation);
+            firespawned++;
+            firespawnCooldown = 0.0f;
+        }
+      
     }
  
 }
