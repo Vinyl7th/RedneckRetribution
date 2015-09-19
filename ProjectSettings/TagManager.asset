@@ -12,6 +12,7 @@ TagManager:
   - currWeapon
   - Rune
   - Passive
+  - NecroAura
   layers:
   - Default
   - TransparentFX
