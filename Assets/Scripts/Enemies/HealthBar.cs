@@ -29,8 +29,8 @@ public class HealthBar : MonoBehaviour {
         }
         else if (Etype == 2)
         {
-            MaxHealth = gameObject.GetComponentInParent<skeleton>().maxHealth;
-            CurrHealth = gameObject.GetComponentInParent<skeleton>().hitPoints;
+            MaxHealth = gameObject.GetComponentInParent<Necromancer>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<Necromancer>().hitPoints;
         }
 
 
