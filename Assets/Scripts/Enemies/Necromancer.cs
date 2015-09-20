@@ -19,7 +19,7 @@ public class Necromancer : MonoBehaviour {
 
 
     //basic varible to hold the Necromancer's stats
-    float aggroRange,
+    public float aggroRange,
            runAway,
            moveSpeed,
            maxHealth,
