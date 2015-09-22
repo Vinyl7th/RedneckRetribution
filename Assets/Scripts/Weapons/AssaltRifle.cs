@@ -17,12 +17,19 @@ public class AssaltRifle : MonoBehaviour
     int element;
     bool isRight;
     public bool currWeapon = false;
+
+    public int rariety;
+    public int damage;
+    public float ROF;
+    public float accMin;
+    public float accMax;
+    public float delay;
     // Use this for initialization
     void Start()
     {
         thePlayer = GameObject.FindGameObjectWithTag("Player").transform;
         Reticule = GameObject.FindGameObjectWithTag("Reticule").transform;
-
+        RollStats();
     }
 
     // Update is called once per frame
@@ -105,7 +112,7 @@ public class AssaltRifle : MonoBehaviour
                         bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f);
                         break;
                 }
-
+                bullet.GetComponent<AssaltBullet>().SetDamage(damage);
                 Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
                 count++;
                 if (count == 5)
@@ -116,7 +123,7 @@ public class AssaltRifle : MonoBehaviour
         }
         else
         {
-            if (timer >= 0.5f)
+            if (timer >= delay)
             {
                 count = 0;
                 Burst = true;
@@ -126,5 +133,44 @@ public class AssaltRifle : MonoBehaviour
 
         }
 
+    }
+    void RollStats()
+    {
+        if (rariety <= 64)
+        {
+            //common
+            damage = Random.Range(125, 165);
+            ROF = Random.Range(0.1f, 0.12f);
+            accMin = -0.01f;
+            accMax = 0.01f;
+            delay = 0.7f;
+        }
+        else if (rariety <= 94)
+        {
+            //unique
+            damage = Random.Range(175, 215);
+            ROF = Random.Range(0.07f, 0.09f);
+            accMin = -0.01f;
+            accMax = 0.01f;
+            delay = 0.5f;
+        }
+        else if (rariety <= 99)
+        {
+            //rare
+            damage = Random.Range(215, 300);
+            ROF = Random.Range(0.05f, 0.06f);
+            accMin = -0.01f;
+            accMax = 0.01f;
+            delay = 0.3f;
+        }
+        else if (rariety == 100)
+        {
+            //contraban
+            damage = Random.Range(350, 450);
+            ROF = Random.Range(0.02f, 0.03f);
+            accMin = -0.01f;
+            accMax = 0.01f;
+            delay = 0.2f;
+        }
     }
 }

@@ -84,7 +84,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d84bf3ec6034f949aabc487696a8963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  accMin: -.00999999978
+  accMax: .00999999978
+  damage: 64
 --- !u!212 &21215444
 SpriteRenderer:
   m_ObjectHideFlags: 1
