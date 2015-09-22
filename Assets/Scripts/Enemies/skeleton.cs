@@ -153,6 +153,14 @@ public class skeleton : MonoBehaviour {
         }
 
     }
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.gameObject.tag == "Player")
+    //    {
+    //        other.SendMessage("TakePhysicalDamage", 50);
+    //    }
+    //}
+
 
     //Check if the enemy leaves the range of the necro's aura
     void OnTriggerExit2D(Collider2D other)
