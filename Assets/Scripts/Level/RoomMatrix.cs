@@ -3,6 +3,9 @@ using System.Collections;
 
 public class RoomMatrix : MonoBehaviour {
 
+    public int Row;
+    public int Coll;
+
 	// Use this for initialization
 	void Start () {
 	
