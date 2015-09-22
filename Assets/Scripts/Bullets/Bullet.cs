@@ -5,6 +5,8 @@ public class Bullet : MonoBehaviour
 {
     float bulletSpeed;
     float accuracy;
+    public float accMin;
+    public float accMax;
     float displayDelay = 0.0f;
     public float damage;
     GameObject thePlayer;

@@ -4,6 +4,7 @@ using System.Collections;
 public class Sniper : MonoBehaviour
 {
 
+
     public GameObject bullet;
     Transform thePlayer;
     Transform Reticule;
@@ -14,12 +15,17 @@ public class Sniper : MonoBehaviour
     int element;
     bool isRight;
     public bool currWeapon = false;
+
+   public int rariety;
+   public  int damage;
+    public float ROF;
+    public float accMin;
     // Use this for initialization
     void Start()
     {
         thePlayer = GameObject.FindGameObjectWithTag("Player").transform;
         Reticule = GameObject.FindGameObjectWithTag("Reticule").transform;
-
+        RollStats();
     }
 
     // Update is called once per frame
@@ -81,7 +87,7 @@ public class Sniper : MonoBehaviour
     void ShootGun(int type)
     {
 
-        if (fireRate >= 1.00f)
+        if (fireRate >= ROF)
         {
             switch (element)
             {
@@ -98,10 +104,42 @@ public class Sniper : MonoBehaviour
                     bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f);
                     break;
             }
-
+            bullet.GetComponent<SniperShot>().SetDamage(damage);
+           
             Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
             fireRate = 0;
         }
 
+    }
+    void RollStats()
+    {
+        if(rariety <= 64)
+        {
+            //common
+            damage = Random.Range(2400, 3000);
+            ROF = Random.Range(2.0f, 2.5f);
+            accMin = 0;
+        }
+        else if(rariety <= 94)
+        {
+            //unique
+            damage = Random.Range(3000, 3500);
+            ROF = Random.Range(1.55f, 2.0f);
+            accMin = 0;
+        }
+       else if(rariety <= 99)
+        {
+            //rare
+            damage = Random.Range(3500, 4000);
+            ROF = Random.Range(0.75f, 1.25f);
+            accMin = 0;
+        }
+        else if(rariety == 100)
+        {
+            //contraban
+            damage = Random.Range(5000, 6000);
+            ROF = Random.Range(0.4f, 0.6f);
+            accMin = 0;
+        }
     }
 }

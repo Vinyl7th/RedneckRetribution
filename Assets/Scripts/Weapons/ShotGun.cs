@@ -13,12 +13,18 @@ public class ShotGun : MonoBehaviour
     int element;
     bool isRight;
     public bool currWeapon = false;
+
+    public int rariety;
+    public int damage;
+    public float ROF;
+    public float accMin;
+    public float accMax;
     // Use this for initialization
     void Start()
     {
         thePlayer = GameObject.FindGameObjectWithTag("Player").transform;
         Reticule = GameObject.FindGameObjectWithTag("Reticule").transform;
-
+        RollStats();
     }
 
     // Update is called once per frame
@@ -80,7 +86,7 @@ public class ShotGun : MonoBehaviour
     void ShootGun(int type)
     {
 
-        if (fireRate >= 0.5f)
+        if (fireRate >= ROF)
         {
             switch (element)
             {
@@ -99,12 +105,51 @@ public class ShotGun : MonoBehaviour
             }
             for (int i = 0; i < 15; i++)
             {
+                bullet.GetComponent<Pellet>().SetDamage(damage);
+                bullet.GetComponent<Pellet>().accMin = accMin;
+                bullet.GetComponent<Pellet>().accMax = accMax;
                 Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
 
             }
             fireRate = 0;
         }
 
+    }
+    void RollStats()
+    {
+        if (rariety <= 64)
+        {
+            //common
+            damage = Random.Range(110, 140);
+            ROF = Random.Range(0.75f, 1);
+            accMin = -0.2f;
+            accMax = 0.2f;
+
+        }
+        else if (rariety <= 94)
+        {
+            //unique
+            damage = Random.Range(170, 230);
+            ROF = Random.Range(0.45f, 0.65f);
+            accMin = -0.1f;
+            accMax = 0.1f;
+        }
+        else if (rariety <= 99)
+        {
+            //rare
+            damage = Random.Range(250, 325);
+            ROF = Random.Range(0.3f, 0.4f);
+            accMin = -0.05f;
+            accMax = 0.05f;
+        }
+        else if (rariety == 100)
+        {
+            //contraban
+            damage = Random.Range(420, 640);
+            ROF = Random.Range(0.2f, 0.1f);
+            accMin = -0.02f;
+            accMax = 0.02f;
+        }
     }
 
 }

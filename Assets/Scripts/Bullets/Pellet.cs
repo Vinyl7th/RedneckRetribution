@@ -6,6 +6,8 @@ public class Pellet : MonoBehaviour
 
     float bulletSpeed;
     float accuracy;
+    public float accMin;
+    public float accMax;
     float displayDelay = 0.0f;
     public int damage;
     GameObject thePlayer;
@@ -15,7 +17,7 @@ public class Pellet : MonoBehaviour
     void Start()
     {
         bulletSpeed = Random.Range(13, 16);
-        accuracy = Random.Range(-0.05f, 0.05f);
+        accuracy = Random.Range(accMin, accMax);
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         playerPos = thePlayer.transform.position;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;

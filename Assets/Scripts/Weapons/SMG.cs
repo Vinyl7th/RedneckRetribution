@@ -13,12 +13,18 @@ public class SMG : MonoBehaviour
     int element;
     bool isRight;
     public bool currWeapon = false;
+
+    public int rariety;
+    public int damage;
+    public float ROF;
+    public float accMin;
+    public float accMax;
     // Use this for initialization
     void Start()
     {
         thePlayer = GameObject.FindGameObjectWithTag("Player").transform;
         Reticule = GameObject.FindGameObjectWithTag("Reticule").transform;
-
+        RollStats();
     }
 
     // Update is called once per frame
@@ -80,7 +86,7 @@ public class SMG : MonoBehaviour
     void ShootGun(int type)
     {
 
-        if (fireRate >= 0.04f)
+        if (fireRate >= ROF)
         {
             switch (element)
             {
@@ -97,11 +103,48 @@ public class SMG : MonoBehaviour
                     bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f);
                     break;
             }
-            bullet.GetComponent<Bullet>().SetDamage(20);
+            bullet.GetComponent<Bullet>().SetDamage(damage);
+            bullet.GetComponent<Bullet>().accMin = accMin;
+            bullet.GetComponent<Bullet>().accMax = accMax;
             Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
             fireRate = 0;
         }
 
+    }
+    void RollStats()
+    {
+        if (rariety <= 64)
+        {
+            //common
+            damage = Random.Range(15, 25);
+            ROF = Random.Range(0.035f, 0.05f);
+            accMin = -0.12f;
+            accMax = 0.12f;
+        }
+        else if (rariety <= 94)
+        {
+            //unique
+            damage = Random.Range(20, 30);
+            ROF = Random.Range(0.03f, 0.04f);
+            accMin = -0.1f;
+            accMax = 0.11f;
+        }
+        else if (rariety <= 99)
+        {
+            //rare
+            damage = Random.Range(30, 40);
+            ROF = Random.Range(0.03f, 0.04f);
+            accMin = -0.08f;
+            accMax = 0.08f;
+        }
+        else if (rariety == 100)
+        {
+            //contraban
+            damage = Random.Range(50, 75);
+            ROF = Random.Range(0.01f, 0.0013f);
+            accMin = -0.01f;
+            accMax = 0.01f;
+        }
     }
 
 }
