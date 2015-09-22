@@ -4,12 +4,7 @@ using System.Collections;
 public class skeleton : MonoBehaviour {
 
     //Gameobjects for the player and a object for the killcounter
-    GameObject thePlayer,
-               killCounter;
-
-    
-
-
+    GameObject thePlayer;
 
     //varibles for the visual feedback when the skeleton takes damage
     Color baseColor;
@@ -153,13 +148,7 @@ public class skeleton : MonoBehaviour {
         }
 
     }
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.gameObject.tag == "Player")
-    //    {
-    //        other.SendMessage("TakePhysicalDamage", 50);
-    //    }
-    //}
+   
 
 
     //Check if the enemy leaves the range of the necro's aura

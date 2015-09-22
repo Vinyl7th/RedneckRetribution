@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.7900009, y: 6.76000023, z: -8}
+  m_LocalPosition: {x: 21.7900009, y: 6.76000023, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,6 +85,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319dcea0a25a4b346b7ecfbe92199bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aggroRange: 0
+  moveSpeed: 0
+  maxHealth: 0
+  hitPoints: 0
 --- !u!212 &21243580
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -117,7 +121,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 178348}

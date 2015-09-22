@@ -43,6 +43,7 @@ GameObject:
   - 58: {fileID: 5842378}
   - 61: {fileID: 6104580}
   - 50: {fileID: 5081202}
+  - 114: {fileID: 11444802}
   m_Layer: 10
   m_Name: MotherSpider
   m_TagString: Enemy
@@ -114,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.0100002, y: 6.829, z: -8}
+  m_LocalPosition: {x: 19.0100002, y: 6.829, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 433838}
@@ -214,6 +215,22 @@ BoxCollider2D:
   m_Offset: {x: .0213222504, y: -.0170559883}
   serializedVersion: 2
   m_Size: {x: .712206483, y: .806022525}
+--- !u!114 &11444802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c080bf3c482a0b46ada1d7faf634c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireWeakness: 1
+  iceWeakness: 0
+  poisonWeakness: 0
+  darkWeakness: 0
+  physicalWeakness: 0
 --- !u!114 &11455782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -225,17 +242,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ddb097a3296d3478fbfb3ce1f5adeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpiderWeb: {fileID: 0}
-  BabySpider: {fileID: 0}
-  SummonSpider:
-  - {fileID: 433838}
-  - {fileID: 473892}
-  - {fileID: 476382}
-  - {fileID: 463068}
-  - {fileID: 496006}
+  SpiderWeb: {fileID: 166402, guid: f298412081b74e340be5f42733b3b235, type: 2}
+  BabySpider: {fileID: 178348, guid: f006d4c94682c7546a0d26bbabad2491, type: 2}
   aggroRange: 0
-  runAway: 0
-  moveSpeed: 0
   maxHealth: 0
   hitPoints: 0
   fireDelay: 0
@@ -272,7 +281,23 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: SpiderWeb
+      value: 
+      objectReference: {fileID: 166402, guid: f298412081b74e340be5f42733b3b235, type: 2}
+    - target: {fileID: 0}
+      propertyPath: BabySpider
+      value: 
+      objectReference: {fileID: 178348, guid: f006d4c94682c7546a0d26bbabad2491, type: 2}
+    - target: {fileID: 0}
+      propertyPath: fireWeakness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 127168}
