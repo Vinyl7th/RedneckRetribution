@@ -48,7 +48,7 @@ public class Fireball : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        if (other.gameObject.tag != "Enemy")
+       // if (other.gameObject.tag != "Enemy")
             Destroy(gameObject);
 
     }
