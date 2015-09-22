@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11467336}
   - 61: {fileID: 6120430}
   - 50: {fileID: 5037654}
+  - 114: {fileID: 11440698}
   m_Layer: 10
   m_Name: babySpider
   m_TagString: Enemy
@@ -74,6 +75,22 @@ BoxCollider2D:
   m_Offset: {x: .00852775574, y: -.00852775574}
   serializedVersion: 2
   m_Size: {x: .230635509, y: .247692615}
+--- !u!114 &11440698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c080bf3c482a0b46ada1d7faf634c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireWeakness: 1
+  iceWeakness: 0
+  poisonWeakness: 0
+  darkWeakness: 0
+  physicalWeakness: 0
 --- !u!114 &11467336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,6 +142,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fireWeakness
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
