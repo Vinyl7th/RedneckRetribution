@@ -51,6 +51,11 @@ public class Room : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
+            foreach (Transform child in transform)
+            {
+                child.SendMessage("Spawn");
+            }
+
             Vector3 playerPos = coll.gameObject.transform.position;
             Vector3 roomPos = gameObject.transform.position;
 

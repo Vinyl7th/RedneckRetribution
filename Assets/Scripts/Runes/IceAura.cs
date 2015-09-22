@@ -22,7 +22,7 @@ public class IceAura : MonoBehaviour
         theRigidBody = GetComponent<Rigidbody2D>();
         x = transform.position.x;
         y = transform.position.y;
-        Vector3 temp = Vector3.forward;
+        
        
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, .25f);
         offsetx = Random.Range(-8.0f, 8.0f);

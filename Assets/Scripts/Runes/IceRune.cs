@@ -6,15 +6,19 @@ public class IceRune : MonoBehaviour
 
     public bool current = false;
     bool active;
+    bool spikeActive = false;
     int charges;
     int element;
     Transform thePlayer;
     Vector3 offSet;
     public GameObject iceAura;
+    public GameObject iceSpike;
     float timer = 0.0f;
 
 
-
+    float spikeSpawnCooldown;
+    int spikeSpawned = 0;
+    int spikeMax = 70;
     // Use this for initialization
     void Start()
     {
@@ -49,11 +53,13 @@ public class IceRune : MonoBehaviour
                 timer = 0;
             }
         }
+        if (spikeActive)
+            IceSpike();
     }
     public void OnUse()
     {
         IceAura();
-
+        IceSpike();
         charges--;
     }
     public void ChangeCurrent()
@@ -70,5 +76,22 @@ public class IceRune : MonoBehaviour
     void IceAura()
     {
         active = true;
+    }
+    void IceSpike()
+    {
+        spikeSpawnCooldown += Time.deltaTime;
+        spikeActive = true;
+        if (spikeSpawned == spikeMax)
+        {
+            spikeActive = false;
+            spikeSpawned = 0;
+            charges--;
+        }
+        if (spikeSpawnCooldown >= 0.1f)
+        {
+            Instantiate(iceSpike, GameObject.FindGameObjectWithTag("Reticule").transform.position, thePlayer.transform.rotation);
+            spikeSpawned++;
+            spikeSpawnCooldown = 0.0f;
+        }
     }
 }
