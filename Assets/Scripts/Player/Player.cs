@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
             else
             {
                 GetComponent<PlayerStats>().pHealthCurr = GetComponent<PlayerStats>().pHealthMax;
+                Destroy(currRune);
+                phoenixEgg = false;
             }
         }
         moveVelocity = new Vector2(0, 0);
