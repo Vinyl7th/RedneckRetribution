@@ -56,7 +56,7 @@ public class SMG : MonoBehaviour
             if (!isRight)
             {
                 Vector3 curScale = transform.localScale;
-                curScale.y = -1;
+                curScale.y = 1;
                 transform.localScale = curScale;
                 isRight = true;
             }
@@ -68,7 +68,7 @@ public class SMG : MonoBehaviour
             if (!isRight)
             {
                 Vector3 curScale = transform.localScale;
-                curScale.y = 1;
+                curScale.y = -1;
                 transform.localScale = curScale;
                 isRight = true;
             }
