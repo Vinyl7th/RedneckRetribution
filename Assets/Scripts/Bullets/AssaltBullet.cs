@@ -45,7 +45,10 @@ public class AssaltBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.gameObject.tag == "Default")
+        {
+            Destroy(gameObject);
+        }
     }
 
     void DestroySelf()
