@@ -4,11 +4,13 @@ using System.Collections;
 public class skeleton : MonoBehaviour {
 
     //Gameobjects for the player and a object for the killcounter
-    GameObject thePlayer,
-               killCounter;
+    GameObject thePlayer;
 
-    
+    [SerializeField]
+    AudioSource damageNoise;
 
+    [SerializeField]
+    AudioSource attackNoise;
 
 
     //varibles for the visual feedback when the skeleton takes damage
@@ -34,7 +36,8 @@ public class skeleton : MonoBehaviour {
         // At the start make the thePlayer gameobject the player with tag
         thePlayer = GameObject.FindWithTag("Player");
 
-        
+        damageNoise.volume = soundController.sfxValue;
+        attackNoise.volume = soundController.sfxValue;
 
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -101,6 +104,7 @@ public class skeleton : MonoBehaviour {
     //Function that passes the amount damage the enemy needs to receive
     public void RecieveDamage(float _dmg)
     {
+        damageNoise.Play();
         hitPoints -= _dmg;
         changeColor = true;
 
@@ -149,17 +153,12 @@ public class skeleton : MonoBehaviour {
 
         if(other.gameObject.tag == "Player")
         {
+            attackNoise.Play();
             other.SendMessage("TakePhysicalDamage", 50);
         }
 
     }
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.gameObject.tag == "Player")
-    //    {
-    //        other.SendMessage("TakePhysicalDamage", 50);
-    //    }
-    //}
+   
 
 
     //Check if the enemy leaves the range of the necro's aura

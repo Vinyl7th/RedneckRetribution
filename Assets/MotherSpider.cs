@@ -7,7 +7,12 @@ public class MotherSpider : MonoBehaviour {
     public GameObject SpiderWeb, BabySpider;
     GameObject spiderspawn;
 
-   public Transform[] SummonSpider; 
+    [SerializeField]
+    AudioSource hurtSound;
+    [SerializeField]
+    AudioSource webSound;
+    [SerializeField]
+    AudioSource squishSound;
 
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer,
@@ -20,12 +25,14 @@ public class MotherSpider : MonoBehaviour {
 
     //bool to switch when the necro fireball cast is on cooldown
     bool offCoolDown;
+    float healthRegenTimer = 0.0f;
+
+    bool regenHealth;
 
 
+ 
     //basic varible to hold the Necromancer's stats
     public float aggroRange,
-           runAway,
-           moveSpeed,
            maxHealth,
            hitPoints,
            fireDelay,
@@ -38,6 +45,10 @@ public class MotherSpider : MonoBehaviour {
     void Start () {
         thePlayer = GameObject.FindWithTag("Player");
 
+        hurtSound.volume = soundController.sfxValue;
+        squishSound.volume = soundController.sfxValue;
+        webSound.volume = soundController.sfxValue;
+
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
         changeColor = false;
@@ -45,15 +56,13 @@ public class MotherSpider : MonoBehaviour {
 
         //have offcooldown set to true so he fires at the beginning
         offCoolDown = true;
-        SummonSpider = new Transform[5];
 
+        regenHealth = false;
 
         // Set the Enemy's Movement Speed, Hitpoints, aggrorange,
         //when to runaway, and when cast fireballs
         aggroRange = 20.0f;
-        moveSpeed = 3f;
         hitPoints = 5000.0f;
-        runAway = 5;
         maxHealth = hitPoints;
 
     }
@@ -63,6 +72,21 @@ public class MotherSpider : MonoBehaviour {
 
         if (!offCoolDown)
             delayCastSpiderWeb += Time.deltaTime;
+
+        healthRegenTimer += Time.deltaTime;
+
+        if (regenHealth == true && hitPoints < maxHealth)
+        {
+            if (healthRegenTimer >= 0.5f)
+            {
+                if (hitPoints < maxHealth)
+                    hitPoints += 50;
+                if (hitPoints >= maxHealth)
+                    hitPoints = maxHealth;
+
+                healthRegenTimer = 0.0f;
+            }
+        }
 
 
         //  if enemy took damage  
@@ -89,14 +113,21 @@ public class MotherSpider : MonoBehaviour {
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints <= 2500.0f)
         {
+            squishSound.Play();
             SummonSpiderpoint();
-            Destroy(gameObject);
+            for (int i = 0; i < 1500; i++)
+            {
+                if(i == 1498)
+                Destroy(gameObject);
+            }
+            
         }
 
     }
 
     public void RecieveDamage(float _dmg)
     {
+        hurtSound.Play();
         hitPoints -= _dmg;
         changeColor = true;
 
@@ -145,8 +176,13 @@ public class MotherSpider : MonoBehaviour {
 
     void CastSpiderWeb()
     {
+        webSound.Play();
         Instantiate(SpiderWeb, gameObject.transform.position, gameObject.transform.rotation);
     }
+
+
+
+
 
 
     void SummonSpiderpoint()
@@ -154,27 +190,43 @@ public class MotherSpider : MonoBehaviour {
 
         for (int i = 0; i < 20; i++)
         {
-            int _num = Random.Range(0, 4);
-            switch (_num)
-            {
-                case 0:
-                    Instantiate(BabySpider, SummonSpider[0].transform.position, gameObject.transform.rotation);
-                    break;
-                case 1:
-                    Instantiate(BabySpider, SummonSpider[1].transform.position, gameObject.transform.rotation);
-                    break;
-                case 2:
-                    Instantiate(BabySpider, SummonSpider[2].transform.position, gameObject.transform.rotation);
-                    break;
-                case 3:
-                    Instantiate(BabySpider, SummonSpider[3].transform.position, gameObject.transform.rotation);
-                    break;
-                case 4:
-                    Instantiate(BabySpider, SummonSpider[4].transform.position, gameObject.transform.rotation);
-                    break;
-            }
+            float _x = Random.Range(-2, 2);
+            float _y = Random.Range(-2, 2);
+
+            Vector3 randpos = new Vector3(gameObject.transform.position.x +_x, gameObject.transform.position.y + _y, gameObject.transform.position.z);
+            Instantiate(BabySpider, randpos, gameObject.transform.rotation);
+                
         }
     }
+
+
+    //Check if the enemy leaves the range of the necro's aura
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "NecroAura")
+            regenHealth = false;
+    }
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "NecroAura")
+        {
+            regenHealth = true;
+        }
+
+        if (other.gameObject.tag == "Player")
+        {
+            other.SendMessage("TakePhysicalDamage", 50);
+            Destroy(gameObject);
+        }
+
+    }
+
+
+
+
+
+
+
 }
 
 
