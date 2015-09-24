@@ -36,12 +36,12 @@ public class PlayerStats : MonoBehaviour {
     {
         src.Play();
         pHealthCurr -= _damage;
-        if (pHealthCurr <= 0.0f)
-        {
+       // if (pHealthCurr <= 0.0f)
+       // {
             
-            pHealthCurr = 0.0f;
-            pIsAlive = false;
-            Application.LoadLevel("Menu_Main");
-        }
+           // pHealthCurr = 0.0f;
+            //pIsAlive = false;
+            //Application.LoadLevel("Menu_Main");
+       // }
     }
 }
