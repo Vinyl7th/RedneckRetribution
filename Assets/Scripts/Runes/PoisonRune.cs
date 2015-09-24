@@ -62,6 +62,7 @@ public class PoisonRune : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().SetElement(element);
             current = true;
+            transform.position = GameObject.FindWithTag("HUDRune").transform.position;
         }
 
     }
@@ -70,7 +71,7 @@ public class PoisonRune : MonoBehaviour
         for (int i = 0; i < 30; i++)
         {
             gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            Instantiate(swordsDance, gameObject.transform.position, gameObject.transform.rotation);
+            Instantiate(swordsDance, thePlayer.position, gameObject.transform.rotation);
             angle += 15;
         }
         angle = 0.0f;
@@ -81,6 +82,6 @@ public class PoisonRune : MonoBehaviour
     }
     void SiphonShot()
     {
-        Instantiate(siphonShot, transform.position, transform.rotation);
+        Instantiate(siphonShot, thePlayer.position, thePlayer.rotation);
     }
 }

@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
             if (currRune)
                 currRune.SendMessage("OnUse");
         }
-        if (Input.GetButton("PickUP"))
+        if (Input.GetButtonDown("PickUP"))
         {
             if (C_Object)
             {

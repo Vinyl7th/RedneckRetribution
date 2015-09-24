@@ -56,6 +56,7 @@ public class FireRune : MonoBehaviour
             current = false;
             if (phoenixEgg)
                 thePlayer.SendMessage("PhoenixEgg");
+            transform.position = GameObject.FindWithTag("Player").transform.position;
         }
         else
         {
