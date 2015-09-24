@@ -7,7 +7,12 @@ public class MotherSpider : MonoBehaviour {
     public GameObject SpiderWeb, BabySpider;
     GameObject spiderspawn;
 
-   
+    [SerializeField]
+    AudioSource hurtSound;
+    [SerializeField]
+    AudioSource webSound;
+    [SerializeField]
+    AudioSource squishSound;
 
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer,
@@ -39,6 +44,10 @@ public class MotherSpider : MonoBehaviour {
     // Use this for initialization
     void Start () {
         thePlayer = GameObject.FindWithTag("Player");
+
+        hurtSound.volume = soundController.sfxValue;
+        squishSound.volume = soundController.sfxValue;
+        webSound.volume = soundController.sfxValue;
 
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -104,14 +113,21 @@ public class MotherSpider : MonoBehaviour {
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints <= 2500.0f)
         {
+            squishSound.Play();
             SummonSpiderpoint();
-            Destroy(gameObject);
+            for (int i = 0; i < 1500; i++)
+            {
+                if(i == 1498)
+                Destroy(gameObject);
+            }
+            
         }
 
     }
 
     public void RecieveDamage(float _dmg)
     {
+        hurtSound.Play();
         hitPoints -= _dmg;
         changeColor = true;
 
@@ -160,8 +176,13 @@ public class MotherSpider : MonoBehaviour {
 
     void CastSpiderWeb()
     {
+        webSound.Play();
         Instantiate(SpiderWeb, gameObject.transform.position, gameObject.transform.rotation);
     }
+
+
+
+
 
 
     void SummonSpiderpoint()

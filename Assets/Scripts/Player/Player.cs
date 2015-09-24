@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     Vector2 moveVelocity;
 
     public bool standingOnObject;
-    GameObject gun;
+    public GameObject gun;
     public GameObject currRune;
     GameObject C_Object;
     // Use this for initialization
