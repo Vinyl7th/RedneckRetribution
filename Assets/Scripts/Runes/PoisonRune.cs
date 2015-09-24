@@ -71,7 +71,7 @@ public class PoisonRune : MonoBehaviour
         for (int i = 0; i < 30; i++)
         {
             gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            Instantiate(swordsDance, thePlayer.position, thePlayer.rotation);
+            Instantiate(swordsDance, thePlayer.position, gameObject.transform.rotation);
             angle += 15;
         }
         angle = 0.0f;

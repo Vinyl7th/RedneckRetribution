@@ -8351,6 +8351,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
       propertyPath: poison
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
+      propertyPath: ice
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
