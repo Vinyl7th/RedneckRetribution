@@ -10,8 +10,9 @@ public class Player : MonoBehaviour
 
     public bool standingOnObject;
     public GameObject gun;
-    public GameObject currRune;
+    public GameObject currRune = null;
     GameObject C_Object;
+    bool phoenixEgg;
     // Use this for initialization
     void Start()
     {
@@ -21,6 +22,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GetComponent<PlayerStats>().pHealthCurr == 0)
+        {
+            if (!phoenixEgg)
+                Destroy(gameObject);
+            else
+            {
+                GetComponent<PlayerStats>().pHealthCurr = GetComponent<PlayerStats>().pHealthMax;
+                Destroy(currRune);
+                phoenixEgg = false;
+            }
+        }
         moveVelocity = new Vector2(0, 0);
         if (Input.GetButton("MoveUp"))
         {
@@ -115,5 +127,12 @@ public class Player : MonoBehaviour
     public void RuneDestroyed()
     {
         elementalType = 0;
+    }
+    public void PhoenixEgg()
+    {
+        if (phoenixEgg)
+            phoenixEgg = false;
+        else
+            phoenixEgg = true;
     }
 }

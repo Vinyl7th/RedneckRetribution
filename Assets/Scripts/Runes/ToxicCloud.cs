@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IceAura : MonoBehaviour
+public class ToxicCloud : MonoBehaviour
 {
 
     float deathTime;
@@ -15,15 +15,15 @@ public class IceAura : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
-        
-            deathTime = 0.1f;
+
+
+        deathTime = 0.5f;
 
         theRigidBody = GetComponent<Rigidbody2D>();
         x = transform.position.x;
         y = transform.position.y;
-        
-       
+
+
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, .25f);
         offsetx = Random.Range(-8.0f, 8.0f);
         offsety = Random.Range(-8.0f, 8.0f);

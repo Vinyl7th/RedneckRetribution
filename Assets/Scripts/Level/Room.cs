@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Room : MonoBehaviour {
+public class Room : MonoBehaviour
+{
 
     GameObject thePlayer;
     public GameObject spikes;
@@ -21,11 +22,11 @@ public class Room : MonoBehaviour {
 
     bool spikesSpawned = false;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         thePlayer = GameObject.FindWithTag("Player");
-	}
+    }
 
     // Update is called once per frame
     void Update()
@@ -45,7 +46,7 @@ public class Room : MonoBehaviour {
             bufferTime = 0.0f;
         }
 
-	}
+    }
 
     void OnTriggerEnter2D(Collider2D coll)
     {
@@ -69,8 +70,8 @@ public class Room : MonoBehaviour {
             {
                 playerPos.y += 1.5f;
                 playerPos.x = roomPos.x;
-                
-                if(!spikesSpawned)
+
+                if (!spikesSpawned)
                     SpawnSpikes();
 
                 thePlayer.gameObject.transform.position = playerPos;

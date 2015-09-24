@@ -1,69 +1,79 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &127648
+--- !u!1 &198332
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 492104}
-  - 114: {fileID: 11474696}
-  - 212: {fileID: 21247810}
-  - 61: {fileID: 6113366}
-  m_Layer: 0
-  m_Name: IceRune
-  m_TagString: Rune
+  - 4: {fileID: 452026}
+  - 212: {fileID: 21292238}
+  - 114: {fileID: 11424446}
+  - 61: {fileID: 6106550}
+  - 114: {fileID: 11438702}
+  m_Layer: 9
+  m_Name: SnowBall
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &492104
+--- !u!4 &452026
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127648}
+  m_GameObject: {fileID: 198332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.73999977, y: -4.94999981, z: 0}
+  m_LocalPosition: {x: -29.2726879, y: .325967133, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6113366
+--- !u!61 &6106550
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127648}
+  m_GameObject: {fileID: 198332}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
---- !u!114 &11474696
+  m_Size: {x: .319999993, y: .319999993}
+--- !u!114 &11424446
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127648}
+  m_GameObject: {fileID: 198332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cf528be6314f5a4480121087d934c08, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e921c3d07944044f91b29f62a658c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: 0
-  iceAura: {fileID: 158928, guid: f97c3cb7b14679943aecf3139209e713, type: 2}
-  iceSpike: {fileID: 198130, guid: ce470a28d6e69a447987a17a1d2a830c, type: 2}
-  snowBall: {fileID: 198332, guid: 283b604e03fd6df468d0f46dcf867523, type: 2}
---- !u!212 &21247810
+  damage: 500
+--- !u!114 &11438702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aef48f4daf7faf46a3dc2007c1cc6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletType: 5
+--- !u!212 &21292238
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127648}
+  m_GameObject: {fileID: 198332}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -82,7 +92,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 59455ec4561ede341ab794c9bc486fda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 276688136dfce534cb2b399e7de2e15d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -92,14 +102,18 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: iceSpike
-      value: 
-      objectReference: {fileID: 198130, guid: ce470a28d6e69a447987a17a1d2a830c, type: 2}
+      propertyPath: m_TagString
+      value: Bullet
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: snowBall
-      value: 
-      objectReference: {fileID: 198332, guid: 283b604e03fd6df468d0f46dcf867523, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bulletType
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 127648}
+  m_RootGameObject: {fileID: 198332}
   m_IsPrefabParent: 1
