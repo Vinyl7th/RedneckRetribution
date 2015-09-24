@@ -32,6 +32,11 @@ public class HealthBar : MonoBehaviour {
             MaxHealth = gameObject.GetComponentInParent<Necromancer>().maxHealth;
             CurrHealth = gameObject.GetComponentInParent<Necromancer>().hitPoints;
         }
+        else if (Etype == 3)
+        {
+            MaxHealth = gameObject.GetComponentInParent<WastelandBoss>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<WastelandBoss>().hitPoints;
+        }
 
 
         Vector3 displayPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + heightOffset, -8.0f);

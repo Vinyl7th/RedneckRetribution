@@ -73,11 +73,8 @@ public class WastelandGun : MonoBehaviour {
 
     }
 
-    void ShootGun(int type)
+    public void ShootGun()
     {
-        
-       
-            Instantiate(Wastelandbullet, gameObject.transform.position, gameObject.transform.rotation);
-            fireRate = 0;
+      Instantiate(Wastelandbullet, gameObject.transform.position, gameObject.transform.rotation); 
     }
 }

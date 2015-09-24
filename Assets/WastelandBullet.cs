@@ -19,7 +19,7 @@ public class WastelandBullet : MonoBehaviour {
     void Start()
     {
 
-        fireballSpeed = 10;
+        fireballSpeed = 13;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         accuracy = Random.Range(-0.05f, 0.05f);
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -33,7 +33,7 @@ public class WastelandBullet : MonoBehaviour {
     void Update()
     {
         displayDelay += Time.deltaTime;
-        if (displayDelay >= 0.05f)
+        if (displayDelay >= 0.1f)
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
         timer += Time.deltaTime;
         if (timer >= 8.0f)
@@ -53,7 +53,7 @@ public class WastelandBullet : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        // if (other.gameObject.tag != "Enemy")
+        if (other.gameObject.tag != "Enemy")
         Destroy(gameObject);
 
     }

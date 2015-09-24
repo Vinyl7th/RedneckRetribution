@@ -14,6 +14,7 @@ public class WastelandBoss : MonoBehaviour {
     bool changeColor;
     float delayColorChanger;
 
+    bool _Find;
     bool _Fire;
     int count = 0;
     float fireDelay;
@@ -21,12 +22,13 @@ public class WastelandBoss : MonoBehaviour {
     public float moveSpeed,
           maxHealth,
           hitPoints;
-
+    int waypathing;
+    float distance;
 
     // Use this for initialization
     void Start () {
-        
-        Instantiate(HisGun, transform.position, transform.rotation);
+        Instantiate(HisGun, gameObject.transform.position, gameObject.transform.rotation);
+        HisGun = GameObject.FindWithTag("Boss_Gun");
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -35,7 +37,7 @@ public class WastelandBoss : MonoBehaviour {
         _Fire = false;
         fireDelay = 0;
         moveSpeed = 5f;
-        hitPoints = 15000.0f;
+        hitPoints = 8000.0f;
         maxHealth = hitPoints;
         Waypoint = GameObject.FindGameObjectsWithTag("Boss_Waypoint");
 
@@ -95,17 +97,30 @@ public class WastelandBoss : MonoBehaviour {
             {
                 //calling the function to fire the fireball
                 HisGun.SendMessage("ShootGun");
+                
                 count++;
                 if (count == 15)
+                {
                     _Fire = false;
+                    _Find = true;
+                }
+                    
                 fireDelay = 0;
             }
 
         }
         else
         {
+          
             count = 0;
             Move();
+        }
+
+        //if the healthpoints are 0 destroy the enemy on screen
+        if (hitPoints < 0.0f)
+        {
+            Destroy(HisGun);
+            Destroy(gameObject);
         }
 
     }
@@ -120,8 +135,11 @@ public class WastelandBoss : MonoBehaviour {
 
     void Move()
     {
-       int waypathing = Random.Range(0, 4);
-        float distance;
+        if (_Find == true)
+        {
+            waypathing = Random.Range(0, 4);
+            _Find = false;
+        }
         float movetoWaypoint;
 
         switch (waypathing)

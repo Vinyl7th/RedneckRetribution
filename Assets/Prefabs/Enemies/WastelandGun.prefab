@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11438798}
   m_Layer: 0
   m_Name: WastelandGun
-  m_TagString: Untagged
+  m_TagString: Boss_Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,6 +87,10 @@ Prefab:
       propertyPath: Wastelandbullet
       value: 
       objectReference: {fileID: 183464, guid: 6c895517049a6f2419c1ae3dbf099068, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Boss_Gun
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 194156}
