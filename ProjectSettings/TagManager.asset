@@ -16,6 +16,7 @@ TagManager:
   - EnemyBullet
   - Traps
   - Boss_Waypoint
+  - HUDRune
   layers:
   - Default
   - TransparentFX
