@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hardCode: 0
-  theSMG: {fileID: 117950, guid: e9713754659c2be4bb9d08f23868cad6, type: 2}
+  theSMG: {fileID: 127556, guid: e9713754659c2be4bb9d08f23868cad6, type: 2}
   SMG: 0
   theShotGun: {fileID: 139788, guid: d3210aee694d64d42b0fdf66ad000d57, type: 2}
   ShotGun: 0
@@ -58,7 +58,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: theSMG
+      value: 
+      objectReference: {fileID: 127556, guid: e9713754659c2be4bb9d08f23868cad6, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 128560}
