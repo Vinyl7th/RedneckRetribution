@@ -35,7 +35,7 @@ public class IceRune : MonoBehaviour
     {
         if (current)
         {
-            transform.position = thePlayer.position;
+            transform.position = GameObject.FindWithTag("HUDRune").transform.position;
         }
         timer += Time.deltaTime;
         if (charges == 0 && !active)
@@ -71,7 +71,11 @@ public class IceRune : MonoBehaviour
     public void ChangeCurrent()
     {
         if (current)
+        {
+
             current = false;
+            transform.position = GameObject.FindWithTag("Player").transform.position;
+        }
         else
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().SetElement(element);
@@ -102,6 +106,6 @@ public class IceRune : MonoBehaviour
     }
     void SnowBall()
     {
-        Instantiate(snowBall, transform.position, transform.rotation);
+        Instantiate(snowBall, thePlayer.position, thePlayer.rotation);
     }
 }
