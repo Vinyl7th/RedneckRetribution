@@ -46,7 +46,7 @@ public class skeleton : MonoBehaviour {
 
         regenHealth = false;
         // Set the Enemy's Movement Speed, Hitpoints, and aggrorange
-        aggroRange = 10.0f;
+        aggroRange = 20.0f;
         moveSpeed = 4.2f;
         hitPoints = 2000.0f;
         maxHealth = hitPoints;

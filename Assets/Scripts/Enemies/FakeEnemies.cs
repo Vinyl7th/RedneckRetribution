@@ -3,7 +3,8 @@ using System.Collections;
 
 public class FakeEnemies : MonoBehaviour
 {
-   public  float hp = 1000;
+    public float hp = 1000;
+    public float hpMax = 1000;
     // Use this for initialization
     void Start()
     {

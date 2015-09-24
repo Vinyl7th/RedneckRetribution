@@ -424,7 +424,7 @@ Transform:
   - {fileID: 235237892}
   - {fileID: 428467425}
   m_Father: {fileID: 1086367364}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &32616029
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +681,10 @@ Prefab:
     - target: {fileID: 497454, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
+      propertyPath: poison
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
@@ -1637,6 +1641,10 @@ Prefab:
       propertyPath: m_Name
       value: RuneSpawner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
+      propertyPath: ice
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
   m_IsPrefabParent: 0
@@ -1777,6 +1785,7 @@ Transform:
   - {fileID: 1919400797}
   - {fileID: 183292398}
   - {fileID: 692813610}
+  - {fileID: 574334850}
   m_Father: {fileID: 1086367364}
   m_RootOrder: 5
 --- !u!1 &210081330
@@ -3923,6 +3932,7 @@ GameObject:
   - 81: {fileID: 437090086}
   - 114: {fileID: 437090091}
   - 114: {fileID: 437090092}
+  - 82: {fileID: 437090093}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -4014,7 +4024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followPlayer: 0
-  src: {fileID: 0}
+  src: {fileID: 437090093}
 --- !u!114 &437090092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4028,6 +4038,76 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 871504973}
   healthBarAnchor: {fileID: 2096110556}
+--- !u!82 &437090093
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 437090085}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 58042f14e452e1246a0d455b693e9967, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &443735765
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,7 +4333,7 @@ Transform:
   - {fileID: 1108663648}
   - {fileID: 2083919138}
   m_Father: {fileID: 1086367364}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!212 &456300675
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8588,6 +8668,10 @@ Prefab:
       propertyPath: ice
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
+      propertyPath: poison
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
   m_IsPrefabParent: 0
@@ -8935,6 +9019,14 @@ Prefab:
     - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
       propertyPath: ice
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
+      propertyPath: tier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
+      propertyPath: fire
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
@@ -10163,7 +10255,6 @@ Transform:
   - {fileID: 41666957}
   - {fileID: 70011578}
   - {fileID: 205404029}
-  - {fileID: 574334850}
   - {fileID: 1846290615}
   - {fileID: 1971398619}
   - {fileID: 31238518}
@@ -13062,7 +13153,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1086367364}
+    m_TransformParent: {fileID: 205404029}
     m_Modifications:
     - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
       propertyPath: m_LocalPosition.x
@@ -13070,7 +13161,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12.3699999
+      value: -7.63000011
       objectReference: {fileID: 0}
     - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13094,7 +13185,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11498910, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
       propertyPath: common
@@ -15178,7 +15269,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 460942, guid: ecd6ac8d57536c9498d3e3aa225fc789, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecd6ac8d57536c9498d3e3aa225fc789, type: 2}
@@ -15819,7 +15910,7 @@ Transform:
   - {fileID: 1900783691}
   - {fileID: 484097160}
   m_Father: {fileID: 1086367364}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!212 &1846290616
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17296,7 +17387,7 @@ Transform:
   - {fileID: 266126341}
   - {fileID: 1465781839}
   m_Father: {fileID: 1086367364}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &1999638661
 GameObject:
   m_ObjectHideFlags: 0

@@ -116,7 +116,7 @@ public class SMG : MonoBehaviour
         if (rariety <= 64)
         {
             //common
-            damage = Random.Range(15, 25);
+            damage = Random.Range(30, 50);
             ROF = Random.Range(0.035f, 0.05f);
             accMin = -0.12f;
             accMax = 0.12f;
@@ -124,7 +124,7 @@ public class SMG : MonoBehaviour
         else if (rariety <= 94)
         {
             //unique
-            damage = Random.Range(20, 30);
+            damage = Random.Range(40, 60);
             ROF = Random.Range(0.03f, 0.04f);
             accMin = -0.1f;
             accMax = 0.11f;
@@ -132,7 +132,7 @@ public class SMG : MonoBehaviour
         else if (rariety <= 99)
         {
             //rare
-            damage = Random.Range(30, 40);
+            damage = Random.Range(60, 80);
             ROF = Random.Range(0.03f, 0.04f);
             accMin = -0.08f;
             accMax = 0.08f;
@@ -140,7 +140,7 @@ public class SMG : MonoBehaviour
         else if (rariety == 100)
         {
             //contraban
-            damage = Random.Range(50, 75);
+            damage = Random.Range(150, 250);
             ROF = Random.Range(0.01f, 0.0013f);
             accMin = -0.01f;
             accMax = 0.01f;

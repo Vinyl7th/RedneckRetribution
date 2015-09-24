@@ -37,6 +37,11 @@ public class HealthBar : MonoBehaviour {
             MaxHealth = gameObject.GetComponentInParent<WastelandBoss>().maxHealth;
             CurrHealth = gameObject.GetComponentInParent<WastelandBoss>().hitPoints;
         }
+        else if (Etype == 4)
+        {
+            MaxHealth = gameObject.GetComponentInParent<FakeEnemies>().hpMax;
+            CurrHealth = gameObject.GetComponentInParent<FakeEnemies>().hp;
+        }
 
 
         Vector3 displayPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + heightOffset, -8.0f);

@@ -27,7 +27,8 @@ public class PlayerStats : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	
 	}
 
@@ -40,6 +41,7 @@ public class PlayerStats : MonoBehaviour {
             
             pHealthCurr = 0.0f;
             pIsAlive = false;
+            Application.LoadLevel("Menu_Main");
         }
     }
 }
