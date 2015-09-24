@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PoisonRune : MonoBehaviour {
+public class PoisonRune : MonoBehaviour
+{
 
     public bool current = false;
-   
+
     int charges;
     int element;
     Transform thePlayer;
     public GameObject swordsDance;
-    
+    public GameObject toxicEmmiter;
+    public GameObject siphonShot;
+    public int tier;
+    bool active;
     float angle = 0.0f;
 
 
@@ -35,12 +39,16 @@ public class PoisonRune : MonoBehaviour {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().RuneDestroyed();
             Destroy(gameObject);
         }
-     
+
     }
     public void OnUse()
     {
-        SwordsDance();
-
+        if (tier == 1)
+            SwordsDance();
+        if (tier == 2)
+            ToxicCloud();
+        if (tier == 3)
+            SiphonShot();
         charges--;
     }
     public void ChangeCurrent()
@@ -63,5 +71,13 @@ public class PoisonRune : MonoBehaviour {
             angle += 15;
         }
         angle = 0.0f;
+    }
+    void ToxicCloud()
+    {
+        Instantiate(toxicEmmiter, thePlayer.position, thePlayer.rotation);
+    }
+    void SiphonShot()
+    {
+        Instantiate(siphonShot, transform.position, transform.rotation);
     }
 }

@@ -10,6 +10,8 @@ public class FireRune : MonoBehaviour
     Vector3 offSet;
     public GameObject orbitingFire;
     public GameObject moltenWake;
+    public int tier;
+    bool phoenixEgg;
 
 
     float firespawnCooldown;
@@ -22,7 +24,9 @@ public class FireRune : MonoBehaviour
         thePlayer = GameObject.FindGameObjectWithTag("Player").transform;
         element = 1;
         charges = 3;
-        
+        if (tier == 3)
+            phoenixEgg = true;
+
     }
 
     // Update is called once per frame
@@ -40,21 +44,29 @@ public class FireRune : MonoBehaviour
     }
     public void OnUse()
     {
-        Orbitingfire();
-        MoltenWake();
+        if (tier == 1)
+            Orbitingfire();
+        if (tier == 2)
+            MoltenWake();
     }
     public void ChangeCurrent()
     {
         if (current)
+        {
             current = false;
+            if (phoenixEgg)
+                thePlayer.SendMessage("PhoenixEgg");
+        }
         else
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().SetElement(element);
             current = true;
+            if (phoenixEgg)
+                thePlayer.SendMessage("PhoenixEgg");
         }
 
     }
-    
+
     void Orbitingfire()
     {
         offSet.y = thePlayer.position.y + 2;
@@ -82,7 +94,7 @@ public class FireRune : MonoBehaviour
             firespawned++;
             firespawnCooldown = 0.0f;
         }
-      
+
     }
- 
+
 }

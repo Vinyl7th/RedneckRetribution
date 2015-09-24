@@ -56,6 +56,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   current: 0
   swordsDance: {fileID: 157090, guid: c5e207659ab829f43b27a13d2d64dc51, type: 2}
+  toxicEmmiter: {fileID: 124634, guid: b398bf43e7acc6f418881f95704d1bae, type: 2}
+  siphonShot: {fileID: 136346, guid: 331a5b42ecfd762479f81032ed9b7b93, type: 2}
 --- !u!212 &21202116
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -88,7 +90,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: toxicEmmiter
+      value: 
+      objectReference: {fileID: 124634, guid: b398bf43e7acc6f418881f95704d1bae, type: 2}
+    - target: {fileID: 0}
+      propertyPath: siphonShot
+      value: 
+      objectReference: {fileID: 136346, guid: 331a5b42ecfd762479f81032ed9b7b93, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 166372}
