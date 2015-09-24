@@ -5,6 +5,7 @@ public class HUD : MonoBehaviour {
 
     GameObject thePlayer;
     public GameObject healthBar;
+    public Transform healthBarAnchor;
     Vector3 healthBarInit;
     Vector3 healthBarPos;
 
@@ -15,21 +16,21 @@ public class HUD : MonoBehaviour {
 	void Start ()
     {
         thePlayer = GameObject.FindWithTag("Player");
-        healthBarInit = healthBar.transform.position;
         healthBarPos = healthBar.transform.position;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        MaxHP = gameObject.GetComponentInParent<PlayerStats>().pHealthMax;
-        CurrHP = gameObject.GetComponentInParent<PlayerStats>().pHealthCurr;
+        healthBarInit = healthBarAnchor.transform.position;
+
+        MaxHP = thePlayer.GetComponentInParent<PlayerStats>().pHealthMax;
+        CurrHP = thePlayer.GetComponentInParent<PlayerStats>().pHealthCurr;
 
         float ratio = CurrHP / MaxHP;
 
-        healthBarPos.z = -9.5f;
-        healthBarPos.x -= (0.5f * (1.0f - ratio));
-        healthBar.transform.position = healthBarPos;
+        healthBarInit.x -= (4f * (1.0f - ratio));
+        healthBar.transform.position = healthBarInit;
         Vector3 scale = new Vector3(1, 1, 1);
         scale.x = ratio;
         healthBar.transform.localScale = scale;
