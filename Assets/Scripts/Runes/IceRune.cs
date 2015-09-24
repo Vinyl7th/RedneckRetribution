@@ -13,6 +13,8 @@ public class IceRune : MonoBehaviour
     Vector3 offSet;
     public GameObject iceAura;
     public GameObject iceSpike;
+    public GameObject snowBall;
+    public int tier;
     float timer = 0.0f;
 
 
@@ -35,7 +37,7 @@ public class IceRune : MonoBehaviour
         {
             transform.position = thePlayer.position;
         }
-            timer += Time.deltaTime;
+        timer += Time.deltaTime;
         if (charges == 0 && !active)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().RuneDestroyed();
@@ -58,8 +60,12 @@ public class IceRune : MonoBehaviour
     }
     public void OnUse()
     {
-        IceAura();
-        IceSpike();
+        if (tier == 1)
+            IceAura();
+        if (tier == 2)
+            IceSpike();
+        if (tier == 3)
+            SnowBall();
         charges--;
     }
     public void ChangeCurrent()
@@ -93,5 +99,9 @@ public class IceRune : MonoBehaviour
             spikeSpawned++;
             spikeSpawnCooldown = 0.0f;
         }
+    }
+    void SnowBall()
+    {
+        Instantiate(snowBall, transform.position, transform.rotation);
     }
 }

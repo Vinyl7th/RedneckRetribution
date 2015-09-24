@@ -41,6 +41,10 @@ public class Enemy_Type_Calc : MonoBehaviour {
 
             if (type == 4)
                 incPlayerDamage = coll.gameObject.GetComponent<SniperShot>().damage;
+            if (type == 5)
+                incPlayerDamage = coll.gameObject.GetComponent<SnowBall>().damage;
+            if (type == 6)
+                incPlayerDamage = coll.gameObject.GetComponent<SiphonShot>().damage;
 
             pRuneType = thePlayer.GetComponent<Player>().elementalType;
 
