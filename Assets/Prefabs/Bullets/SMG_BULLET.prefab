@@ -86,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   accMin: -.119999997
   accMax: .119999997
-  damage: 24
+  damage: 16
 --- !u!212 &21215444
 SpriteRenderer:
   m_ObjectHideFlags: 1
