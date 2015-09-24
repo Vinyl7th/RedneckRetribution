@@ -7999,7 +7999,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
       propertyPath: hardCode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
       propertyPath: fire
@@ -8007,7 +8007,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
       propertyPath: ice
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
@@ -8355,6 +8355,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
       propertyPath: ice
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
+      propertyPath: tier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417546, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
+      propertyPath: fire
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
