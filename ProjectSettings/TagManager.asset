@@ -15,6 +15,7 @@ TagManager:
   - NecroAura
   - EnemyBullet
   - Traps
+  - Boss_Waypoint
   layers:
   - Default
   - TransparentFX
