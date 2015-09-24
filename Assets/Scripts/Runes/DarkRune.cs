@@ -20,7 +20,7 @@ public class DarkRune : MonoBehaviour
     {
         if (current)
         {
-            transform.position = thePlayer.transform.position;
+            transform.position = GameObject.FindWithTag("HUDRune").transform.position;
         }
         if (charges == 0)
             Destroy(gameObject);

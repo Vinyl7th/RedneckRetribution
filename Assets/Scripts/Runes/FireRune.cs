@@ -33,7 +33,7 @@ public class FireRune : MonoBehaviour
     void Update()
     {
         if (current)
-            transform.position = thePlayer.position;
+            transform.position = GameObject.FindWithTag("HUDRune").transform.position;
         if (active)
             MoltenWake();
         if (charges == 0)

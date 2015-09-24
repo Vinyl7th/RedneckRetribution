@@ -32,7 +32,7 @@ public class PoisonRune : MonoBehaviour
     {
         if (current)
         {
-            transform.position = thePlayer.position;
+            transform.position = GameObject.FindWithTag("HUDRune").transform.position;
         }
         if (charges == 0)
         {
@@ -54,7 +54,10 @@ public class PoisonRune : MonoBehaviour
     public void ChangeCurrent()
     {
         if (current)
+        {
             current = false;
+            transform.position = GameObject.FindWithTag("Player").transform.position;
+        }
         else
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().SetElement(element);

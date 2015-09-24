@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     public bool standingOnObject;
     public GameObject gun;
-    public GameObject currRune;
+    public GameObject currRune = null;
     GameObject C_Object;
     bool phoenixEgg;
     // Use this for initialization
