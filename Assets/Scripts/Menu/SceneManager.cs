@@ -15,7 +15,7 @@ public class SceneManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-
+        Cursor.visible = true;
         soundController.sfxValue = PlayerPrefs.GetFloat("sfxVolume");
         soundController.musicValue = PlayerPrefs.GetFloat("musicVolume");
         // Debug.Log(PlayerPrefs.GetFloat("sfxVolume"));
@@ -54,7 +54,7 @@ public class SceneManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
 
-           
+            Cursor.visible = false;
             buttons[btnIndex].image.color = Color.green;
 
 
@@ -173,33 +173,39 @@ public class SceneManager : MonoBehaviour
 
     public void switchToGame()
     {
+        Cursor.visible = false;
         StartCoroutine(DelayedLoad2());
        
     }
 
     public void switchToTutorial()
     {
+        Cursor.visible = false;
         StartCoroutine(DelayedLoad3());
         
     }
     public void switchToCredits()
     {
+        Cursor.visible = false;
         StartCoroutine(DelayedLoad4());
        
     }
     public void switchToHTP()
     {
+        Cursor.visible = false;
         StartCoroutine(DelayedLoad5());
         
     }
     public void switchToOptions()
     {
+        Cursor.visible = false;
         StartCoroutine(DelayedLoad6());
        
     }
 
     public void ExitGame()
     {
+        Cursor.visible = false;
         StartCoroutine(DelayedLoad1());
         
     }
