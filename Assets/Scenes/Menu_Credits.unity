@@ -146,12 +146,12 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "CREDITS\n\nExecutive Producer: John Oleske\n\nAssistant Prodicer: Shawn
-    Paris\n\nAssistant Prodicer: Shawn Hathaway\n\nAI dude/ Cool Guy #1: Christopher
-    Conklin\n\n#1 Tryhard: Ryan Cunningham\n\nMenu Guru/ Number Guy: Adam Feirick\n\nand
-    last but not least\n\n#1 Most Honorable Chairman Extrodinarre of the Cosmos of
-    Level Design: Dillon Lewis\n\n\nSPECIAL THANKS TO\n\nBone mom\nJohn Cena\nVlambeer\nJacob
-    Wrightsman (for being a bro)\n\nAnd to everyone who actually clicks on the credits!
-    \n"
+    Paris\n\nAssistant Prodicer: Shawn Hathaway\n\nArtist #1: Gregory Bey\n\nArtist
+    #2: Karris Frazier\n\nAI dude/ Cool Guy #1: Christopher Conklin\n\n#1 Tryhard:
+    Ryan Cunningham\n\nMenu Guru/ Number Guy: Adam Feirick\n\nand last but not least\n\n#1
+    Most Honorable Chairman Extrodinarre of the Cosmos of Level Design: Dillon Lewis\n\n\nSPECIAL
+    THANKS TO\n\nBone mom\nJohn Cena\nVlambeer\nJacob Wrightsman (for being a bro)\n\nAnd
+    to everyone who actually clicks on the credits! \n"
 --- !u!222 &12046671
 CanvasRenderer:
   m_ObjectHideFlags: 0
