@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1d457a9a03c1140b772a7447eb34c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hardCode: 1
+  hardCode: 0
   fireRune: {fileID: 150140, guid: b31d32705d5533d49944b3c0f292b75a, type: 2}
   fire: 0
   poisonRune: {fileID: 166372, guid: f29d3879c7ee86a44b7fec81d9e27c24, type: 2}
@@ -56,6 +56,10 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: fire
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: hardCode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
