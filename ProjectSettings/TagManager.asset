@@ -17,6 +17,7 @@ TagManager:
   - Traps
   - Boss_Waypoint
   - HUDRune
+  - Boss_Gun
   layers:
   - Default
   - TransparentFX
