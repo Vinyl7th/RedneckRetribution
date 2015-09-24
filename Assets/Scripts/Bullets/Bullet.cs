@@ -54,7 +54,10 @@ public class Bullet : MonoBehaviour
         }
 
 
-
+        if (other.gameObject.tag == "Default")
+        {
+            Destroy(gameObject);
+        }
 
     }
 }

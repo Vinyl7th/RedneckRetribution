@@ -51,9 +51,12 @@ public class SniperShot : MonoBehaviour
             other.gameObject.SendMessage("TakeDamage", damage);
             Destroy(gameObject);
         }
+        if(other.gameObject.tag == "Default")
+        {
+            Destroy(gameObject);
+        }
 
-
-
+        
 
     }
 }

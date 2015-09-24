@@ -54,7 +54,10 @@ public class Pellet : MonoBehaviour
             Destroy(gameObject);
         }
 
-
+        if (other.gameObject.tag == "Default")
+        {
+            Destroy(gameObject);
+        }
 
 
     }

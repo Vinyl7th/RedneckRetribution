@@ -186,26 +186,26 @@ public class SceneManager : MonoBehaviour
     }
     public void switchToCredits()
     {
-        Cursor.visible = false;
+        
         StartCoroutine(DelayedLoad4());
        
     }
     public void switchToHTP()
     {
-        Cursor.visible = false;
+       
         StartCoroutine(DelayedLoad5());
         
     }
     public void switchToOptions()
     {
-        Cursor.visible = false;
+        
         StartCoroutine(DelayedLoad6());
        
     }
 
     public void ExitGame()
     {
-        Cursor.visible = false;
+        
         StartCoroutine(DelayedLoad1());
         
     }
