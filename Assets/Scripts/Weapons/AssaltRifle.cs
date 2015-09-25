@@ -36,7 +36,10 @@ public class AssaltRifle : MonoBehaviour
     void Update()
     {
         if (currWeapon)
+        {
             MoveGun();
+            SendStats();
+        }
         fireRate += Time.deltaTime;
         if (!Burst)
             timer += Time.deltaTime;
@@ -171,6 +174,42 @@ public class AssaltRifle : MonoBehaviour
             accMin = -0.01f;
             accMax = 0.01f;
             delay = 0.2f;
+        }
+    }
+
+    void SendStats()
+    {
+        GameObject theCamera = GameObject.FindWithTag("Flavor");
+
+        theCamera.GetComponent<FlavorText>().hWeaponStyle.text = "Assault Rifle";
+        theCamera.GetComponent<FlavorText>().hAttack.text = damage.ToString();
+        string rate = string.Format("{0:0.00}", ROF);
+        theCamera.GetComponent<FlavorText>().hFireRate.text = rate;
+        theCamera.GetComponent<FlavorText>().hAccuracy.text = (accMax - accMin).ToString();
+
+        if (rariety < 64)
+        {
+            theCamera.GetComponent<FlavorText>().hRarity.text = "Common";
+            Color newColor = new Color(0.9f, 0.9f, 0.9f);
+            theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
+        }
+        else if (rariety < 94)
+        {
+            theCamera.GetComponent<FlavorText>().hRarity.text = "Uncommon";
+            Color newColor = new Color(0.1f, 0.9f, 0.1f);
+            theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
+        }
+        else if (rariety <= 99)
+        {
+            theCamera.GetComponent<FlavorText>().hRarity.text = "Rare";
+            Color newColor = new Color(0.9f, 0.1f, 0.9f);
+            theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
+        }
+        else
+        {
+            theCamera.GetComponent<FlavorText>().hRarity.text = "Contraband";
+            Color newColor = new Color(0.9f, 0.5f, 0.1f);
+            theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
         }
     }
 }
