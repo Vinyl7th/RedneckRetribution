@@ -174,6 +174,145 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1 &1369127225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1369127227}
+  - 114: {fileID: 1369127226}
+  m_Layer: 0
+  m_Name: Floor1Matrix
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1369127226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1369127225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21834aa3ab25ca94f8a318cf7d137812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorNum: 4
+  Row1: 0000000000000000010000000500000003000000000000000b000000
+  Row2: 04000000110000000600000000000000120000000500000010000000
+  Row3: 00000000020000000000000008000000100000000000000002000000
+  Row4: 010000000f0000000e00000000000000040000001100000006000000
+  Row5: 02000000000000000000000000000000000000000200000000000000
+  Row6: 12000000050000000300000000000000010000000f00000003000000
+  Row7: 09000000000000000400000005000000060000000000000000000000
+  Combat_UP_RIGHT:
+  - {fileID: 142852, guid: e852edf3ea5e2b5488c2480b4ae23611, type: 2}
+  - {fileID: 142852, guid: e852edf3ea5e2b5488c2480b4ae23611, type: 2}
+  - {fileID: 142852, guid: e852edf3ea5e2b5488c2480b4ae23611, type: 2}
+  - {fileID: 142852, guid: e852edf3ea5e2b5488c2480b4ae23611, type: 2}
+  Combat_UP_DOWN:
+  - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+  - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+  - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+  - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+  Combat_UP_LEFT:
+  - {fileID: 188196, guid: 507c8e15737503e44982cdaec2f9e1f8, type: 2}
+  - {fileID: 188196, guid: 507c8e15737503e44982cdaec2f9e1f8, type: 2}
+  - {fileID: 188196, guid: 507c8e15737503e44982cdaec2f9e1f8, type: 2}
+  - {fileID: 188196, guid: 507c8e15737503e44982cdaec2f9e1f8, type: 2}
+  Combat_RIGHT_DOWN:
+  - {fileID: 127690, guid: 7f380c6acbe01da4380beea5ec0000fb, type: 2}
+  - {fileID: 128236, guid: c46a5ea07fe7cce4b82e5072281e553a, type: 2}
+  - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
+  Combat_RIGHT_LEFT:
+  - {fileID: 177600, guid: c13b084dd44762348b8aeb6e48cfd319, type: 2}
+  - {fileID: 177600, guid: c13b084dd44762348b8aeb6e48cfd319, type: 2}
+  - {fileID: 177600, guid: c13b084dd44762348b8aeb6e48cfd319, type: 2}
+  - {fileID: 177600, guid: c13b084dd44762348b8aeb6e48cfd319, type: 2}
+  Combat_DOWN_LEFT:
+  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
+  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
+  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
+  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
+  Treasure_UP:
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  Treasure_RIGHT:
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  Treasure_DOWN:
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  Treasure_LEFT:
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  Armory_UP:
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  Armory_RIGHT:
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  Armory_DOWN:
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  Armory_LEFT:
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  Combat_NO_UP:
+  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
+  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
+  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
+  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
+  Combat_NO_RIGHT:
+  - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+  - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+  - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+  - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+  Combat_NO_DOWN:
+  - {fileID: 142852, guid: e852edf3ea5e2b5488c2480b4ae23611, type: 2}
+  - {fileID: 142852, guid: e852edf3ea5e2b5488c2480b4ae23611, type: 2}
+  - {fileID: 142852, guid: e852edf3ea5e2b5488c2480b4ae23611, type: 2}
+  - {fileID: 142852, guid: e852edf3ea5e2b5488c2480b4ae23611, type: 2}
+  Combat_NO_LEFT:
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  - {fileID: 194936, guid: 343b91a9deaa5e0479d919cec4e5b777, type: 2}
+  Start_Room: {fileID: 180716, guid: ecd6ac8d57536c9498d3e3aa225fc789, type: 2}
+  Boss_Room: {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+--- !u!4 &1369127227
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1369127225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.1696892, y: 8.7938242, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &2028464171
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +373,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 90
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -255,7 +394,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2028464171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 92, y: 62, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
