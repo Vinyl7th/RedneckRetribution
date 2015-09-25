@@ -16681,6 +16681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21834aa3ab25ca94f8a318cf7d137812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floorNum: 0
   Row1: 00000000000000000000000000000000000000000000000000000000
   Row2: 00000000000000000000000000000000000000000000000000000000
   Row3: 00000000000000000000000000000000000000000000000000000000
@@ -16778,6 +16779,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  Start_Room: {fileID: 0}
+  Boss_Room: {fileID: 0}
 --- !u!4 &1859106943
 Transform:
   m_ObjectHideFlags: 0
