@@ -26,7 +26,12 @@ public class IceRune : MonoBehaviour
     {
         thePlayer = GameObject.FindGameObjectWithTag("Player").transform;
         element = 2;
-        charges = 3;
+        if (tier == 1)
+            charges = 5;
+        if (tier == 2)
+            charges = 5;
+        if (tier == 3)
+            charges = 3;
 
     }
 
@@ -61,11 +66,11 @@ public class IceRune : MonoBehaviour
     public void OnUse()
     {
         if (tier == 1)
-            IceAura();
-        if (tier == 2)
-            IceSpike();
-        if (tier == 3)
             SnowBall();
+        if (tier == 2)
+            IceAura();
+        if (tier == 3)
+            IceSpike();
         charges--;
     }
     public void ChangeCurrent()
@@ -86,6 +91,7 @@ public class IceRune : MonoBehaviour
     void IceAura()
     {
         active = true;
+        timer = 0;
     }
     void IceSpike()
     {
@@ -95,7 +101,7 @@ public class IceRune : MonoBehaviour
         {
             spikeActive = false;
             spikeSpawned = 0;
-            charges--;
+            //charges--;
         }
         if (spikeSpawnCooldown >= 0.1f)
         {

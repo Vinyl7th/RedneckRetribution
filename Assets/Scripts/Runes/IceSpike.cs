@@ -33,7 +33,7 @@ public class IceSpike : MonoBehaviour {
     {
         if (other.gameObject.tag == "Enemy")
         {
-            other.gameObject.SendMessage("TakeDamage", IceDamage);
+            other.gameObject.SendMessage("TakePhysicalDamage", IceDamage);
         }
     }
 }

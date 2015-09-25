@@ -50,7 +50,7 @@ public class Pellet : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            other.gameObject.SendMessage("TakeDamage", damage);
+            //other.gameObject.SendMessage("TakeDamage", damage);
             Destroy(gameObject);
         }
 

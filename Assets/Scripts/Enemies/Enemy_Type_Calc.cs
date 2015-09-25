@@ -63,7 +63,7 @@ public class Enemy_Type_Calc : MonoBehaviour {
             if (pRuneType == 0)
                 TakePhysicalDamage(incPlayerDamage);
 
-            coll.SendMessage("DestroySelf");
+            //coll.SendMessage("DestroySelf");
         }
     }
 

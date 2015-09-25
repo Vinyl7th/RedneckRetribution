@@ -25,7 +25,10 @@ public class Player : MonoBehaviour
         if(GetComponent<PlayerStats>().pHealthCurr == 0)
         {
             if (!phoenixEgg)
+            {
                 Destroy(gameObject);
+                Application.LoadLevel("Menu_Main");
+            }
             else
             {
                 GetComponent<PlayerStats>().pHealthCurr = GetComponent<PlayerStats>().pHealthMax;

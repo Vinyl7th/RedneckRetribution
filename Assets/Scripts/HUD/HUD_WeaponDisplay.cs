@@ -1,24 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HUD_WeaponDisplay : MonoBehaviour {
+public class HUD_WeaponDisplay : MonoBehaviour
+{
 
     GameObject thePlayer;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         thePlayer = GameObject.FindWithTag("Player");
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         GetGunSprite();
-	}
+    }
 
     void GetGunSprite()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = thePlayer.GetComponent<Player>().gun.GetComponent<SpriteRenderer>().sprite;
+        if (thePlayer.GetComponent<Player>().gun != null)
+            gameObject.GetComponent<SpriteRenderer>().sprite = thePlayer.GetComponent<Player>().gun.GetComponent<SpriteRenderer>().sprite;
     }
 }
