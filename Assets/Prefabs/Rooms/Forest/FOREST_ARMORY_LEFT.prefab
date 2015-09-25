@@ -622,7 +622,7 @@ GameObject:
   - 4: {fileID: 405776}
   - 212: {fileID: 21227668}
   m_Layer: 0
-  m_Name: ForestArmory 1
+  m_Name: FOREST_ARMORY_LEFT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1950,6 +1950,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 145352, guid: 1d919220b7aacf643bbd19021e3b6e8e, type: 2}
   currWeapon: 0
+  rariety: 0
+  damage: 0
+  ROF: 0
+  accMin: 0
+  accMax: 0
 --- !u!114 &11408282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1963,6 +1968,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 156064, guid: 2405a63040ff0494d876970e04f42e4e, type: 2}
   currWeapon: 0
+  rariety: 0
+  damage: 0
+  ROF: 0
+  accMin: 0
+  accMax: 0
 --- !u!212 &21221132
 SpriteRenderer:
   m_ObjectHideFlags: 1
