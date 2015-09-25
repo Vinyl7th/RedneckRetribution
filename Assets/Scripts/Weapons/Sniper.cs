@@ -32,7 +32,10 @@ public class Sniper : MonoBehaviour
     void Update()
     {
         if (currWeapon)
+        {
             MoveGun();
+            SendStats();
+        }
         fireRate += Time.deltaTime;
         element = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().elementalType;
 
@@ -140,6 +143,42 @@ public class Sniper : MonoBehaviour
             damage = Random.Range(5000, 6000);
             ROF = Random.Range(0.4f, 0.6f);
             accMin = 0;
+        }
+    }
+
+    void SendStats()
+    {
+        GameObject theCamera = GameObject.FindWithTag("Flavor");
+
+        theCamera.GetComponent<FlavorText>().hWeaponStyle.text = "Sniper Rifle";
+        theCamera.GetComponent<FlavorText>().hAttack.text = damage.ToString();
+        string rate = string.Format("{0:0.00}", ROF);
+        theCamera.GetComponent<FlavorText>().hFireRate.text = rate;
+        theCamera.GetComponent<FlavorText>().hAccuracy.text = (0.0f - 0.0f).ToString();
+
+        if (rariety < 64)
+        {
+            theCamera.GetComponent<FlavorText>().hRarity.text = "Common";
+            Color newColor = new Color(0.9f, 0.9f, 0.9f);
+            theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
+        }
+        else if (rariety < 94)
+        {
+            theCamera.GetComponent<FlavorText>().hRarity.text = "Uncommon";
+            Color newColor = new Color(0.1f, 0.9f, 0.1f);
+            theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
+        }
+        else if (rariety <= 99)
+        {
+            theCamera.GetComponent<FlavorText>().hRarity.text = "Rare";
+            Color newColor = new Color(0.9f, 0.1f, 0.9f);
+            theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
+        }
+        else
+        {
+            theCamera.GetComponent<FlavorText>().hRarity.text = "Contraband";
+            Color newColor = new Color(0.9f, 0.5f, 0.1f);
+            theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
         }
     }
 }
