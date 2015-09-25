@@ -18,6 +18,8 @@ TagManager:
   - Boss_Waypoint
   - HUDRune
   - Boss_Gun
+  - HUD
+  - Flavor
   layers:
   - Default
   - TransparentFX
