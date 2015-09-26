@@ -138,14 +138,18 @@ MonoBehaviour:
   - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
   - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
   Start_Room: {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
-  Boss_Room: {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+  Boss_Room: {fileID: 106132, guid: af64b11521890bb49b4d6a16379b2dbb, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Boss_Room
+      value: 
+      objectReference: {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 118682}

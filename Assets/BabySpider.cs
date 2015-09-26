@@ -6,6 +6,9 @@ public class BabySpider : MonoBehaviour {
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer;
 
+    [SerializeField]
+    AudioSource deathoise;
+
     //varibles for the visual feedback when the spider takes damage
     Color baseColor;
     bool changeColor;
@@ -27,7 +30,7 @@ public class BabySpider : MonoBehaviour {
     void Start () {
         // At the start make the thePlayer gameobject the player with tag
         thePlayer = GameObject.FindWithTag("Player");
-
+        deathoise.volume = soundController.sfxValue;
 
 
         //save the color of the enemy at start and have a bool set to false
@@ -90,6 +93,7 @@ public class BabySpider : MonoBehaviour {
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints < 0.0f)
         {
+            deathoise.PlayOneShot(deathoise.clip, deathoise.volume);
             Destroy(gameObject);
         }
 

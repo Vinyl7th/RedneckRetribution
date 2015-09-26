@@ -7,8 +7,8 @@ public class MotherSpider : MonoBehaviour {
     public GameObject SpiderWeb, BabySpider;
     GameObject spiderspawn;
 
-    [SerializeField]
-    AudioSource hurtSound;
+    //[SerializeField]
+   // AudioSource hurtSound;
     [SerializeField]
     AudioSource webSound;
     [SerializeField]
@@ -45,7 +45,7 @@ public class MotherSpider : MonoBehaviour {
     void Start () {
         thePlayer = GameObject.FindWithTag("Player");
 
-        hurtSound.volume = soundController.sfxValue;
+        //hurtSound.volume = soundController.sfxValue;
         squishSound.volume = soundController.sfxValue;
         webSound.volume = soundController.sfxValue;
 
@@ -113,7 +113,7 @@ public class MotherSpider : MonoBehaviour {
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints <= 2500.0f)
         {
-            squishSound.Play();
+            //squishSound.Play();
             SummonSpiderpoint();
             for (int i = 0; i < 1500; i++)
             {
@@ -127,7 +127,7 @@ public class MotherSpider : MonoBehaviour {
 
     public void RecieveDamage(float _dmg)
     {
-        hurtSound.Play();
+        squishSound.Play();
         hitPoints -= _dmg;
         changeColor = true;
 

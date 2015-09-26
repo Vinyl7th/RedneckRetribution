@@ -47,6 +47,26 @@ public class HealthBar : MonoBehaviour {
             MaxHealth = gameObject.GetComponentInParent<Witch>().maxHealth;
             CurrHealth = gameObject.GetComponentInParent<Witch>().hitPoints;
         }
+        else if(Etype == 6)
+        {
+            MaxHealth = gameObject.GetComponentInParent<FireDragon>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<FireDragon>().hitPoints;
+        }
+        else if(Etype == 7)
+        {
+            MaxHealth = gameObject.GetComponentInParent<PoisonDragon>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<PoisonDragon>().hitPoints;
+        }
+        else if(Etype == 8)
+        {
+            MaxHealth = gameObject.GetComponentInParent<IceDragon>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<IceDragon>().hitPoints;
+        }
+        else if(Etype == 9)
+        {
+            MaxHealth = gameObject.GetComponentInParent<DarkDragon>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<DarkDragon>().hitPoints;
+        }
 
 
         Vector3 displayPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + heightOffset, -8.0f);

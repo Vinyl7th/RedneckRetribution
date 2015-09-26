@@ -10,6 +10,8 @@ public class RuneSpawner : MonoBehaviour
     public bool poison;
     public GameObject iceRune;
     public bool ice;
+    public GameObject darkRune;
+    public bool dark;
     float percent;
     public int tier;
     // Use this for initialization
@@ -17,7 +19,7 @@ public class RuneSpawner : MonoBehaviour
     {
         if(!hardCode)
         {
-            switch(Random.Range(0,2))
+            switch(Random.Range(0,3))
             {
                 case 0:
                     fire = true;
@@ -27,6 +29,9 @@ public class RuneSpawner : MonoBehaviour
                     break;
                 case 2:
                     poison = true;
+                    break;
+                case 3:
+                    dark = true;
                     break;
             }
             percent = Random.Range(0.0f, 1.0f);
@@ -59,6 +64,12 @@ public class RuneSpawner : MonoBehaviour
             poisonRune.GetComponent<PoisonRune>().tier = tier;
             Instantiate(poisonRune, transform.position, transform.rotation);
         }
+        if (dark)
+        {
+            darkRune.GetComponent<DarkRune>().tier = tier;
+            Instantiate(darkRune, transform.position, transform.rotation);
+        }
+
     }
 
     // Update is called once per frame

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy_Type_Calc : MonoBehaviour {
+public class Enemy_Type_Calc : MonoBehaviour
+{
 
     GameObject thePlayer;
 
@@ -13,17 +14,19 @@ public class Enemy_Type_Calc : MonoBehaviour {
 
     float incPlayerDamage;
     int pRuneType;
- 
+
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         thePlayer = GameObject.FindWithTag("Player");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     void OnTriggerEnter2D(Collider2D coll)
     {
@@ -31,7 +34,7 @@ public class Enemy_Type_Calc : MonoBehaviour {
         {
             int type = coll.gameObject.GetComponent<BulletID>().bulletType;
 
-            if(type == 1)
+            if (type == 1)
                 incPlayerDamage = coll.gameObject.GetComponent<AssaltBullet>().damage;
             if (type == 2)
                 incPlayerDamage = coll.gameObject.GetComponent<Pellet>().damage;
@@ -45,6 +48,8 @@ public class Enemy_Type_Calc : MonoBehaviour {
                 incPlayerDamage = coll.gameObject.GetComponent<SnowBall>().damage;
             if (type == 6)
                 incPlayerDamage = coll.gameObject.GetComponent<SiphonShot>().damage;
+           
+
 
             pRuneType = thePlayer.GetComponent<Player>().elementalType;
 
