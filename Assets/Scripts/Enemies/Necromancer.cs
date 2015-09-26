@@ -9,6 +9,10 @@ public class Necromancer : MonoBehaviour {
     GameObject thePlayer,
                killcounter;
 
+    [SerializeField]
+    AudioSource hitSound;
+    [SerializeField]
+    AudioSource fireballSound;
     //varibles for the visual feedback when the skeleton takes damage
     Color baseColor;
     bool changeColor;
@@ -32,12 +36,12 @@ public class Necromancer : MonoBehaviour {
     // Use this for initialization
     void Start () {
         thePlayer = GameObject.FindWithTag("Player");
-
+        fireballSound.volume = hitSound.volume = soundController.sfxValue;
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
         changeColor = false;
         delayColorChanger = 0.0f;
-
+        hitSound.volume *= 2;
         //have offcooldown set to true so he fires at the beginning
         offCoolDown = true;
 
@@ -56,6 +60,7 @@ public class Necromancer : MonoBehaviour {
 
     public void RecieveDamage(float _dmg)
     {
+        hitSound.Play();
         hitPoints -= _dmg;
         changeColor = true;
 
@@ -127,6 +132,7 @@ public class Necromancer : MonoBehaviour {
                 if (fireDelay >= 0.09f)
                 {
                     //calling the function to fire the fireball
+                    fireballSound.Play();
                     CastFireball();
                     count++;
                     if (count == 8)
