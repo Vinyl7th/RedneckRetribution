@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fireball : MonoBehaviour
+public class PoisonBall : MonoBehaviour
 {
 
     GameObject thePlayer;
-
+    GameObject theBoss;
+    GameObject[] Bosses;
 
     Vector3 playerPos;
 
@@ -21,12 +22,14 @@ public class Fireball : MonoBehaviour
     void Start()
     {
 
-        fireballSpeed = 20;
+        fireballSpeed = 10;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         accuracy = Random.Range(-0.05f, 0.05f);
         direction = thePlayer.transform.position - gameObject.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        Bosses = GameObject.FindGameObjectsWithTag("Enemy");
+        FindBoss();
 
     }
 
@@ -41,13 +44,23 @@ public class Fireball : MonoBehaviour
 
     }
 
-
+    void FindBoss()
+    {
+        for (int i = 0; i < Bosses.Length; i++)
+        {
+            if(Bosses[i].GetComponent<EnemyID>().EnemyType == 7)
+            {
+                theBoss = Bosses[i];
+            }
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             other.gameObject.SendMessage("TakeFireDamage", 75);
+            theBoss.GetComponent<PoisonDragon>().hitPoints += 75;
             Destroy(gameObject);
         }
 

@@ -21,6 +21,7 @@ TagManager:
   - HUD
   - Flavor
   - ROOM
+  - DragonControl
   layers:
   - Default
   - TransparentFX

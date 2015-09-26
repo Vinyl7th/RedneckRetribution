@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Necromancer : MonoBehaviour {
+public class Necromancer : MonoBehaviour
+{
 
     public GameObject FireBall;
 
@@ -30,7 +31,8 @@ public class Necromancer : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         thePlayer = GameObject.FindWithTag("Player");
 
         //save the color of the enemy at start and have a bool set to false
@@ -41,7 +43,7 @@ public class Necromancer : MonoBehaviour {
         //have offcooldown set to true so he fires at the beginning
         offCoolDown = true;
 
-        
+
 
         // Set the Enemy's Movement Speed, Hitpoints, aggrorange,
         //when to runaway, and when cast fireballs
@@ -50,7 +52,7 @@ public class Necromancer : MonoBehaviour {
         hitPoints = 3500.0f;
         runAway = 5;
         maxHealth = hitPoints;
-        
+
 
     }
 
@@ -62,9 +64,10 @@ public class Necromancer : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
-        if(!offCoolDown)
+        if (!offCoolDown)
             delayCastFireball += Time.deltaTime;
 
 
@@ -96,7 +99,8 @@ public class Necromancer : MonoBehaviour {
 
     }
 
-    void Move() {
+    void Move()
+    {
 
         //Set the player movement every frame to 0x 0y
         Vector2 moveEnemy = new Vector2(0, 0);
@@ -112,8 +116,8 @@ public class Necromancer : MonoBehaviour {
             //per fireball being shot 
             fireDelay += Time.deltaTime;
 
-            
-           
+
+
             //temp varibles for the player's and enemies's position
             float playerX = thePlayer.transform.position.x;
             float playerY = thePlayer.transform.position.y;
@@ -145,10 +149,10 @@ public class Necromancer : MonoBehaviour {
                     count = 0;
                 }
             }
-          
+
 
             //Run away from the player
-            if(DisToPlayer <= runAway)
+            if (DisToPlayer <= runAway)
             {
                 if (playerX >= enemyX)         // enemy move left
                     moveEnemy.x = -moveSpeed;
@@ -163,7 +167,7 @@ public class Necromancer : MonoBehaviour {
         gameObject.GetComponent<Rigidbody2D>().velocity = moveEnemy;
     }
 
-   
+
 
 
     void CastFireball()

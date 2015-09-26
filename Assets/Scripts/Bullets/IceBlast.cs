@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fireball : MonoBehaviour
+public class IceBlast : MonoBehaviour
 {
-
     GameObject thePlayer;
 
 
@@ -21,9 +20,9 @@ public class Fireball : MonoBehaviour
     void Start()
     {
 
-        fireballSpeed = 20;
+        fireballSpeed = 5;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
-        accuracy = Random.Range(-0.05f, 0.05f);
+        accuracy = 0;
         direction = thePlayer.transform.position - gameObject.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -47,7 +46,7 @@ public class Fireball : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.SendMessage("TakeFireDamage", 75);
+            other.gameObject.SendMessage("TakeFireDamage", 500);
             Destroy(gameObject);
         }
 
@@ -55,4 +54,5 @@ public class Fireball : MonoBehaviour
         Destroy(gameObject);
 
     }
+
 }
