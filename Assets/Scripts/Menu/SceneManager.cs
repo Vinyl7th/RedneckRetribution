@@ -15,6 +15,7 @@ public class SceneManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        
         Cursor.visible = true;
         soundController.sfxValue = PlayerPrefs.GetFloat("sfxVolume");
         soundController.musicValue = PlayerPrefs.GetFloat("musicVolume");
