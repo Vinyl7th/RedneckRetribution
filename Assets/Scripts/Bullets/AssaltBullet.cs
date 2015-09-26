@@ -50,6 +50,10 @@ public class AssaltBullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+   void OnCollisionEnter2D(Collision2D col)
+    {
+        Destroy(gameObject);
+    }
 
     void DestroySelf()
     {
