@@ -4317,6 +4317,7 @@ MonoBehaviour:
   hFireRate: {fileID: 2043607742}
   hRarity: {fileID: 1303838926}
   hAccuracy: {fileID: 1654990515}
+  hCharges: {fileID: 0}
 --- !u!1 &444879464
 GameObject:
   m_ObjectHideFlags: 0
@@ -4719,7 +4720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43146ccc0eefb2441956334cbc2b6c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Level_Tutorial
+  SceneName: Level_Main
 --- !u!61 &484097162
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6948,7 +6949,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 06757a82056553e4a9ee4f0ebd2ed677, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b30169507ca4d84483af3956c26364b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &687092526
 GameObject:
@@ -7359,7 +7360,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
