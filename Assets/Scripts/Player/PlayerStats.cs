@@ -29,7 +29,12 @@ public class PlayerStats : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-	
+        pHealthCurr += 0.1f;
+
+        if(pHealthCurr > pHealthMax)
+        {
+            pHealthCurr = pHealthMax;
+        }
 	}
 
     public void TakeDamage(float _damage)

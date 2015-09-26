@@ -20,6 +20,9 @@ TagManager:
   - Boss_Gun
   - HUD
   - Flavor
+  - ROOM
+  - Door
+  - DragonControl
   - WitchWaypoints
   layers:
   - Default

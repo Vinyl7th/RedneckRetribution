@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fireball : MonoBehaviour {
+public class Fireball : MonoBehaviour
+{
 
     GameObject thePlayer;
-    
+
 
     Vector3 playerPos;
 
@@ -17,9 +18,10 @@ public class Fireball : MonoBehaviour {
     float timer = 0f;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
-        fireballSpeed = 10;
+        fireballSpeed = 20;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         accuracy = Random.Range(-0.05f, 0.05f);
         direction = thePlayer.transform.position - gameObject.transform.position;
@@ -27,15 +29,16 @@ public class Fireball : MonoBehaviour {
         gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         timer += Time.deltaTime;
         if (timer >= 8.0f)
             Destroy(gameObject);
 
         transform.Translate(new Vector3(fireballSpeed * Time.deltaTime, accuracy, 0));
-        
+
     }
 
 
@@ -48,8 +51,8 @@ public class Fireball : MonoBehaviour {
             Destroy(gameObject);
         }
 
-       // if (other.gameObject.tag != "Enemy")
-            Destroy(gameObject);
+        // if (other.gameObject.tag != "Enemy")
+        Destroy(gameObject);
 
     }
 }

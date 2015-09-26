@@ -4,8 +4,11 @@ using System.Collections;
 public class Witch : MonoBehaviour {
     public GameObject FireBall;
 
-    GameObject[] Waypoint;
-
+    [SerializeField]
+    AudioSource teleportNoise;
+    [SerializeField]
+    AudioSource fireballSound;
+   
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer;
 
@@ -36,6 +39,8 @@ public class Witch : MonoBehaviour {
     {
         thePlayer = GameObject.FindWithTag("Player");
 
+        teleportNoise.volume = fireballSound.volume = soundController.sfxValue;
+
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
         changeColor = false;
@@ -61,6 +66,7 @@ public class Witch : MonoBehaviour {
 
     public void RecieveDamage(float _dmg)
     {
+        teleportNoise.Play();
         hitPoints -= _dmg;
         changeColor = true;
 
@@ -114,6 +120,7 @@ public class Witch : MonoBehaviour {
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints < 0.0f)
         {
+            teleportNoise.PlayOneShot(teleportNoise.clip, teleportNoise.volume);
             Destroy(gameObject);
         }
 
@@ -145,6 +152,7 @@ public class Witch : MonoBehaviour {
                 if (fireDelay >= 0.5f)
                 {
                     //calling the function to fire the fireball
+                    fireballSound.Play();
                     CastFireball();
                     count++;
                     if (count == 4)

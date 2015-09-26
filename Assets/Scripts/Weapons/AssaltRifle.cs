@@ -114,6 +114,9 @@ public class AssaltRifle : MonoBehaviour
                     case 3:
                         bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f);
                         break;
+                    case 4:
+                        bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 1.0f);
+                        break;
                 }
                 bullet.GetComponent<AssaltBullet>().SetDamage(damage);
                 Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);

@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400280}
   m_Layer: 0
-  m_Name: Forest_Armory_Bottom
+  m_Name: FOREST_ARMORY_DOWN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,7 +311,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.9000015, y: -3.5999999, z: 0}
+  m_LocalPosition: {x: .0541366301, y: .0902280435, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 415318}
@@ -385,7 +385,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.51000023, y: 1.37, z: 0}
+  m_LocalPosition: {x: -4.42999983, y: 1.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 415318}
@@ -397,7 +397,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407500}
@@ -770,8 +770,8 @@ MonoBehaviour:
   Sniper: 0
   theAssaltRifle: {fileID: 116742, guid: 8e0cdea9ba90d9c4991174dcc0fae5f5, type: 2}
   AssaltRifle: 0
-  common: 0
-  unique: 0
+  common: 1
+  unique: 1
   rare: 0
   contraband: 0
 --- !u!114 &11428068
@@ -794,8 +794,8 @@ MonoBehaviour:
   Sniper: 0
   theAssaltRifle: {fileID: 116742, guid: 8e0cdea9ba90d9c4991174dcc0fae5f5, type: 2}
   AssaltRifle: 0
-  common: 0
-  unique: 0
+  common: 1
+  unique: 1
   rare: 0
   contraband: 0
 --- !u!114 &11428238
