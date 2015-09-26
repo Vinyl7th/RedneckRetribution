@@ -269,22 +269,22 @@ public class RoomMatrix : MonoBehaviour {
                 }
             case 15: // Combat NO UP
                 {
-                    Instantiate(Armory_LEFT[index], _position, gameObject.transform.rotation);
+                    Instantiate(Combat_NO_UP[index], _position, gameObject.transform.rotation);
                     break;
                 }
             case 16: // Combat NO RIGHT
                 {
-                    Instantiate(Armory_LEFT[index], _position, gameObject.transform.rotation);
+                    Instantiate(Combat_NO_RIGHT[index], _position, gameObject.transform.rotation);
                     break;
                 }
             case 17: // Combat NO DOWN
                 {
-                    Instantiate(Armory_LEFT[index], _position, gameObject.transform.rotation);
+                    Instantiate(Combat_NO_DOWN[index], _position, gameObject.transform.rotation);
                     break;
                 }
             case 18: // Combat NO LEFT
                 {
-                    Instantiate(Armory_LEFT[index], _position, gameObject.transform.rotation);
+                    Instantiate(Combat_NO_LEFT[index], _position, gameObject.transform.rotation);
                     break;
                 }
         }
