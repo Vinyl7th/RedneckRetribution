@@ -21,6 +21,7 @@ TagManager:
   - HUD
   - Flavor
   - ROOM
+  - Door
   - DragonControl
   layers:
   - Default

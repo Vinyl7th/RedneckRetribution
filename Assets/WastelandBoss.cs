@@ -9,6 +9,14 @@ public class WastelandBoss : MonoBehaviour {
 
     GameObject[] Waypoint;
 
+    [SerializeField]
+    AudioSource bulletShootNoise;
+    [SerializeField]
+    AudioSource shellFallNoise;
+    [SerializeField]
+    AudioSource hurtSound;
+
+
     //varibles for the visual feedback when the skeleton takes damage
     Color baseColor;
     bool changeColor;
@@ -27,6 +35,12 @@ public class WastelandBoss : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+
+
+        bulletShootNoise.volume = shellFallNoise.volume = hurtSound.volume = soundController.sfxValue;
+
+
         Instantiate(HisGun, gameObject.transform.position, gameObject.transform.rotation);
         HisGun = GameObject.FindWithTag("Boss_Gun");
         thePlayer = GameObject.FindGameObjectWithTag("Player");
@@ -96,6 +110,8 @@ public class WastelandBoss : MonoBehaviour {
             if (fireDelay >= 0.09f)
             {
                 //calling the function to fire the fireball
+                bulletShootNoise.Play();
+                shellFallNoise.Play();
                 HisGun.SendMessage("ShootGun");
                 
                 count++;
@@ -127,6 +143,7 @@ public class WastelandBoss : MonoBehaviour {
 
     public void RecieveDamage(float _dmg)
     {
+        hurtSound.Play();
         hitPoints -= _dmg;
         changeColor = true;
 

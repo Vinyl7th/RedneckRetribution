@@ -9,6 +9,7 @@ public class FlavorText : MonoBehaviour {
     public Text hFireRate;
     public Text hRarity;
     public Text hAccuracy;
+    public Text hCharges;
 
 	// Use this for initialization
 	void Start ()
