@@ -59,4 +59,8 @@ public class SniperShot : MonoBehaviour
         
 
     }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Destroy(gameObject);
+    }
 }
