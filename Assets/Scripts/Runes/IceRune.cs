@@ -7,7 +7,7 @@ public class IceRune : MonoBehaviour
     public bool current = false;
     bool active;
     bool spikeActive = false;
-    int charges;
+    public int charges;
     int element;
     Transform thePlayer;
     Vector3 offSet;

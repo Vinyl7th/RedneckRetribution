@@ -100,6 +100,8 @@ public class Player : MonoBehaviour
             }
         }
 
+        SendRuneCharges();
+
     }
     public void SetElement(int _in)
     {
@@ -137,5 +139,26 @@ public class Player : MonoBehaviour
             phoenixEgg = false;
         else
             phoenixEgg = true;
+    }
+
+    public void SendRuneCharges()
+    {
+        if (elementalType == 1)
+        {
+            GameObject temp = GameObject.FindWithTag("Flavor");
+            temp.GetComponent<FlavorText>().hCharges.text = currRune.GetComponent<FireRune>().charges.ToString();
+        }
+
+        if (elementalType == 2)
+        {
+            GameObject temp = GameObject.FindWithTag("Flavor");
+            temp.GetComponent<FlavorText>().hCharges.text = currRune.GetComponent<IceRune>().charges.ToString();
+        }
+
+        if (elementalType == 3)
+        {
+            GameObject temp = GameObject.FindWithTag("Flavor");
+            temp.GetComponent<FlavorText>().hCharges.text = currRune.GetComponent<PoisonRune>().charges.ToString();
+        }
     }
 }
