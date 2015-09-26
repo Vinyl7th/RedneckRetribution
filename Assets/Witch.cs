@@ -8,6 +8,8 @@ public class Witch : MonoBehaviour {
     AudioSource teleportNoise;
     [SerializeField]
     AudioSource fireballSound;
+
+    GameObject[] Waypoint;
    
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer;
