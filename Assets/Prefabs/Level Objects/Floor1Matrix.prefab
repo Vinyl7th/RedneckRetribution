@@ -145,7 +145,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Boss_Room
+      value: 
+      objectReference: {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 118682}

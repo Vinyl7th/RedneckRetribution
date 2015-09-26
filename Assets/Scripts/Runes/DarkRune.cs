@@ -5,14 +5,17 @@ public class DarkRune : MonoBehaviour
 {
     public bool current = false;
     GameObject thePlayer;
+  public  GameObject specter;
     int charges;
     int element;
+    Vector3 offSet;
+    public int tier;
     // Use this for initialization
     void Start()
     {
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         element = 4;
-        charges = 1;
+        charges = 5;
     }
 
     // Update is called once per frame
@@ -38,20 +41,31 @@ public class DarkRune : MonoBehaviour
     }
     public void OnUse()
     {
-        BloodBonds();
-        Specters();
+        if (tier == 1)
+        {
+            BloodBonds();
+            charges = 1;
+        }
+        if (tier == 2)
+            Specters();
         charges--;
-        
+
     }
     void BloodBonds()
     {
         thePlayer.GetComponent<PlayerStats>().pHealthMax = thePlayer.GetComponent<PlayerStats>().pHealthMax / 2;
         thePlayer.GetComponent<PlayerStats>().pAttack += 0.5f;
-        if(thePlayer.GetComponent<PlayerStats>().pHealthCurr > thePlayer.GetComponent<PlayerStats>().pHealthMax)
+        if (thePlayer.GetComponent<PlayerStats>().pHealthCurr > thePlayer.GetComponent<PlayerStats>().pHealthMax)
             thePlayer.GetComponent<PlayerStats>().pHealthCurr = thePlayer.GetComponent<PlayerStats>().pHealthMax;
     }
     void Specters()
     {
-
+        offSet.y = thePlayer.transform.position.y + 2;
+        Instantiate(specter, offSet, thePlayer.transform.rotation);
+        offSet.y = thePlayer.transform.position.y - 2;
+        offSet.x = thePlayer.transform.position.x - 3;
+        Instantiate(specter, offSet, thePlayer.transform.rotation);
+        offSet.x = thePlayer.transform.position.x + 3;
+        Instantiate(specter, offSet, thePlayer.transform.rotation);
     }
 }
