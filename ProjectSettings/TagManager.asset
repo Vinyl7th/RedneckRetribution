@@ -22,6 +22,7 @@ TagManager:
   - Flavor
   - ROOM
   - Door
+  - DragonControl
   layers:
   - Default
   - TransparentFX

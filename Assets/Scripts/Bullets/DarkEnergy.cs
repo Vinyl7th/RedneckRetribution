@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fireball : MonoBehaviour
+public class DarkEnergy : MonoBehaviour
 {
 
     GameObject thePlayer;
@@ -21,7 +21,7 @@ public class Fireball : MonoBehaviour
     void Start()
     {
 
-        fireballSpeed = 20;
+        fireballSpeed = 6;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         accuracy = Random.Range(-0.05f, 0.05f);
         direction = thePlayer.transform.position - gameObject.transform.position;
@@ -35,9 +35,9 @@ public class Fireball : MonoBehaviour
     {
         timer += Time.deltaTime;
         if (timer >= 8.0f)
-            Destroy(gameObject);
-
-        transform.Translate(new Vector3(fireballSpeed * Time.deltaTime, accuracy, 0));
+             Destroy(gameObject);
+        transform.position = Vector3.MoveTowards(transform.position, thePlayer.transform.position, fireballSpeed*Time.deltaTime);
+        //transform.Translate(new Vector3(fireballSpeed * Time.deltaTime, accuracy, 0));
 
     }
 

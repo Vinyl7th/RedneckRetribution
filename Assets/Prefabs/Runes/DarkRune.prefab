@@ -54,6 +54,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa440bf99f4b9ad45a7809ada1dbf0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  current: 0
+  specter: {fileID: 101334, guid: 369eeb850ffd9c6419284a236b5873ef, type: 2}
+  tier: 2
 --- !u!212 &21238518
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -86,7 +89,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: specter
+      value: 
+      objectReference: {fileID: 101334, guid: 369eeb850ffd9c6419284a236b5873ef, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 124352}
