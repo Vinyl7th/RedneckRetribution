@@ -20,6 +20,7 @@ TagManager:
   - Boss_Gun
   - HUD
   - Flavor
+  - WitchWaypoints
   layers:
   - Default
   - TransparentFX
