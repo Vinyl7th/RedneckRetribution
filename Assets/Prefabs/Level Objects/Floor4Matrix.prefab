@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &135440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 489856}
+  - 114: {fileID: 11401402}
+  m_Layer: 0
+  m_Name: Floor4Matrix
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &489856
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11401402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21834aa3ab25ca94f8a318cf7d137812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorNum: 1
+  Row1: 0000000000000000010000000500000003000000000000000b000000
+  Row2: 04000000110000000600000000000000120000000500000010000000
+  Row3: 00000000020000000000000008000000100000000000000002000000
+  Row4: 010000000f0000000e00000000000000040000001100000006000000
+  Row5: 02000000000000000000000000000000000000000200000000000000
+  Row6: 12000000050000000300000000000000010000000f00000003000000
+  Row7: 09000000000000000400000005000000060000000000000000000000
+  Combat_UP_RIGHT:
+  - {fileID: 121264, guid: 286865ab914bf1e4f8d7a99b95d499c8, type: 2}
+  - {fileID: 121264, guid: 286865ab914bf1e4f8d7a99b95d499c8, type: 2}
+  - {fileID: 121264, guid: 286865ab914bf1e4f8d7a99b95d499c8, type: 2}
+  - {fileID: 121264, guid: 286865ab914bf1e4f8d7a99b95d499c8, type: 2}
+  Combat_UP_DOWN:
+  - {fileID: 186152, guid: 2ba25eaf8507bca48a9932b02ee6dec4, type: 2}
+  - {fileID: 186152, guid: 2ba25eaf8507bca48a9932b02ee6dec4, type: 2}
+  - {fileID: 186152, guid: 2ba25eaf8507bca48a9932b02ee6dec4, type: 2}
+  - {fileID: 186152, guid: 2ba25eaf8507bca48a9932b02ee6dec4, type: 2}
+  Combat_UP_LEFT:
+  - {fileID: 145252, guid: af9cc1e4bc410c546a17b296b9b83a8a, type: 2}
+  - {fileID: 145252, guid: af9cc1e4bc410c546a17b296b9b83a8a, type: 2}
+  - {fileID: 145252, guid: af9cc1e4bc410c546a17b296b9b83a8a, type: 2}
+  - {fileID: 145252, guid: af9cc1e4bc410c546a17b296b9b83a8a, type: 2}
+  Combat_RIGHT_DOWN:
+  - {fileID: 132968, guid: b7161e4775680404d9d755f681a6719e, type: 2}
+  - {fileID: 132968, guid: b7161e4775680404d9d755f681a6719e, type: 2}
+  - {fileID: 132968, guid: b7161e4775680404d9d755f681a6719e, type: 2}
+  - {fileID: 132968, guid: b7161e4775680404d9d755f681a6719e, type: 2}
+  Combat_RIGHT_LEFT:
+  - {fileID: 149632, guid: 0092a17bdd425f84f86039a3926b90a7, type: 2}
+  - {fileID: 149632, guid: 0092a17bdd425f84f86039a3926b90a7, type: 2}
+  - {fileID: 149632, guid: 0092a17bdd425f84f86039a3926b90a7, type: 2}
+  - {fileID: 149632, guid: 0092a17bdd425f84f86039a3926b90a7, type: 2}
+  Combat_DOWN_LEFT:
+  - {fileID: 143452, guid: acb8b1d5566b1324c98de5e6ec85b724, type: 2}
+  - {fileID: 143452, guid: acb8b1d5566b1324c98de5e6ec85b724, type: 2}
+  - {fileID: 143452, guid: acb8b1d5566b1324c98de5e6ec85b724, type: 2}
+  - {fileID: 143452, guid: acb8b1d5566b1324c98de5e6ec85b724, type: 2}
+  Treasure_UP:
+  - {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
+  - {fileID: 195688, guid: 6140461773bf72f45b90291d51eda520, type: 2}
+  - {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
+  - {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
+  Treasure_RIGHT:
+  - {fileID: 180716, guid: ecd6ac8d57536c9498d3e3aa225fc789, type: 2}
+  - {fileID: 180716, guid: ecd6ac8d57536c9498d3e3aa225fc789, type: 2}
+  - {fileID: 180716, guid: ecd6ac8d57536c9498d3e3aa225fc789, type: 2}
+  - {fileID: 0}
+  Treasure_DOWN:
+  - {fileID: 100504, guid: d5dfedec0630a75419d3ad587928e615, type: 2}
+  - {fileID: 101070, guid: 17a61486690211148a10e8fd3f6f6b0d, type: 2}
+  - {fileID: 100504, guid: d5dfedec0630a75419d3ad587928e615, type: 2}
+  - {fileID: 100504, guid: d5dfedec0630a75419d3ad587928e615, type: 2}
+  Treasure_LEFT:
+  - {fileID: 175958, guid: 4203bede93f2acb49a0e1cb64138dcd4, type: 2}
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 175958, guid: 4203bede93f2acb49a0e1cb64138dcd4, type: 2}
+  - {fileID: 175958, guid: 4203bede93f2acb49a0e1cb64138dcd4, type: 2}
+  Armory_UP:
+  - {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
+  - {fileID: 195688, guid: 6140461773bf72f45b90291d51eda520, type: 2}
+  - {fileID: 195688, guid: 6140461773bf72f45b90291d51eda520, type: 2}
+  - {fileID: 195688, guid: 6140461773bf72f45b90291d51eda520, type: 2}
+  Armory_RIGHT:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Armory_DOWN:
+  - {fileID: 101070, guid: 17a61486690211148a10e8fd3f6f6b0d, type: 2}
+  - {fileID: 101070, guid: 17a61486690211148a10e8fd3f6f6b0d, type: 2}
+  - {fileID: 101070, guid: 17a61486690211148a10e8fd3f6f6b0d, type: 2}
+  - {fileID: 101070, guid: 17a61486690211148a10e8fd3f6f6b0d, type: 2}
+  Armory_LEFT:
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  Combat_NO_UP:
+  - {fileID: 164046, guid: 626dba9e0e8db324c9b195ed42598220, type: 2}
+  - {fileID: 164046, guid: 626dba9e0e8db324c9b195ed42598220, type: 2}
+  - {fileID: 164046, guid: 626dba9e0e8db324c9b195ed42598220, type: 2}
+  - {fileID: 164046, guid: 626dba9e0e8db324c9b195ed42598220, type: 2}
+  Combat_NO_RIGHT:
+  - {fileID: 148604, guid: 3fc8175d2fc77214bb9c860417571c69, type: 2}
+  - {fileID: 148604, guid: 3fc8175d2fc77214bb9c860417571c69, type: 2}
+  - {fileID: 148604, guid: 3fc8175d2fc77214bb9c860417571c69, type: 2}
+  - {fileID: 148604, guid: 3fc8175d2fc77214bb9c860417571c69, type: 2}
+  Combat_NO_DOWN:
+  - {fileID: 130846, guid: 01bab857b2000724ba50824e992bcd37, type: 2}
+  - {fileID: 130846, guid: 01bab857b2000724ba50824e992bcd37, type: 2}
+  - {fileID: 130846, guid: 01bab857b2000724ba50824e992bcd37, type: 2}
+  - {fileID: 130846, guid: 01bab857b2000724ba50824e992bcd37, type: 2}
+  Combat_NO_LEFT:
+  - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
+  - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
+  - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
+  - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
+  Start_Room: {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
+  Boss_Room: {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 135440}
+  m_IsPrefabParent: 1

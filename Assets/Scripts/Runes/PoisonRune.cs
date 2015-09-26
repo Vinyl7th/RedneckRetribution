@@ -6,7 +6,7 @@ public class PoisonRune : MonoBehaviour
 
     public bool current = false;
 
-    int charges;
+    public int charges;
     int element;
     Transform thePlayer;
     public GameObject swordsDance;

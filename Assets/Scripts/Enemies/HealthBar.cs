@@ -42,6 +42,11 @@ public class HealthBar : MonoBehaviour {
             MaxHealth = gameObject.GetComponentInParent<FakeEnemies>().hpMax;
             CurrHealth = gameObject.GetComponentInParent<FakeEnemies>().hp;
         }
+        else if (Etype == 5)
+        {
+            MaxHealth = gameObject.GetComponentInParent<Witch>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<Witch>().hitPoints;
+        }
 
 
         Vector3 displayPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + heightOffset, -8.0f);

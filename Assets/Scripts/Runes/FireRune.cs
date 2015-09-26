@@ -4,7 +4,7 @@ using System.Collections;
 public class FireRune : MonoBehaviour
 {
     public bool current = false;
-    int charges;
+    public int charges;
     int element;
     Transform thePlayer;
     Vector3 offSet;

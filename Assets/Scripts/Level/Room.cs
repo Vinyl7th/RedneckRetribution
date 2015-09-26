@@ -21,10 +21,12 @@ public class Room : MonoBehaviour
     public int ActiveObjects = 0;
 
     bool spikesSpawned = false;
+    bool stopSpawning = false;
 
     // Use this for initialization
     void Start()
     {
+        stopSpawning = false;
         thePlayer = GameObject.FindWithTag("Player");
     }
 
@@ -40,7 +42,7 @@ public class Room : MonoBehaviour
 
             if (ActiveObjects == 0)
             {
-                DestroySpikes();
+                    DestroySpikes();
             }
 
             bufferTime = 0.0f;
@@ -50,6 +52,8 @@ public class Room : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
+        stopSpawning = false;
+
         if (coll.gameObject.tag == "Player")
         {
             foreach (Transform child in transform)
@@ -57,7 +61,7 @@ public class Room : MonoBehaviour
                 child.SendMessage("Spawn");
             }
 
-            Vector3 playerPos = coll.gameObject.transform.position;
+            Vector3 playerPos = GameObject.FindWithTag("Player").transform.position;
             Vector3 roomPos = gameObject.transform.position;
 
             float leftBound = roomPos.x - 3;
@@ -110,110 +114,104 @@ public class Room : MonoBehaviour
                 if (!spikesSpawned)
                     SpawnSpikes();
 
-                thePlayer.gameObject.transform.position = playerPos;
+                thePlayer.transform.position = playerPos;
             }
         }
     }
 
     void SpawnSpikes()
     {
-        // Left Spikes
-        Vector3 spikePos = gameObject.transform.position;
-        spikePos.x -= 15.5f;
-        spikePos.y += 2f;
-        spikePos.z = 0.0f;
-
-        for (int i = 0; i < 4; i++)
+        if (!stopSpawning)
         {
-            leftSpikes[i] = Instantiate(spikes);
-            leftSpikes[i].transform.position = spikePos;
-            spikePos.y -= 1.0f;
-            spikePos.z -= 0.1f;
+            // Left Spikes
+            Vector3 spikePos = gameObject.transform.position;
+            spikePos.x -= 15.5f;
+            spikePos.y += 2f;
+            spikePos.z = 0.0f;
 
-            if (!LeftSpikes)
+            for (int i = 0; i < 4; i++)
             {
-                leftSpikes[i].GetComponent<SpriteRenderer>().enabled = false;
+                leftSpikes[i] = Instantiate(spikes);
+                leftSpikes[i].transform.position = spikePos;
+                spikePos.y -= 1.0f;
+                spikePos.z -= 0.1f;
+
+                if (!LeftSpikes)
+                {
+                    leftSpikes[i].GetComponent<SpriteRenderer>().enabled = false;
+                }
             }
-        }
 
-        // Right Spikes
-        spikePos = gameObject.transform.position;
-        spikePos.x += 15.5f;
-        spikePos.y += 2f;
-        spikePos.z = 0.0f;
+            // Right Spikes
+            spikePos = gameObject.transform.position;
+            spikePos.x += 15.5f;
+            spikePos.y += 2f;
+            spikePos.z = 0.0f;
 
-        for (int i = 0; i < 4; i++)
-        {
-            rightSpikes[i] = Instantiate(spikes);
-            rightSpikes[i].transform.position = spikePos;
-            spikePos.y -= 1.0f;
-            spikePos.z -= 0.1f;
-
-            if (!RightSpikes)
+            for (int i = 0; i < 4; i++)
             {
-                rightSpikes[i].GetComponent<SpriteRenderer>().enabled = false;
+                rightSpikes[i] = Instantiate(spikes);
+                rightSpikes[i].transform.position = spikePos;
+                spikePos.y -= 1.0f;
+                spikePos.z -= 0.1f;
+
+                if (!RightSpikes)
+                {
+                    rightSpikes[i].GetComponent<SpriteRenderer>().enabled = false;
+                }
             }
-        }
 
-        // Top Spikes
-        spikePos = gameObject.transform.position;
-        spikePos.x -= 1.5f;
-        spikePos.y += 9f;
-        spikePos.z = 0.0f;
+            // Top Spikes
+            spikePos = gameObject.transform.position;
+            spikePos.x -= 1.5f;
+            spikePos.y += 9f;
+            spikePos.z = 0.0f;
 
-        for (int i = 0; i < 4; i++)
-        {
-            topSpikes[i] = Instantiate(spikes);
-            topSpikes[i].transform.position = spikePos;
-            spikePos.x += 1.0f;
-            spikePos.z -= 0.1f;
-
-            if (!TopSpikes)
+            for (int i = 0; i < 4; i++)
             {
-                topSpikes[i].GetComponent<SpriteRenderer>().enabled = false;
+                topSpikes[i] = Instantiate(spikes);
+                topSpikes[i].transform.position = spikePos;
+                spikePos.x += 1.0f;
+                spikePos.z -= 0.1f;
+
+                if (!TopSpikes)
+                {
+                    topSpikes[i].GetComponent<SpriteRenderer>().enabled = false;
+                }
             }
-        }
 
-        // Bot Spikes
-        spikePos = gameObject.transform.position;
-        spikePos.x -= 1.5f;
-        spikePos.y -= 9f;
-        spikePos.z = 0.0f;
+            // Bot Spikes
+            spikePos = gameObject.transform.position;
+            spikePos.x -= 1.5f;
+            spikePos.y -= 9f;
+            spikePos.z = 0.0f;
 
-        for (int i = 0; i < 4; i++)
-        {
-            bottomSpikes[i] = Instantiate(spikes);
-            bottomSpikes[i].transform.position = spikePos;
-            spikePos.x += 1.0f;
-            spikePos.z -= 0.1f;
-
-            if (!BotSpikes)
+            for (int i = 0; i < 4; i++)
             {
-                bottomSpikes[i].GetComponent<SpriteRenderer>().enabled = false;
+                bottomSpikes[i] = Instantiate(spikes);
+                bottomSpikes[i].transform.position = spikePos;
+                spikePos.x += 1.0f;
+                spikePos.z -= 0.1f;
+
+                if (!BotSpikes)
+                {
+                    bottomSpikes[i].GetComponent<SpriteRenderer>().enabled = false;
+                }
             }
         }
     }
 
     void DestroySpikes()
     {
-        for (int i = 0; i < 4; i++)
+        GameObject[] theDoors = GameObject.FindGameObjectsWithTag("Door");
+        int length = theDoors.Length;
+        for(int i = 0; i < length; i++)
         {
-            Destroy(leftSpikes[i].gameObject);
+            Destroy(theDoors[i]);
         }
 
-        for (int i = 0; i < 4; i++)
-        {
-            Destroy(rightSpikes[i].gameObject);
-        }
-        for (int i = 0; i < 4; i++)
-        {
-            Destroy(topSpikes[i].gameObject);
-        }
-        for (int i = 0; i < 4; i++)
-        {
-            Destroy(bottomSpikes[i].gameObject);
-        }
-
+        spikesSpawned = false;
+        stopSpawning = true;
     }
 
 
