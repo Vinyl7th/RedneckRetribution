@@ -371,20 +371,20 @@ MonoBehaviour:
   - {fileID: 149632, guid: 0092a17bdd425f84f86039a3926b90a7, type: 2}
   - {fileID: 149632, guid: 0092a17bdd425f84f86039a3926b90a7, type: 2}
   Combat_DOWN_LEFT:
-  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
-  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
-  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
-  - {fileID: 119062, guid: 2e4ef8e2f8d7c754ea2bb48960f9ed3d, type: 2}
+  - {fileID: 143452, guid: acb8b1d5566b1324c98de5e6ec85b724, type: 2}
+  - {fileID: 143452, guid: acb8b1d5566b1324c98de5e6ec85b724, type: 2}
+  - {fileID: 143452, guid: acb8b1d5566b1324c98de5e6ec85b724, type: 2}
+  - {fileID: 143452, guid: acb8b1d5566b1324c98de5e6ec85b724, type: 2}
   Treasure_UP:
   - {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
   - {fileID: 195688, guid: 6140461773bf72f45b90291d51eda520, type: 2}
   - {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
   - {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
   Treasure_RIGHT:
-  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
-  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
-  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
-  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Treasure_DOWN:
   - {fileID: 100504, guid: d5dfedec0630a75419d3ad587928e615, type: 2}
   - {fileID: 101070, guid: 17a61486690211148a10e8fd3f6f6b0d, type: 2}
@@ -401,10 +401,10 @@ MonoBehaviour:
   - {fileID: 195688, guid: 6140461773bf72f45b90291d51eda520, type: 2}
   - {fileID: 195688, guid: 6140461773bf72f45b90291d51eda520, type: 2}
   Armory_RIGHT:
-  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
-  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
-  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
-  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Armory_DOWN:
   - {fileID: 101070, guid: 17a61486690211148a10e8fd3f6f6b0d, type: 2}
   - {fileID: 101070, guid: 17a61486690211148a10e8fd3f6f6b0d, type: 2}
