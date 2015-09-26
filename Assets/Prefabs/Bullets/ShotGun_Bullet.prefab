@@ -72,9 +72,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d60e5751b89b94bbac60163d52efa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accMin: -.0500000007
-  accMax: .0500000007
-  damage: 256
+  accMin: -.200000003
+  accMax: .200000003
+  damage: 124
 --- !u!114 &11463124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4a6a08257951548418c7a4876cd4b696, type: 3}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Color: {r: .899999976, g: .899999976, b: .899999976, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
