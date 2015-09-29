@@ -23,6 +23,7 @@ TagManager:
   - ROOM
   - Door
   - DragonControl
+  - WitchWaypoints
   layers:
   - Default
   - TransparentFX
