@@ -132,16 +132,8 @@ public class RoomMatrix : MonoBehaviour {
 
         Vector3 SpawnPosition;
         // Set rooms
-        bool isLayoutValid = false;
 
         LetsDoThis();
-
-        /*
-        while (isLayoutValid == false)
-        {
-            LetsDoThis();
-        }
-        */
 
         ForceValidation();
         EmbedMatrix();
@@ -512,67 +504,70 @@ public class RoomMatrix : MonoBehaviour {
     bool LetsDoThis()
     {
         bool bossFound = false;
-        bool validLayout = true;
-        
-        RandomizeLayout();
 
-        // Place rooms
-        for (int i = 0; i < 15; i++)
+        while (bossFound == false)
         {
-            FindValidRooms();
+            // Place rooms
 
-            bool success = PlaceRooms();
-            if (!success)
-                validLayout = false;
+            bool validLayout = false;
 
-            EmbedMatrix();
-        }
-
-        // Check for boss room
-        FindValidRooms();
-
-        for (int i = 0; i < 100; i++)
-        {
-            int range = availableRooms.Length;
-            int randRoom = Random.Range(0, range);
-            ArraySize = range;
-
-            if (!bossFound)
-            {
-                Vector2 index = availableRooms[randRoom];
-
-                if (roomLayout[(int)index.x, (int)index.y].down == 1)
+            while (!validLayout)
                 {
-                    int numDoors = 0;
-                    if (roomLayout[(int)index.x, (int)index.y].up == 1)
-                        numDoors++;
+                    validLayout = true;
+                    RandomizeLayout();
 
-                    if (roomLayout[(int)index.x, (int)index.y].right == 1)
-                        numDoors++;
-
-                    if (roomLayout[(int)index.x, (int)index.y].left == 1)
-                        numDoors++;
-
-                    if (numDoors == 0)
+                    for (int i = 0; i < 15; i++)
                     {
-                        bossCoords = index;
-                        roomLayout[(int)index.x, (int)index.y].left = 2;
-                        roomLayout[(int)index.x, (int)index.y].up = 2;
-                        roomLayout[(int)index.x, (int)index.y].right = 2;
-                        roomLayout[(int)index.x, (int)index.y].down = 1;
-                        roomLayout[(int)index.x, (int)index.y].roomState = 2;
-                        bossFound = true;
+                        FindValidRooms();
+
+                        bool success = PlaceRooms();
+                        if (!success)
+                            validLayout = false;
+                    }
+                }
+
+            // Check for boss room
+            for (int i = 0; i < 100; i++)
+            {
+                FindValidRooms();
+
+                int range = availableRooms.Length;
+                int randRoom = Random.Range(0, range);
+                ArraySize = range;
+
+                if (!bossFound)
+                {
+                    Vector2 index = availableRooms[randRoom];
+
+                    if (roomLayout[(int)index.x, (int)index.y].down == 1)
+                    {
+                        int numDoors = 0;
+                        if (roomLayout[(int)index.x, (int)index.y].up == 1)
+                            numDoors++;
+
+                        if (roomLayout[(int)index.x, (int)index.y].right == 1)
+                            numDoors++;
+
+                        if (roomLayout[(int)index.x, (int)index.y].left == 1)
+                            numDoors++;
+
+                        if (numDoors == 0)
+                        {
+                            bossCoords = index;
+                            roomLayout[(int)index.x, (int)index.y].left = 2;
+                            roomLayout[(int)index.x, (int)index.y].up = 2;
+                            roomLayout[(int)index.x, (int)index.y].right = 2;
+                            roomLayout[(int)index.x, (int)index.y].down = 1;
+                            roomLayout[(int)index.x, (int)index.y].roomState = 2;
+                            bossFound = true;
+                        }
                     }
                 }
             }
+            
         }
 
-        // Clean up rooms
-
-        if (bossFound)
-            return validLayout;
-        else
-            return !validLayout;
+        return true;
     }
 
     bool PlaceRooms()
@@ -637,7 +632,9 @@ public class RoomMatrix : MonoBehaviour {
 
         // 4 entrances
         if (numDoors == 4)
-            return false;
+        {
+
+        }
 
         roomLayout[x, y] = theRoom;
 
@@ -1236,38 +1233,125 @@ public class RoomMatrix : MonoBehaviour {
 
     void ForceValidation()
     {
-        for(int i = 1; i < 8; i++)
+
+        roomLayout[4, 5].down = 1;
+        roomLayout[5, 4].left = 1;
+        roomLayout[4, 3].up = 1;
+        roomLayout[3, 4].right = 1;
+
+        roomLayout[1, 1].left = 2;
+        roomLayout[1, 2].left = 2;
+        roomLayout[1, 3].left = 2;
+        roomLayout[1, 4].left = 2;
+        roomLayout[1, 5].left = 2;
+        roomLayout[1, 6].left = 2;
+        roomLayout[1, 7].left = 2;
+
+        roomLayout[7, 1].right = 2;
+        roomLayout[7, 2].right = 2;
+        roomLayout[7, 3].right = 2;
+        roomLayout[7, 4].right = 2;
+        roomLayout[7, 5].right = 2;
+        roomLayout[7, 6].right = 2;
+        roomLayout[7, 7].right = 2;
+
+        roomLayout[1, 1].up = 2;
+        roomLayout[2, 1].up = 2;
+        roomLayout[3, 1].up = 2;
+        roomLayout[4, 1].up = 2;
+        roomLayout[5, 1].up = 2;
+        roomLayout[6, 1].up = 2;
+        roomLayout[7, 1].up = 2;
+
+        roomLayout[1, 7].down = 2;
+        roomLayout[2, 7].down = 2;
+        roomLayout[3, 7].down = 2;
+        roomLayout[4, 7].down = 2;
+        roomLayout[5, 7].down = 2;
+        roomLayout[6, 7].down = 2;
+        roomLayout[7, 7].down = 2;
+
+
+        for (int i = 1; i < 8; i++)
         {
             for(int j = 1; j < 8; j++)
             {
                 PreRoom theRoom = roomLayout[i, j];
 
-                if(theRoom.up != 1)
+                if(theRoom.up == 1)
                 {
                     int y = j + 1;
-                    roomLayout[i, y].down = 2;
+                    roomLayout[i, y].down = 1;
                 }
 
-                if (theRoom.right != 1)
+                if (theRoom.right == 1)
                 {
                     int x = i + 1;
-                    roomLayout[x, j].left = 2;
+                    roomLayout[x, j].left = 1;
                 }
 
-                if (theRoom.down != 1)
+                if (theRoom.down == 1)
                 {
                     int y = j - 1;
-                    roomLayout[i, y].up = 2;
+                    roomLayout[i, y].up = 1;
                 }
 
-                if (theRoom.left != 1)
+                if (theRoom.left == 1)
                 {
                     int x = i - 1;
-                    roomLayout[x, j].right = 2;
+                    roomLayout[x, j].right = 1;
+                }
+            }
+        }
+
+        Vector2 dungeonPos = bossCoords;
+        dungeonPos.y -= 1;
+
+        bool dungY = false;
+        bool dungX = false;
+
+        while(dungX == false)
+        {
+            if (dungeonPos.x != 4)
+            {
+                if(dungeonPos.x < 4)
+                {
+                    roomLayout[(int)dungeonPos.x, (int)dungeonPos.y].right = 1;
+                    dungeonPos.x += 1;
+                    roomLayout[(int)dungeonPos.x, (int)dungeonPos.y].left = 1;
                 }
 
-                roomLayout[i, j] = theRoom;
+                if (dungeonPos.x > 4)
+                {
+                    roomLayout[(int)dungeonPos.x, (int)dungeonPos.y].left = 1;
+                    dungeonPos.x -= 1;
+                    roomLayout[(int)dungeonPos.x, (int)dungeonPos.y].right = 1;
+                }
             }
+            else
+                dungX = true;
+        }
+
+        while (dungY == false)
+        {
+            if (dungeonPos.y != 4)
+            {
+                if (dungeonPos.y < 4)
+                {
+                    roomLayout[(int)dungeonPos.x, (int)dungeonPos.y].up = 1;
+                    dungeonPos.y += 1;
+                    roomLayout[(int)dungeonPos.x, (int)dungeonPos.y].down = 1;
+                }
+
+                if (dungeonPos.y > 4)
+                {
+                    roomLayout[(int)dungeonPos.x, (int)dungeonPos.y].down = 1;
+                    dungeonPos.y -= 1;
+                    roomLayout[(int)dungeonPos.x, (int)dungeonPos.y].up = 1;
+                }
+            }
+            else
+                dungY = true;
         }
 
     }
