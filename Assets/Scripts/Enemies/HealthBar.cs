@@ -5,7 +5,6 @@ public class HealthBar : MonoBehaviour {
 
     public Transform healthBarBorder;
     public Transform healthBarBack;
-
     public float heightOffset;
 
     float MaxHealth;
@@ -16,6 +15,7 @@ public class HealthBar : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+      
         Etype = gameObject.GetComponentInParent<EnemyID>().EnemyType;
     }
 	
@@ -47,25 +47,41 @@ public class HealthBar : MonoBehaviour {
             MaxHealth = gameObject.GetComponentInParent<Witch>().maxHealth;
             CurrHealth = gameObject.GetComponentInParent<Witch>().hitPoints;
         }
-        else if(Etype == 6)
+        else if (Etype == 6)
         {
-            MaxHealth = gameObject.GetComponentInParent<FireDragon>().maxHealth;
-            CurrHealth = gameObject.GetComponentInParent<FireDragon>().hitPoints;
+            
+                //gameObject.GetComponent<SpriteRenderer>().enabled = gameObject.GetComponentInParent<FireDragon>().active;
+                MaxHealth = gameObject.GetComponentInParent<FireDragon>().maxHealth;
+                CurrHealth = gameObject.GetComponentInParent<FireDragon>().hitPoints;
+            
         }
-        else if(Etype == 7)
+        else if (Etype == 7)
         {
-            MaxHealth = gameObject.GetComponentInParent<PoisonDragon>().maxHealth;
-            CurrHealth = gameObject.GetComponentInParent<PoisonDragon>().hitPoints;
+             
+         
+               // gameObject.GetComponent<SpriteRenderer>().enabled = gameObject.GetComponentInParent<PoisonDragon>().active;
+                MaxHealth = gameObject.GetComponentInParent<PoisonDragon>().maxHealth;
+                CurrHealth = gameObject.GetComponentInParent<PoisonDragon>().hitPoints;
+            
         }
-        else if(Etype == 8)
+        else if (Etype == 8)
         {
-            MaxHealth = gameObject.GetComponentInParent<IceDragon>().maxHealth;
-            CurrHealth = gameObject.GetComponentInParent<IceDragon>().hitPoints;
+          
+                //gameObject.GetComponent<SpriteRenderer>().enabled = gameObject.GetComponentInParent<IceDragon>().active;
+                MaxHealth = gameObject.GetComponentInParent<IceDragon>().maxHealth;
+                CurrHealth = gameObject.GetComponentInParent<IceDragon>().hitPoints;
         }
         else if(Etype == 9)
         {
-            MaxHealth = gameObject.GetComponentInParent<DarkDragon>().maxHealth;
-            CurrHealth = gameObject.GetComponentInParent<DarkDragon>().hitPoints;
+               // gameObject.GetComponent<SpriteRenderer>().enabled = gameObject.GetComponentInParent<DarkDragon>().active;
+                MaxHealth = gameObject.GetComponentInParent<DarkDragon>().maxHealth;
+                CurrHealth = gameObject.GetComponentInParent<DarkDragon>().hitPoints;
+        }
+        else if (Etype == 10)
+        {
+            // gameObject.GetComponent<SpriteRenderer>().enabled = gameObject.GetComponentInParent<DarkDragon>().active;
+            MaxHealth = gameObject.GetComponentInParent<Yetis>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<Yetis>().hitPoints;
         }
 
 

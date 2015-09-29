@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BabySpider : MonoBehaviour {
+public class Yetis : MonoBehaviour {
 
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer;
 
-    [SerializeField]
-    AudioSource deathoise;
+    //[SerializeField]
+    //AudioSource damageNoise;
 
-    //varibles for the visual feedback when the spider takes damage
+    //[SerializeField]
+    //AudioSource attackNoise;
+
+
+    //varibles for the visual feedback when the skeleton takes damage
     Color baseColor;
     bool changeColor;
     float delayColorChanger;
@@ -27,11 +31,13 @@ public class BabySpider : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         // At the start make the thePlayer gameobject the player with tag
         thePlayer = GameObject.FindWithTag("Player");
-        deathoise.volume = soundController.sfxValue;
 
+        //damageNoise.volume = soundController.sfxValue;
+        //attackNoise.volume = soundController.sfxValue;
 
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -41,9 +47,10 @@ public class BabySpider : MonoBehaviour {
         regenHealth = false;
         // Set the Enemy's Movement Speed, Hitpoints, and aggrorange
         aggroRange = 20.0f;
-        moveSpeed = Random.Range(3.0f, 4.30f);
-        hitPoints = 10.0f;
+        moveSpeed = 4.2f;
+        hitPoints = 2000.0f;
         maxHealth = hitPoints;
+
     }
 
     // Update is called once per frame
@@ -63,7 +70,6 @@ public class BabySpider : MonoBehaviour {
                 healthRegenTimer = 0.0f;
             }
         }
-
 
         //  if enemy took damage  
 
@@ -87,21 +93,22 @@ public class BabySpider : MonoBehaviour {
         //enemy's movement  
         Move();
 
-
-
-
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints < 0.0f)
         {
-            deathoise.PlayOneShot(deathoise.clip, deathoise.volume);
             Destroy(gameObject);
         }
 
     }
 
+    //Function that passes the amount damage the enemy needs to receive
+    public void RecieveDamage(float _dmg)
+    {
+        //damageNoise.Play();
+        hitPoints -= _dmg;
+        changeColor = true;
 
-
-
+    }
 
     //Funtion that makes the enemy move based on the character's position
     void Move()
@@ -109,12 +116,12 @@ public class BabySpider : MonoBehaviour {
         //Set the player movement every frame to 0x 0y
         Vector2 moveEnemy = new Vector2(0, 0);
 
-        // tracks the distance to the player's position from the spider's position
+        // tracks the distance to the player's position from the skeleton's position
         float DisToPlayer = Vector2.Distance(
             thePlayer.transform.position,
             gameObject.transform.position);
 
-        //if player's position is with then the range of the spider's aggrorange
+        //if player's position is with then the range of the skeleton's aggrorange
         if (DisToPlayer <= aggroRange)
         {
             //temp varibles for the player's and enemies's position
@@ -146,8 +153,8 @@ public class BabySpider : MonoBehaviour {
 
         if (other.gameObject.tag == "Player")
         {
+            //attackNoise.Play();
             other.SendMessage("TakePhysicalDamage", 50);
-            Destroy(gameObject);
         }
 
     }
@@ -160,14 +167,5 @@ public class BabySpider : MonoBehaviour {
         if (other.gameObject.tag == "NecroAura")
             regenHealth = false;
     }
-
-    //Function that passes the amount damage the enemy needs to receive
-    public void RecieveDamage(float _dmg)
-    {
-        hitPoints -= _dmg;
-        changeColor = true;
-
-    }
-
 
 }

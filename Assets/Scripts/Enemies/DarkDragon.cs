@@ -9,9 +9,11 @@ public class DarkDragon : MonoBehaviour
     public GameObject fireball;
 
     //varibles for the visual feedback when the skeleton takes damage
-    Color baseColor;
+    Color baseColor, blackColor;
     bool changeColor;
     float delayColorChanger;
+    bool _changeonce;
+  
 
     public bool active = false;
     bool _Find;
@@ -28,8 +30,10 @@ public class DarkDragon : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        _changeonce = false;
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
+        blackColor = gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f);
         changeColor = false;
         delayColorChanger = 0.0f;
         moveSpeed = 5f;
@@ -38,6 +42,8 @@ public class DarkDragon : MonoBehaviour
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         Waypoint = GameObject.FindGameObjectsWithTag("Boss_Waypoint");
         DragonControl = GameObject.FindGameObjectWithTag("DragonControl");
+     
+
     }
 
     // Update is called once per frame
@@ -47,6 +53,10 @@ public class DarkDragon : MonoBehaviour
         {
 
         
+
+
+            active = true;
+            gameObject.GetComponent<SpriteRenderer>().color = baseColor;
         if (changeColor == true)
         {
             //start the delaytimer and change the enemy's color to red
@@ -94,6 +104,14 @@ public class DarkDragon : MonoBehaviour
             Move();
         }
 
+        }
+        else
+        {
+            if (_changeonce == false)
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = blackColor;
+                _changeonce = true;
+            }
         }
     }
 
