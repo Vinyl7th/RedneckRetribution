@@ -124,7 +124,7 @@ MonoBehaviour:
   - {fileID: 164046, guid: 626dba9e0e8db324c9b195ed42598220, type: 2}
   Combat_NO_RIGHT:
   - {fileID: 148604, guid: 3fc8175d2fc77214bb9c860417571c69, type: 2}
-  - {fileID: 148604, guid: 3fc8175d2fc77214bb9c860417571c69, type: 2}
+  - {fileID: 108354, guid: b8a6d50c52b9de044ac52fa2e2c381b7, type: 2}
   - {fileID: 148604, guid: 3fc8175d2fc77214bb9c860417571c69, type: 2}
   - {fileID: 148604, guid: 3fc8175d2fc77214bb9c860417571c69, type: 2}
   Combat_NO_DOWN:
@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
   - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
   Start_Room: {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
-  Boss_Room: {fileID: 106132, guid: af64b11521890bb49b4d6a16379b2dbb, type: 2}
+  Boss_Room: {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -149,7 +149,11 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: Boss_Room
       value: 
-      objectReference: {fileID: 106132, guid: af64b11521890bb49b4d6a16379b2dbb, type: 2}
+      objectReference: {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Combat_NO_RIGHT.Array.data[1]
+      value: 
+      objectReference: {fileID: 108354, guid: b8a6d50c52b9de044ac52fa2e2c381b7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 118682}
