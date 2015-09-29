@@ -533,7 +533,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2059156, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
       propertyPath: orthographic size
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 21224454, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
       propertyPath: m_Sprite

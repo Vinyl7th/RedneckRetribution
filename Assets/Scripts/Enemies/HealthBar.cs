@@ -77,11 +77,11 @@ public class HealthBar : MonoBehaviour {
                 MaxHealth = gameObject.GetComponentInParent<DarkDragon>().maxHealth;
                 CurrHealth = gameObject.GetComponentInParent<DarkDragon>().hitPoints;
         }
-        else if (Etype == 9)
+        else if (Etype == 10)
         {
             // gameObject.GetComponent<SpriteRenderer>().enabled = gameObject.GetComponentInParent<DarkDragon>().active;
-            MaxHealth = gameObject.GetComponentInParent<Yeti>().maxHealth;
-            CurrHealth = gameObject.GetComponentInParent<Yeti>().hitPoints;
+            MaxHealth = gameObject.GetComponentInParent<Yetis>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<Yetis>().hitPoints;
         }
 
 

@@ -3519,11 +3519,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 494352, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -77
+      value: -76.6999969
       objectReference: {fileID: 0}
     - target: {fileID: 494352, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .699999988
+      value: .200000003
       objectReference: {fileID: 0}
     - target: {fileID: 494352, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3547,7 +3547,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 494352, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8278944, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: MinDistance
@@ -16720,6 +16720,7 @@ MonoBehaviour:
   theRight: 0
   theDown: 0
   theLeft: 0
+  bossCoords: {x: 0, y: 0}
   floorNum: 0
   Row1: 00000000000000000000000000000000000000000000000000000000
   Row2: 00000000000000000000000000000000000000000000000000000000

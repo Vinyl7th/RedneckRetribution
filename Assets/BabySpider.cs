@@ -42,7 +42,7 @@ public class BabySpider : MonoBehaviour {
         // Set the Enemy's Movement Speed, Hitpoints, and aggrorange
         aggroRange = 20.0f;
         moveSpeed = Random.Range(3.0f, 4.30f);
-        hitPoints = 300.0f;
+        hitPoints = 10.0f;
         maxHealth = hitPoints;
     }
 
