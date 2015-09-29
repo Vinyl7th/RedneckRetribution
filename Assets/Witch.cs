@@ -8,6 +8,8 @@ public class Witch : MonoBehaviour {
     AudioSource teleportNoise;
     [SerializeField]
     AudioSource fireballSound;
+
+    GameObject[] Waypoint;
    
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer;
@@ -26,6 +28,7 @@ public class Witch : MonoBehaviour {
     //basic varible to hold the Necromancer's stats
     public float aggroRange,
            moveSpeed,
+           runAway,
            maxHealth,
            hitPoints,
            fireDelay,
@@ -50,11 +53,13 @@ public class Witch : MonoBehaviour {
 
         regenHealth = false;
 
+        Waypoint = GameObject.FindGameObjectsWithTag("WitchWaypoints");
 
         // Set the Enemy's Movement Speed, Hitpoints, aggrorange,
         //when to runaway, and when cast fireballs
         aggroRange = 30.0f;
         moveSpeed = 3f;
+        runAway = 8f;
         hitPoints = 3500.0f;
         maxHealth = hitPoints;
 
@@ -169,6 +174,33 @@ public class Witch : MonoBehaviour {
                 }
             }
 
+            if (DisToPlayer <= runAway)
+            {
+                int _num = Random.Range(0, 3);
+
+                switch (_num)
+                {
+                    case 0:
+                        transform.position = Waypoint[0].transform.position;
+
+                        break;
+
+                    case 1:
+                        transform.position = Waypoint[1].transform.position;
+
+                        break;
+
+                    case 2:
+                        transform.position = Waypoint[2].transform.position;
+                        break;
+
+
+                }
+
+
+
+
+            }
 
            
         }
