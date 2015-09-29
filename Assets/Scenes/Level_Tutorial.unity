@@ -11360,48 +11360,6 @@ BoxCollider2D:
   m_Offset: {x: 1.94944382, y: 2.05604744}
   serializedVersion: 2
   m_Size: {x: 4.89888096, y: .866158724}
---- !u!1001 &1166569085
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 482736, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 72.6319427
-      objectReference: {fileID: 0}
-    - target: {fileID: 482736, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 50.5659409
-      objectReference: {fileID: 0}
-    - target: {fileID: 482736, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482736, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482736, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482736, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 482736, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 482736, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1180616752
 GameObject:
   m_ObjectHideFlags: 0
@@ -16757,6 +16715,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21834aa3ab25ca94f8a318cf7d137812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ArraySize: 0
+  theUp: 0
+  theRight: 0
+  theDown: 0
+  theLeft: 0
   floorNum: 0
   Row1: 00000000000000000000000000000000000000000000000000000000
   Row2: 00000000000000000000000000000000000000000000000000000000
