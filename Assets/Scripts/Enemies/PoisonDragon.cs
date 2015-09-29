@@ -39,6 +39,8 @@ public class PoisonDragon : MonoBehaviour
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         Waypoint = GameObject.FindGameObjectsWithTag("Boss_Waypoint");
         DragonControl = GameObject.FindGameObjectWithTag("DragonControl");
+       
+        
     }
 
     // Update is called once per frame
@@ -48,6 +50,7 @@ public class PoisonDragon : MonoBehaviour
         {
             if (hitPoints > maxHealth)
                 hitPoints = maxHealth;
+           
             if (changeColor == true)
             {
                 //start the delaytimer and change the enemy's color to red

@@ -13,6 +13,7 @@ GameObject:
   - 50: {fileID: 5058588}
   - 114: {fileID: 11452636}
   - 114: {fileID: 11405854}
+  - 114: {fileID: 11448950}
   m_Layer: 9
   m_Name: SMG_BULLET
   m_TagString: Bullet
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 156064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.76999998, y: 1.57000005, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: .899999976, y: .899999976, z: .899999976}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,6 +74,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 3
+--- !u!114 &11448950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62cfe58c12c6496499343fd15e207497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theSprites:
+  - {fileID: 21300000, guid: 4a6a08257951548418c7a4876cd4b696, type: 3}
+  - {fileID: 21300000, guid: 6a5014121d2a7194496e52f8ddfb3f18, type: 3}
+  - {fileID: 21300000, guid: fd7e8faf65bb7ec40bca277eddec59f1, type: 3}
+  - {fileID: 21300000, guid: 36a6a2fff49b5684ea5c720eb76888c7, type: 3}
+  - {fileID: 21300000, guid: ce3806f623de79d4e9b06ca96f9cd1a9, type: 3}
+  particles:
+  - {fileID: 21300000, guid: f27cbd72c983b7245893f7d9baa466da, type: 3}
+  - {fileID: 21300000, guid: 077adf07d99ce1640b90664f5da48871, type: 3}
+  particle: {fileID: 163746, guid: 1cf343c43e891ea409e41bff42a39310, type: 2}
 --- !u!114 &11452636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -84,9 +106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d84bf3ec6034f949aabc487696a8963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accMin: -.0799999982
-  accMax: .0799999982
-  damage: 65
+  accMin: -.119999997
+  accMax: .119999997
+  damage: 47
 --- !u!212 &21215444
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -111,8 +133,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a6a08257951548418c7a4876cd4b696, type: 3}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: fd7e8faf65bb7ec40bca277eddec59f1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -121,21 +143,80 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: particles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bulletType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 163746, guid: 1cf343c43e891ea409e41bff42a39310, type: 2}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a6a08257951548418c7a4876cd4b696,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6a5014121d2a7194496e52f8ddfb3f18,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: fd7e8faf65bb7ec40bca277eddec59f1,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 36a6a2fff49b5684ea5c720eb76888c7,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: ce3806f623de79d4e9b06ca96f9cd1a9,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: particles.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: f27cbd72c983b7245893f7d9baa466da,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: particles.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 077adf07d99ce1640b90664f5da48871,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 156064}

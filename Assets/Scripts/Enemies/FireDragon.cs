@@ -39,6 +39,7 @@ public class FireDragon : MonoBehaviour
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         Waypoint = GameObject.FindGameObjectsWithTag("Boss_Waypoint");
         DragonControl = GameObject.FindGameObjectWithTag("DragonControl");
+       
     }
 
     // Update is called once per frame
@@ -46,6 +47,7 @@ public class FireDragon : MonoBehaviour
     {
         if (active)
         {
+            
             if (changeColor == true)
             {
                 //start the delaytimer and change the enemy's color to red
