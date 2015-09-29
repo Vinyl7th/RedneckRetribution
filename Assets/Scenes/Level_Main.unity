@@ -135,11 +135,11 @@ Prefab:
         type: 3}
     - target: {fileID: 402390, guid: 0c77f4d7bd663c34fac74d2637c5906d, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 402390, guid: 0c77f4d7bd663c34fac74d2637c5906d, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: .5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c77f4d7bd663c34fac74d2637c5906d, type: 2}
@@ -745,53 +745,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!1001 &2137370878
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11498910, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
-      propertyPath: AssaltRifle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11498910, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
-      propertyPath: rare
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
-  m_IsPrefabParent: 0

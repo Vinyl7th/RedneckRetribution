@@ -116,6 +116,10 @@ public class RoomMatrix : MonoBehaviour {
     [SerializeField]
     GameObject[] Combat_NO_LEFT;
 
+    // Type 21
+    [SerializeField]
+    GameObject[] Combat_ALL;
+
     public GameObject Start_Room;
     public GameObject Boss_Room;
 
@@ -325,6 +329,11 @@ public class RoomMatrix : MonoBehaviour {
             case 20: // Combat NO LEFT
                 {
                     Instantiate(Boss_Room, _position, gameObject.transform.rotation);
+                    break;
+                }
+            case 21: // Combat NO LEFT
+                {
+                    Instantiate(Combat_NO_LEFT[index], _position, gameObject.transform.rotation);
                     break;
                 }
         }
@@ -1449,6 +1458,10 @@ public class RoomMatrix : MonoBehaviour {
                 // Combat room with a door at the left top and right
                 if (theRoom.up == 1 && theRoom.right == 1 && theRoom.down != 1 && theRoom.left == 1)
                     theRoom.style = 17;
+
+                // Combat room with a door at the left top and right
+                if (theRoom.up == 1 && theRoom.right == 1 && theRoom.down == 1 && theRoom.left == 1)
+                    theRoom.style = 21;
 
                 roomLayout[i, j] = theRoom;
             }

@@ -143,7 +143,12 @@ MonoBehaviour:
   - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
   - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
   - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
-  Start_Room: {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
+  Combat_ALL:
+  - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
+  - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
+  - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
+  - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
+  Start_Room: {fileID: 142992, guid: 532ca43d5a094c24890180cd070254da, type: 2}
   Boss_Room: {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
 --- !u!1001 &100100000
 Prefab:
@@ -168,10 +173,6 @@ Prefab:
       propertyPath: Row1.Array.data[4]
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: Start_Room
-      value: 
-      objectReference: {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 118682}

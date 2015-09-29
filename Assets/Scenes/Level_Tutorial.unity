@@ -3519,11 +3519,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 494352, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -76.4000015
+      value: -77
       objectReference: {fileID: 0}
     - target: {fileID: 494352, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .400000006
+      value: .699999988
       objectReference: {fileID: 0}
     - target: {fileID: 494352, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3547,7 +3547,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 494352, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8278944, guid: c294c30b003ba9344aa43ba194463ca9, type: 2}
       propertyPath: MinDistance
@@ -4091,7 +4091,7 @@ Transform:
   - {fileID: 871504975}
   - {fileID: 2096110556}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!114 &437090091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4277,7 +4277,7 @@ RectTransform:
   - {fileID: 1279707838}
   - {fileID: 500086007}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -4876,7 +4876,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &491953508
 GameObject:
   m_ObjectHideFlags: 0
@@ -7360,7 +7360,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -10471,7 +10471,7 @@ Transform:
   - {fileID: 456300674}
   - {fileID: 1591159404}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &1086416294
 GameObject:
   m_ObjectHideFlags: 0
@@ -16688,151 +16688,6 @@ BoxCollider2D:
   m_Offset: {x: -.0739808083, y: .0554881096}
   serializedVersion: 2
   m_Size: {x: .852028966, y: .889024436}
---- !u!1 &1859106941
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1859106943}
-  - 114: {fileID: 1859106942}
-  m_Layer: 0
-  m_Name: LevelMatrix
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1859106942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1859106941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21834aa3ab25ca94f8a318cf7d137812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ArraySize: 0
-  theUp: 0
-  theRight: 0
-  theDown: 0
-  theLeft: 0
-  bossCoords: {x: 0, y: 0}
-  floorNum: 0
-  Row1: 00000000000000000000000000000000000000000000000000000000
-  Row2: 00000000000000000000000000000000000000000000000000000000
-  Row3: 00000000000000000000000000000000000000000000000000000000
-  Row4: 00000000000000000000000000000000000000000000000000000000
-  Row5: 00000000000000000000000000000000000000000000000000000000
-  Row6: 00000000000000000000000000000000000000000000000000000000
-  Row7: 00000000000000000000000000000000000000000000000000000000
-  Combat_UP_RIGHT:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Combat_UP_DOWN:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Combat_UP_LEFT:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Combat_RIGHT_DOWN:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Combat_RIGHT_LEFT:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Combat_DOWN_LEFT:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Treasure_UP:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Treasure_RIGHT:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Treasure_DOWN:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Treasure_LEFT:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Armory_UP:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Armory_RIGHT:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Armory_DOWN:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Armory_LEFT:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Combat_NO_UP:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Combat_NO_RIGHT:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Combat_NO_DOWN:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Combat_NO_LEFT:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Start_Room: {fileID: 0}
-  Boss_Room: {fileID: 0}
---- !u!4 &1859106943
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1859106941}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.8328171, y: 20.4846745, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
 --- !u!4 &1866731555 stripped
 Transform:
   m_PrefabParentObject: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
@@ -19161,6 +19016,60 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 85a73b72157ec7b4fa4d655484fad93a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &2107065711
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -75.902504
+      objectReference: {fileID: 0}
+    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.33008766
+      objectReference: {fileID: 0}
+    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498910, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+      propertyPath: hardCode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498910, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+      propertyPath: AssaltRifle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498910, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+      propertyPath: rare
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2129574139
 GameObject:
   m_ObjectHideFlags: 0
