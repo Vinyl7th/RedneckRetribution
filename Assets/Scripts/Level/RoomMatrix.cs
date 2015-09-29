@@ -32,7 +32,7 @@ public class RoomMatrix : MonoBehaviour {
     PreRoom[,] roomLayout;
     Vector2[] availableRooms;
     PreRoom[] validRooms;
-    Vector2 bossCoords;
+    public Vector2 bossCoords;
 
     public int floorNum;
 
@@ -143,6 +143,7 @@ public class RoomMatrix : MonoBehaviour {
         }
         */
 
+        ForceValidation();
         EmbedMatrix();
 
         // Set start
@@ -204,7 +205,7 @@ public class RoomMatrix : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     // Good
@@ -523,6 +524,8 @@ public class RoomMatrix : MonoBehaviour {
             bool success = PlaceRooms();
             if (!success)
                 validLayout = false;
+
+            EmbedMatrix();
         }
 
         // Check for boss room
@@ -532,8 +535,9 @@ public class RoomMatrix : MonoBehaviour {
         {
             int range = availableRooms.Length;
             int randRoom = Random.Range(0, range);
+            ArraySize = range;
 
-            if (bossFound)
+            if (!bossFound)
             {
                 Vector2 index = availableRooms[randRoom];
 
@@ -575,8 +579,6 @@ public class RoomMatrix : MonoBehaviour {
     {
         int size = availableRooms.Length;
         int index = Random.Range(0, size);
-
-        Debug.Log(size);
 
         Vector2 temp = availableRooms[index];
         int x = (int)temp.x;
@@ -647,14 +649,6 @@ public class RoomMatrix : MonoBehaviour {
         PreRoom theRoom = _theRoom;
         int vacant = Random.Range(0, 3);
         Vector2 otherPos;
-
-        if (theRoom.pos.x == 4 && theRoom.pos.y == 4)
-        {
-            theUp = theRoom.up;
-            theRight = theRoom.right;
-            theDown = theRoom.down;
-            theLeft = theRoom.left;
-        }
 
         bool setTop = true;
         bool setRight = true;
@@ -896,6 +890,8 @@ public class RoomMatrix : MonoBehaviour {
                 roomLayout[(int)otherPos.x, (int)otherPos.y].roomState = 1;
             }
 
+            randCheck = true;
+
         }
 
         if (setRight)
@@ -903,6 +899,12 @@ public class RoomMatrix : MonoBehaviour {
             // Set room to the top
             otherPos = theRoom.pos;
             otherPos.x += 1;
+
+            Debug.Log(theRoom.pos.x);
+            Debug.Log(theRoom.pos.y);
+
+            Debug.Log(otherPos.x);
+            Debug.Log(otherPos.y);
 
             // See if we place a door or a wall
             if (randCheck)
@@ -923,6 +925,8 @@ public class RoomMatrix : MonoBehaviour {
                 roomLayout[(int)otherPos.x, (int)otherPos.y].roomState = 1;
             }
 
+            randCheck = true;
+
         }
 
         if (setDown)
@@ -930,6 +934,12 @@ public class RoomMatrix : MonoBehaviour {
             // Set room to the top
             otherPos = theRoom.pos;
             otherPos.y -= 1;
+
+            Debug.Log(theRoom.pos.x);
+            Debug.Log(theRoom.pos.y);
+
+            Debug.Log(otherPos.x);
+            Debug.Log(otherPos.y);
 
             // See if we place a door or a wall
             if (randCheck)
@@ -950,6 +960,8 @@ public class RoomMatrix : MonoBehaviour {
                 roomLayout[(int)otherPos.x, (int)otherPos.y].roomState = 1;
             }
 
+            randCheck = true;
+
         }
 
         if (setLeft)
@@ -957,6 +969,12 @@ public class RoomMatrix : MonoBehaviour {
             // Set room to the top
             otherPos = theRoom.pos;
             otherPos.x -= 1;
+
+            Debug.Log(theRoom.pos.x);
+            Debug.Log(theRoom.pos.y);
+
+            Debug.Log(otherPos.x);
+            Debug.Log(otherPos.y);
 
             // See if we place a door or a wall
             if (randCheck)
@@ -976,6 +994,8 @@ public class RoomMatrix : MonoBehaviour {
                 roomLayout[(int)otherPos.x, (int)otherPos.y].right = 1;
                 roomLayout[(int)otherPos.x, (int)otherPos.y].roomState = 1;
             }
+
+            randCheck = true;
 
         }
 
@@ -1078,68 +1098,56 @@ public class RoomMatrix : MonoBehaviour {
         bool setDown = true;
         bool setLeft = true;
 
-        if (theRoom.up == 1)
+        if (theRoom.up == 0)
             setTop = false;
 
-        if (theRoom.right == 1)
+        if (theRoom.right == 0)
             setRight = false;
 
-        if (theRoom.down == 1)
+        if (theRoom.down == 0)
             setDown = false;
 
-        if (theRoom.left == 1)
+        if (theRoom.left == 0)
             setLeft = false;
 
         if (setTop)
         {
-            if (theRoom.up != 2)
-            {
-                // Set room to the top
-                otherPos = theRoom.pos;
-                otherPos.y += 1;
+            // Set room to the top
+            otherPos = theRoom.pos;
+            otherPos.y += 1;
 
-                theRoom.up = 2;
-                roomLayout[(int)otherPos.x, (int)otherPos.y].down = 2;
-            }
+            theRoom.up = 2;
+            roomLayout[(int)otherPos.x, (int)otherPos.y].down = 2;
         }
 
         if (setRight)
         {
-            if (theRoom.right != 2)
-            {
-                // Set room to the top
-                otherPos = theRoom.pos;
-                otherPos.x += 1;
+            // Set room to the top
+            otherPos = theRoom.pos;
+            otherPos.x += 1;
 
-                theRoom.right = 2;
-                roomLayout[(int)otherPos.x, (int)otherPos.y].left = 2;
-            }
+            theRoom.right = 2;
+            roomLayout[(int)otherPos.x, (int)otherPos.y].left = 2;
         }
 
         if (setDown)
         {
-            if (theRoom.down != 2)
-            {
-                // Set room to the top
-                otherPos = theRoom.pos;
-                otherPos.y -= 1;
+            // Set room to the top
+            otherPos = theRoom.pos;
+            otherPos.y -= 1;
 
-                theRoom.down = 2;
-                roomLayout[(int)otherPos.x, (int)otherPos.y].up = 2;
-            }
+            theRoom.down = 2;
+            roomLayout[(int)otherPos.x, (int)otherPos.y].up = 2;
         }
 
         if (setLeft)
         {
-            if (theRoom.left != 2)
-            {
-                // Set room to the top
-                otherPos = theRoom.pos;
-                otherPos.x -= 1;
+            // Set room to the top
+            otherPos = theRoom.pos;
+            otherPos.x -= 1;
 
-                theRoom.left = 2;
-                roomLayout[(int)otherPos.x, (int)otherPos.y].right = 2;
-            }
+            theRoom.left = 2;
+            roomLayout[(int)otherPos.x, (int)otherPos.y].right = 2;
         }
 
         theRoom.roomState = 2;
@@ -1224,6 +1232,44 @@ public class RoomMatrix : MonoBehaviour {
         theRoom.roomState = 2;
 
         return _theRoom;
+    }
+
+    void ForceValidation()
+    {
+        for(int i = 1; i < 8; i++)
+        {
+            for(int j = 1; j < 8; j++)
+            {
+                PreRoom theRoom = roomLayout[i, j];
+
+                if(theRoom.up != 1)
+                {
+                    int y = j + 1;
+                    roomLayout[i, y].down = 2;
+                }
+
+                if (theRoom.right != 1)
+                {
+                    int x = i + 1;
+                    roomLayout[x, j].left = 2;
+                }
+
+                if (theRoom.down != 1)
+                {
+                    int y = j - 1;
+                    roomLayout[i, y].up = 2;
+                }
+
+                if (theRoom.left != 1)
+                {
+                    int x = i - 1;
+                    roomLayout[x, j].right = 2;
+                }
+
+                roomLayout[i, j] = theRoom;
+            }
+        }
+
     }
 
     void EmbedMatrix()
