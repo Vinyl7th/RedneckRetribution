@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Yeti : MonoBehaviour {
+public class Yetis : MonoBehaviour {
 
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer;
 
-    [SerializeField]
-    AudioSource damageNoise;
+    //[SerializeField]
+    //AudioSource damageNoise;
 
-    [SerializeField]
-    AudioSource attackNoise;
+    //[SerializeField]
+    //AudioSource attackNoise;
 
 
     //varibles for the visual feedback when the skeleton takes damage
@@ -27,7 +27,7 @@ public class Yeti : MonoBehaviour {
            moveSpeed,
            maxHealth,
            hitPoints;
-           
+
 
 
     // Use this for initialization
@@ -36,8 +36,8 @@ public class Yeti : MonoBehaviour {
         // At the start make the thePlayer gameobject the player with tag
         thePlayer = GameObject.FindWithTag("Player");
 
-        damageNoise.volume = soundController.sfxValue;
-        attackNoise.volume = soundController.sfxValue;
+        //damageNoise.volume = soundController.sfxValue;
+        //attackNoise.volume = soundController.sfxValue;
 
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -78,7 +78,7 @@ public class Yeti : MonoBehaviour {
             //start the delaytimer and change the enemy's color to red
             delayColorChanger += Time.deltaTime;
             Color newColor = new Color(1.0f, 0, 0);
-            gameObject.GetComponent<SpriteRenderer>().color = newColor; 
+            gameObject.GetComponent<SpriteRenderer>().color = newColor;
 
             //after the color is red change the color back to its normal color
             //and change the bool back to false
@@ -104,7 +104,7 @@ public class Yeti : MonoBehaviour {
     //Function that passes the amount damage the enemy needs to receive
     public void RecieveDamage(float _dmg)
     {
-        damageNoise.Play();
+        //damageNoise.Play();
         hitPoints -= _dmg;
         changeColor = true;
 
@@ -151,14 +151,14 @@ public class Yeti : MonoBehaviour {
             regenHealth = true;
         }
 
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            attackNoise.Play();
+            //attackNoise.Play();
             other.SendMessage("TakePhysicalDamage", 50);
         }
 
     }
-   
+
 
 
     //Check if the enemy leaves the range of the necro's aura
