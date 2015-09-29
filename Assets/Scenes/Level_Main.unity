@@ -235,7 +235,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -431,48 +431,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 425170, guid: 8f341a654d57a484b8eeeaf37adcacb1, type: 2}
   m_PrefabInternal: {fileID: 2101094999}
---- !u!1001 &1010172594
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 417470, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -102
-      objectReference: {fileID: 0}
-    - target: {fileID: 417470, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 44
-      objectReference: {fileID: 0}
-    - target: {fileID: 417470, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 417470, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 417470, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 417470, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 417470, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 417470, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1497240064
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1001 &1997298212
 Prefab:
   m_ObjectHideFlags: 0
@@ -777,7 +735,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1001 &2137370878
 Prefab:
   m_ObjectHideFlags: 0
