@@ -128,6 +128,19 @@ Prefab:
       propertyPath: thePlayer
       value: 
       objectReference: {fileID: 665032432}
+    - target: {fileID: 21226298, guid: 0c77f4d7bd663c34fac74d2637c5906d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 49af6373ce260334fa776946f47306c6,
+        type: 3}
+    - target: {fileID: 402390, guid: 0c77f4d7bd663c34fac74d2637c5906d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402390, guid: 0c77f4d7bd663c34fac74d2637c5906d, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c77f4d7bd663c34fac74d2637c5906d, type: 2}
   m_IsPrefabParent: 0
@@ -474,7 +487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
 --- !u!1001 &1997298212
 Prefab:
   m_ObjectHideFlags: 0
@@ -520,17 +533,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2059156, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
       propertyPath: orthographic size
-      value: 90
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 21224454, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3b30169507ca4d84483af3956c26364b,
         type: 3}
-    - target: {fileID: 8205148, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 093103b470e0c8b418c2f0d58c05e24f, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
   m_IsPrefabParent: 0
@@ -745,11 +754,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 455914, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
       propertyPath: m_LocalPosition.z
