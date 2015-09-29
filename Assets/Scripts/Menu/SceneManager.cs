@@ -120,7 +120,7 @@ public class SceneManager : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
 
         //Load scene here
-        Application.LoadLevel("Level_Main");
+        Application.LoadLevel("Menu_Loading_Main");
 
     }
     IEnumerator DelayedLoad3()
@@ -132,7 +132,7 @@ public class SceneManager : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
 
         //Load scene here
-        Application.LoadLevel("Level_Tutorial");
+        Application.LoadLevel("Menu_Loading_Tutorial");
 
     }
     IEnumerator DelayedLoad4()
