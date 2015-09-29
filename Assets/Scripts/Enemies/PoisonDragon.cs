@@ -55,6 +55,7 @@ public class PoisonDragon : MonoBehaviour
 
             if (hitPoints > maxHealth)
                 hitPoints = maxHealth;
+           
             if (changeColor == true)
             {
                 //start the delaytimer and change the enemy's color to red

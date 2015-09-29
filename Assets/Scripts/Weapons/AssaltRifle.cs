@@ -24,6 +24,8 @@ public class AssaltRifle : MonoBehaviour
     public float accMin;
     public float accMax;
     public float delay;
+    [SerializeField]
+     Sprite[]  bulletSprites;
     // Use this for initialization
     void Start()
     {
@@ -103,19 +105,24 @@ public class AssaltRifle : MonoBehaviour
                 switch (element)
                 {
                     case 0:
-                        bullet.GetComponent<SpriteRenderer>().color = new Color(.90f, .90f, .90f);
+                        bullet.GetComponent<SpriteRenderer>().sprite = bulletSprites[element];
+                        bullet.transform.localScale = new Vector3(1, 1, 1);
                         break;
                     case 1:
-                        bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0, 0);
+                        bullet.GetComponent<SpriteRenderer>().sprite = bulletSprites[element];
+                        bullet.transform.localScale = new Vector3(0.90f, 0.90f, 0.90f);
                         break;
                     case 2:
-                        bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 1.0f);
+                        bullet.GetComponent<SpriteRenderer>().sprite = bulletSprites[element];
+                        bullet.transform.localScale = new Vector3(0.90f, 0.90f, 0.90f);
                         break;
                     case 3:
-                        bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f);
+                        bullet.GetComponent<SpriteRenderer>().sprite = bulletSprites[element];
+                        bullet.transform.localScale = new Vector3(0.90f, 0.90f, 0.90f);
                         break;
                     case 4:
-                        bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 1.0f);
+                        bullet.GetComponent<SpriteRenderer>().sprite = bulletSprites[element];
+                        bullet.transform.localScale = new Vector3(0.90f, 0.90f, 0.90f);
                         break;
                 }
                 bullet.GetComponent<AssaltBullet>().SetDamage(damage);

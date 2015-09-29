@@ -20,6 +20,8 @@ public class Sniper : MonoBehaviour
    public  int damage;
     public float ROF;
     public float accMin;
+    [SerializeField]
+    Sprite[] bulletSprites;
     // Use this for initialization
     void Start()
     {
@@ -95,19 +97,24 @@ public class Sniper : MonoBehaviour
             switch (element)
             {
                 case 0:
-                    bullet.GetComponent<SpriteRenderer>().color = new Color(.90f, .90f, .90f);
+                    bullet.GetComponent<SpriteRenderer>().sprite = bulletSprites[element];
+                    bullet.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                     break;
                 case 1:
-                    bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0, 0);
+                    bullet.GetComponent<SpriteRenderer>().sprite = bulletSprites[element];
+                    bullet.transform.localScale = new Vector3(0.90f, 0.90f, 0.90f);
                     break;
                 case 2:
-                    bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 1.0f);
+                    bullet.GetComponent<SpriteRenderer>().sprite = bulletSprites[element];
+                    bullet.transform.localScale = new Vector3(0.90f, 0.90f, 0.90f);
                     break;
                 case 3:
-                    bullet.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f);
+                    bullet.GetComponent<SpriteRenderer>().sprite = bulletSprites[element];
+                    bullet.transform.localScale = new Vector3(0.90f, 0.90f, 0.90f);
                     break;
                 case 4:
-                    bullet.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 1.0f);
+                    bullet.GetComponent<SpriteRenderer>().sprite = bulletSprites[element];
+                    bullet.transform.localScale = new Vector3(0.90f, 0.90f, 0.90f);
                     break;
             }
             bullet.GetComponent<SniperShot>().SetDamage(damage);
@@ -115,7 +122,7 @@ public class Sniper : MonoBehaviour
             Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
             fireRate = 0;
         }
-
+        
     }
     void RollStats()
     {

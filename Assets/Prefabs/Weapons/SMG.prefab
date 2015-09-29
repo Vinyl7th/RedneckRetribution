@@ -56,11 +56,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 156064, guid: 2405a63040ff0494d876970e04f42e4e, type: 2}
   currWeapon: 0
-  rariety: 35
+  rariety: 1
   damage: 0
   ROF: 0
   accMin: 0
   accMax: 0
+  bulletSprites:
+  - {fileID: 21300000, guid: 4a6a08257951548418c7a4876cd4b696, type: 3}
+  - {fileID: 21300000, guid: 6a5014121d2a7194496e52f8ddfb3f18, type: 3}
+  - {fileID: 21300000, guid: fd7e8faf65bb7ec40bca277eddec59f1, type: 3}
+  - {fileID: 21300000, guid: 36a6a2fff49b5684ea5c720eb76888c7, type: 3}
+  - {fileID: 21300000, guid: ce3806f623de79d4e9b06ca96f9cd1a9, type: 3}
 --- !u!212 &21288404
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -93,7 +99,83 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: particles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bulletSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bulletSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a6a08257951548418c7a4876cd4b696,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: bulletSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6a5014121d2a7194496e52f8ddfb3f18,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: bulletSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: fd7e8faf65bb7ec40bca277eddec59f1,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: bulletSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 36a6a2fff49b5684ea5c720eb76888c7,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: bulletSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: ce3806f623de79d4e9b06ca96f9cd1a9,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a6a08257951548418c7a4876cd4b696,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6a5014121d2a7194496e52f8ddfb3f18,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: fd7e8faf65bb7ec40bca277eddec59f1,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 36a6a2fff49b5684ea5c720eb76888c7,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: theSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: ce3806f623de79d4e9b06ca96f9cd1a9,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: particles.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: f27cbd72c983b7245893f7d9baa466da,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: particles.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 077adf07d99ce1640b90664f5da48871,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 163746, guid: 1cf343c43e891ea409e41bff42a39310, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 127556}

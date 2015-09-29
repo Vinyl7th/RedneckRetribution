@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AssaltBullet : MonoBehaviour
 {
-    float bulletSpeed;
+    public float bulletSpeed;
     float accuracy;
     float displayDelay = 0.0f;
     public int damage;
