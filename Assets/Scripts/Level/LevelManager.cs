@@ -23,14 +23,8 @@ public class LevelManager : MonoBehaviour {
 
     public void LoadLevel(int _level)
     {
-        GameObject[] levelDat = GameObject.FindGameObjectsWithTag("ROOM");
-        for (int i = 0; i < levelDat.Length; i++)
-        {
-            Destroy(levelDat[i]);
-        }
-
         GameObject thePlayer = GameObject.FindWithTag("Player");
-        Vector3 spawn = new Vector3(0, 0, 0);
+        Vector3 spawn = new Vector3(100, 60, 0);
         thePlayer.transform.position = spawn;
 
 
