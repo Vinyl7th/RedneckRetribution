@@ -53,7 +53,7 @@ public class Necromancer : MonoBehaviour
         //when to runaway, and when cast fireballs
         aggroRange = 30.0f;
         moveSpeed = 4.5f;
-        hitPoints = 3500.0f;
+        hitPoints = 2000.0f;
         runAway = 8;
         maxHealth = hitPoints;
 

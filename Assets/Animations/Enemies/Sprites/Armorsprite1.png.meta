@@ -1,0 +1,903 @@
+fileFormatVersion: 2
+guid: 42461f6ed7e0d0c46a7c13a02c58c996
+timeCreated: 1443726584
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Armorsprite1_0
+    21300002: Armorsprite1_1
+    21300004: Armorsprite1_2
+    21300006: Armorsprite1_3
+    21300008: Armorsprite1_4
+    21300010: Armorsprite1_5
+    21300012: Armorsprite1_6
+    21300014: Armorsprite1_7
+    21300016: Armorsprite1_8
+    21300018: Armorsprite1_9
+    21300020: Armorsprite1_10
+    21300022: Armorsprite1_11
+    21300024: Armorsprite1_12
+    21300026: Armorsprite1_13
+    21300028: Armorsprite1_14
+    21300030: Armorsprite1_15
+    21300032: Armorsprite1_16
+    21300034: Armorsprite1_17
+    21300036: Armorsprite1_18
+    21300038: Armorsprite1_19
+    21300040: Armorsprite1_20
+    21300042: Armorsprite1_21
+    21300044: Armorsprite1_22
+    21300046: Armorsprite1_23
+    21300048: Armorsprite1_24
+    21300050: Armorsprite1_25
+    21300052: Armorsprite1_26
+    21300054: Armorsprite1_27
+    21300056: Armorsprite1_28
+    21300058: Armorsprite1_29
+    21300060: Armorsprite1_30
+    21300062: Armorsprite1_31
+    21300064: Armorsprite1_32
+    21300066: Armorsprite1_33
+    21300068: Armorsprite1_34
+    21300070: Armorsprite1_35
+    21300072: Armorsprite1_36
+    21300074: Armorsprite1_37
+    21300076: Armorsprite1_38
+    21300078: Armorsprite1_39
+    21300080: Armorsprite1_40
+    21300082: Armorsprite1_41
+    21300084: Armorsprite1_42
+    21300086: Armorsprite1_43
+    21300088: Armorsprite1_44
+    21300090: Armorsprite1_45
+    21300092: Armorsprite1_46
+    21300094: Armorsprite1_47
+    21300096: Armorsprite1_48
+    21300098: Armorsprite1_49
+    21300100: Armorsprite1_50
+    21300102: Armorsprite1_51
+    21300104: Armorsprite1_52
+    21300106: Armorsprite1_53
+    21300108: Armorsprite1_54
+    21300110: Armorsprite1_55
+    21300112: Armorsprite1_56
+    21300114: Armorsprite1_57
+    21300116: Armorsprite1_58
+    21300118: Armorsprite1_59
+    21300120: Armorsprite1_60
+    21300122: Armorsprite1_61
+    21300124: Armorsprite1_62
+    21300126: Armorsprite1_63
+    21300128: Armorsprite1_64
+    21300130: Armorsprite1_65
+    21300132: Armorsprite1_66
+    21300134: Armorsprite1_67
+    21300136: Armorsprite1_68
+    21300138: Armorsprite1_69
+    21300140: Armorsprite1_70
+    21300142: Armorsprite1_71
+    21300144: Armorsprite1_72
+    21300146: Armorsprite1_73
+    21300148: Armorsprite1_74
+    21300150: Armorsprite1_75
+    21300152: Armorsprite1_76
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 18
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Armorsprite1_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 921
+        width: 46
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 921
+        width: 70
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 914
+        width: 80
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_3
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 891
+        width: 40
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_4
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 891
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 891
+        width: 44
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 818
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_7
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 818
+        width: 44
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_8
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 818
+        width: 48
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_9
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 818
+        width: 50
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_10
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 818
+        width: 72
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_11
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 818
+        width: 77
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_12
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 817
+        width: 77
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_13
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 719
+        width: 52
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_14
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 721
+        width: 32
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_15
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 793
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_16
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 723
+        width: 77
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_17
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 723
+        width: 77
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_18
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 723
+        width: 89
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_19
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 724
+        width: 81
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_20
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 726
+        width: 81
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_21
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 645
+        width: 81
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_22
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 645
+        width: 63
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_23
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 645
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_24
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 646
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_25
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 646
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 646
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_27
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 646
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_28
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 649
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_29
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 554
+        width: 46
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_30
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 554
+        width: 45
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_31
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 554
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_32
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 554
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_33
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 552
+        width: 209
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_34
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 531
+        width: 41
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_35
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 531
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_36
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 531
+        width: 44
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_37
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 440
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_38
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 440
+        width: 45
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_39
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 440
+        width: 63
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_40
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 440
+        width: 81
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_41
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 440
+        width: 80
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_42
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 440
+        width: 62
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_43
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 440
+        width: 54
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_44
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 345
+        width: 54
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_45
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 418
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_46
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 411
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_47
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 347
+        width: 78
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_48
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 406
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_49
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 399
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_50
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 347
+        width: 61
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_51
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 343
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_52
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 347
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_53
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 347
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_54
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 347
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_55
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 342
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_56
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 339
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_57
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 241
+        width: 60
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_58
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 320
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_59
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 313
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_60
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 235
+        width: 62
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_61
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 245
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_62
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 245
+        width: 81
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_63
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 245
+        width: 81
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_64
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 245
+        width: 81
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_65
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 126
+        width: 37
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_66
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 197
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_67
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 127
+        width: 89
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_68
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 126
+        width: 81
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_69
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 126
+        width: 81
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_70
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 126
+        width: 81
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_71
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 122
+        width: 63
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_72
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 95
+        width: 41
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_73
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 6
+        width: 38
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_74
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 70
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_75
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 6
+        width: 37
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Armorsprite1_76
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 6
+        width: 38
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
