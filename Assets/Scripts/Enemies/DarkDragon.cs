@@ -18,9 +18,9 @@ public class DarkDragon : MonoBehaviour
     bool changeColor;
     float delayColorChanger;
     bool _changeonce;
-  
 
-    public bool active = false;
+    [SerializeField]
+    public bool active;
     bool _Find;
     bool _Fire;
     int count = 0;
@@ -40,7 +40,6 @@ public class DarkDragon : MonoBehaviour
         _changeonce = false;
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
-        blackColor = gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f);
         changeColor = false;
         delayColorChanger = 0.0f;
         moveSpeed = 5f;
@@ -56,11 +55,10 @@ public class DarkDragon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(active)
+        if (!active)
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f);
+        if (active)
         {
-
-        
-
 
             active = true;
             gameObject.GetComponent<SpriteRenderer>().color = baseColor;
@@ -132,14 +130,7 @@ public class DarkDragon : MonoBehaviour
         }
 
         }
-        else
-        {
-            if (_changeonce == false)
-            {
-                gameObject.GetComponent<SpriteRenderer>().color = blackColor;
-                _changeonce = true;
-            }
-        }
+       
     }
 
     public void RecieveDamage(float _dmg)
@@ -157,15 +148,15 @@ public class DarkDragon : MonoBehaviour
     {
         if (_Find == true)
         {
-            waypathing = Random.Range(0, 4);
+            waypathing = Random.Range(0, 5);
             direction = (transform.position - Waypoint[waypathing].transform.position);
-            if (direction.x >= 0)
+            if (direction.x > 0)
             {
                 theAnimator.SetBool("moveLeft", true);
                 theAnimator.transform.localScale = new Vector3(-1, 1, 1);
                 theAnimator.SetBool("moveRight", false);
             }
-            else if (direction.x < 0)
+            else if (direction.x <= 0)
             {
                 theAnimator.SetBool("moveLeft", false);
                 theAnimator.transform.localScale = new Vector3(1, 1, 1);
