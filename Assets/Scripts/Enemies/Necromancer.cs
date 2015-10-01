@@ -52,9 +52,9 @@ public class Necromancer : MonoBehaviour
         // Set the Enemy's Movement Speed, Hitpoints, aggrorange,
         //when to runaway, and when cast fireballs
         aggroRange = 30.0f;
-        moveSpeed = 3f;
+        moveSpeed = 4.5f;
         hitPoints = 3500.0f;
-        runAway = 5;
+        runAway = 8;
         maxHealth = hitPoints;
 
 
