@@ -3,7 +3,8 @@ using System.Collections;
 
 public class PoisonDragon : MonoBehaviour
 {
-
+    Animator theAnimator;
+    Vector3 direction;
     GameObject thePlayer;
     GameObject[] Waypoint;
     GameObject DragonControl;
@@ -29,6 +30,8 @@ public class PoisonDragon : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        theAnimator = gameObject.GetComponent<Animator>();
+
         _changeonce = false;
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -41,6 +44,7 @@ public class PoisonDragon : MonoBehaviour
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         Waypoint = GameObject.FindGameObjectsWithTag("Boss_Waypoint");
         DragonControl = GameObject.FindGameObjectWithTag("DragonControl");
+        
        
 
     }
@@ -50,8 +54,8 @@ public class PoisonDragon : MonoBehaviour
     {
         if (active)
         {
-         
 
+            
 
             if (hitPoints > maxHealth)
                 hitPoints = maxHealth;
@@ -100,6 +104,7 @@ public class PoisonDragon : MonoBehaviour
             {
 
                 count = 0;
+                theAnimator.SetBool("moveLeft", true);
                 Move();
             }
 
@@ -119,6 +124,18 @@ public class PoisonDragon : MonoBehaviour
         if (_Find == true)
         {
             waypathing = Random.Range(0, 4);
+            direction = (transform.position - Waypoint[waypathing].transform.position);
+            if (direction.x >= 0)
+            {
+                theAnimator.SetBool("moveLeft", true);
+                theAnimator.SetBool("moveRight", false);
+            }
+            else if (direction.x < 0)
+            {
+                theAnimator.SetBool("moveLeft", false);
+                theAnimator.SetBool("moveRight", true);
+                
+            }
             _Find = false;
         }
         float movetoWaypoint;
@@ -166,6 +183,11 @@ public class PoisonDragon : MonoBehaviour
                     _Fire = true;
                 break;
 
+        }
+        if (_Fire == true)
+        {
+            theAnimator.SetBool("moveLeft", false);
+            theAnimator.SetBool("moveRight", false);
         }
     }
     void ShootFireBall()

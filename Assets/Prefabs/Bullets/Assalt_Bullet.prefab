@@ -82,6 +82,8 @@ MonoBehaviour:
   particles:
   - {fileID: 21300000, guid: f27cbd72c983b7245893f7d9baa466da, type: 3}
   - {fileID: 21300000, guid: 077adf07d99ce1640b90664f5da48871, type: 3}
+  - {fileID: 21300000, guid: dc49bb92ab557764d924d2caf11b33ef, type: 3}
+  - {fileID: 21300000, guid: ac1e02fd9b5c4f84a94c9abcd237fea7, type: 3}
   particle: {fileID: 163746, guid: 1cf343c43e891ea409e41bff42a39310, type: 2}
 --- !u!114 &11473602
 MonoBehaviour:
@@ -107,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 0
-  damage: 398
+  damage: 245
 --- !u!212 &21205922
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -132,7 +134,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6a5014121d2a7194496e52f8ddfb3f18, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce3806f623de79d4e9b06ca96f9cd1a9, type: 3}
   m_Color: {r: .899999976, g: .899999976, b: .899999976, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -143,7 +145,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: particles.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: theSprites.Array.size
@@ -244,6 +246,16 @@ Prefab:
       propertyPath: particles.Array.data[1]
       value: 
       objectReference: {fileID: 21300000, guid: 077adf07d99ce1640b90664f5da48871,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: particles.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: dc49bb92ab557764d924d2caf11b33ef,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: particles.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: ac1e02fd9b5c4f84a94c9abcd237fea7,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
