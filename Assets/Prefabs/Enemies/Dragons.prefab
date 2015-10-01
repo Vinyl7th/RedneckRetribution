@@ -30,6 +30,7 @@ GameObject:
   - 61: {fileID: 6118144}
   - 50: {fileID: 5043468}
   - 114: {fileID: 11438686}
+  - 95: {fileID: 9564984}
   m_Layer: 10
   m_Name: FireDragon
   m_TagString: Enemy
@@ -51,6 +52,7 @@ GameObject:
   - 61: {fileID: 6181752}
   - 50: {fileID: 5060172}
   - 114: {fileID: 11475472}
+  - 95: {fileID: 9591194}
   m_Layer: 10
   m_Name: IceDragon
   m_TagString: Enemy
@@ -88,6 +90,7 @@ GameObject:
   - 61: {fileID: 6109138}
   - 50: {fileID: 5071236}
   - 114: {fileID: 11458538}
+  - 95: {fileID: 9578904}
   m_Layer: 10
   m_Name: PoisionDragon
   m_TagString: Enemy
@@ -125,6 +128,7 @@ GameObject:
   - 61: {fileID: 6196152}
   - 50: {fileID: 5082924}
   - 114: {fileID: 11486114}
+  - 95: {fileID: 9542290}
   m_Layer: 10
   m_Name: DarkDragon
   m_TagString: Enemy
@@ -439,7 +443,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.65999985, y: 73.25, z: -1}
+  m_LocalPosition: {x: -69.9674683, y: 4.91536999, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 431560}
@@ -628,6 +632,74 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
+--- !u!95 &9542290
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129838}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 4279bdafa98a00147ac5a82ef16e9d54, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &9564984
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113294}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f7acb7da3a9cada4cad414243e3f4c8f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &9578904
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124782}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 078b9cc98cb49cb448deca583a64aa6f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &9591194
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117228}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 57f2586bd5e47df4ca311d626a723c76, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400322
 MonoBehaviour:
   m_ObjectHideFlags: 1
