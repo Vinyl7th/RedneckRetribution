@@ -13,8 +13,9 @@ public class PoisonDragon : MonoBehaviour
     Color baseColor, blackColor;
     bool changeColor;
     float delayColorChanger;
-    
-   public  bool active = false;
+
+    [SerializeField]
+    public bool active;
     bool _Find;
     bool _Fire;
     int count = 0;
@@ -32,7 +33,7 @@ public class PoisonDragon : MonoBehaviour
         _changeonce = false;
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
-      
+
         changeColor = false;
         delayColorChanger = 0.0f;
         moveSpeed = 5f;
@@ -48,11 +49,12 @@ public class PoisonDragon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!active)
+         gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f);
+
         if (active)
         {
-         
-
-
+            gameObject.GetComponent<SpriteRenderer>().color = baseColor;
             if (hitPoints > maxHealth)
                 hitPoints = maxHealth;
            
@@ -105,6 +107,8 @@ public class PoisonDragon : MonoBehaviour
 
         }
        
+       
+
     }
 
     public void RecieveDamage(float _dmg)

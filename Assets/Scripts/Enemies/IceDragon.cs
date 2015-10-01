@@ -14,7 +14,9 @@ public class IceDragon : MonoBehaviour
     bool changeColor;
     float delayColorChanger;
     bool _changeonce;
-    public bool active = false;
+
+    [SerializeField]
+    public bool active;
     bool _Find;
     bool _Fire;
     int count = 0;
@@ -33,7 +35,6 @@ public class IceDragon : MonoBehaviour
         _changeonce = false;
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
-        blackColor = gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f);
         changeColor = false;
         delayColorChanger = 0.0f;
         moveSpeed = 5f;
@@ -50,10 +51,10 @@ public class IceDragon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!active)
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f);
         if (active)
         {
-          
-
             active = true;
             gameObject.GetComponent<SpriteRenderer>().color = baseColor;
             _changeonce = false;
@@ -105,15 +106,6 @@ public class IceDragon : MonoBehaviour
                 Move();
             }
 
-        }
-        else
-        {
-            if (_changeonce == false)
-            {
-                gameObject.GetComponent<SpriteRenderer>().color = blackColor;
-                
-                _changeonce = true;
-            }
         }
         
     }
