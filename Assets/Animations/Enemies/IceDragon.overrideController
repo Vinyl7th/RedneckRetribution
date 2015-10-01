@@ -8,7 +8,7 @@ AnimatorOverrideController:
   m_Name: IceDragon
   m_Controller: {fileID: 9100000, guid: f7acb7da3a9cada4cad414243e3f4c8f, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: c9b045f71f088324ab09a0dc6c83809c, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: a598a2f080df8a24683f64f8157db633, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: d6b2741e110c8954aaa97ec1403756f6, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 1b9be0caccc730c428677f7351950027, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2a980dcfcba14cc4081e767f32b1b745, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5179e0fcba7c2664989d061f290336ee, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 57db21c4734d68244850cbd51c1bdb53, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 822df8704e4b5fb409c84234c0aa604e, type: 2}

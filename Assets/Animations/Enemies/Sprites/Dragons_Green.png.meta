@@ -1,0 +1,1563 @@
+fileFormatVersion: 2
+guid: 750929dbe15fe7a4592f2860779e4981
+timeCreated: 1443711333
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Dragons_Green_0
+    21300002: Dragons_Green_1
+    21300004: Dragons_Green_2
+    21300006: Dragons_Green_3
+    21300008: Dragons_Green_4
+    21300010: Dragons_Green_5
+    21300012: Dragons_Green_6
+    21300014: Dragons_Green_7
+    21300016: Dragons_Green_8
+    21300018: Dragons_Green_9
+    21300020: Dragons_Green_10
+    21300022: Dragons_Green_11
+    21300024: Dragons_Green_12
+    21300026: Dragons_Green_13
+    21300028: Dragons_Green_14
+    21300030: Dragons_Green_15
+    21300032: Dragons_Green_16
+    21300034: Dragons_Green_17
+    21300036: Dragons_Green_18
+    21300038: Dragons_Green_19
+    21300040: Dragons_Green_20
+    21300042: Dragons_Green_21
+    21300044: Dragons_Green_22
+    21300046: Dragons_Green_23
+    21300048: Dragons_Green_24
+    21300050: Dragons_Green_25
+    21300052: Dragons_Green_26
+    21300054: Dragons_Green_27
+    21300056: Dragons_Green_28
+    21300058: Dragons_Green_29
+    21300060: Dragons_Green_30
+    21300062: Dragons_Green_31
+    21300064: Dragons_Green_32
+    21300066: Dragons_Green_33
+    21300068: Dragons_Green_34
+    21300070: Dragons_Green_35
+    21300072: Dragons_Green_36
+    21300074: Dragons_Green_37
+    21300076: Dragons_Green_38
+    21300078: Dragons_Green_39
+    21300080: Dragons_Green_40
+    21300082: Dragons_Green_41
+    21300084: Dragons_Green_42
+    21300086: Dragons_Green_43
+    21300088: Dragons_Green_44
+    21300090: Dragons_Green_45
+    21300092: Dragons_Green_46
+    21300094: Dragons_Green_47
+    21300096: Dragons_Green_48
+    21300098: Dragons_Green_49
+    21300100: Dragons_Green_50
+    21300102: Dragons_Green_51
+    21300104: Dragons_Green_52
+    21300106: Dragons_Green_53
+    21300108: Dragons_Green_54
+    21300110: Dragons_Green_55
+    21300112: Dragons_Green_56
+    21300114: Dragons_Green_57
+    21300116: Dragons_Green_58
+    21300118: Dragons_Green_59
+    21300120: Dragons_Green_60
+    21300122: Dragons_Green_61
+    21300124: Dragons_Green_62
+    21300126: Dragons_Green_63
+    21300128: Dragons_Green_64
+    21300130: Dragons_Green_65
+    21300132: Dragons_Green_66
+    21300134: Dragons_Green_67
+    21300136: Dragons_Green_68
+    21300138: Dragons_Green_69
+    21300140: Dragons_Green_70
+    21300142: Dragons_Green_71
+    21300144: Dragons_Green_72
+    21300146: Dragons_Green_73
+    21300148: Dragons_Green_74
+    21300150: Dragons_Green_75
+    21300152: Dragons_Green_76
+    21300154: Dragons_Green_77
+    21300156: Dragons_Green_78
+    21300158: Dragons_Green_79
+    21300160: Dragons_Green_80
+    21300162: Dragons_Green_81
+    21300164: Dragons_Green_82
+    21300166: Dragons_Green_83
+    21300168: Dragons_Green_84
+    21300170: Dragons_Green_85
+    21300172: Dragons_Green_86
+    21300174: Dragons_Green_87
+    21300176: Dragons_Green_88
+    21300178: Dragons_Green_89
+    21300180: Dragons_Green_90
+    21300182: Dragons_Green_91
+    21300184: Dragons_Green_92
+    21300186: Dragons_Green_93
+    21300188: Dragons_Green_94
+    21300190: Dragons_Green_95
+    21300192: Dragons_Green_96
+    21300194: Dragons_Green_97
+    21300196: Dragons_Green_98
+    21300198: Dragons_Green_99
+    21300200: Dragons_Green_100
+    21300202: Dragons_Green_101
+    21300204: Dragons_Green_102
+    21300206: Dragons_Green_103
+    21300208: Dragons_Green_104
+    21300210: Dragons_Green_105
+    21300212: Dragons_Green_106
+    21300214: Dragons_Green_107
+    21300216: Dragons_Green_108
+    21300218: Dragons_Green_109
+    21300220: Dragons_Green_110
+    21300222: Dragons_Green_111
+    21300224: Dragons_Green_112
+    21300226: Dragons_Green_113
+    21300228: Dragons_Green_114
+    21300230: Dragons_Green_115
+    21300232: Dragons_Green_116
+    21300234: Dragons_Green_117
+    21300236: Dragons_Green_118
+    21300238: Dragons_Green_119
+    21300240: Dragons_Green_120
+    21300242: Dragons_Green_121
+    21300244: Dragons_Green_122
+    21300246: Dragons_Green_123
+    21300248: Dragons_Green_124
+    21300250: Dragons_Green_125
+    21300252: Dragons_Green_126
+    21300254: Dragons_Green_127
+    21300256: Dragons_Green_128
+    21300258: Dragons_Green_129
+    21300260: Dragons_Green_130
+    21300262: Dragons_Green_131
+    21300264: Dragons_Green_132
+    21300266: Dragons_Green_133
+    21300268: Dragons_Green_134
+    21300270: Dragons_Green_135
+    21300272: Dragons_Green_136
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Dragons_Green_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1524
+        width: 53
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1524
+        width: 54
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_2
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1524
+        width: 54
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1524
+        width: 54
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_4
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1524
+        width: 53
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_5
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1524
+        width: 54
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_6
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1524
+        width: 55
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_7
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 1524
+        width: 55
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_8
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1552
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_9
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1552
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_10
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1513
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_11
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1513
+        width: 102
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_12
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 1513
+        width: 93
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_13
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1513
+        width: 99
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_14
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1513
+        width: 95
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_15
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1513
+        width: 78
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_16
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1395
+        width: 63
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_17
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1393
+        width: 91
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_18
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1398
+        width: 104
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_19
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1403
+        width: 90
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_20
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1409
+        width: 108
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_21
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1416
+        width: 117
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_22
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 1412
+        width: 120
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_23
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1398
+        width: 121
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_24
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1408
+        width: 114
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_25
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1399
+        width: 84
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_26
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1402
+        width: 73
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_27
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 1396
+        width: 61
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_28
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1270
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_29
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1267
+        width: 57
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_30
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1271
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_31
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1271
+        width: 98
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_32
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1271
+        width: 111
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_33
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 1260
+        width: 121
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_34
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1263
+        width: 106
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_35
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1264
+        width: 98
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_36
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 1264
+        width: 78
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_37
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1266
+        width: 62
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_38
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1268
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_39
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 1291
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_40
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 1289
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_41
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 1288
+        width: 39
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_42
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1279
+        width: 33
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_43
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 1279
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_44
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1277
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_45
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 1278
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_46
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 1277
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_47
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 1278
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_48
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1268
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_49
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1267
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_50
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1266
+        width: 55
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_51
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 1268
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_52
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 1268
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_53
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1146
+        width: 55
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_54
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1144
+        width: 68
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_55
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1148
+        width: 86
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_56
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1148
+        width: 107
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_57
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1148
+        width: 124
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_58
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1148
+        width: 140
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_59
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 1217
+        width: 5
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_60
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 1148
+        width: 61
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_61
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1148
+        width: 105
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_62
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1162
+        width: 20
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_63
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1148
+        width: 73
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_64
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1169
+        width: 18
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_65
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1182
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_66
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1182
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_67
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 1182
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_68
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 1182
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_69
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 1182
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_70
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1027
+        width: 52
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_71
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1027
+        width: 63
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_72
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1026
+        width: 88
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_73
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1024
+        width: 102
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_74
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1016
+        width: 111
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_75
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 1025
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_76
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 1091
+        width: 67
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_77
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 1090
+        width: 80
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_78
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1016
+        width: 106
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_79
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1016
+        width: 109
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_80
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1020
+        width: 87
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_81
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 903
+        width: 110
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_82
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 903
+        width: 123
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_83
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 892
+        width: 121
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_84
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 963
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_85
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 894
+        width: 121
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_86
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 895
+        width: 94
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_87
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 957
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_88
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 895
+        width: 77
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_89
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 963
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_90
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 960
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_91
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 897
+        width: 65
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_92
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 967
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_93
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 913
+        width: 51
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_94
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 949
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_95
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 949
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_96
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 930
+        width: 89
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_97
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 920
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_98
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 920
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_99
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 921
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_100
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 790
+        width: 145
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_101
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 790
+        width: 153
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_102
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 790
+        width: 84
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_103
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 855
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_104
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 781
+        width: 92
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_105
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 787
+        width: 105
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_106
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 789
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_107
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 790
+        width: 105
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_108
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 796
+        width: 18
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_109
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 842
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_110
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 789
+        width: 71
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_111
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 826
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_112
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 830
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_113
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 818
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_114
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 807
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_115
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 813
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_116
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 806
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_117
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 790
+        width: 53
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_118
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 790
+        width: 54
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_119
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 650
+        width: 110
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_120
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 649
+        width: 123
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_121
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 684
+        width: 101
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_122
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 654
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_123
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 679
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_124
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 681
+        width: 80
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_125
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 669
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_126
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 681
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_127
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 682
+        width: 81
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_128
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 682
+        width: 105
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_129
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 682
+        width: 104
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_130
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 682
+        width: 99
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_131
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 682
+        width: 94
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_132
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 680
+        width: 69
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_133
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 681
+        width: 57
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_134
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 662
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_135
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 674
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dragons_Green_136
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 662
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

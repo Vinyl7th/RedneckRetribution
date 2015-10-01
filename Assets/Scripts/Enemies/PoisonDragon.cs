@@ -10,6 +10,7 @@ public class PoisonDragon : MonoBehaviour
     GameObject DragonControl;
     public GameObject fireball;
     bool _changeonce;
+    bool isRight;
     //varibles for the visual feedback when the skeleton takes damage
     Color baseColor, blackColor;
     bool changeColor;
@@ -83,7 +84,26 @@ public class PoisonDragon : MonoBehaviour
             fireDelay += Time.deltaTime;
             if (_Fire == true)
             {
-
+                if (gameObject.transform.position.x > thePlayer.transform.position.x)
+                {
+                    if (!isRight)
+                    {
+                        theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                        isRight = true;
+                    }
+                    else
+                        isRight = false;
+                }
+                else
+                {
+                    if (!isRight)
+                    {
+                        theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                        isRight = true;
+                    }
+                    else
+                        isRight = false;
+                }
                 if (fireDelay >= 0.10f)
                 {
                     //calling the function to fire the fireball
@@ -128,11 +148,13 @@ public class PoisonDragon : MonoBehaviour
             if (direction.x >= 0)
             {
                 theAnimator.SetBool("moveLeft", true);
+                theAnimator.transform.localScale = new Vector3(-1, 1, 1);
                 theAnimator.SetBool("moveRight", false);
             }
             else if (direction.x < 0)
             {
                 theAnimator.SetBool("moveLeft", false);
+                theAnimator.transform.localScale = new Vector3(1, 1, 1);
                 theAnimator.SetBool("moveRight", true);
                 
             }

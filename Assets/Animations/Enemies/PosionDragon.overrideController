@@ -8,7 +8,7 @@ AnimatorOverrideController:
   m_Name: PosionDragon
   m_Controller: {fileID: 9100000, guid: f7acb7da3a9cada4cad414243e3f4c8f, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: c9b045f71f088324ab09a0dc6c83809c, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 678a28419115d8a418711c23aca5aa6a, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: d6b2741e110c8954aaa97ec1403756f6, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: f3af03b0fdd696844a1688dc64f85509, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2a980dcfcba14cc4081e767f32b1b745, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 726b2966c51dd444584d6739715264ad, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 57db21c4734d68244850cbd51c1bdb53, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c92d1e29a24662746af64d654256ba67, type: 2}
