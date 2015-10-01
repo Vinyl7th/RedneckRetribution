@@ -95,7 +95,7 @@ MonoBehaviour:
   - {fileID: 104058, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
   Treasure_DOWN:
   - {fileID: 100504, guid: d5dfedec0630a75419d3ad587928e615, type: 2}
-  - {fileID: 101070, guid: 17a61486690211148a10e8fd3f6f6b0d, type: 2}
+  - {fileID: 0}
   - {fileID: 100504, guid: d5dfedec0630a75419d3ad587928e615, type: 2}
   - {fileID: 100504, guid: d5dfedec0630a75419d3ad587928e615, type: 2}
   Treasure_LEFT:
