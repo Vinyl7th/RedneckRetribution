@@ -6,6 +6,7 @@ public class IceDragon : MonoBehaviour
 
     Animator theAnimator;
     Vector3 direction;
+    bool isRight;
 
     GameObject thePlayer;
     GameObject[] Waypoint;
@@ -85,7 +86,26 @@ public class IceDragon : MonoBehaviour
             fireDelay += Time.deltaTime;
             if (_Fire == true)
             {
-
+                if (gameObject.transform.position.x > thePlayer.transform.position.x)
+                {
+                    if (!isRight)
+                    {
+                        theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                        isRight = true;
+                    }
+                    else
+                        isRight = false;
+                }
+                else
+                {
+                    if (!isRight)
+                    {
+                        theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                        isRight = true;
+                    }
+                    else
+                        isRight = false;
+                }
                 if (fireDelay >= 0.5f)
                 {
                     //calling the function to fire the fireball
@@ -142,11 +162,13 @@ public class IceDragon : MonoBehaviour
             if (direction.x >= 0)
             {
                 theAnimator.SetBool("moveLeft", true);
+                theAnimator.transform.localScale = new Vector3(-1, 1, 1);
                 theAnimator.SetBool("moveRight", false);
             }
             else if (direction.x < 0)
             {
                 theAnimator.SetBool("moveLeft", false);
+                theAnimator.transform.localScale = new Vector3(1, 1, 1);
                 theAnimator.SetBool("moveRight", true);
             }
             _Find = false;

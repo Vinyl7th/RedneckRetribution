@@ -10,6 +10,7 @@ public class FireDragon : MonoBehaviour
     GameObject[] Waypoint;
     GameObject DragonControl;
     public GameObject fireball;
+    bool isRight;
 
     //varibles for the visual feedback when the skeleton takes damage
     Color baseColor, blackColor;
@@ -33,7 +34,7 @@ public class FireDragon : MonoBehaviour
     void Start()
     {
         theAnimator = gameObject.GetComponent<Animator>();
-        
+        theAnimator.transform.localScale = new Vector3(-1, 1, 1);
         _changeonce = false;
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -84,7 +85,26 @@ public class FireDragon : MonoBehaviour
             fireDelay += Time.deltaTime;
             if (_Fire == true)
             {
-
+                if (gameObject.transform.position.x > thePlayer.transform.position.x)
+                {
+                    if (!isRight)
+                    {
+                        theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                        isRight = true;
+                    }
+                    else
+                        isRight = false;
+                }
+                else
+                {
+                    if (!isRight)
+                    {
+                        theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                        isRight = true;
+                    }
+                    else
+                        isRight = false;
+                }
                 if (fireDelay >= 0.09f)
                 {
                     //calling the function to fire the fireball
@@ -141,11 +161,13 @@ public class FireDragon : MonoBehaviour
             if(direction.x >= 0)
             {
                 theAnimator.SetBool("moveLeft", true);
+                theAnimator.transform.localScale = new Vector3(-1, 1, 1);
                 theAnimator.SetBool("moveRight", false);
             }
            else  if (direction.x < 0)
             {
                 theAnimator.SetBool("moveLeft", false);
+                theAnimator.transform.localScale = new Vector3(1, 1, 1);
                 theAnimator.SetBool("moveRight", true);
             }
             _Find = false;
