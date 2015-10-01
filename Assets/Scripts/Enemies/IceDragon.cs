@@ -4,6 +4,10 @@ using System.Collections;
 public class IceDragon : MonoBehaviour
 {
 
+    Animator theAnimator;
+    Vector3 direction;
+    bool isRight;
+
     GameObject thePlayer;
     GameObject[] Waypoint;
     GameObject DragonControl;
@@ -31,7 +35,8 @@ public class IceDragon : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+        theAnimator = gameObject.GetComponent<Animator>();
+      
         _changeonce = false;
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -55,6 +60,7 @@ public class IceDragon : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f);
         if (active)
         {
+            
             active = true;
             gameObject.GetComponent<SpriteRenderer>().color = baseColor;
             _changeonce = false;
@@ -82,17 +88,37 @@ public class IceDragon : MonoBehaviour
             fireDelay += Time.deltaTime;
             if (_Fire == true)
             {
-
+                if (gameObject.transform.position.x > thePlayer.transform.position.x)
+                {
+                    if (!isRight)
+                    {
+                        theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                        isRight = true;
+                    }
+                    else
+                        isRight = false;
+                }
+                else
+                {
+                    if (!isRight)
+                    {
+                        theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                        isRight = true;
+                    }
+                    else
+                        isRight = false;
+                }
                 if (fireDelay >= 0.5f)
                 {
                     //calling the function to fire the fireball
                     //HisGun.SendMessage("ShootGun");
                     ShootFireBall();
                     count++;
-                    if (count == 15)
+                    if (count == 5)
                     {
                         _Fire = false;
                         _Find = true;
+                        
                     }
 
                     fireDelay = 0;
@@ -103,6 +129,7 @@ public class IceDragon : MonoBehaviour
             {
 
                 count = 0;
+                theAnimator.SetBool("moveLeft", true);
                 Move();
             }
 
@@ -124,6 +151,19 @@ public class IceDragon : MonoBehaviour
         if (_Find == true)
         {
             waypathing = Random.Range(0, 4);
+            direction = (transform.position - Waypoint[waypathing].transform.position);
+            if (direction.x >= 0)
+            {
+                theAnimator.SetBool("moveLeft", true);
+                theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                theAnimator.SetBool("moveRight", false);
+            }
+            else if (direction.x < 0)
+            {
+                theAnimator.SetBool("moveLeft", false);
+                theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                theAnimator.SetBool("moveRight", true);
+            }
             _Find = false;
         }
         float movetoWaypoint;
@@ -171,6 +211,11 @@ public class IceDragon : MonoBehaviour
                     _Fire = true;
                 break;
 
+        }
+        if (_Fire == true)
+        {
+            theAnimator.SetBool("moveLeft", false);
+            theAnimator.SetBool("moveRight", false);
         }
     }
     void ShootFireBall()

@@ -3,6 +3,11 @@ using System.Collections;
 
 public class DarkDragon : MonoBehaviour
 {
+
+    Animator theAnimator;
+    Vector3 direction;
+    bool isRight;
+
     GameObject thePlayer;
     GameObject[] Waypoint;
     GameObject DragonControl;
@@ -30,6 +35,8 @@ public class DarkDragon : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        theAnimator = gameObject.GetComponent<Animator>();
+        
         _changeonce = false;
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -78,8 +85,27 @@ public class DarkDragon : MonoBehaviour
         fireDelay += Time.deltaTime;
         if (_Fire == true)
         {
-
-            if (fireDelay >= 0.35f)
+                if (gameObject.transform.position.x > thePlayer.transform.position.x)
+                {
+                    if (!isRight)
+                    {
+                        theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                        isRight = true;
+                    }
+                    else
+                        isRight = false;
+                }
+                else
+                {
+                    if (!isRight)
+                    {
+                        theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                        isRight = true;
+                    }
+                    else
+                        isRight = false;
+                }
+                if (fireDelay >= 0.35f)
             {
                 //calling the function to fire the fireball
                 //HisGun.SendMessage("ShootGun");
@@ -99,7 +125,8 @@ public class DarkDragon : MonoBehaviour
         {
 
             count = 0;
-            Move();
+                theAnimator.SetBool("moveLeft", true);
+                Move();
         }
 
         }
@@ -122,6 +149,19 @@ public class DarkDragon : MonoBehaviour
         if (_Find == true)
         {
             waypathing = Random.Range(0, 4);
+            direction = (transform.position - Waypoint[waypathing].transform.position);
+            if (direction.x >= 0)
+            {
+                theAnimator.SetBool("moveLeft", true);
+                theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                theAnimator.SetBool("moveRight", false);
+            }
+            else if (direction.x < 0)
+            {
+                theAnimator.SetBool("moveLeft", false);
+                theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                theAnimator.SetBool("moveRight", true);
+            }
             _Find = false;
         }
         float movetoWaypoint;
@@ -169,6 +209,11 @@ public class DarkDragon : MonoBehaviour
                     _Fire = true;
                 break;
 
+        }
+        if (_Fire == true)
+        {
+            theAnimator.SetBool("moveLeft", false);
+            theAnimator.SetBool("moveRight", false);
         }
     }
     void ShootFireBall()

@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: DarkDragon
+  m_Controller: {fileID: 9100000, guid: f7acb7da3a9cada4cad414243e3f4c8f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 2a980dcfcba14cc4081e767f32b1b745, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 51ec8c66bb003a74586665d557b94054, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 57db21c4734d68244850cbd51c1bdb53, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c432d3ec4dc85dc4c95b28aaeb45e2f6, type: 2}

@@ -44,6 +44,22 @@ public class BulletEmmiter : MonoBehaviour
                 Instantiate(particle, gameObject.transform.position, gameObject.transform.rotation);
 
             }
+            if (theSprites[3] == gameObject.GetComponent<SpriteRenderer>().sprite)
+            {
+                particle.GetComponent<SpriteRenderer>().sprite = particles[2];
+                particle.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.30f);
+
+                Instantiate(particle, gameObject.transform.position, gameObject.transform.rotation);
+
+            }
+            if (theSprites[4] == gameObject.GetComponent<SpriteRenderer>().sprite)
+            {
+                particle.GetComponent<SpriteRenderer>().sprite = particles[3];
+                particle.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.60f);
+
+                Instantiate(particle, gameObject.transform.position, gameObject.transform.rotation);
+
+            }
             timer = 0.0f;
         }
     }
