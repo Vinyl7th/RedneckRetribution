@@ -147,7 +147,7 @@ public class PoisonDragon : MonoBehaviour
     {
         if (_Find == true)
         {
-            waypathing = Random.Range(0, 4);
+            waypathing = Random.Range(0, 5);
             direction = (transform.position - Waypoint[waypathing].transform.position);
             if (direction.x >= 0)
             {

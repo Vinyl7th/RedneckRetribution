@@ -148,15 +148,15 @@ public class DarkDragon : MonoBehaviour
     {
         if (_Find == true)
         {
-            waypathing = Random.Range(0, 4);
+            waypathing = Random.Range(0, 5);
             direction = (transform.position - Waypoint[waypathing].transform.position);
-            if (direction.x >= 0)
+            if (direction.x > 0)
             {
                 theAnimator.SetBool("moveLeft", true);
                 theAnimator.transform.localScale = new Vector3(-1, 1, 1);
                 theAnimator.SetBool("moveRight", false);
             }
-            else if (direction.x < 0)
+            else if (direction.x <= 0)
             {
                 theAnimator.SetBool("moveLeft", false);
                 theAnimator.transform.localScale = new Vector3(1, 1, 1);
