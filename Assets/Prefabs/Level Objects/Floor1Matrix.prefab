@@ -65,7 +65,7 @@ MonoBehaviour:
   - {fileID: 186152, guid: 2ba25eaf8507bca48a9932b02ee6dec4, type: 2}
   Combat_UP_LEFT:
   - {fileID: 145252, guid: af9cc1e4bc410c546a17b296b9b83a8a, type: 2}
-  - {fileID: 145252, guid: af9cc1e4bc410c546a17b296b9b83a8a, type: 2}
+  - {fileID: 178834, guid: d9a021f69f940ed4285df44865c315c6, type: 2}
   - {fileID: 145252, guid: af9cc1e4bc410c546a17b296b9b83a8a, type: 2}
   - {fileID: 145252, guid: af9cc1e4bc410c546a17b296b9b83a8a, type: 2}
   Combat_RIGHT_DOWN:
@@ -90,7 +90,7 @@ MonoBehaviour:
   - {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
   Treasure_RIGHT:
   - {fileID: 104058, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
-  - {fileID: 118564, guid: 3c32eafe06be438468518f2a4fffa327, type: 2}
+  - {fileID: 119568, guid: 6138312134640894fab3db5b1f870a01, type: 2}
   - {fileID: 104058, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
   - {fileID: 104058, guid: 25e0925e177f36b44a17c881dbf720b3, type: 2}
   Treasure_DOWN:
@@ -121,7 +121,7 @@ MonoBehaviour:
   Armory_LEFT:
   - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
   - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
-  - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
+  - {fileID: 101886, guid: e9e0783e604649d49a5246f2ce644a41, type: 2}
   - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
   Combat_NO_UP:
   - {fileID: 164046, guid: 626dba9e0e8db324c9b195ed42598220, type: 2}

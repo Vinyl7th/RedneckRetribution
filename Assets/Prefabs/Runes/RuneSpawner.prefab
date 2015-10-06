@@ -68,6 +68,10 @@ Prefab:
       propertyPath: darkRune
       value: 
       objectReference: {fileID: 124352, guid: 4c943ed9d7c4d8d42b63a56be7dc4b6e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: tier
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 190528}
