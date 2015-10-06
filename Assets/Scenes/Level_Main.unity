@@ -646,7 +646,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 697715036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.80000019, y: 27.1000004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 367328484}
@@ -998,6 +998,33 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16b5ae89e22b0804793cacbd44662100, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &527677357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 527677358}
+  m_Layer: 0
+  m_Name: BossSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &527677358
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527677357}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.89999962, y: .699999988, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1561050893}
+  m_RootOrder: 7
 --- !u!1 &573614749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,7 +1383,6 @@ GameObject:
   - 82: {fileID: 697715038}
   - 82: {fileID: 697715037}
   - 114: {fileID: 697715042}
-  - 58: {fileID: 697715043}
   - 58: {fileID: 697715041}
   m_Layer: 10
   m_Name: Necronomicon
@@ -1519,7 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a944f83616121f84cb555929c7313dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyType: 2
+  EnemyType: 20
 --- !u!114 &697715040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1563,30 +1589,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossState: 0
   bossFight: 0
+  shootBalls: 0
   bHP_Max: 0
   bHP_Curr: 0
   moveSpeed: 4
   attackCooldown: 0
   attackThreshold: 10
+  ballCooldown: 0
   sprite_Idle: {fileID: 21300000, guid: c954a37260ffa554ea00bd48012396d7, type: 3}
   sprite_Attack: {fileID: 21300000, guid: def7b0ae867820c45bba9a9fa8456d80, type: 3}
   sprite_Follow: {fileID: 21300000, guid: 30e1eff5905e33142ac46618b67eda3d, type: 3}
   thePlayer: {fileID: 0}
+  theFireball: {fileID: 459552, guid: ca58cb5e42c4fdb4d9b8bf5473e52bd0, type: 2}
+  spawnPos: {fileID: 527677358}
+  healthBar: {fileID: 367328484}
   damageNoise: {fileID: 697715038}
   attackNoise: {fileID: 697715037}
---- !u!58 &697715043
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 697715036}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.20000005
+  sprite_fireball: {fileID: 21300000, guid: 6a5014121d2a7194496e52f8ddfb3f18, type: 3}
+  sprite_iceball: {fileID: 21300000, guid: fd7e8faf65bb7ec40bca277eddec59f1, type: 3}
+  sprite_poisonball: {fileID: 21300000, guid: 36a6a2fff49b5684ea5c720eb76888c7, type: 3}
+  sprite_darkball: {fileID: 21300000, guid: ce3806f623de79d4e9b06ca96f9cd1a9, type: 3}
+  moveToThis: {x: 0, y: 0}
+  tempPlayer: {x: 0, y: 0}
 --- !u!50 &697715044
 Rigidbody2D:
   serializedVersion: 2
@@ -2868,6 +2892,7 @@ Transform:
   - {fileID: 326351633}
   - {fileID: 593395596}
   - {fileID: 1103570681}
+  - {fileID: 527677358}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &1582560975

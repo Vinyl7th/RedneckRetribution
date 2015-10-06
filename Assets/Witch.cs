@@ -9,7 +9,8 @@ public class Witch : MonoBehaviour {
     [SerializeField]
     AudioSource fireballSound;
 
-    GameObject[] Waypoint;
+    Vector3 theCameraPlusPos;
+    
    
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer;
@@ -25,6 +26,10 @@ public class Witch : MonoBehaviour {
     bool regenHealth;
     float healthRegenTimer = 0.0f;
 
+
+        float timersp;
+
+
     //basic varible to hold the Necromancer's stats
     public float aggroRange,
            moveSpeed,
@@ -39,6 +44,9 @@ public class Witch : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+
+        theCameraPlusPos = Camera.main.transform.position;
+        theCameraPlusPos.z = transform.position.z;
         thePlayer = GameObject.FindWithTag("Player");
 
         teleportNoise.volume = fireballSound.volume = soundController.sfxValue;
@@ -53,7 +61,7 @@ public class Witch : MonoBehaviour {
 
         regenHealth = false;
 
-        Waypoint = GameObject.FindGameObjectsWithTag("WitchWaypoints");
+
 
         // Set the Enemy's Movement Speed, Hitpoints, aggrorange,
         //when to runaway, and when cast fireballs
@@ -62,6 +70,8 @@ public class Witch : MonoBehaviour {
         runAway = 8f;
         hitPoints = 3500.0f;
         maxHealth = hitPoints;
+
+      
 
 
     }
@@ -77,7 +87,7 @@ public class Witch : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        timersp += Time.deltaTime;
 
         healthRegenTimer += Time.deltaTime;
 
@@ -139,6 +149,12 @@ public class Witch : MonoBehaviour {
             thePlayer.transform.position,
             gameObject.transform.position);
 
+        //temp varibles for the player's and enemies's position
+        float playerX = thePlayer.transform.position.x;
+        float playerY = thePlayer.transform.position.y;
+        float enemyX = gameObject.transform.position.x;
+        float enemyY = gameObject.transform.position.y;
+
         //if player's position is with then the range of the Enemy's aggrorange
         if (DisToPlayer <= aggroRange)
         {
@@ -174,36 +190,21 @@ public class Witch : MonoBehaviour {
                 }
             }
 
-            if (DisToPlayer <= runAway)
+            if (timersp >= 3.0f)
             {
-                int _num = Random.Range(0, 3);
-
-                switch (_num)
-                {
-                    case 0:
-                        transform.position = Waypoint[0].transform.position;
-
-                        break;
-
-                    case 1:
-                        transform.position = Waypoint[1].transform.position;
-
-                        break;
-
-                    case 2:
-                        transform.position = Waypoint[2].transform.position;
-                        break;
+                float X_num = Random.Range(-14, 14);
+                float Y_Num = Random.Range(-8, 8);
+                theCameraPlusPos = Camera.main.transform.position;
+                theCameraPlusPos.z = transform.position.z;
+                theCameraPlusPos.x = theCameraPlusPos.x + X_num;
+                theCameraPlusPos.y = theCameraPlusPos.y + Y_Num;
 
 
-                }
-
-
-
-
+                transform.position = theCameraPlusPos;
+                timersp = 0;
             }
 
-           
-        }
+                   }
     }
 
 

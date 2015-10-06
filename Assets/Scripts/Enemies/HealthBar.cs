@@ -83,7 +83,24 @@ public class HealthBar : MonoBehaviour {
             MaxHealth = gameObject.GetComponentInParent<Yetis>().maxHealth;
             CurrHealth = gameObject.GetComponentInParent<Yetis>().hitPoints;
         }
+        else if (Etype == 11)
+        {
+           
+            MaxHealth = gameObject.GetComponentInParent<EnchantedArmor>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<EnchantedArmor>().hitPoints;
+        }
+        else if (Etype == 12)
+        {
 
+            MaxHealth = gameObject.GetComponentInParent<Bat>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<Bat>().hitPoints;
+        }
+        else if (Etype == 20)
+        {
+
+            MaxHealth = gameObject.GetComponentInParent<Necronomicon>().bHP_Max;
+            CurrHealth = gameObject.GetComponentInParent<Necronomicon>().bHP_Curr;
+        }
 
         Vector3 displayPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + heightOffset, -8.0f);
         healthBarBorder.transform.position = displayPos;

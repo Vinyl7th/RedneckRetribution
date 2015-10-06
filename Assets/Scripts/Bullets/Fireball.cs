@@ -21,7 +21,7 @@ public class Fireball : MonoBehaviour
     void Start()
     {
 
-        fireballSpeed = 20;
+        fireballSpeed = 10;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         accuracy = Random.Range(-0.05f, 0.05f);
         direction = thePlayer.transform.position - gameObject.transform.position;

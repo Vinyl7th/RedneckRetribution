@@ -144,7 +144,7 @@ public class DarkDragon : MonoBehaviour
 
     }
 
-    void Move()
+    void Move()    
     {
         if (_Find == true)
         {
