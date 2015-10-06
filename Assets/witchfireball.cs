@@ -46,7 +46,6 @@ public class witchfireball : MonoBehaviour {
             Destroy(gameObject);
         }
 
-         if (other.gameObject.tag != "Enemy")
         Destroy(gameObject);
 
     }
