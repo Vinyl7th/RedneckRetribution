@@ -16,7 +16,8 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        Vector3 newStart = new Vector3(-200, 0, 0);
+        gameObject.transform.position = newStart;
     }
 
     // Update is called once per frame
