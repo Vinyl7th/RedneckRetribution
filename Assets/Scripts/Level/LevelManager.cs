@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LevelManager : MonoBehaviour {
+public class LevelManager : MonoBehaviour
+{
 
     public GameObject Floor1;
     public GameObject Floor2;
@@ -10,16 +11,16 @@ public class LevelManager : MonoBehaviour {
     public GameObject Floor5;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         LoadLevel(1);
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-	
-	}
+
+    }
 
     public void LoadLevel(int _level)
     {

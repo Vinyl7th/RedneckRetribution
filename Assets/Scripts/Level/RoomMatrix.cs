@@ -906,11 +906,11 @@ public class RoomMatrix : MonoBehaviour {
             otherPos = theRoom.pos;
             otherPos.x += 1;
 
-            Debug.Log(theRoom.pos.x);
-            Debug.Log(theRoom.pos.y);
+            //Debug.Log(theRoom.pos.x);
+            //Debug.Log(theRoom.pos.y);
 
-            Debug.Log(otherPos.x);
-            Debug.Log(otherPos.y);
+            //Debug.Log(otherPos.x);
+            //Debug.Log(otherPos.y);
 
             // See if we place a door or a wall
             if (randCheck)
