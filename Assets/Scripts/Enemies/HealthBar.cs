@@ -107,6 +107,12 @@ public class HealthBar : MonoBehaviour {
             MaxHealth = gameObject.GetComponentInParent<PossesedBook>().maxHealth;
             CurrHealth = gameObject.GetComponentInParent<PossesedBook>().currHealth;
         }
+        else if (Etype == 15)
+        {
+
+            MaxHealth = gameObject.GetComponentInParent<SnowMan>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<SnowMan>().currHealth;
+        }
         else if (Etype == 20)
         {
 
