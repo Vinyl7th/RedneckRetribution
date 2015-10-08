@@ -16,8 +16,8 @@ public class RainScript : MonoBehaviour
 
         angle = 5;
         rotation = new Quaternion(0, 0, angle, 90);
-       speed = Random.Range(50.0f, 60.0f);
-       // lifeSpan = Random.Range(0.01f, 0.05f);
+        speed = Random.Range(50.0f, 60.0f);
+        // lifeSpan = Random.Range(0.01f, 0.05f);
         lifeTime = 0.0f;
         transform.rotation = rotation;
         theAnimator = gameObject.GetComponent<Animator>();
@@ -28,14 +28,14 @@ public class RainScript : MonoBehaviour
     void Update()
     {
         lifeTime += Time.deltaTime;
-        if(lifeTime <= 0.05f)
+        if (lifeTime <= 0.05f)
         {
-        transform.Translate(new Vector3(0, -speed*Time.deltaTime, 0));
-            theAnimator.SetBool("Dying", true);
-           
-            
+            transform.Translate(new Vector3(0, -speed * Time.deltaTime, 0));
+             theAnimator.SetBool("Dying", true);
+
+
         }
-       
+
     }
     void kill()
     {

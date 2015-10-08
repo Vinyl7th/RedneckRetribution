@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class skeleton : MonoBehaviour {
+public class skeleton : MonoBehaviour
+{
 
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer;
@@ -27,7 +28,7 @@ public class skeleton : MonoBehaviour {
            moveSpeed,
            maxHealth,
            hitPoints;
-           
+
 
 
     // Use this for initialization
@@ -78,7 +79,7 @@ public class skeleton : MonoBehaviour {
             //start the delaytimer and change the enemy's color to red
             delayColorChanger += Time.deltaTime;
             Color newColor = new Color(1.0f, 0, 0);
-            gameObject.GetComponent<SpriteRenderer>().color = newColor; 
+            gameObject.GetComponent<SpriteRenderer>().color = newColor;
 
             //after the color is red change the color back to its normal color
             //and change the bool back to false
@@ -151,14 +152,14 @@ public class skeleton : MonoBehaviour {
             regenHealth = true;
         }
 
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             attackNoise.Play();
             other.SendMessage("TakePhysicalDamage", 50);
         }
 
     }
-   
+
 
 
     //Check if the enemy leaves the range of the necro's aura

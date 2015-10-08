@@ -19,6 +19,9 @@ public class Weather : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        for (int i = 0; i <3; i++)
+        {
+
         position = Camera.main.transform.position;
         position.z = 1;
         offsetX = Random.Range(-16.0f, 16.0f);
@@ -26,5 +29,6 @@ public class Weather : MonoBehaviour
         position.x += offsetX;
         position.y += offsetY;
         Instantiate(rain, position, rain.transform.rotation);
-    }
+   }
+        }
 }

@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     float moveSpeed = 8;
     public int elementalType = 0;
     Vector2 moveVelocity;
+    Animator theAnimator;
 
     public bool standingOnObject;
     public GameObject gun;
@@ -16,13 +17,15 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        theAnimator = gameObject.GetComponent<Animator>();
+        Vector3 newStart = new Vector3(-200, 0, 0);
+        gameObject.transform.position = newStart;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(GetComponent<PlayerStats>().pHealthCurr == 0)
+        if(GetComponent<PlayerStats>().pHealthCurr <= 0)
         {
             if (!phoenixEgg)
             {
@@ -40,18 +43,25 @@ public class Player : MonoBehaviour
         if (Input.GetButton("MoveUp"))
         {
             moveVelocity.y = moveSpeed;
+            theAnimator.SetBool("walkRight", true);
         }
         if (Input.GetButton("MoveDown"))
         {
             moveVelocity.y = -moveSpeed;
+            theAnimator.SetBool("walkRight", true);
         }
         if (Input.GetButton("MoveLeft"))
         {
             moveVelocity.x = -moveSpeed;
+            theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+            theAnimator.SetBool("walkRight",true);
+
         }
         if (Input.GetButton("MoveRight"))
         {
             moveVelocity.x = moveSpeed;
+            theAnimator.transform.localScale = new Vector3(1, 1, 1);
+            theAnimator.SetBool("walkRight", true);
         }
         gameObject.GetComponent<Rigidbody2D>().velocity = moveVelocity;
 
@@ -101,6 +111,11 @@ public class Player : MonoBehaviour
         }
 
         SendRuneCharges();
+        if(moveVelocity.x == 0 && moveVelocity.y == 0)
+        {
+            //theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+            theAnimator.SetBool("walkRight", false);
+        }
 
     }
     public void SetElement(int _in)

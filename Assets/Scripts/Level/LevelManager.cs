@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
     public void LoadLevel(int _level)
     {
         GameObject thePlayer = GameObject.FindWithTag("Player");
-        Vector3 spawn = new Vector3(100, 60, 0);
+        Vector3 spawn = new Vector3(-200, 0, 0);
         thePlayer.transform.position = spawn;
 
 

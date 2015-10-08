@@ -13,6 +13,8 @@ GameObject:
   - 50: {fileID: 5061916}
   - 58: {fileID: 5878312}
   - 114: {fileID: 11496914}
+  - 114: {fileID: 11421606}
+  - 95: {fileID: 9501896}
   m_Layer: 11
   m_Name: fireball
   m_TagString: EnemyBullet
@@ -61,6 +63,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .5
+--- !u!95 &9501896
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173832}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b6042ba65cb751b4ca8070d559d0739f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11421606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62cfe58c12c6496499343fd15e207497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theSprites:
+  - {fileID: 21300000, guid: 4a6a08257951548418c7a4876cd4b696, type: 3}
+  - {fileID: 21300000, guid: 6a5014121d2a7194496e52f8ddfb3f18, type: 3}
+  - {fileID: 21300000, guid: fd7e8faf65bb7ec40bca277eddec59f1, type: 3}
+  - {fileID: 21300000, guid: 36a6a2fff49b5684ea5c720eb76888c7, type: 3}
+  - {fileID: 21300000, guid: ce3806f623de79d4e9b06ca96f9cd1a9, type: 3}
+  particles:
+  - {fileID: 21300000, guid: f27cbd72c983b7245893f7d9baa466da, type: 3}
+  - {fileID: 21300000, guid: 077adf07d99ce1640b90664f5da48871, type: 3}
+  - {fileID: 21300000, guid: dc49bb92ab557764d924d2caf11b33ef, type: 3}
+  - {fileID: 21300000, guid: ac1e02fd9b5c4f84a94c9abcd237fea7, type: 3}
+  particle: {fileID: 163746, guid: 1cf343c43e891ea409e41bff42a39310, type: 2}
 --- !u!114 &11459514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,6 +180,10 @@ Prefab:
       propertyPath: m_TagString
       value: EnemyBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b6042ba65cb751b4ca8070d559d0739f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 173832}
