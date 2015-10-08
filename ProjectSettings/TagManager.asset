@@ -25,6 +25,9 @@ TagManager:
   - DragonControl
   - WitchWaypoints
   - Necronomicon
+  - TextSpawner
+  - EmptyText
+  - CompletedText
   layers:
   - Default
   - TransparentFX

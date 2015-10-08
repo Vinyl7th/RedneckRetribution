@@ -118,6 +118,15 @@ public class Enemy_Type_Calc : MonoBehaviour
     public void CalculateDamage(float _damage)
     {
         gameObject.SendMessage("RecieveDamage", _damage);
+
+        // UI 
+        Vector3 _pos = gameObject.transform.position;
+        _pos.y += 3.0f;
+
+        int theDamage = (int)_damage;
+
+        GameObject theCanvas = GameObject.FindWithTag("TextSpawner");
+        theCanvas.GetComponent<TextSpawner>().SpawnTheText(theDamage, _pos);
     }
 }
 
