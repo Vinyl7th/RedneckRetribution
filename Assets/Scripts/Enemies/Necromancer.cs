@@ -136,6 +136,7 @@ public class Necromancer : MonoBehaviour
                 if (fireDelay >= 0.09f)
                 {
                     //calling the function to fire the fireball
+                   
                     fireballSound.Play();
                     CastFireball();
                     count++;

@@ -5,16 +5,17 @@ public class SnowMan : MonoBehaviour
 {
 
     public GameObject FireBall;
-   public GameObject snowmen;
+    public GameObject snowmen;
 
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer,
                killcounter;
 
     [SerializeField]
-    AudioSource hitSound;
+    AudioSource Laugh;
     [SerializeField]
-    AudioSource fireballSound;
+    AudioSource Walk;
+
     //varibles for the visual feedback when the skeleton takes damage
     Color baseColor;
     bool changeColor;
@@ -41,6 +42,8 @@ public class SnowMan : MonoBehaviour
     {
         thePlayer = GameObject.FindWithTag("Player");
         //fireballSound.volume = hitSound.volume = soundController.sfxValue;
+        Laugh.volume = Walk.volume = soundController.sfxValue;
+        Laugh.Stop();
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
         changeColor = false;
@@ -49,7 +52,7 @@ public class SnowMan : MonoBehaviour
         //have offcooldown set to true so he fires at the beginning
         offCoolDown = true;
 
-       
+
         // Set the Enemy's Movement Speed, Hitpoints, aggrorange,
         //when to runaway, and when cast fireballs
         aggroRange = 30.0f;
@@ -63,7 +66,8 @@ public class SnowMan : MonoBehaviour
 
     public void RecieveDamage(float _dmg)
     {
-        //hitSound.Play();
+        if (!Laugh.isPlaying)
+            Laugh.Play();
         currHealth -= _dmg;
         changeColor = true;
 
@@ -76,7 +80,8 @@ public class SnowMan : MonoBehaviour
         if (!offCoolDown)
             delayCastFireball += Time.deltaTime;
 
-
+        if (!Walk.isPlaying)
+            Walk.Play();
         //  if enemy took damage  
         if (changeColor == true)
         {
@@ -102,19 +107,19 @@ public class SnowMan : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if(transform.localScale.x >= 2.0f)
+        if (transform.localScale.x >= 2.0f)
         {
             Vector3 pos = gameObject.transform.position;
             pos.x += 2;
             transform.localScale = new Vector3(1, 1, 1);
-            Instantiate(snowmen,pos,gameObject.transform.rotation);
-           
+            Instantiate(snowmen, pos, gameObject.transform.rotation);
+
         }
     }
 
     void Move()
     {
-      
+
         //Set the player movement every frame to 0x 0y
         Vector2 moveEnemy = new Vector2(0, 0);
 
@@ -179,7 +184,7 @@ public class SnowMan : MonoBehaviour
                 transform.localScale = new Vector3(temp.x += 0.001f, temp.y += 0.001f, 1);
             }
             //Run away from the player
-             if (DisToPlayer < (runAway))
+            if (DisToPlayer < (runAway))
             {
                 if (playerX >= enemyX)         // enemy move left
                     moveEnemy.x = -moveSpeed;
