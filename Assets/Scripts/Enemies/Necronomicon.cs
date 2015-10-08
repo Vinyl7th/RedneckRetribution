@@ -308,7 +308,7 @@ public class Necronomicon : MonoBehaviour {
             temp.GetComponent<SpriteRenderer>().sprite = sprite_darkball;
         }
 
-        temp.GetComponent<SpriteRenderer>().color = newColor;
+       // temp.GetComponent<SpriteRenderer>().color = newColor;
 
     }
 

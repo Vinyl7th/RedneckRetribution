@@ -17,7 +17,7 @@ public class SwordsDance : MonoBehaviour
     void Update()
     {
       
-        transform.Translate( new Vector3(movementSpeed*Time.deltaTime,1,1));
+        transform.Translate( new Vector3(movementSpeed*Time.deltaTime,1,0));
 
     }
     void OnTriggerEnter2D(Collider2D col)
