@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SnowMan : MonoBehaviour {
+public class SnowMan : MonoBehaviour
+{
 
     public GameObject FireBall;
+   public GameObject snowmen;
 
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer,
@@ -18,6 +20,9 @@ public class SnowMan : MonoBehaviour {
     bool changeColor;
     float delayColorChanger;
 
+    public float maxHealth;
+    public float currHealth;
+
     //bool to switch when the necro fireball cast is on cooldown
     bool offCoolDown;
 
@@ -26,8 +31,6 @@ public class SnowMan : MonoBehaviour {
     public float aggroRange,
            runAway,
            moveSpeed,
-           maxHealth,
-           hitPoints,
            fireDelay,
            delayCastFireball;
     int count = 0;
@@ -42,27 +45,26 @@ public class SnowMan : MonoBehaviour {
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
         changeColor = false;
         delayColorChanger = 0.0f;
-       // hitSound.volume *= 2;
+        // hitSound.volume *= 2;
         //have offcooldown set to true so he fires at the beginning
         offCoolDown = true;
 
-
-
+       
         // Set the Enemy's Movement Speed, Hitpoints, aggrorange,
         //when to runaway, and when cast fireballs
         aggroRange = 30.0f;
         moveSpeed = 4.5f;
-        hitPoints = 2000.0f;
+        maxHealth = 2000.0f;
         runAway = 8;
-        maxHealth = hitPoints;
+        currHealth = maxHealth;
 
 
     }
 
     public void RecieveDamage(float _dmg)
     {
-        hitSound.Play();
-        hitPoints -= _dmg;
+        //hitSound.Play();
+        currHealth -= _dmg;
         changeColor = true;
 
     }
@@ -96,16 +98,23 @@ public class SnowMan : MonoBehaviour {
         Move();
 
         //if the healthpoints are 0 destroy the enemy on screen
-        if (hitPoints < 0.0f)
+        if (currHealth <= 0.0f)
         {
             Destroy(gameObject);
         }
-
+        if(transform.localScale.x >= 2.0f)
+        {
+            Vector3 pos = gameObject.transform.position;
+            pos.x += 2;
+            transform.localScale = new Vector3(1, 1, 1);
+            Instantiate(snowmen,pos,gameObject.transform.rotation);
+           
+        }
     }
 
     void Move()
     {
-
+      
         //Set the player movement every frame to 0x 0y
         Vector2 moveEnemy = new Vector2(0, 0);
 
@@ -135,7 +144,7 @@ public class SnowMan : MonoBehaviour {
                 if (fireDelay >= 0.09f)
                 {
                     //calling the function to fire the fireball
-                   // fireballSound.Play();
+                    // fireballSound.Play();
                     CastFireball();
                     count++;
                     if (count == 8)
@@ -156,8 +165,21 @@ public class SnowMan : MonoBehaviour {
             }
 
 
+            if (DisToPlayer >= 6)
+            {
+                if (playerX >= enemyX)         // enemy move left
+                    moveEnemy.x = moveSpeed;
+                if (playerX <= enemyX)         // enemy move right
+                    moveEnemy.x = -moveSpeed;
+                if (playerY >= enemyY)         // enemy move down
+                    moveEnemy.y = moveSpeed;
+                if (playerY <= enemyY)         // enemy move up
+                    moveEnemy.y = -moveSpeed;
+                Vector3 temp = transform.localScale;
+                transform.localScale = new Vector3(temp.x += 0.001f, temp.y += 0.001f, 1);
+            }
             //Run away from the player
-            if (DisToPlayer <= runAway)
+             if (DisToPlayer < (runAway))
             {
                 if (playerX >= enemyX)         // enemy move left
                     moveEnemy.x = -moveSpeed;
@@ -167,6 +189,8 @@ public class SnowMan : MonoBehaviour {
                     moveEnemy.y = -moveSpeed;
                 if (playerY <= enemyY)         // enemy move up
                     moveEnemy.y = moveSpeed;
+                Vector3 temp = transform.localScale;
+                transform.localScale = new Vector3(temp.x += 0.001f, temp.y += 0.001f, 1);
             }
         }
         gameObject.GetComponent<Rigidbody2D>().velocity = moveEnemy;
@@ -177,7 +201,7 @@ public class SnowMan : MonoBehaviour {
 
     void CastFireball()
     {
-        
+
         Instantiate(FireBall, gameObject.transform.position, gameObject.transform.rotation);
     }
 }
