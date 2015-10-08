@@ -17,9 +17,16 @@ public class Froog : MonoBehaviour
     bool caught = false;
     bool intinced = false;
     float distance;
+    //varibles for the visual feedback when the enemy takes damage
+    Color baseColor;
+    bool changeColor;
+    float delayColorChanger;
     // Use this for initialization
     void Start()
     {
+        baseColor = gameObject.GetComponent<SpriteRenderer>().color;
+        changeColor = false;
+        delayColorChanger = 0.0f;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
         agroRange = 15.0f;
         maxHealth = 2500;
@@ -33,6 +40,26 @@ public class Froog : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(theTongue);
+        }
+        // Damage color
+        if (changeColor == true)
+        {
+            //start the delaytimer and change the enemy's color to red
+            delayColorChanger += Time.deltaTime;
+            Color newColor = new Color(1.0f, 0, 0);
+            gameObject.GetComponent<SpriteRenderer>().color = newColor;
+
+            Color baseColor;
+            baseColor = new Color(1.0f, 1.0f, 1.0f);
+
+            //after the color is red change the color back to its normal color
+            //and change the bool back to false
+            if (delayColorChanger >= 0.1f)
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = baseColor;
+                delayColorChanger = 0.0f;
+                changeColor = false;
+            }
         }
         distance = Vector2.Distance(thePlayer.transform.position, transform.position);
         if (distance <= agroRange)
@@ -134,7 +161,7 @@ public class Froog : MonoBehaviour
     {
         // damageNoise.Play();
         currHealth -= _dmg;
-        // changeColor = true;
+         changeColor = true;
 
     }
     void BlowTheFuckUp()

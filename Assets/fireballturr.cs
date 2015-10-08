@@ -20,7 +20,7 @@ public class fireballturr : MonoBehaviour {
     void Start()
     {
 
-        fireballSpeed = 10;
+        fireballSpeed = 5;
        
         //accuracy = Random.Range(-0.05f, 0.05f);
         //direction = thePlayer.transform.position - gameObject.transform.position;
@@ -33,7 +33,7 @@ public class fireballturr : MonoBehaviour {
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 2.5f)
+        if (timer >= 7.5f)
             Destroy(gameObject);
 
         transform.Translate(new Vector3(fireballSpeed * Time.deltaTime, 0, 0));

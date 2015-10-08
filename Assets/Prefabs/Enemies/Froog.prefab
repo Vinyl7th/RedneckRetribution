@@ -64,7 +64,7 @@ GameObject:
   - 95: {fileID: 9573346}
   - 114: {fileID: 11450616}
   - 114: {fileID: 11481670}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Froog
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -198.754623, y: -3.37759662, z: 1}
+  m_LocalPosition: {x: -203.423523, y: 4.99219513, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461460}

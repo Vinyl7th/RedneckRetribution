@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
             if (!phoenixEgg)
             {
                 Destroy(gameObject);
+                Cursor.visible = true;
                 Application.LoadLevel("Menu_Main");
             }
             else

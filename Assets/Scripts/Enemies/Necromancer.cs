@@ -14,7 +14,7 @@ public class Necromancer : MonoBehaviour
     AudioSource hitSound;
     [SerializeField]
     AudioSource fireballSound;
-    //varibles for the visual feedback when the skeleton takes damage
+    //varibles for the visual feedback when the enemy takes damage
     Color baseColor;
     bool changeColor;
     float delayColorChanger;

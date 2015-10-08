@@ -10,11 +10,20 @@ public class PossesedBook : MonoBehaviour
     float timer = 0.0f;
     public float currHealth;
     public float maxHealth;
+
+    //varibles for the visual feedback when the enemy takes damage
+    Color baseColor;
+    bool changeColor;
+    float delayColorChanger;
+
     // Use this for initialization
     void Start()
     {
+        baseColor = gameObject.GetComponent<SpriteRenderer>().color;
+        changeColor = false;
+        delayColorChanger = 0.0f;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
-        maxHealth = 250;
+        maxHealth = 1250;
         currHealth = maxHealth;
         SetDash();
     }
@@ -24,6 +33,26 @@ public class PossesedBook : MonoBehaviour
     {
         if (currHealth <= 0)
             Destroy(gameObject);
+        // Damage color
+        if (changeColor == true)
+        {
+            //start the delaytimer and change the enemy's color to red
+            delayColorChanger += Time.deltaTime;
+            Color newColor = new Color(1.0f, 0, 0);
+            gameObject.GetComponent<SpriteRenderer>().color = newColor;
+
+            Color baseColor;
+            baseColor = new Color(1.0f, 1.0f, 1.0f);
+
+            //after the color is red change the color back to its normal color
+            //and change the bool back to false
+            if (delayColorChanger >= 0.1f)
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = baseColor;
+                delayColorChanger = 0.0f;
+                changeColor = false;
+            }
+        }
         timer += Time.deltaTime;
         angle += 30;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
@@ -46,7 +75,7 @@ public class PossesedBook : MonoBehaviour
     {
         // damageNoise.Play();
         currHealth -= _dmg;
-        // changeColor = true;
+         changeColor = true;
 
     }
     void Dash()

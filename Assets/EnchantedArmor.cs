@@ -98,7 +98,7 @@ public class EnchantedArmor : MonoBehaviour {
 
         //enemy's movement  
         Move();
-        if (gameObject.transform.position.x >= thePlayer.transform.position.x)
+        if ((int)gameObject.transform.position.x > (int)thePlayer.transform.position.x)
         {
             if (!isRightattack)
             {
