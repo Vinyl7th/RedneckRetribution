@@ -54,7 +54,7 @@ public class Necromancer : MonoBehaviour
         aggroRange = 30.0f;
         moveSpeed = 4.5f;
         hitPoints = 2000.0f;
-        runAway = 8;
+        runAway = 5;
         maxHealth = hitPoints;
 
 
@@ -156,7 +156,17 @@ public class Necromancer : MonoBehaviour
                 }
             }
 
-
+            if(DisToPlayer >= 6)
+            {
+                if (playerX >= enemyX)         // enemy move left
+                    moveEnemy.x = moveSpeed;
+                if (playerX <= enemyX)         // enemy move right
+                    moveEnemy.x = -moveSpeed;
+                if (playerY >= enemyY)         // enemy move down
+                    moveEnemy.y = moveSpeed;
+                if (playerY <= enemyY)         // enemy move up
+                    moveEnemy.y = -moveSpeed;
+            }
             //Run away from the player
             if (DisToPlayer <= runAway)
             {

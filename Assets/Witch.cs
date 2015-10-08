@@ -67,8 +67,8 @@ public class Witch : MonoBehaviour {
         //when to runaway, and when cast fireballs
         aggroRange = 30.0f;
         moveSpeed = 3f;
-        runAway = 8f;
-        hitPoints = 3500.0f;
+        runAway = 2.5f;
+        hitPoints = 2500.0f;
         maxHealth = hitPoints;
 
       
@@ -204,7 +204,21 @@ public class Witch : MonoBehaviour {
                 timersp = 0;
             }
 
-                   }
+            if (DisToPlayer <= runAway)
+            {
+                float X_num = Random.Range(-14, 14);
+                float Y_Num = Random.Range(-8, 8);
+                theCameraPlusPos = Camera.main.transform.position;
+                theCameraPlusPos.z = transform.position.z;
+                theCameraPlusPos.x = theCameraPlusPos.x + X_num;
+                theCameraPlusPos.y = theCameraPlusPos.y + Y_Num;
+
+
+                transform.position = theCameraPlusPos;
+                timersp = 0;
+            }
+
+        }
     }
 
 
