@@ -204,8 +204,10 @@ public class Necronomicon : MonoBehaviour {
             bossState = 5;
 
         if (bHP_Curr <= 0.0f)
+        {
+            Cursor.visible = true;
             Application.LoadLevel("Menu_Credits");
-
+        }
 
     }
 

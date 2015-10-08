@@ -12,7 +12,7 @@ public class FireturrTrap : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         delaytime += Time.deltaTime;
-        if (delaytime >= 1)
+        if (delaytime >= 2)
         {
             Instantiate(FireBall, gameObject.transform.position, gameObject.transform.rotation);
             Instantiate(FireBall, gameObject.transform.position, Quaternion.Euler(0, 0, 90));
