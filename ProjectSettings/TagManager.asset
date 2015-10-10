@@ -28,8 +28,7 @@ TagManager:
   - TextSpawner
   - EmptyText
   - CompletedText
-  - Demon  layers:
-  - shadowwaypoint
+  - LevelManager
   layers:
   - Default
   - TransparentFX

@@ -30,10 +30,21 @@ public class LevelManager : MonoBehaviour
 
     public void LoadLevel()
     {
+        Vector3 spawn;
         _level += 1;
         GameObject thePlayer = GameObject.FindWithTag("Player");
-        Vector3 spawn = new Vector3(-200, 0, 0);
-        thePlayer.transform.position = spawn;
+
+        if(_level < 5)
+        {
+            spawn = new Vector3(96, 60, 0);
+            thePlayer.transform.position = spawn;
+        }
+        else
+        {
+            spawn = new Vector3(-190, -20, 0);
+            thePlayer.transform.position = spawn;
+        }
+        
 
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("ROOM");
         int roomSize = rooms.Length;

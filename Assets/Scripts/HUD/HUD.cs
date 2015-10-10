@@ -19,7 +19,7 @@ public class HUD : MonoBehaviour {
     {
         thePlayer = GameObject.FindWithTag("Player");
         healthBarPos = healthBar.transform.position;
-        currTheme.volume = soundController.musicValue;
+        // currTheme.volume = soundController.musicValue;
     }
 	
 	// Update is called once per frame
