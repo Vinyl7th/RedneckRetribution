@@ -11,7 +11,7 @@ public class EnchantedArmor : MonoBehaviour {
 
     //[SerializeField]
     //AudioSource attackNoise;
-
+    Animator theAnimator;
 
     //varibles for the visual feedback when the skeleton takes damage
     Color baseColor;
@@ -20,19 +20,22 @@ public class EnchantedArmor : MonoBehaviour {
     float healthRegenTimer = 0.0f;
 
     bool regenHealth;
-
+    bool isRightattack;
+    bool isRight;
 
     //basic varible to hold the skeletons stats
     public float aggroRange,
            moveSpeed,
            maxHealth,
-           hitPoints;
+           hitPoints,
+           attackrange;
 
 
 
     // Use this for initialization
     void Start()
     {
+        theAnimator = gameObject.GetComponent<Animator>();
         // At the start make the thePlayer gameobject the player with tag
         thePlayer = GameObject.FindWithTag("Player");
 
@@ -47,9 +50,12 @@ public class EnchantedArmor : MonoBehaviour {
         regenHealth = false;
         // Set the Enemy's Movement Speed, Hitpoints, and aggrorange
         aggroRange = 20.0f;
-        moveSpeed = 4.5f;
-        hitPoints = 2500.0f;
+        moveSpeed = 2f;
+        hitPoints = 10000.0f;
         maxHealth = hitPoints;
+        isRightattack = false;
+        isRight = false;
+        attackrange = 2f;
 
     }
 
@@ -92,6 +98,26 @@ public class EnchantedArmor : MonoBehaviour {
 
         //enemy's movement  
         Move();
+        if ((int)gameObject.transform.position.x > (int)thePlayer.transform.position.x)
+        {
+            if (!isRightattack)
+            {
+                theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                isRightattack = true;
+            }
+            else
+                isRightattack = false;
+        }
+        else
+        {
+            if (!isRightattack)
+            {
+                theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                isRightattack = true;
+            }
+            else
+                isRightattack = false;
+        }
 
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints < 0.0f)
@@ -141,6 +167,13 @@ public class EnchantedArmor : MonoBehaviour {
                 moveEnemy.y = -moveSpeed;
         }
         gameObject.GetComponent<Rigidbody2D>().velocity = moveEnemy;
+
+        if(DisToPlayer <= attackrange)
+        {
+            theAnimator.SetBool("attack", true);
+        }
+        else
+            theAnimator.SetBool("attack", false);
     }
 
     //Checks if the enemy is within range of the necro's aura
@@ -156,6 +189,7 @@ public class EnchantedArmor : MonoBehaviour {
             //attackNoise.Play();
             other.SendMessage("TakePhysicalDamage", 50);
         }
+       
 
     }
 

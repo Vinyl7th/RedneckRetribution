@@ -95,6 +95,24 @@ public class HealthBar : MonoBehaviour {
             MaxHealth = gameObject.GetComponentInParent<Bat>().maxHealth;
             CurrHealth = gameObject.GetComponentInParent<Bat>().hitPoints;
         }
+        else if (Etype == 13)
+        {
+
+            MaxHealth = gameObject.GetComponentInParent<Froog>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<Froog>().currHealth;
+        }
+        else if (Etype == 14)
+        {
+
+            MaxHealth = gameObject.GetComponentInParent<PossesedBook>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<PossesedBook>().currHealth;
+        }
+        else if (Etype == 15)
+        {
+
+            MaxHealth = gameObject.GetComponentInParent<SnowMan>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<SnowMan>().currHealth;
+        }
         else if (Etype == 20)
         {
 

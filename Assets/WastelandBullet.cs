@@ -25,7 +25,7 @@ public class WastelandBullet : MonoBehaviour {
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         direction = thePlayer.transform.position - gameObject.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        gameObject.transform.rotation = Quaternion.AngleAxis(angle,Vector3.forward);
 
     }
 

@@ -11,12 +11,15 @@ public class HUD : MonoBehaviour {
 
     float MaxHP;
     float CurrHP;
+    [SerializeField]
+    AudioSource currTheme;
 
 	// Use this for initialization
 	void Start ()
     {
         thePlayer = GameObject.FindWithTag("Player");
         healthBarPos = healthBar.transform.position;
+        currTheme.volume = soundController.musicValue;
     }
 	
 	// Update is called once per frame

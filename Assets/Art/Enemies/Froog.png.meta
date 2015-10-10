@@ -1,0 +1,617 @@
+fileFormatVersion: 2
+guid: fed3047d5fd3e4e48aef8dd8852aebce
+timeCreated: 1444265562
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Froog_0
+    21300002: Froog_1
+    21300004: Froog_2
+    21300006: Froog_3
+    21300008: Froog_4
+    21300010: Froog_5
+    21300012: Froog_6
+    21300014: Froog_7
+    21300016: Froog_8
+    21300018: Froog_9
+    21300020: Froog_10
+    21300022: Froog_11
+    21300024: Froog_12
+    21300026: Froog_13
+    21300028: Froog_14
+    21300030: Froog_15
+    21300032: Froog_16
+    21300034: Froog_17
+    21300036: Froog_18
+    21300038: Froog_19
+    21300040: Froog_20
+    21300042: Froog_21
+    21300044: Froog_22
+    21300046: Froog_23
+    21300048: Froog_24
+    21300050: Froog_25
+    21300052: Froog_26
+    21300054: Froog_27
+    21300056: Froog_28
+    21300058: Froog_29
+    21300060: Froog_30
+    21300062: Froog_31
+    21300064: Froog_32
+    21300066: Froog_33
+    21300068: Froog_34
+    21300070: Froog_35
+    21300072: Froog_36
+    21300074: Froog_37
+    21300076: Froog_38
+    21300078: Froog_39
+    21300080: Froog_40
+    21300082: Froog_41
+    21300084: Froog_42
+    21300086: Froog_43
+    21300088: Froog_44
+    21300090: Froog_45
+    21300092: Froog_46
+    21300094: Froog_47
+    21300096: Froog_59
+    21300098: Froog_60
+    21300100: Froog_61
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Froog_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 170
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 172
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 170
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 171
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_4
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 173
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_5
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 186
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_6
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 173
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_7
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 178
+        width: 11
+        height: 24
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_8
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 170
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 139
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_10
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 138
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_11
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 138
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_12
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 138
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 138
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_14
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 145
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_15
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 138
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_16
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 137
+        width: 32
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_17
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 137
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_19
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 105
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_20
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 105
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_21
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 105
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_22
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 105
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_23
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 121
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_24
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 106
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_25
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 120
+        width: 32
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_26
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 104
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_27
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 73
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_28
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 72
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_29
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 71
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_30
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 72
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_31
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 72
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_32
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 79
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_33
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 72
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_34
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 71
+        width: 32
+        height: 32
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_35
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 72
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_36
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 38
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_37
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 40
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_38
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 38
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_39
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 40
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_40
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 40
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_41
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 46
+        width: 11
+        height: 24
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_42
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 40
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_43
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 38
+        width: 11
+        height: 32
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_44
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 42
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_45
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_46
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_47
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_59
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_60
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 3
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Froog_61
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 3
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

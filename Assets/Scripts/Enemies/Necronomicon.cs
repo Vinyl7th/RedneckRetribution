@@ -204,8 +204,10 @@ public class Necronomicon : MonoBehaviour {
             bossState = 5;
 
         if (bHP_Curr <= 0.0f)
+        {
+            Cursor.visible = true;
             Application.LoadLevel("Menu_Credits");
-
+        }
 
     }
 
@@ -308,7 +310,7 @@ public class Necronomicon : MonoBehaviour {
             temp.GetComponent<SpriteRenderer>().sprite = sprite_darkball;
         }
 
-        temp.GetComponent<SpriteRenderer>().color = newColor;
+       // temp.GetComponent<SpriteRenderer>().color = newColor;
 
     }
 
