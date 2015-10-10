@@ -25,6 +25,7 @@ TagManager:
   - DragonControl
   - WitchWaypoints
   - Necronomicon
+  - Demon
   layers:
   - Default
   - TransparentFX

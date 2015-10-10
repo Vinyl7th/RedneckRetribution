@@ -48,6 +48,8 @@ public class Enemy_Type_Calc : MonoBehaviour
                 incPlayerDamage = coll.gameObject.GetComponent<SnowBall>().damage;
             if (type == 6)
                 incPlayerDamage = coll.gameObject.GetComponent<SiphonShot>().damage;
+            if (type == 7)
+                incPlayerDamage = coll.gameObject.GetComponent<DemonShot>().damage;
            
 
 

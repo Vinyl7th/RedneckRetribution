@@ -113,6 +113,12 @@ public class HealthBar : MonoBehaviour {
             MaxHealth = gameObject.GetComponentInParent<SnowMan>().maxHealth;
             CurrHealth = gameObject.GetComponentInParent<SnowMan>().currHealth;
         }
+        else if (Etype == 16)
+        {
+
+            MaxHealth = gameObject.GetComponentInParent<FrostBug>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<FrostBug>().currHealth;
+        }
         else if (Etype == 20)
         {
 
