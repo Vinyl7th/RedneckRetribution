@@ -24,7 +24,10 @@ public class Dragons : MonoBehaviour
         //if(currDragon != 4)
         currDragon++;
         if (currDragon == 4)
+        {
+            GameObject.FindGameObjectWithTag("LevelManager").SendMessage("LoadLevel");
             Destroy(gameObject);
+        }
         id = theDragons[currDragon].GetComponent<EnemyID>().EnemyType;
         switch (id)
         {

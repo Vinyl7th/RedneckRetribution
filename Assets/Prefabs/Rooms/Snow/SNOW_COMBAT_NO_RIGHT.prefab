@@ -1894,7 +1894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 145200, guid: 2c8c5c3bd3a2cf5408d8b6112f493bb5, type: 2}
+  - {fileID: 150160, guid: 7f46f0cfe48b69f45a98622c83fb6155, type: 2}
 --- !u!114 &11458970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1907,7 +1907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 129592, guid: 5331bc2a73d115c4082ac84015fc8be3, type: 2}
+  - {fileID: 175352, guid: 005433b9736de0e41b45dc2399612495, type: 2}
 --- !u!114 &11463930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1963,7 +1963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 127168, guid: 3f9187ec3ae9b27428f2fc215cf81444, type: 2}
+  - {fileID: 158518, guid: dcb044ae8eb9cdf47b7df20ef92787a5, type: 2}
 --- !u!212 &21244422
 SpriteRenderer:
   m_ObjectHideFlags: 1

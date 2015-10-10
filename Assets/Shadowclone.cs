@@ -222,7 +222,7 @@ public class Shadowclone : MonoBehaviour {
        else if (hitPoints < 0.0f)
         {
             Destroy(currGun);
-            
+            GameObject.FindGameObjectWithTag("LevelManager").SendMessage("LoadLevel");
             Destroy(gameObject);
         }
 

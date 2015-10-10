@@ -1307,7 +1307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 123664, guid: 8e3963402de8b6b4dbfd704690b4be8c, type: 2}
+  - {fileID: 150160, guid: 7f46f0cfe48b69f45a98622c83fb6155, type: 2}
 --- !u!114 &11482082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1320,7 +1320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 123664, guid: 8e3963402de8b6b4dbfd704690b4be8c, type: 2}
+  - {fileID: 158518, guid: dcb044ae8eb9cdf47b7df20ef92787a5, type: 2}
 --- !u!114 &11499818
 MonoBehaviour:
   m_ObjectHideFlags: 1
