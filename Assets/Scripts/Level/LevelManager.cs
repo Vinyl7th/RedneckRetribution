@@ -3,6 +3,8 @@ using System.Collections;
 
 public class LevelManager : MonoBehaviour
 {
+    public int _level = 0;
+    public bool nextLevel = false;
 
     public GameObject Floor1;
     public GameObject Floor2;
@@ -13,21 +15,33 @@ public class LevelManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        LoadLevel(1);
+        LoadLevel();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(nextLevel)
+        {
+            LoadLevel();
+            nextLevel = false;
+        }
     }
 
-    public void LoadLevel(int _level)
+    public void LoadLevel()
     {
+        _level += 1;
         GameObject thePlayer = GameObject.FindWithTag("Player");
         Vector3 spawn = new Vector3(-200, 0, 0);
         thePlayer.transform.position = spawn;
 
+        GameObject[] rooms = GameObject.FindGameObjectsWithTag("ROOM");
+        int roomSize = rooms.Length;
+
+        for(int i = 0; i < roomSize; i++)
+        {
+            Destroy(rooms[i]);
+        }
 
         switch (_level)
         {
@@ -38,22 +52,22 @@ public class LevelManager : MonoBehaviour
                 }
             case 2:
                 {
-                    Instantiate(Floor2, spawn, gameObject.transform.rotation);
+                    Instantiate(Floor1, spawn, gameObject.transform.rotation);
                     break;
                 }
             case 3:
                 {
-                    Instantiate(Floor3, spawn, gameObject.transform.rotation);
+                    Instantiate(Floor1, spawn, gameObject.transform.rotation);
                     break;
                 }
             case 4:
                 {
-                    Instantiate(Floor4, spawn, gameObject.transform.rotation);
+                    Instantiate(Floor1, spawn, gameObject.transform.rotation);
                     break;
                 }
             case 5:
                 {
-                    Instantiate(Floor5, spawn, gameObject.transform.rotation);
+                    Instantiate(Floor1, spawn, gameObject.transform.rotation);
                     break;
                 }
 
