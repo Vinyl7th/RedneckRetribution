@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 463284}
   m_Layer: 0
   m_Name: FOREST_TREASURE_DOWN
-  m_TagString: Untagged
+  m_TagString: ROOM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -749,6 +749,8 @@ MonoBehaviour:
   poison: 0
   iceRune: {fileID: 127648, guid: b16046b5b198fca499744c0f5b871719, type: 2}
   ice: 0
+  darkRune: {fileID: 0}
+  dark: 0
   tier: 1
 --- !u!114 &11469786
 MonoBehaviour:
@@ -768,6 +770,8 @@ MonoBehaviour:
   poison: 0
   iceRune: {fileID: 127648, guid: b16046b5b198fca499744c0f5b871719, type: 2}
   ice: 0
+  darkRune: {fileID: 0}
+  dark: 0
   tier: 1
 --- !u!114 &11481888
 MonoBehaviour:
@@ -805,6 +809,8 @@ MonoBehaviour:
   poison: 0
   iceRune: {fileID: 127648, guid: b16046b5b198fca499744c0f5b871719, type: 2}
   ice: 0
+  darkRune: {fileID: 0}
+  dark: 0
   tier: 1
 --- !u!212 &21234610
 SpriteRenderer:
@@ -838,7 +844,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: ROOM
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100504}
