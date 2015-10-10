@@ -219,7 +219,7 @@ GameObject:
   - 4: {fileID: 435124}
   m_Layer: 0
   m_Name: Forest_Combat_All
-  m_TagString: Untagged
+  m_TagString: ROOM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -740,6 +740,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: ROOM
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
