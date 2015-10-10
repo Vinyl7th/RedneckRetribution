@@ -149,7 +149,11 @@ MonoBehaviour:
   - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
   - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
   Start_Room: {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
-  Boss_Room: {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
+  Boss_Room:
+  - {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
+  - {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
+  - {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
+  - {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -157,6 +161,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Boss_Room.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: Boss_Room
       value: 

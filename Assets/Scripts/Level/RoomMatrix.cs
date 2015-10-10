@@ -121,7 +121,9 @@ public class RoomMatrix : MonoBehaviour {
     GameObject[] Combat_ALL;
 
     public GameObject Start_Room;
-    public GameObject Boss_Room;
+
+    [SerializeField]
+    public GameObject[] Boss_Room;
 
     // Use this for initialization
     void Start()
@@ -328,7 +330,7 @@ public class RoomMatrix : MonoBehaviour {
                 }
             case 20: // Combat NO LEFT
                 {
-                    Instantiate(Boss_Room, _position, gameObject.transform.rotation);
+                    Instantiate(Boss_Room[floorNum], _position, gameObject.transform.rotation);
                     break;
                 }
             case 21: // Combat NO LEFT

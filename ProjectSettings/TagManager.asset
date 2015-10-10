@@ -28,6 +28,7 @@ TagManager:
   - TextSpawner
   - EmptyText
   - CompletedText
+  - LevelManager
   layers:
   - Default
   - TransparentFX
