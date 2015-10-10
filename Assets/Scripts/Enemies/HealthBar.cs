@@ -119,6 +119,12 @@ public class HealthBar : MonoBehaviour {
             MaxHealth = gameObject.GetComponentInParent<Necronomicon>().bHP_Max;
             CurrHealth = gameObject.GetComponentInParent<Necronomicon>().bHP_Curr;
         }
+        else if (Etype == 21)
+        {
+
+            MaxHealth = gameObject.GetComponentInParent<Shadowclone>().maxHealth;
+            CurrHealth = gameObject.GetComponentInParent<Shadowclone>().hitPoints;
+        }
 
         Vector3 displayPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + heightOffset, -8.0f);
         healthBarBorder.transform.position = displayPos;

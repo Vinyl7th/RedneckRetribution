@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         theAnimator = gameObject.GetComponent<Animator>();
-        Vector3 newStart = new Vector3(-200, 0, 0);
-        gameObject.transform.position = newStart;
+        //Vector3 newStart = new Vector3(0, 0, 0);
+        //gameObject.transform.position = newStart;
     }
 
     // Update is called once per frame
