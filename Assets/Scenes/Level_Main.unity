@@ -2512,7 +2512,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!1 &919005877
 GameObject:
   m_ObjectHideFlags: 0
@@ -4924,6 +4924,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 3b30169507ca4d84483af3956c26364b,
         type: 3}
+    - target: {fileID: 8205148, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 15e1b4ffe3a60834297e0705201b8d99, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
   m_IsPrefabParent: 0
