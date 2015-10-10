@@ -21,6 +21,10 @@ public class Froog : MonoBehaviour
     Color baseColor;
     bool changeColor;
     float delayColorChanger;
+    [SerializeField]
+    AudioSource idle;
+    [SerializeField]
+    AudioSource Hurt;
     // Use this for initialization
     void Start()
     {
@@ -28,6 +32,7 @@ public class Froog : MonoBehaviour
         changeColor = false;
         delayColorChanger = 0.0f;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
+        idle.volume = Hurt.volume = soundController.sfxValue;
         agroRange = 15.0f;
         maxHealth = 2500;
         currHealth = maxHealth;
@@ -36,7 +41,7 @@ public class Froog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currHealth <= 0)
+        if (currHealth <= 0)
         {
             Destroy(gameObject);
             Destroy(theTongue);
@@ -91,6 +96,8 @@ public class Froog : MonoBehaviour
 
         }
         LookAtPlayer();
+        if (!idle.isPlaying)
+            idle.Play();
     }
 
     void LookAtPlayer()
@@ -159,7 +166,8 @@ public class Froog : MonoBehaviour
     }
     public void RecieveDamage(float _dmg)
     {
-        // damageNoise.Play();
+        if (!Hurt.isPlaying)
+            Hurt.Play();
         currHealth -= _dmg;
          changeColor = true;
 

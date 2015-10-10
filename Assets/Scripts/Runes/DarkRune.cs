@@ -6,6 +6,7 @@ public class DarkRune : MonoBehaviour
     public bool current = false;
     GameObject thePlayer;
   public  GameObject specter;
+    public GameObject demon;
     int charges;
     int element;
     Vector3 offSet;
@@ -48,6 +49,11 @@ public class DarkRune : MonoBehaviour
         }
         if (tier == 2)
             Specters();
+        if(tier == 3)
+        {
+            Demon();
+            charges = 1;
+        }
         charges--;
 
     }
@@ -67,5 +73,10 @@ public class DarkRune : MonoBehaviour
         Instantiate(specter, offSet, thePlayer.transform.rotation);
         offSet.x = thePlayer.transform.position.x + 3;
         Instantiate(specter, offSet, thePlayer.transform.rotation);
+    }
+    void Demon()
+    {
+        Instantiate(demon, thePlayer.transform.position, thePlayer.transform.rotation);
+        thePlayer.SendMessage("Change");
     }
 }

@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   accMin: -.0199999996
   accMax: .0199999996
-  damage: 439
+  damage: 562
 --- !u!114 &11432400
 MonoBehaviour:
   m_ObjectHideFlags: 1
