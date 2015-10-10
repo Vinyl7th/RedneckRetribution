@@ -6,11 +6,11 @@ public class Yetis : MonoBehaviour {
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer;
 
-    //[SerializeField]
-    //AudioSource damageNoise;
+    [SerializeField]
+    AudioSource damageNoise;
 
-    //[SerializeField]
-    //AudioSource attackNoise;
+    [SerializeField]
+    AudioSource attackNoise;
 
 
     //varibles for the visual feedback when the skeleton takes damage
@@ -36,8 +36,8 @@ public class Yetis : MonoBehaviour {
         // At the start make the thePlayer gameobject the player with tag
         thePlayer = GameObject.FindWithTag("Player");
 
-        //damageNoise.volume = soundController.sfxValue;
-        //attackNoise.volume = soundController.sfxValue;
+        damageNoise.volume = soundController.sfxValue;
+        attackNoise.volume = soundController.sfxValue;
 
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -104,7 +104,8 @@ public class Yetis : MonoBehaviour {
     //Function that passes the amount damage the enemy needs to receive
     public void RecieveDamage(float _dmg)
     {
-        //damageNoise.Play();
+        if(!damageNoise.isPlaying)
+        damageNoise.Play();
         hitPoints -= _dmg;
         changeColor = true;
 
@@ -115,7 +116,8 @@ public class Yetis : MonoBehaviour {
     {
         //Set the player movement every frame to 0x 0y
         Vector2 moveEnemy = new Vector2(0, 0);
-
+        if (!attackNoise.isPlaying)
+            attackNoise.Play();
         // tracks the distance to the player's position from the skeleton's position
         float DisToPlayer = Vector2.Distance(
             thePlayer.transform.position,

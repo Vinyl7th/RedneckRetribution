@@ -199,7 +199,7 @@ public class Witch : MonoBehaviour {
                 theCameraPlusPos.x = theCameraPlusPos.x + X_num;
                 theCameraPlusPos.y = theCameraPlusPos.y + Y_Num;
 
-
+                teleportNoise.Play();
                 transform.position = theCameraPlusPos;
                 timersp = 0;
             }
@@ -213,7 +213,7 @@ public class Witch : MonoBehaviour {
                 theCameraPlusPos.x = theCameraPlusPos.x + X_num;
                 theCameraPlusPos.y = theCameraPlusPos.y + Y_Num;
 
-
+                teleportNoise.Play();
                 transform.position = theCameraPlusPos;
                 timersp = 0;
             }

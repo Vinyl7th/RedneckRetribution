@@ -14,12 +14,13 @@ public class Player : MonoBehaviour
     public GameObject currRune = null;
     GameObject C_Object;
     bool phoenixEgg;
+    bool change;
     // Use this for initialization
     void Start()
     {
         theAnimator = gameObject.GetComponent<Animator>();
-        Vector3 newStart = new Vector3(-200, 0, 0);
-        gameObject.transform.position = newStart;
+        //Vector3 newStart = new Vector3(0, 0, 0);
+        //gameObject.transform.position = newStart;
     }
 
     // Update is called once per frame
@@ -41,6 +42,9 @@ public class Player : MonoBehaviour
             }
         }
         moveVelocity = new Vector2(0, 0);
+        if(!change)
+        {
+
         if (Input.GetButton("MoveUp"))
         {
             moveVelocity.y = moveSpeed;
@@ -110,6 +114,12 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().velocity = GameObject.FindGameObjectWithTag("Demon").GetComponent<Demon>().moveVelocity;
+            transform.position = GameObject.FindGameObjectWithTag("Demon").transform.position;
+        }
 
         SendRuneCharges();
         if(moveVelocity.x == 0 && moveVelocity.y == 0)
@@ -175,6 +185,26 @@ public class Player : MonoBehaviour
         {
             GameObject temp = GameObject.FindWithTag("Flavor");
             temp.GetComponent<FlavorText>().hCharges.text = currRune.GetComponent<PoisonRune>().charges.ToString();
+        }
+    }
+    public void Change()
+    {
+        if(change)
+        {
+            change = false;
+            GetComponent<BoxCollider2D>().enabled = true;
+            GetComponent<SpriteRenderer>().enabled = true;
+            if (gun)
+                gun.GetComponent<SpriteRenderer>().enabled = true;
+        }
+        else
+        {
+            transform.position = GameObject.FindGameObjectWithTag("Demon").transform.position;
+            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            if (gun)
+                gun.GetComponent<SpriteRenderer>().enabled = false;
+            change = true;
         }
     }
 }
