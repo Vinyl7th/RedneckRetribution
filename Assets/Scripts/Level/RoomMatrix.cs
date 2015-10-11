@@ -136,6 +136,8 @@ public class RoomMatrix : MonoBehaviour {
         Row6 = new int[7];
         Row7 = new int[7];
 
+        floorNum = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>()._level;
+
         Vector3 SpawnPosition;
         // Set rooms
 
@@ -908,12 +910,6 @@ public class RoomMatrix : MonoBehaviour {
             otherPos = theRoom.pos;
             otherPos.x += 1;
 
-            //Debug.Log(theRoom.pos.x);
-            //Debug.Log(theRoom.pos.y);
-
-            //Debug.Log(otherPos.x);
-            //Debug.Log(otherPos.y);
-
             // See if we place a door or a wall
             if (randCheck)
                 randVal = Random.Range(0, 2);
@@ -943,12 +939,6 @@ public class RoomMatrix : MonoBehaviour {
             otherPos = theRoom.pos;
             otherPos.y -= 1;
 
-            Debug.Log(theRoom.pos.x);
-            Debug.Log(theRoom.pos.y);
-
-            Debug.Log(otherPos.x);
-            Debug.Log(otherPos.y);
-
             // See if we place a door or a wall
             if (randCheck)
                 randVal = Random.Range(0, 2);
@@ -977,12 +967,6 @@ public class RoomMatrix : MonoBehaviour {
             // Set room to the top
             otherPos = theRoom.pos;
             otherPos.x -= 1;
-
-            Debug.Log(theRoom.pos.x);
-            Debug.Log(theRoom.pos.y);
-
-            Debug.Log(otherPos.x);
-            Debug.Log(otherPos.y);
 
             // See if we place a door or a wall
             if (randCheck)
