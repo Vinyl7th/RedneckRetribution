@@ -6,11 +6,15 @@ public class CameraFollow : MonoBehaviour {
     bool loading;
     float delay;
     Vector3 loadingscreen;
+    
+    // Use this to determine the active weather system. 0 = no weather, 1 = rain, 2 = snow
+    public int weatherType;
 
     public bool followPlayer = false;
     GameObject thePlayer;
     [SerializeField]
     AudioSource src;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -71,5 +75,10 @@ public class CameraFollow : MonoBehaviour {
     public void FollowPlayer()
     {
         followPlayer = true;
+    }
+
+    public void SetWeather(int _weatherType)
+    {
+        weatherType = _weatherType;
     }
 }
