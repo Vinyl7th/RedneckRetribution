@@ -222,6 +222,10 @@ Prefab:
       propertyPath: src
       value: 
       objectReference: {fileID: 8265304}
+    - target: {fileID: 0}
+      propertyPath: passChoice
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 149120}

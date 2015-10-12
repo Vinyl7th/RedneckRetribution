@@ -143,11 +143,11 @@ public class skeleton : MonoBehaviour
                     float aPosX = hit.collider.transform.position.x;
                     
                     float aPosY = hit.collider.transform.position.y;
-                    if (aPosX > enemyX)        // enemy move right
+                    if (aPosX >= enemyX)        // enemy move right
                         moveEnemy.x = -moveSpeed;
                     if (aPosX < enemyX)        // enemy move left
                         moveEnemy.x = moveSpeed;
-                    if (aPosY > enemyY)        // enemy move up
+                    if (aPosY >= enemyY)        // enemy move up
                         moveEnemy.y = -moveSpeed;
                     if (aPosY < enemyY)        // enemy move down
                         moveEnemy.y = moveSpeed;

@@ -21,7 +21,7 @@ public class passiveSpawner : MonoBehaviour {
 	void Start ()
     {
         src.volume = soundController.sfxValue;
-        passChoice = Random.Range(0, 5);
+        passChoice = Random.Range(0, 6);
         thePlayer = GameObject.FindWithTag("Player");
         switch (passChoice)
         {

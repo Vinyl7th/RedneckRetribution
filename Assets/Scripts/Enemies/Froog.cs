@@ -108,59 +108,82 @@ public class Froog : MonoBehaviour
         {
             transform.localScale = new Vector3(1, 1, 1);
             gameObject.GetComponent<SpriteRenderer>().sprite = froogs[0];
-            theTongue.transform.localScale = new Vector3(1, distance, 1);
-            theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[0];
+            if (theTongue != null)
+            {
+                theTongue.transform.localScale = new Vector3(1, distance, 1);
+                theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[0];
+            }
         }
         else if ((int)pPos.x > (int)fPos.x && (int)pPos.y > (int)fPos.y)
         {
             transform.localScale = new Vector3(1, 1, 1);
             gameObject.GetComponent<SpriteRenderer>().sprite = froogs[1];
-            theTongue.transform.localScale = new Vector3(distance / 2, distance / 2, 1);
-            theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[1];
-            //theTongue.transform.rotation = Quaternion.AngleAxis(Vector3.Angle(fPos, pPos)*Mathf.Rad2Deg, Vector3.back);
+            if (theTongue != null)
+            {
+                theTongue.transform.localScale = new Vector3(distance / 2, distance / 2, 1);
+                theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[1];
+            }
         }
         else if ((int)pPos.x > (int)fPos.x && (int)pPos.y == (int)fPos.y)
         {
             transform.localScale = new Vector3(1, 1, 1);
             gameObject.GetComponent<SpriteRenderer>().sprite = froogs[2];
-            theTongue.transform.localScale = new Vector3(distance, 1, 1);
-            theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[2];
+            if (theTongue != null)
+            {
+                theTongue.transform.localScale = new Vector3(distance, 1, 1);
+                theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[2];
+            }
 
         }
         else if ((int)pPos.x > (int)fPos.x && (int)pPos.y < (int)fPos.y)
         {
             transform.localScale = new Vector3(1, 1, 1);
             gameObject.GetComponent<SpriteRenderer>().sprite = froogs[3];
-            theTongue.transform.localScale = new Vector3(distance / 2, distance / 2, 1);
-            theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[3];
+            if (theTongue != null)
+            {
+                theTongue.transform.localScale = new Vector3(distance / 2, distance / 2, 1);
+                theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[3];
+            }
         }
         else if ((int)pPos.x == (int)fPos.x && (int)pPos.y < (int)fPos.y)
         {
             transform.localScale = new Vector3(1, 1, 1);
             gameObject.GetComponent<SpriteRenderer>().sprite = froogs[4];
-            theTongue.transform.localScale = new Vector3(1, distance, 1);
-            theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[4];
+            if (theTongue != null)
+            {
+                theTongue.transform.localScale = new Vector3(1, distance, 1);
+                theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[4];
+            }
         }
         else if ((int)pPos.x < (int)fPos.x && (int)pPos.y < (int)fPos.y)
         {
             transform.localScale = new Vector3(-1, 1, 1);
             gameObject.GetComponent<SpriteRenderer>().sprite = froogs[3];
-            theTongue.transform.localScale = new Vector3(-1 * distance / 2, distance / 2, 1);
-            theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[3];
+            if (theTongue != null)
+            {
+                theTongue.transform.localScale = new Vector3(-1 * distance / 2, distance / 2, 1);
+                theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[3];
+            }
         }
         else if ((int)pPos.x < (int)fPos.x && (int)pPos.y == (int)fPos.y)
         {
             transform.localScale = new Vector3(-1, 1, 1);
             gameObject.GetComponent<SpriteRenderer>().sprite = froogs[2];
-            theTongue.transform.localScale = new Vector3(-1 * distance, 1, 1);
-            theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[2];
+            if (theTongue != null)
+            {
+                theTongue.transform.localScale = new Vector3(-1 * distance, 1, 1);
+                theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[2];
+            }
         }
         else if ((int)pPos.x < (int)fPos.x && (int)pPos.y > (int)fPos.y)
         {
             transform.localScale = new Vector3(-1, 1, 1);
             gameObject.GetComponent<SpriteRenderer>().sprite = froogs[1];
-            theTongue.transform.localScale = new Vector3(-1 * distance / 2, distance / 2, 1);
-            theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[1];
+            if (theTongue != null)
+            {
+                theTongue.transform.localScale = new Vector3(-1 * distance / 2, distance / 2, 1);
+                theTongue.GetComponent<SpriteRenderer>().sprite = theTongue.GetComponent<tongue>().tongues[1];
+            }
         }
 
     }
@@ -169,7 +192,7 @@ public class Froog : MonoBehaviour
         if (!Hurt.isPlaying)
             Hurt.Play();
         currHealth -= _dmg;
-         changeColor = true;
+        changeColor = true;
 
     }
     void BlowTheFuckUp()
