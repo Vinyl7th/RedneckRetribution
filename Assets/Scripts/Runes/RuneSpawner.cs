@@ -19,7 +19,7 @@ public class RuneSpawner : MonoBehaviour
     {
         if(!hardCode)
         {
-            switch(Random.Range(0,3))
+            switch(Random.Range(0,4))
             {
                 case 0:
                     fire = true;

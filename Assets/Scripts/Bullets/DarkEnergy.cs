@@ -7,12 +7,11 @@ public class DarkEnergy : MonoBehaviour
     GameObject thePlayer;
 
 
-    Vector3 playerPos;
+   // Vector3 playerPos;
 
     public float damage;
-    float fireballSpeed,
-           accuracy,
-           displayDelay;
+    float fireballSpeed;
+          
     Vector3 direction;
 
     float timer = 0f;
@@ -23,7 +22,7 @@ public class DarkEnergy : MonoBehaviour
 
         fireballSpeed = 6;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
-        accuracy = Random.Range(-0.05f, 0.05f);
+       // accuracy = Random.Range(-0.05f, 0.05f);
         direction = thePlayer.transform.position - gameObject.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);

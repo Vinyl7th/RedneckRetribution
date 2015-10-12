@@ -58,6 +58,7 @@ public class Room : MonoBehaviour
         {
             foreach (Transform child in transform)
             {
+                if(child.name != "GunSpawner")
                 child.SendMessage("Spawn");
             }
 

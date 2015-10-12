@@ -4206,6 +4206,18 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 15e1b4ffe3a60834297e0705201b8d99, type: 3}
+    - target: {fileID: 2059156, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2059156, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
+      propertyPath: field of view
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205148, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
+      propertyPath: MaxDistance
+      value: 11.2572937
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
   m_IsPrefabParent: 0
