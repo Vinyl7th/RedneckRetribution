@@ -6,6 +6,9 @@ public class Room : MonoBehaviour
 
     GameObject thePlayer;
     public GameObject spikes;
+    public bool WeatherEffects = false;
+
+    public int weatherStyle = 0;
 
     GameObject[] leftSpikes = new GameObject[4];
     GameObject[] rightSpikes = new GameObject[4];
@@ -61,6 +64,14 @@ public class Room : MonoBehaviour
                 if(child.name != "GunSpawner")
                 child.SendMessage("Spawn");
             }
+
+            // Set Weather
+            if(WeatherEffects)
+            {
+                GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>().weatherType = weatherStyle;
+            }
+            else
+                GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>().weatherType = 0;
 
             Vector3 playerPos = GameObject.FindWithTag("Player").transform.position;
             Vector3 roomPos = gameObject.transform.position;
