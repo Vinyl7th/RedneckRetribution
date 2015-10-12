@@ -1264,6 +1264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spikes: {fileID: 101122, guid: 59b3a552fbac90d49b34894ef4124437, type: 2}
+  WeatherEffects: 1
+  weatherStyle: 2
   LeftSpikes: 0
   RightSpikes: 0
   TopSpikes: 0
@@ -1370,6 +1372,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: ROOM
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: WeatherEffects
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: weatherStyle
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
