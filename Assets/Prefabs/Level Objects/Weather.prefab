@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rain: {fileID: 114208, guid: 4430ac9d1c6f7f24387c3765eefb470b, type: 2}
   snow: {fileID: 176056, guid: 04ee67d68012b3541ab2b7c8056300bf, type: 2}
+  lightning: {fileID: 168910, guid: 8229e03e69a117d40b4afa77fd2ab231, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -52,6 +53,10 @@ Prefab:
       propertyPath: snow
       value: 
       objectReference: {fileID: 176056, guid: 04ee67d68012b3541ab2b7c8056300bf, type: 2}
+    - target: {fileID: 0}
+      propertyPath: lightning
+      value: 
+      objectReference: {fileID: 168910, guid: 8229e03e69a117d40b4afa77fd2ab231, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 153624}

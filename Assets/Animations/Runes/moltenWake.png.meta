@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: 6e0e4fdd9389a034baac3c6bf2134cf2
+timeCreated: 1444750038
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: moltenWake_5
+    21300002: moltenWake_13
+    21300004: moltenWake_14
+    21300006: moltenWake_15
+    21300008: moltenWake_18
+    21300010: moltenWake_19
+    21300012: moltenWake_21
+    21300014: moltenWake_22
+    21300016: moltenWake_23
+    21300018: moltenWake_24
+    21300020: moltenWake_25
+    21300022: moltenWake_26
+    21300024: moltenWake_27
+    21300026: moltenWake_28
+    21300028: moltenWake_29
+    21300030: moltenWake_31
+    21300032: moltenWake_32
+    21300034: moltenWake_34
+    21300036: moltenWake_35
+    21300038: moltenWake_36
+    21300040: moltenWake_37
+    21300042: moltenWake_38
+    21300044: moltenWake_39
+    21300046: moltenWake_40
+    21300048: moltenWake_41
+    21300050: moltenWake_42
+    21300052: moltenWake_43
+    21300054: moltenWake_44
+    21300056: moltenWake_45
+    21300058: moltenWake_46
+    21300060: moltenWake_47
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 256
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: moltenWake_14
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 628
+        width: 140
+        height: 396
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_15
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 639
+        width: 148
+        height: 363
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_18
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 610
+        width: 170
+        height: 374
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_19
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 624
+        width: 139
+        height: 398
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_21
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 629
+        width: 154
+        height: 351
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_22
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 607
+        width: 157
+        height: 417
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_23
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 596
+        width: 160
+        height: 426
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_24
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 614
+        width: 161
+        height: 356
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_26
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 614
+        width: 176
+        height: 400
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_37
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 84
+        width: 183
+        height: 443
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_39
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 89
+        width: 173
+        height: 414
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_41
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 86
+        width: 179
+        height: 390
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_42
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 72
+        width: 171
+        height: 410
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: moltenWake_44
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 67
+        width: 169
+        height: 431
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

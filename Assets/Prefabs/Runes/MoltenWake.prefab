@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21225804}
   - 61: {fileID: 6146148}
   - 114: {fileID: 11427790}
+  - 95: {fileID: 9554758}
   m_Layer: 0
   m_Name: MoltenWake
   m_TagString: Untagged
@@ -43,6 +44,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -.260368347}
   serializedVersion: 2
   m_Size: {x: 2, y: 1.47926331}
+--- !u!95 &9554758
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198130}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd6f608c9f0811b42a069b17b29b1338, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11427790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,6 +110,10 @@ Prefab:
       propertyPath: FireDamage
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cd6f608c9f0811b42a069b17b29b1338, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 198130}

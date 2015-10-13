@@ -8,14 +8,18 @@ public class Weather : MonoBehaviour
     GameObject rain;
     [SerializeField]
     GameObject snow;
+    [SerializeField]
+    GameObject lightning;
     int effect;
     float offsetX;
     float offsetY;
     Vector3 position;
+    float timer = 0.0f;
+    float light;
     // Use this for initialization
     void Start()
     {
-
+        light = Random.Range(4.0f, 10.0f);
 
     }
 
@@ -29,7 +33,7 @@ public class Weather : MonoBehaviour
         }
         else if (effect == 1)
         {
-
+            timer += Time.deltaTime;
             for (int i = 0; i < 3; i++)
             {
 
@@ -40,6 +44,14 @@ public class Weather : MonoBehaviour
                 position.x += offsetX;
                 position.y += offsetY;
                 Instantiate(rain, position, rain.transform.rotation);
+                if(timer >= light)
+                {
+                    light = Random.Range(4.0f, 10.0f);
+                    position = Camera.main.transform.position;
+                    position.z = -8;
+                    Instantiate(lightning, position, lightning.transform.rotation);
+                    timer = 0.0f;
+                }
             }
         }
         else if (effect == 2)
