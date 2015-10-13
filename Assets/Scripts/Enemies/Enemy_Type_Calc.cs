@@ -79,7 +79,7 @@ public class Enemy_Type_Calc : MonoBehaviour
         incPlayerDamage = _damage;
         if (fireWeakness)
             incPlayerDamage = incPlayerDamage * 1.2f;
-
+       
         CalculateDamage(incPlayerDamage);
     }
 
@@ -119,8 +119,9 @@ public class Enemy_Type_Calc : MonoBehaviour
 
     public void CalculateDamage(float _damage)
     {
+        _damage = _damage + (_damage * thePlayer.GetComponent<PlayerStats>().pAttack);
         gameObject.SendMessage("RecieveDamage", _damage);
-
+        thePlayer.GetComponent<PlayerStats>().pHealthCurr += thePlayer.GetComponent<PlayerStats>().pHealthMax * thePlayer.GetComponent<PlayerStats>().pLifeSteal;
         // UI 
         Vector3 _pos = gameObject.transform.position;
         _pos.y += 3.0f;

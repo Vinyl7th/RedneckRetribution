@@ -55,6 +55,6 @@ public class Damage_Text : MonoBehaviour {
 
         myPos = _position;
         gameObject.transform.position = myPos;
-        Debug.Log("FACK");
+       // Debug.Log("FACK");
     }
 }

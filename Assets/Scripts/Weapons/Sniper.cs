@@ -19,6 +19,7 @@ public class Sniper : MonoBehaviour
    public int rariety;
    public  int damage;
     public float ROF;
+    float decrease;
     public float accMin;
     [SerializeField]
     Sprite[] bulletSprites;
@@ -33,6 +34,7 @@ public class Sniper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        decrease = ROF * thePlayer.GetComponent<PlayerStats>().pAttackSpeed;
         if (currWeapon)
         {
             MoveGun();
@@ -92,7 +94,7 @@ public class Sniper : MonoBehaviour
     void ShootGun(int type)
     {
 
-        if (fireRate >= ROF)
+        if (fireRate >= ROF - decrease)
         {
             switch (element)
             {

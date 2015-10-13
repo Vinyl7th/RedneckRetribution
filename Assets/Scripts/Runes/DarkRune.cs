@@ -32,7 +32,10 @@ public class DarkRune : MonoBehaviour
     public void ChangeCurrent()
     {
         if (current)
+        {
             current = false;
+            transform.position = GameObject.FindWithTag("Player").transform.position;
+        }
         else
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().SetElement(element);

@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     GameObject C_Object;
     bool phoenixEgg;
     bool change;
+    float increase;
     // Use this for initialization
     void Start()
     {
@@ -42,29 +43,30 @@ public class Player : MonoBehaviour
             }
         }
         moveVelocity = new Vector2(0, 0);
+        increase = moveSpeed * GetComponent<PlayerStats>().pMoveSpeed;
         if(!change)
         {
 
         if (Input.GetButton("MoveUp"))
         {
-            moveVelocity.y = moveSpeed;
+            moveVelocity.y = moveSpeed + increase;
             theAnimator.SetBool("walkRight", true);
         }
         if (Input.GetButton("MoveDown"))
         {
-            moveVelocity.y = -moveSpeed;
+            moveVelocity.y = -moveSpeed - increase;
             theAnimator.SetBool("walkRight", true);
         }
         if (Input.GetButton("MoveLeft"))
         {
-            moveVelocity.x = -moveSpeed;
+            moveVelocity.x = -moveSpeed - increase;
             theAnimator.transform.localScale = new Vector3(-1, 1, 1);
             theAnimator.SetBool("walkRight",true);
 
         }
         if (Input.GetButton("MoveRight"))
         {
-            moveVelocity.x = moveSpeed;
+            moveVelocity.x = moveSpeed + increase;
             theAnimator.transform.localScale = new Vector3(1, 1, 1);
             theAnimator.SetBool("walkRight", true);
         }

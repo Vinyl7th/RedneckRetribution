@@ -130,6 +130,31 @@ public class skeleton : MonoBehaviour
             float playerY = thePlayer.transform.position.y;
             float enemyX = gameObject.transform.position.x;
             float enemyY = gameObject.transform.position.y;
+            // RayCast Search
+            RaycastHit2D hit;
+           // Ray2D enemySearch = new Ray2D(transform.position, thePlayer.transform.position);
+            hit = Physics2D.Raycast(transform.position, thePlayer.transform.position, 3.0f);
+            
+            Debug.DrawRay(transform.position, thePlayer.transform.position);
+            if(hit.collider.gameObject != gameObject)
+            {
+                if(hit.collider.tag != thePlayer.tag)
+                {
+                    float aPosX = hit.collider.transform.position.x;
+                    
+                    float aPosY = hit.collider.transform.position.y;
+                    if (aPosX >= enemyX)        // enemy move right
+                        moveEnemy.x = -moveSpeed;
+                    if (aPosX < enemyX)        // enemy move left
+                        moveEnemy.x = moveSpeed;
+                    if (aPosY >= enemyY)        // enemy move up
+                        moveEnemy.y = -moveSpeed;
+                    if (aPosY < enemyY)        // enemy move down
+                        moveEnemy.y = moveSpeed;
+                }
+            }
+            else
+            {
 
             //chase player
             if (playerX > enemyX)        // enemy move right
@@ -140,6 +165,7 @@ public class skeleton : MonoBehaviour
                 moveEnemy.y = moveSpeed;
             if (playerY < enemyY)        // enemy move down
                 moveEnemy.y = -moveSpeed;
+            }
         }
         gameObject.GetComponent<Rigidbody2D>().velocity = moveEnemy;
     }

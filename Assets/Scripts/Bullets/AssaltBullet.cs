@@ -6,7 +6,8 @@ public class AssaltBullet : MonoBehaviour
     public float bulletSpeed;
     float accuracy;
     float displayDelay = 0.0f;
-    public int damage;
+    public float damage = 0;
+    float increase;
     GameObject thePlayer;
     Vector3 playerPos;
     Transform reticule;
@@ -34,7 +35,7 @@ public class AssaltBullet : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
         if (Vector3.Distance(transform.position, playerPos) >= 25.0f)
             Destroy(gameObject);
-
+    
 
     }
 

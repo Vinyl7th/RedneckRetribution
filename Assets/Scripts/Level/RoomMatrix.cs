@@ -136,6 +136,8 @@ public class RoomMatrix : MonoBehaviour {
         Row6 = new int[7];
         Row7 = new int[7];
 
+        floorNum = GameObject.FindWithTag("LevelManager").GetComponent<LevelManager>()._level;
+
         Vector3 SpawnPosition;
         // Set rooms
 
