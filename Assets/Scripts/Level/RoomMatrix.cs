@@ -228,6 +228,8 @@ public class RoomMatrix : MonoBehaviour {
             index = Random.Range(1, 4);
         else if (floorNum == 4)
             index = Random.Range(2, 4);
+        else
+            index = 1;
 
         switch (_roomType)
         {

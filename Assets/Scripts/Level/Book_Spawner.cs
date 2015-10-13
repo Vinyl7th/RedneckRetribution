@@ -19,8 +19,10 @@ public class Book_Spawner : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player" && bossTrigger == false)
         {
+            GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>().SetMusic(10);
             GameObject book = GameObject.FindWithTag("Necronomicon");
             book.SendMessage("ActivateIt");
+            bossTrigger = false;
         }
     }
 }
