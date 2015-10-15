@@ -214,8 +214,6 @@ public class RoomMatrix : MonoBehaviour {
     // Good
     void SetRoom(int _roomType, Vector3 _position)
     {
-        Vector3 theRotation = new Vector3(0, 0, 0);
-
         int index = 0;
 
         // Determine floor patterns by floor number
@@ -343,7 +341,7 @@ public class RoomMatrix : MonoBehaviour {
                 }
             case 21: // Combat NO LEFT
                 {
-                    Instantiate(Combat_NO_LEFT[index], _position, gameObject.transform.rotation);
+                    Instantiate(Start_Room, _position, gameObject.transform.rotation);
                     break;
                 }
         }
@@ -1466,6 +1464,7 @@ public class RoomMatrix : MonoBehaviour {
                 // Combat room with a door at the left top and right
                 if (theRoom.up == 1 && theRoom.right == 1 && theRoom.down == 1 && theRoom.left == 1)
                     theRoom.style = 21;
+                
 
                 roomLayout[i, j] = theRoom;
             }

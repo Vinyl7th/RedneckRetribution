@@ -46,7 +46,7 @@ public class LevelManager : MonoBehaviour
             thePlayer.transform.position = spawn;
         }
         
-
+        // Clean up last floor
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("ROOM");
         int roomSize = rooms.Length;
 
@@ -54,6 +54,42 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(rooms[i]);
         }
+
+        GameObject[] theWeapons = GameObject.FindGameObjectsWithTag("Weapon");
+        int weaponSize = theWeapons.Length;
+    
+        for (int i = 0; i < weaponSize; i++)
+        {
+            if(GameObject.FindWithTag("Player").GetComponent<Player>().gun == theWeapons[i])
+            {
+
+            }
+            else
+                Destroy(theWeapons[i]);
+        }
+
+        GameObject[] theRunes = GameObject.FindGameObjectsWithTag("Rune");
+        int runeSize = theRunes.Length;
+
+        for (int i = 0; i < runeSize; i++)
+        {
+            if (GameObject.FindWithTag("Player").GetComponent<Player>().currRune == theRunes[i])
+            {
+
+            }
+            else
+                Destroy(theRunes[i]);
+        }
+
+        GameObject[] thePassives = GameObject.FindGameObjectsWithTag("Passive");
+        int passiveSize = thePassives.Length;
+
+        for (int i = 0; i < passiveSize; i++)
+        {
+            
+            Destroy(thePassives[i]);
+        }
+
 
         switch (_level)
         {

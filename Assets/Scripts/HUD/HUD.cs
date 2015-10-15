@@ -7,7 +7,6 @@ public class HUD : MonoBehaviour {
     public GameObject healthBar;
     public Transform healthBarAnchor;
     Vector3 healthBarInit;
-    Vector3 healthBarPos;
 
     float MaxHP;
     float CurrHP;
@@ -18,7 +17,6 @@ public class HUD : MonoBehaviour {
 	void Start ()
     {
         thePlayer = GameObject.FindWithTag("Player");
-        healthBarPos = healthBar.transform.position;
         // currTheme.volume = soundController.musicValue;
     }
 	
