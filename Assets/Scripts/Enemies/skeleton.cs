@@ -14,6 +14,7 @@ public class skeleton : MonoBehaviour
     [SerializeField]
     AudioSource attackNoise;
 
+    Animator theAnimator;
 
     //varibles for the visual feedback when the skeleton takes damage
     Color baseColor;
@@ -22,9 +23,10 @@ public class skeleton : MonoBehaviour
     float healthRegenTimer = 0.0f;
 
     bool regenHealth;
+    bool isRightattack;
+    bool isRight;
 
-    
-   
+
 
     //basic varible to hold the skeletons stats
     public float aggroRange,
@@ -39,8 +41,9 @@ public class skeleton : MonoBehaviour
     {
 
 
+        theAnimator = gameObject.GetComponent<Animator>();
 
-      
+
         // At the start make the thePlayer gameobject the player with tag
         thePlayer = GameObject.FindWithTag("Player");
 
@@ -101,6 +104,26 @@ public class skeleton : MonoBehaviour
 
         //enemy's movement  
         Move();
+        if ((int)gameObject.transform.position.x > (int)thePlayer.transform.position.x)
+        {
+            if (!isRightattack)
+            {
+                theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                isRightattack = true;
+            }
+            else
+                isRightattack = false;
+        }
+        else
+        {
+            if (!isRightattack)
+            {
+                theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                isRightattack = true;
+            }
+            else
+                isRightattack = false;
+        }
 
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints < 0.0f)
@@ -133,6 +156,7 @@ public class skeleton : MonoBehaviour
         //if player's position is with then the range of the skeleton's aggrorange
         if (DisToPlayer <= aggroRange)
         {
+            theAnimator.SetBool("Walk", true);
             //temp varibles for the player's and enemies's position
             float playerX = thePlayer.transform.position.x;
             float playerY = thePlayer.transform.position.y;
@@ -178,7 +202,17 @@ public class skeleton : MonoBehaviour
                 moveEnemy.y = -moveSpeed;
             }
         }
+        else
+        {
+            theAnimator.SetBool("Walk", false);
+        }
         gameObject.GetComponent<Rigidbody2D>().velocity = moveEnemy;
+        if (DisToPlayer <= 2f)
+        {
+            theAnimator.SetBool("Attack", true);
+        }
+        else
+            theAnimator.SetBool("Attack", false);
     }
 
     //Checks if the enemy is within range of the necro's aura
