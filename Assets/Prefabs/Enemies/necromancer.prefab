@@ -34,6 +34,7 @@ GameObject:
   - 114: {fileID: 11443262}
   - 82: {fileID: 8212046}
   - 82: {fileID: 8297426}
+  - 95: {fileID: 9562618}
   m_Layer: 10
   m_Name: necromancer
   m_TagString: Enemy
@@ -146,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.0328379, y: -3.43128443, z: -5}
+  m_LocalPosition: {x: -55.8948402, y: 29.3627892, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 466284}
@@ -348,6 +349,23 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!95 &9562618
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145200}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 76160684661e2c640ad46d67ed436961, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11413870
 MonoBehaviour:
   m_ObjectHideFlags: 1
