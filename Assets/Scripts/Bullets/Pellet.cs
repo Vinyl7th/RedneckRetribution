@@ -32,7 +32,7 @@ public class Pellet : MonoBehaviour
     void Update()
     {
         displayDelay += Time.deltaTime;
-        transform.Translate(new Vector3(bulletSpeed * Time.deltaTime, accuracy, 0));
+        transform.Translate(new Vector3(bulletSpeed * Time.deltaTime+thePlayer.GetComponent<Player>().moveSpeed*Time.deltaTime, accuracy, 0));
         if (displayDelay >= 0.08f)
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
         if (Vector3.Distance(transform.position, playerPos) >= 7.0f)
