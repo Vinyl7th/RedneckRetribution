@@ -200,6 +200,9 @@ public class RoomMatrix : MonoBehaviour {
 
         // Set boss room
         SpawnPosition = new Vector3(32.0f * 6.0f, 120.0f, 0);
+
+        Vector3 spawnPos = new Vector3(96, 60, 0);
+        GameObject.FindWithTag("Player").transform.position = spawnPos;
     }
 
     // Update is called once per frame
@@ -334,7 +337,8 @@ public class RoomMatrix : MonoBehaviour {
                 }
             case 20: // Combat NO LEFT
                 {
-                    Instantiate(Boss_Room[floorNum], _position, gameObject.transform.rotation);
+                    int num = floorNum - 1;
+                    Instantiate(Boss_Room[num], _position, gameObject.transform.rotation);
                     break;
                 }
             case 21: // Combat NO LEFT
@@ -1302,6 +1306,18 @@ public class RoomMatrix : MonoBehaviour {
         }
 
         Vector2 dungeonPos = bossCoords;
+        Vector2 cullRooms = bossCoords;
+
+        // Make sure no rooms point towards the boss room
+        cullRooms.x += 1;
+        roomLayout[(int)cullRooms.x, (int)cullRooms.y].left = 0;
+        cullRooms.x -= 2;
+        roomLayout[(int)cullRooms.x, (int)cullRooms.y].right = 0;
+
+        cullRooms.x += 1;
+        cullRooms.y += 1;
+        roomLayout[(int)cullRooms.x, (int)cullRooms.y].down = 0;
+
         dungeonPos.y -= 1;
 
         bool dungY = false;

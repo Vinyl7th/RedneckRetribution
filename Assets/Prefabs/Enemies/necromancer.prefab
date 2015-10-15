@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 466284}
   - 58: {fileID: 5843930}
+  - 114: {fileID: 11483162}
   m_Layer: 19
   m_Name: GameObject
   m_TagString: NecroAura
@@ -410,6 +411,17 @@ MonoBehaviour:
   healthBarBorder: {fileID: 492750}
   healthBarBack: {fileID: 419720}
   heightOffset: 1
+--- !u!114 &11483162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c61b6662b6f264496c6424fb2f763f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21235280
 SpriteRenderer:
   m_ObjectHideFlags: 1

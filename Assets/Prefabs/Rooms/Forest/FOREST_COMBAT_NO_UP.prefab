@@ -11,7 +11,7 @@ GameObject:
   - 61: {fileID: 6106060}
   - 114: {fileID: 11454814}
   - 114: {fileID: 11427836}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Room_Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +612,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.631592393, y: -.0541364402, z: 0}
+  m_LocalPosition: {x: -268.169098, y: 143.930557, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 455474}
