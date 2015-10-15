@@ -29,7 +29,7 @@ public class PlayerStats : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        pHealthCurr += 0.1f;
+       // pHealthCurr += 0.1f;
 
         if(pHealthCurr > pHealthMax)
         {
