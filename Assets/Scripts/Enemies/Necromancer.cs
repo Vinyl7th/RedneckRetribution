@@ -5,6 +5,7 @@ public class Necromancer : MonoBehaviour
 {
 
     public GameObject FireBall;
+    GameObject Aura;
 
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer,
@@ -46,7 +47,7 @@ public class Necromancer : MonoBehaviour
         hitSound.volume *= 2;
         //have offcooldown set to true so he fires at the beginning
         offCoolDown = true;
-
+        Aura = GetComponentInChildren<Aura>().gameObject;
 
 
         // Set the Enemy's Movement Speed, Hitpoints, aggrorange,
@@ -99,6 +100,7 @@ public class Necromancer : MonoBehaviour
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints < 0.0f)
         {
+            Destroy(Aura);
             Destroy(gameObject);
         }
 

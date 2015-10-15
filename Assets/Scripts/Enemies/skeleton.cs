@@ -6,6 +6,7 @@ public class skeleton : MonoBehaviour
 
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer;
+    
 
     [SerializeField]
     AudioSource damageNoise;
@@ -22,6 +23,8 @@ public class skeleton : MonoBehaviour
 
     bool regenHealth;
 
+    
+   
 
     //basic varible to hold the skeletons stats
     public float aggroRange,
@@ -34,9 +37,14 @@ public class skeleton : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
+
+
+      
         // At the start make the thePlayer gameobject the player with tag
         thePlayer = GameObject.FindWithTag("Player");
 
+        
         damageNoise.volume = soundController.sfxValue;
         attackNoise.volume = soundController.sfxValue;
 
@@ -132,13 +140,16 @@ public class skeleton : MonoBehaviour
             float enemyY = gameObject.transform.position.y;
             // RayCast Search
             RaycastHit2D hit;
-           // Ray2D enemySearch = new Ray2D(transform.position, thePlayer.transform.position);
+          
+
+            // Ray2D enemySearch = new Ray2D(transform.position, thePlayer.transform.position);
             hit = Physics2D.Raycast(transform.position, thePlayer.transform.position, 3.0f);
-            
-            Debug.DrawRay(transform.position, thePlayer.transform.position);
-            if(hit.collider.gameObject != gameObject)
+
+            Debug.DrawLine(transform.position, hit.transform.position, Color.green);
+            if(hit.collider.gameObject != gameObject && hit.collider.tag != "NecroAura")
             {
-                if(hit.collider.tag != thePlayer.tag)
+
+                 if (hit.collider.tag != thePlayer.tag && hit.collider.tag != "NecroAura")
                 {
                     float aPosX = hit.collider.transform.position.x;
                     
@@ -194,5 +205,13 @@ public class skeleton : MonoBehaviour
         if (other.gameObject.tag == "NecroAura")
             regenHealth = false;
     }
+
+
+
+    
+
+
+
+
 
 }

@@ -3316,7 +3316,7 @@ Transform:
   - {fileID: 1103570681}
   - {fileID: 527677358}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1582560975
 GameObject:
   m_ObjectHideFlags: 0
@@ -4478,7 +4478,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22488978, guid: 8f341a654d57a484b8eeeaf37adcacb1, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22488978, guid: 8f341a654d57a484b8eeeaf37adcacb1, type: 2}
       propertyPath: m_AnchoredPosition.x
