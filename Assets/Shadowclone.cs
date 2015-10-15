@@ -20,6 +20,8 @@ public class Shadowclone : MonoBehaviour {
     AudioSource shellFallNoise;
     [SerializeField]
     AudioSource hurtSound;
+    [SerializeField]
+    GameObject thePortal;
 
 
     //varibles for the visual feedback when the skeleton takes damage
@@ -223,6 +225,7 @@ public class Shadowclone : MonoBehaviour {
         {
             Destroy(currGun);
             GameObject.FindGameObjectWithTag("LevelManager").SendMessage("LoadLevel");
+            Instantiate(thePortal, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
 

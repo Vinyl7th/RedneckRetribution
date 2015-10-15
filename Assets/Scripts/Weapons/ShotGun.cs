@@ -21,12 +21,15 @@ public class ShotGun : MonoBehaviour
     public float accMax;
     [SerializeField]
     Sprite[] bulletSprites;
+    [SerializeField]
+    AudioSource shot;
     // Use this for initialization
     void Start()
     {
         thePlayer = GameObject.FindGameObjectWithTag("Player").transform;
         Reticule = GameObject.FindGameObjectWithTag("Reticule").transform;
         RollStats();
+        shot.volume = soundController.sfxValue;
     }
 
     // Update is called once per frame
@@ -122,6 +125,8 @@ public class ShotGun : MonoBehaviour
                 bullet.GetComponent<Pellet>().accMin = accMin;
                 bullet.GetComponent<Pellet>().accMax = accMax;
                 Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
+                if (!shot.isPlaying)
+                    shot.Play();
 
             }
             fireRate = 0;
@@ -200,5 +205,8 @@ public class ShotGun : MonoBehaviour
             theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
         }
     }
-
+    public void StopAudio()
+    {
+        
+    }
 }

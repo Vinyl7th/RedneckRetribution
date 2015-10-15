@@ -7,6 +7,8 @@ public class Dragons : MonoBehaviour
     int currDragon = -1;
     int id;
    public  GameObject[] theDragons;
+    [SerializeField]
+    GameObject thePortal;
     // Use this for initialization
     void Start()
     {
@@ -25,7 +27,8 @@ public class Dragons : MonoBehaviour
         currDragon++;
         if (currDragon == 4)
         {
-            GameObject.FindGameObjectWithTag("LevelManager").SendMessage("LoadLevel");
+            Instantiate(thePortal, gameObject.transform.position, gameObject.transform.rotation);
+           // GameObject.FindGameObjectWithTag("LevelManager").SendMessage("LoadLevel");
             Destroy(gameObject);
         }
         id = theDragons[currDragon].GetComponent<EnemyID>().EnemyType;

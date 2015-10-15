@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1c9e246eea7ec3c438f01697d0cfe6fe
-timeCreated: 1444146723
+timeCreated: 1444865737
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -64,7 +64,7 @@ TextureImporter:
         width: 32
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Redneck Redemption_Main sheet_1
       rect:
@@ -74,7 +74,7 @@ TextureImporter:
         width: 30
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Redneck Redemption_Main sheet_2
       rect:
@@ -84,7 +84,7 @@ TextureImporter:
         width: 32
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Redneck Redemption_Main sheet_3
       rect:
@@ -93,8 +93,8 @@ TextureImporter:
         y: 24
         width: 14
         height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 1, y: .319073945}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Redneck Redemption_Main sheet_4
       rect:
@@ -104,17 +104,7 @@ TextureImporter:
         width: 32
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Redneck Redemption_Main sheet_5
-      rect:
-        serializedVersion: 2
-        x: 77
-        y: 16
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

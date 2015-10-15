@@ -23,12 +23,15 @@ public class Sniper : MonoBehaviour
     public float accMin;
     [SerializeField]
     Sprite[] bulletSprites;
+    [SerializeField]
+    AudioSource shot;
     // Use this for initialization
     void Start()
     {
         thePlayer = GameObject.FindGameObjectWithTag("Player").transform;
         Reticule = GameObject.FindGameObjectWithTag("Reticule").transform;
         RollStats();
+        shot.volume = soundController.sfxValue;
     }
 
     // Update is called once per frame
@@ -122,6 +125,8 @@ public class Sniper : MonoBehaviour
             bullet.GetComponent<SniperShot>().SetDamage(damage);
            
             Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
+            if (!shot.isPlaying)
+                shot.Play();
             fireRate = 0;
         }
         
@@ -131,29 +136,29 @@ public class Sniper : MonoBehaviour
         if(rariety <= 64)
         {
             //common
-            damage = Random.Range(2400, 3000);
-            ROF = Random.Range(2.0f, 2.5f);
+            damage = Random.Range(900, 1100);
+            ROF = Random.Range(1.0f, 1.5f);
             accMin = 0;
         }
         else if(rariety <= 94)
         {
             //unique
-            damage = Random.Range(3000, 3500);
-            ROF = Random.Range(1.55f, 2.0f);
+            damage = Random.Range(1200, 2000);
+            ROF = Random.Range(0.75f, 1.0f);
             accMin = 0;
         }
        else if(rariety <= 99)
         {
             //rare
-            damage = Random.Range(3500, 4000);
-            ROF = Random.Range(0.75f, 1.25f);
+            damage = Random.Range(1900, 3200);
+            ROF = Random.Range(0.5f, 0.75f);
             accMin = 0;
         }
         else if(rariety == 100)
         {
             //contraban
             damage = Random.Range(5000, 6000);
-            ROF = Random.Range(0.4f, 0.6f);
+            ROF = Random.Range(0.25f, 0.5f);
             accMin = 0;
         }
     }
@@ -192,5 +197,9 @@ public class Sniper : MonoBehaviour
             Color newColor = new Color(0.9f, 0.5f, 0.1f);
             theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
         }
+    }
+    public void StopAudio()
+    {
+        
     }
 }
