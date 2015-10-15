@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
         GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>().SetMusic(_level);
         GameObject thePlayer = GameObject.FindWithTag("Player");
 
-        if(_level < 5)
+        if(_level < 5 && _level > 1)
         {
             spawn = new Vector3(96, 60, 0);
             thePlayer.transform.position = spawn;
