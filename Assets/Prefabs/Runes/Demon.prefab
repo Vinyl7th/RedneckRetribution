@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6137238}
   - 50: {fileID: 5076904}
   - 114: {fileID: 11459488}
+  - 95: {fileID: 9599816}
   m_Layer: 8
   m_Name: Demon
   m_TagString: Demon
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -200.851257, y: -8.02623272, z: -1}
+  m_LocalPosition: {x: 75.947403, y: 60.5166626, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,6 +61,23 @@ BoxCollider2D:
   m_Offset: {x: .0363006592, y: -.254183769}
   serializedVersion: 2
   m_Size: {x: 1.28079271, y: 2.40557671}
+--- !u!95 &9599816
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143846}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 941cf4d8bd952b748bd7bc24b0c80e61, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11459488
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -410,6 +410,7 @@ MonoBehaviour:
   bulletShootNoise: {fileID: 8232556}
   shellFallNoise: {fileID: 8283448}
   hurtSound: {fileID: 8248252}
+  thePortal: {fileID: 105388, guid: bd2b9e80f17264941b68cf5b0d560c0c, type: 2}
   moveSpeed: 0
   maxHealth: 0
   hitPoints: 0
@@ -522,6 +523,10 @@ Prefab:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: thePortal
+      value: 
+      objectReference: {fileID: 105388, guid: bd2b9e80f17264941b68cf5b0d560c0c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 145130}

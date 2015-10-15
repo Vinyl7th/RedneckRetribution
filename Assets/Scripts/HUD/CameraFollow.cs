@@ -10,8 +10,22 @@ public class CameraFollow : MonoBehaviour {
     // Use this to determine the active weather system. 0 = no weather, 1 = rain, 2 = snow
     public int weatherType;
 
+    // Use these to setup the floor / boss audio
+    public AudioClip Floor1_BGM;
+    public AudioClip Floor2_BGM;
+    public AudioClip Floor3_BGM;
+    public AudioClip Floor4_BGM;
+    public AudioClip Floor5_BGM;
+    
+    public AudioClip Floor1_Boss_BGM;
+    public AudioClip Floor2_Boss_BGM;
+    public AudioClip Floor3_Boss_BGM;
+    public AudioClip Floor4_Boss_BGM;
+    public AudioClip Floor5_Boss_BGM;
+    
     public bool followPlayer = false;
     GameObject thePlayer;
+
     [SerializeField]
     AudioSource src;
 
@@ -80,5 +94,47 @@ public class CameraFollow : MonoBehaviour {
     public void SetWeather(int _weatherType)
     {
         weatherType = _weatherType;
+    }
+
+    public void SetMusic(int _musicIndex)
+    {
+        switch(_musicIndex)
+        {
+            case 1:
+                src.clip = Floor1_BGM;
+                break;
+            case 2:
+                src.clip = Floor2_BGM;
+                break;
+            case 3:
+                src.clip = Floor3_BGM;
+                break;
+            case 4:
+                src.clip = Floor4_BGM;
+                break;
+            case 5:
+                src.clip = Floor5_BGM;
+                break;
+            case 6:
+                src.clip = Floor1_Boss_BGM;
+                break;
+            case 7:
+                src.clip = Floor2_Boss_BGM;
+                break;
+            case 8:
+                src.clip = Floor3_Boss_BGM;
+                break;
+            case 9:
+                src.clip = Floor4_Boss_BGM;
+                break;
+            case 10:
+                src.clip = Floor5_Boss_BGM;
+                break;
+        }
+
+        src.volume = soundController.musicValue;
+        gameObject.GetComponent<AudioSource>().Stop();
+        gameObject.GetComponent<AudioSource>().clip = src.clip;
+        gameObject.GetComponent<AudioSource>().Play();
     }
 }

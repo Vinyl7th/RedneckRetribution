@@ -16,10 +16,12 @@ public class Player : MonoBehaviour
     bool phoenixEgg;
     bool change;
     float increase;
+    GameObject reticule;
     // Use this for initialization
     void Start()
     {
         theAnimator = gameObject.GetComponent<Animator>();
+        reticule = GameObject.FindGameObjectWithTag("Reticule");
         //Vector3 newStart = new Vector3(0, 0, 0);
         //gameObject.transform.position = newStart;
     }
@@ -27,7 +29,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GetComponent<PlayerStats>().pHealthCurr <= 0)
+        if (GetComponent<PlayerStats>().pHealthCurr <= 0)
         {
             if (!phoenixEgg)
             {
@@ -44,78 +46,87 @@ public class Player : MonoBehaviour
         }
         moveVelocity = new Vector2(0, 0);
         increase = moveSpeed * GetComponent<PlayerStats>().pMoveSpeed;
-        if(!change)
+        if (!change)
         {
 
-        if (Input.GetButton("MoveUp"))
-        {
-            moveVelocity.y = moveSpeed + increase;
-            theAnimator.SetBool("walkRight", true);
-        }
-        if (Input.GetButton("MoveDown"))
-        {
-            moveVelocity.y = -moveSpeed - increase;
-            theAnimator.SetBool("walkRight", true);
-        }
-        if (Input.GetButton("MoveLeft"))
-        {
-            moveVelocity.x = -moveSpeed - increase;
-            theAnimator.transform.localScale = new Vector3(-1, 1, 1);
-            theAnimator.SetBool("walkRight",true);
-
-        }
-        if (Input.GetButton("MoveRight"))
-        {
-            moveVelocity.x = moveSpeed + increase;
-            theAnimator.transform.localScale = new Vector3(1, 1, 1);
-            theAnimator.SetBool("walkRight", true);
-        }
-        gameObject.GetComponent<Rigidbody2D>().velocity = moveVelocity;
-
-        if (Input.GetButton("Fire1"))
-        {
-            if (gun)
+            if (Input.GetButton("MoveUp"))
             {
-                gun.SendMessage("ShootGun", elementalType);
-                
+                moveVelocity.y = moveSpeed + increase;
+                theAnimator.SetBool("walkRight", true);
+            }
+            if (Input.GetButton("MoveDown"))
+            {
+                moveVelocity.y = -moveSpeed - increase;
+                theAnimator.SetBool("walkRight", true);
+            }
+            if (Input.GetButton("MoveLeft"))
+            {
+                moveVelocity.x = -moveSpeed - increase;
+                theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                theAnimator.SetBool("walkRight", true);
 
             }
-        }
-
-
-
-
-        if (Input.GetButtonDown("Use"))
-        {
-            if (currRune)
-                currRune.SendMessage("OnUse");
-        }
-        if (Input.GetButtonDown("PickUP"))
-        {
-            if (C_Object)
+            if (Input.GetButton("MoveRight"))
             {
+                moveVelocity.x = moveSpeed + increase;
+                theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                theAnimator.SetBool("walkRight", true);
+            }
+            gameObject.GetComponent<Rigidbody2D>().velocity = moveVelocity;
 
-                if (C_Object.tag == "Weapon")
+            if (reticule.transform.position.x >= transform.position.x)
+                theAnimator.transform.localScale = new Vector3(1, 1, 1);
+            else
+                theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+            if (Input.GetButton("Fire1"))
+            {
+                if (gun)
                 {
-                    if (gun)
-                        gun.SendMessage("ChangeCurrent");
-                    C_Object.SendMessage("ChangeCurrent");
-                    gun = C_Object;
-                    standingOnObject = false;
-                    C_Object = null;
-                }
-                else if (C_Object.tag == "Rune")
-                {
-                    if (currRune)
-                        currRune.SendMessage("ChangeCurrent");
-                    C_Object.SendMessage("ChangeCurrent");
-                    currRune = C_Object;
-                    standingOnObject = false;
-                    C_Object = null;
-                    //elementalType = currRune.GetComponent<Rune>().GetElement();
+                    gun.SendMessage("ShootGun", elementalType);
+
+
                 }
             }
-        }
+            else
+            {
+                if (gun)
+                    gun.SendMessage("StopAudio");
+            }
+
+
+
+
+            if (Input.GetButtonDown("Use"))
+            {
+                if (currRune)
+                    currRune.SendMessage("OnUse");
+            }
+            if (Input.GetButtonDown("PickUP"))
+            {
+                if (C_Object)
+                {
+
+                    if (C_Object.tag == "Weapon")
+                    {
+                        if (gun)
+                            gun.SendMessage("ChangeCurrent");
+                        C_Object.SendMessage("ChangeCurrent");
+                        gun = C_Object;
+                        standingOnObject = false;
+                        C_Object = null;
+                    }
+                    else if (C_Object.tag == "Rune")
+                    {
+                        if (currRune)
+                            currRune.SendMessage("ChangeCurrent");
+                        C_Object.SendMessage("ChangeCurrent");
+                        currRune = C_Object;
+                        standingOnObject = false;
+                        C_Object = null;
+                        //elementalType = currRune.GetComponent<Rune>().GetElement();
+                    }
+                }
+            }
         }
         else
         {
@@ -124,7 +135,7 @@ public class Player : MonoBehaviour
         }
 
         SendRuneCharges();
-        if(moveVelocity.x == 0 && moveVelocity.y == 0)
+        if (moveVelocity.x == 0 && moveVelocity.y == 0)
         {
             //theAnimator.transform.localScale = new Vector3(-1, 1, 1);
             theAnimator.SetBool("walkRight", false);
@@ -191,7 +202,7 @@ public class Player : MonoBehaviour
     }
     public void Change()
     {
-        if(change)
+        if (change)
         {
             change = false;
             GetComponent<BoxCollider2D>().enabled = true;

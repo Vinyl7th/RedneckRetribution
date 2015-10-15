@@ -21,6 +21,8 @@ public class SMG : MonoBehaviour
     public float accMax;
     [SerializeField]
     Sprite[] bulletSprites;
+    [SerializeField]
+    AudioSource shot;
     // Use this for initialization
     void Start()
     {
@@ -39,6 +41,7 @@ public class SMG : MonoBehaviour
         }
         fireRate += Time.deltaTime;
         element = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().elementalType;
+        shot.volume = soundController.sfxValue;
 
     }
     void MoveGun()
@@ -119,6 +122,8 @@ public class SMG : MonoBehaviour
             bullet.GetComponent<Bullet>().SetDamage(damage);
             bullet.GetComponent<Bullet>().accMin = accMin;
             bullet.GetComponent<Bullet>().accMax = accMax;
+            if (!shot.isPlaying)
+                shot.Play();
             Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
             fireRate = 0;
         }
@@ -129,7 +134,7 @@ public class SMG : MonoBehaviour
         if (rariety <= 64)
         {
             //common
-            damage = Random.Range(30, 50);
+            damage = Random.Range(60, 100);
             ROF = Random.Range(0.035f, 0.05f);
             accMin = -0.12f;
             accMax = 0.12f;
@@ -137,7 +142,7 @@ public class SMG : MonoBehaviour
         else if (rariety <= 94)
         {
             //unique
-            damage = Random.Range(40, 60);
+            damage = Random.Range(80, 120);
             ROF = Random.Range(0.03f, 0.04f);
             accMin = -0.1f;
             accMax = 0.11f;
@@ -145,7 +150,7 @@ public class SMG : MonoBehaviour
         else if (rariety <= 99)
         {
             //rare
-            damage = Random.Range(60, 80);
+            damage = Random.Range(120, 160);
             ROF = Random.Range(0.03f, 0.04f);
             accMin = -0.08f;
             accMax = 0.08f;
@@ -153,7 +158,7 @@ public class SMG : MonoBehaviour
         else if (rariety == 100)
         {
             //contraban
-            damage = Random.Range(150, 250);
+            damage = Random.Range(300, 500);
             ROF = Random.Range(0.01f, 0.0013f);
             accMin = -0.01f;
             accMax = 0.01f;
@@ -194,6 +199,10 @@ public class SMG : MonoBehaviour
             Color newColor = new Color(0.9f, 0.5f, 0.1f);
             theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
         }
+    }
+    public void StopAudio()
+    {
+        shot.Stop();
     }
 
 }

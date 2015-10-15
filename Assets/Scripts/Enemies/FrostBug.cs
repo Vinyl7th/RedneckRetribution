@@ -16,6 +16,7 @@ public class FrostBug : MonoBehaviour
     AudioSource HideSound;
     [SerializeField]
     AudioSource HurtSound;
+    Animator theAnimator;
     public float maxHealth;
     public float currHealth;
     float tempHealth;
@@ -28,6 +29,7 @@ public class FrostBug : MonoBehaviour
     void Start()
     {
         thePlayer = GameObject.FindGameObjectWithTag("Player");
+        theAnimator = GetComponent<Animator>();
         maxHealth = currHealth = 1500;
         ChargeSound.volume = HideSound.volume = HurtSound.volume = soundController.sfxValue;
          jumpPoint = thePlayer.transform.position;
@@ -64,6 +66,7 @@ public class FrostBug : MonoBehaviour
     void Hide()
     {
         GetComponent<SpriteRenderer>().sprite = hideSprite;
+        theAnimator.SetBool("walk", false);
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<CircleCollider2D>().enabled = false;
         moveEnemy = Vector2.zero;
@@ -88,6 +91,7 @@ public class FrostBug : MonoBehaviour
             {
                 moveEnemy = Vector2.zero;
                 hiding = false;
+                theAnimator.SetBool("jump", true);
                 HideSound.Stop();
                 tempHealth = currHealth;
                 charging = true;
@@ -116,6 +120,8 @@ public class FrostBug : MonoBehaviour
     void Charge()
     {
         GetComponent<SpriteRenderer>().sprite = chargeSprite;
+        theAnimator.SetBool("walk", true);
+        theAnimator.SetBool("jump", false);
         GetComponent<BoxCollider2D>().enabled = true;
         GetComponent<CircleCollider2D>().enabled = true;
         moveEnemy = Vector2.zero;
