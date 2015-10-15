@@ -128,6 +128,7 @@ public class skeleton : MonoBehaviour
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints < 0.0f)
         {
+            GetComponent<Drops>().Drop();
             Destroy(gameObject);
         }
 

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy_Snowball : MonoBehaviour {
+public class Enemy_Snowball : MonoBehaviour
+{
 
     GameObject thePlayer;
 

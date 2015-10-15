@@ -24,7 +24,7 @@ public class healthPotion : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            thePlayer.GetComponent<PlayerStats>().pHealthCurr += (thePlayer.GetComponent<PlayerStats>().pHealthMax * 0.1f);
+            thePlayer.GetComponent<PlayerStats>().pHealthCurr += (thePlayer.GetComponent<PlayerStats>().pHealthMax * 0.05f);
             Destroy(gameObject);
         }
     }
