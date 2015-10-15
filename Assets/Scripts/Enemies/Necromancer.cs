@@ -5,6 +5,7 @@ public class Necromancer : MonoBehaviour
 {
 
     public GameObject FireBall;
+    GameObject Aura;
 
     //Gameobjects for the player and a object for the killcounter
     GameObject thePlayer,
@@ -22,6 +23,10 @@ public class Necromancer : MonoBehaviour
     //bool to switch when the necro fireball cast is on cooldown
     bool offCoolDown;
 
+    Animator theAnimator;
+    bool isRightattack;
+    bool isRight;
+
 
     //basic varible to hold the Necromancer's stats
     public float aggroRange,
@@ -37,6 +42,7 @@ public class Necromancer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        theAnimator = gameObject.GetComponent<Animator>();
         thePlayer = GameObject.FindWithTag("Player");
         fireballSound.volume = hitSound.volume = soundController.sfxValue;
         //save the color of the enemy at start and have a bool set to false
@@ -46,7 +52,7 @@ public class Necromancer : MonoBehaviour
         hitSound.volume *= 2;
         //have offcooldown set to true so he fires at the beginning
         offCoolDown = true;
-
+        Aura = GetComponentInChildren<Aura>().gameObject;
 
 
         // Set the Enemy's Movement Speed, Hitpoints, aggrorange,
@@ -95,10 +101,31 @@ public class Necromancer : MonoBehaviour
 
         //enemy's movement  
         Move();
+        if ((int)gameObject.transform.position.x > (int)thePlayer.transform.position.x)
+        {
+            if (!isRightattack)
+            {
+                theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                isRightattack = true;
+            }
+            else
+                isRightattack = false;
+        }
+        else
+        {
+            if (!isRightattack)
+            {
+                theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                isRightattack = true;
+            }
+            else
+                isRightattack = false;
+        }
 
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints < 0.0f)
         {
+            Destroy(Aura);
             Destroy(gameObject);
         }
 
@@ -118,6 +145,8 @@ public class Necromancer : MonoBehaviour
         //if player's position is with then the range of the Enemy's aggrorange
         if (DisToPlayer <= aggroRange)
         {
+
+            theAnimator.SetBool("Walk", true);
             //per fireball being shot 
             fireDelay += Time.deltaTime;
 
@@ -133,6 +162,7 @@ public class Necromancer : MonoBehaviour
             //then have a cooldown to cast the next volley of fireballs
             if (offCoolDown)
             {
+                theAnimator.SetBool("Attack", true);
                 if (fireDelay >= 0.09f)
                 {
                     //calling the function to fire the fireball
@@ -149,6 +179,7 @@ public class Necromancer : MonoBehaviour
             //When on cooldown necromancer can't cast and has to wait for a period of time.
             else
             {
+                theAnimator.SetBool("Attack", false);
                 if (delayCastFireball >= 3.0f)
                 {
                     offCoolDown = true;
@@ -181,7 +212,12 @@ public class Necromancer : MonoBehaviour
                     moveEnemy.y = moveSpeed;
             }
         }
+        else
+        {
+            theAnimator.SetBool("Walk", false);
+        }
         gameObject.GetComponent<Rigidbody2D>().velocity = moveEnemy;
+       
     }
 
 

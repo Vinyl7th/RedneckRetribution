@@ -46,7 +46,7 @@ public class spiderweb : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.SendMessage("TakePhysicalDamage", 75);
+            other.gameObject.SendMessage("Slow");
             Destroy(gameObject);
         }
 

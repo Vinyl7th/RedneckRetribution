@@ -138,7 +138,7 @@ GameObject:
   - 61: {fileID: 6179254}
   - 114: {fileID: 11435792}
   - 114: {fileID: 11486626}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Room_Bounds (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -722,7 +722,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 182.075897, y: 235.165161, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 455728}
@@ -1006,9 +1006,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 5.94922113, y: -6.55364704}
+  m_Offset: {x: 5.94922304, y: -5.53920555}
   serializedVersion: 2
-  m_Size: {x: 12.8984413, y: 3.99923134}
+  m_Size: {x: 12.8984413, y: 1.97036552}
 --- !u!61 &6157074
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1110,9 +1110,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 5.94922113, y: -6.55364704}
+  m_Offset: {x: 5.94921541, y: -5.53920555}
   serializedVersion: 2
-  m_Size: {x: 12.8984413, y: 3.99923134}
+  m_Size: {x: 12.8984413, y: 1.97036648}
 --- !u!61 &6192604
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1190,6 +1190,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spikes: {fileID: 101122, guid: 59b3a552fbac90d49b34894ef4124437, type: 2}
+  WeatherEffects: 0
+  weatherStyle: 0
   LeftSpikes: 1
   RightSpikes: 0
   TopSpikes: 1

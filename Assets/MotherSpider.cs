@@ -30,11 +30,13 @@ public class MotherSpider : MonoBehaviour {
     bool regenHealth;
 
 
- 
+
     //basic varible to hold the Necromancer's stats
     public float aggroRange,
            maxHealth,
+           moveSpeed,
            hitPoints,
+           runAway,
            fireDelay,
            delayCastSpiderWeb;
     int count = 0;
@@ -61,8 +63,10 @@ public class MotherSpider : MonoBehaviour {
 
         // Set the Enemy's Movement Speed, Hitpoints, aggrorange,
         //when to runaway, and when cast fireballs
+        runAway = 5;
         aggroRange = 20.0f;
         hitPoints = 5000.0f;
+        moveSpeed = 4.5f;
         maxHealth = hitPoints;
 
     }
@@ -135,7 +139,8 @@ public class MotherSpider : MonoBehaviour {
 
     void Move()
     {
-
+        //Set the player movement every frame to 0x 0y
+        Vector2 moveEnemy = new Vector2(0, 0);
         // tracks the distance to the player's position from the Enemy's position
         float DisToPlayer = Vector2.Distance(
             thePlayer.transform.position,
@@ -146,6 +151,11 @@ public class MotherSpider : MonoBehaviour {
         {
             //per fireball being shot 
             fireDelay += Time.deltaTime;
+            //temp varibles for the player's and enemies's position
+            float playerX = thePlayer.transform.position.x;
+            float playerY = thePlayer.transform.position.y;
+            float enemyX = gameObject.transform.position.x;
+            float enemyY = gameObject.transform.position.y;
             // cast a certain amount of fireballs and
             //then have a cooldown to cast the next volley of fireballs
             if (offCoolDown)
@@ -171,7 +181,31 @@ public class MotherSpider : MonoBehaviour {
                     count = 0;
                 }
             }
+            if (DisToPlayer >= 6)
+            {
+                if (playerX >= enemyX)         // enemy move left
+                    moveEnemy.x = moveSpeed;
+                if (playerX <= enemyX)         // enemy move right
+                    moveEnemy.x = -moveSpeed;
+                if (playerY >= enemyY)         // enemy move down
+                    moveEnemy.y = moveSpeed;
+                if (playerY <= enemyY)         // enemy move up
+                    moveEnemy.y = -moveSpeed;
+            }
+            //Run away from the player
+            if (DisToPlayer <= runAway)
+            {
+                if (playerX >= enemyX)         // enemy move left
+                    moveEnemy.x = -moveSpeed;
+                if (playerX <= enemyX)         // enemy move right
+                    moveEnemy.x = moveSpeed;
+                if (playerY >= enemyY)         // enemy move down
+                    moveEnemy.y = -moveSpeed;
+                if (playerY <= enemyY)         // enemy move up
+                    moveEnemy.y = moveSpeed;
+            }
         }
+        gameObject.GetComponent<Rigidbody2D>().velocity = moveEnemy;
     }
 
     void CastSpiderWeb()
@@ -216,7 +250,7 @@ public class MotherSpider : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             other.SendMessage("TakePhysicalDamage", 50);
-            Destroy(gameObject);
+          
         }
 
     }

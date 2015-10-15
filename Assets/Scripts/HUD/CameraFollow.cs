@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
 
-    bool loading;
+    public bool loading;
     float delay;
     Vector3 loadingscreen;
     

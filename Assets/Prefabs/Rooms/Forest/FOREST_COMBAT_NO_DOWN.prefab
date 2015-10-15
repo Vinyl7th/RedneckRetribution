@@ -43,7 +43,7 @@ GameObject:
   - 61: {fileID: 6127072}
   - 114: {fileID: 11436408}
   - 114: {fileID: 11417064}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Room_Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}

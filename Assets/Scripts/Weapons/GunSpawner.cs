@@ -77,28 +77,28 @@ public class GunSpawner : MonoBehaviour
     void CreateSMG()
     {
         if (rariety == -1)
-            rariety = Random.Range(0, 100);
+            rariety = Random.Range(0, 101);
         theSMG.GetComponent<SMG>().rariety = rariety;
         Instantiate(theSMG, transform.position, transform.rotation);
     }
     void CreateShotGun()
     {
         if (rariety == -1)
-            rariety = Random.Range(0, 100);
+            rariety = Random.Range(0, 101);
         theShotGun.GetComponent<ShotGun>().rariety = rariety;
         Instantiate(theShotGun, transform.position, transform.rotation);
     }
     void CreateSniper()
     {
         if (rariety == -1)
-            rariety = Random.Range(0, 100);
+            rariety = Random.Range(0, 101);
         theSniper.GetComponent<Sniper>().rariety = rariety;
         Instantiate(theSniper, transform.position, transform.rotation);
     }
     void CreateAssalt()
     {
         if (rariety == -1)
-            rariety = Random.Range(0, 100);
+            rariety = Random.Range(0, 101);
         theAssaltRifle.GetComponent<AssaltRifle>().rariety = rariety;
         Instantiate(theAssaltRifle, transform.position, transform.rotation);
     }

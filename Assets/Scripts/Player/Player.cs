@@ -4,7 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    float moveSpeed = 8;
+   public float moveSpeed = 8;
     public int elementalType = 0;
     Vector2 moveVelocity;
     Animator theAnimator;
@@ -16,7 +16,11 @@ public class Player : MonoBehaviour
     bool phoenixEgg;
     bool change;
     float increase;
+    bool isSlow;
+    float slower;
     GameObject reticule;
+
+    float timmer = 0f;
     // Use this for initialization
     void Start()
     {
@@ -33,9 +37,16 @@ public class Player : MonoBehaviour
         {
             if (!phoenixEgg)
             {
-                Destroy(gameObject);
+               
+                
                 Cursor.visible = true;
-                Application.LoadLevel("Menu_Main");
+                Camera.main.transform.position = new Vector3(-136f, 103f, -10);
+                timmer += Time.deltaTime;
+                if (timmer >= 3f)
+                {
+                    Destroy(gameObject);
+                    Application.LoadLevel("Menu_Main");
+                }
             }
             else
             {
@@ -46,6 +57,15 @@ public class Player : MonoBehaviour
         }
         moveVelocity = new Vector2(0, 0);
         increase = moveSpeed * GetComponent<PlayerStats>().pMoveSpeed;
+        if(isSlow)
+        {
+            slower += Time.deltaTime;
+        }
+        if(slower >= 5.0f)
+        {
+            moveSpeed = 8;
+            isSlow = false;
+        }
         if (!change)
         {
 
@@ -219,5 +239,11 @@ public class Player : MonoBehaviour
                 gun.GetComponent<SpriteRenderer>().enabled = false;
             change = true;
         }
+    }
+    public void Slow()
+    {
+        isSlow = true;
+        slower = 0;
+        moveSpeed = moveSpeed - moveSpeed * 0.15f;
     }
 }

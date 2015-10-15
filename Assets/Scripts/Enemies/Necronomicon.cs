@@ -49,7 +49,7 @@ public class Necronomicon : MonoBehaviour {
     public Vector2 moveToThis;
     public Vector2 tempPlayer;
 
-
+    float timmer = 0f;
     // Use this for initialization
     void Start ()
     {
@@ -203,8 +203,15 @@ public class Necronomicon : MonoBehaviour {
 
         if (bHP_Curr <= 0.0f)
         {
+            Camera.main.transform.position = new Vector3(-136.75f, 133.69f, -10);
+            timmer += Time.deltaTime;
             Cursor.visible = true;
-            Application.LoadLevel("Menu_Credits");
+            if (timmer >= 3f)
+            {
+                Destroy(gameObject);
+                Application.LoadLevel("Menu_Credits");
+            }
+           
         }
 
     }

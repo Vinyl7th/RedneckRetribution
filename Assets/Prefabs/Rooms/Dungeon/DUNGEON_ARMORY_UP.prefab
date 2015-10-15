@@ -249,7 +249,7 @@ GameObject:
   - 61: {fileID: 6121650}
   - 114: {fileID: 11481346}
   - 114: {fileID: 11485052}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Room_Bounds (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -851,6 +851,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spikes: {fileID: 101122, guid: 59b3a552fbac90d49b34894ef4124437, type: 2}
+  WeatherEffects: 0
+  weatherStyle: 0
   LeftSpikes: 0
   RightSpikes: 1
   TopSpikes: 1
