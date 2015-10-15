@@ -26,12 +26,15 @@ public class AssaltRifle : MonoBehaviour
     public float delay;
     [SerializeField]
      Sprite[]  bulletSprites;
+    [SerializeField]
+    AudioSource shot;
     // Use this for initialization
     void Start()
     {
         thePlayer = GameObject.FindGameObjectWithTag("Player").transform;
         Reticule = GameObject.FindGameObjectWithTag("Reticule").transform;
         RollStats();
+        shot.volume = soundController.sfxValue;
     }
 
     // Update is called once per frame
@@ -127,6 +130,8 @@ public class AssaltRifle : MonoBehaviour
                 }
                 bullet.GetComponent<AssaltBullet>().SetDamage(damage);
                 Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
+                if (!shot.isPlaying)
+                    shot.Play();
                 count++;
                 if (count == 5)
                     Burst = false;
@@ -136,6 +141,7 @@ public class AssaltRifle : MonoBehaviour
         }
         else
         {
+            shot.Stop();
             if (timer >= delay)
             {
                 count = 0;
@@ -221,5 +227,9 @@ public class AssaltRifle : MonoBehaviour
             Color newColor = new Color(0.9f, 0.5f, 0.1f);
             theCamera.GetComponent<FlavorText>().hRarity.color = newColor;
         }
+    }
+   public void StopAudio()
+    {
+        shot.Stop();
     }
 }
