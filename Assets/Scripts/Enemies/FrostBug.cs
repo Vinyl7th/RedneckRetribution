@@ -164,6 +164,7 @@ public class FrostBug : MonoBehaviour
         {
 
             other.SendMessage("TakePhysicalDamage", 50);
+            thePlayer.SendMessage("Slow");
         }
     }
 }

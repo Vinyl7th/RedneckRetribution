@@ -220,6 +220,7 @@ public class Yetis : MonoBehaviour {
         {
             //attackNoise.Play();
             other.SendMessage("TakePhysicalDamage", 50);
+            thePlayer.SendMessage("Slow");
         }
 
     }

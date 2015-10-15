@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class spiderweb : MonoBehaviour {
+public class Enemy_Snowball : MonoBehaviour {
 
     GameObject thePlayer;
 
@@ -9,7 +9,7 @@ public class spiderweb : MonoBehaviour {
     Vector3 playerPos;
 
     public float damage;
-    float webSpeed,
+    float fireballSpeed,
            accuracy,
            displayDelay;
     Vector3 direction;
@@ -20,9 +20,9 @@ public class spiderweb : MonoBehaviour {
     void Start()
     {
 
-        webSpeed = 10;
+        fireballSpeed = 15;
         thePlayer = GameObject.FindGameObjectWithTag("Player");
-        accuracy = Random.Range(-0.08f, 0.08f);
+        accuracy = Random.Range(-0.05f, 0.05f);
         direction = thePlayer.transform.position - gameObject.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -36,7 +36,7 @@ public class spiderweb : MonoBehaviour {
         if (timer >= 8.0f)
             Destroy(gameObject);
 
-        transform.Translate(new Vector3(webSpeed * Time.deltaTime, accuracy, 0));
+        transform.Translate(new Vector3(fireballSpeed * Time.deltaTime, accuracy, 0));
 
     }
 
@@ -46,7 +46,7 @@ public class spiderweb : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.SendMessage("Slow");
+            other.gameObject.SendMessage("TakeIceDamage", 75);
             Destroy(gameObject);
         }
 

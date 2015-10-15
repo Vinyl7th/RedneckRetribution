@@ -68,7 +68,7 @@ public class Player_Type_Resist : MonoBehaviour {
             {
                 incDamage = incDamage * runeResistIce;
             }
-
+            GetComponent<Player>().moveSpeed = GetComponent<Player>().moveSpeed - GetComponent<Player>().moveSpeed * 0.15f;
             CalculateDamage(incDamage);
         }
     }
