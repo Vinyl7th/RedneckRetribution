@@ -222,6 +222,7 @@ public class Room : MonoBehaviour
             Destroy(theDoors[i]);
         }
 
+        // gameObject.BroadcastMessage("DestroySpawner");
         spikesSpawned = false;
         stopSpawning = true;
     }

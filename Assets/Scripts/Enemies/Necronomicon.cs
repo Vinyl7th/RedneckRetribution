@@ -37,7 +37,6 @@ public class Necronomicon : MonoBehaviour {
     AudioSource attackNoise;
 
     float delayColorChanger;
-    float healthRegenTimer = 0.0f;
     bool changeColor = false;
 
     // Fireball stuff
@@ -50,7 +49,7 @@ public class Necronomicon : MonoBehaviour {
     public Vector2 moveToThis;
     public Vector2 tempPlayer;
 
-
+    float timmer = 0f;
     // Use this for initialization
     void Start ()
     {
@@ -124,7 +123,6 @@ public class Necronomicon : MonoBehaviour {
                 {
                     shootAngle += Time.deltaTime * 2080.0f;
                     Vector3 axis = new Vector3(0, 0, shootAngle);
-                    Vector3 axisHUD = new Vector3(0, 0, -shootAngle);
                     gameObject.transform.rotation = Quaternion.Euler(axis);
                     ShootFireball();
                     ballCooldown = 0.0f;
@@ -205,8 +203,15 @@ public class Necronomicon : MonoBehaviour {
 
         if (bHP_Curr <= 0.0f)
         {
+            Camera.main.transform.position = new Vector3(-136.75f, 133.69f, -10);
+            timmer += Time.deltaTime;
             Cursor.visible = true;
-            Application.LoadLevel("Menu_Credits");
+            if (timmer >= 3f)
+            {
+                Destroy(gameObject);
+                Application.LoadLevel("Menu_Credits");
+            }
+           
         }
 
     }
@@ -230,9 +235,6 @@ public class Necronomicon : MonoBehaviour {
         Vector2 moveEnemy = new Vector2(0, 0);
 
         // tracks the distance to the player's position from the skeleton's position
-        float DisToPlayer = Vector2.Distance(
-            thePlayer.transform.position,
-            gameObject.transform.position);
 
             //temp varibles for the player's and enemies's position
             float playerX = thePlayer.transform.position.x;

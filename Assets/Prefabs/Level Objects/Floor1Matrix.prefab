@@ -57,22 +57,22 @@ MonoBehaviour:
   - {fileID: 121264, guid: 286865ab914bf1e4f8d7a99b95d499c8, type: 2}
   - {fileID: 121264, guid: 286865ab914bf1e4f8d7a99b95d499c8, type: 2}
   - {fileID: 159038, guid: 41cda6213be199d4599132202698ad8c, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 151906, guid: 33ba9f8f253ea95439fd214a8f4af687, type: 2}
   Combat_UP_DOWN:
   - {fileID: 186152, guid: 2ba25eaf8507bca48a9932b02ee6dec4, type: 2}
   - {fileID: 178102, guid: 1dd164b3e4bfe4e43bd699f959ef918d, type: 2}
   - {fileID: 112904, guid: 60edd1f1a7f191f45a456c1083994d04, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 194626, guid: 8335f60e26912c74d817607898b7bb87, type: 2}
   Combat_UP_LEFT:
   - {fileID: 145252, guid: af9cc1e4bc410c546a17b296b9b83a8a, type: 2}
   - {fileID: 178834, guid: d9a021f69f940ed4285df44865c315c6, type: 2}
   - {fileID: 103646, guid: 99bb302338f08d74c8040803c0f25044, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 144736, guid: d64dfe19a2416d748b6e43ca79abf2a7, type: 2}
   Combat_RIGHT_DOWN:
   - {fileID: 132968, guid: b7161e4775680404d9d755f681a6719e, type: 2}
   - {fileID: 144948, guid: ff9c37020f8b337439819084bc917b8d, type: 2}
   - {fileID: 137332, guid: a6db82a254272284785961c0a0906bbc, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 168260, guid: 824317f33cd63e74eac2165e3b8606ac, type: 2}
   Combat_RIGHT_LEFT:
   - {fileID: 149632, guid: 0092a17bdd425f84f86039a3926b90a7, type: 2}
   - {fileID: 157544, guid: b17d6358264ec3a4dbbf952d6fbe75b4, type: 2}
@@ -82,7 +82,7 @@ MonoBehaviour:
   - {fileID: 143452, guid: acb8b1d5566b1324c98de5e6ec85b724, type: 2}
   - {fileID: 117534, guid: ee26dc150c1b5674da98ba7d7858f47f, type: 2}
   - {fileID: 124332, guid: aac1656dd8ba19a45b017a764675f77e, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 133194, guid: 8b3058a9a84f9db4489b0ed48bc7eafd, type: 2}
   Treasure_UP:
   - {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
   - {fileID: 163682, guid: 20fdeea004f5d734ab4da1a87b9fc470, type: 2}
@@ -97,12 +97,12 @@ MonoBehaviour:
   - {fileID: 100504, guid: d5dfedec0630a75419d3ad587928e615, type: 2}
   - {fileID: 177062, guid: d949df4b0ba54614cbcf705c8c80139a, type: 2}
   - {fileID: 141460, guid: 74811a5324105b24eb587f1a352d6e96, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 0}
   Treasure_LEFT:
   - {fileID: 175958, guid: 4203bede93f2acb49a0e1cb64138dcd4, type: 2}
   - {fileID: 187222, guid: cb26f6848dc47b149a1d53a8d32449ae, type: 2}
   - {fileID: 115752, guid: 3a8395fd61344df4f86ea7a1c5003d97, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 159978, guid: f0585ef5a545952428e5708905c9e15b, type: 2}
   Armory_UP:
   - {fileID: 146782, guid: a24873fa9e87e73498d53a961152bd2a, type: 2}
   - {fileID: 149546, guid: 339cdf34f7b5d7d43b77fb38460c3aab, type: 2}
@@ -112,27 +112,27 @@ MonoBehaviour:
   - {fileID: 118564, guid: 3c32eafe06be438468518f2a4fffa327, type: 2}
   - {fileID: 115144, guid: 5f6e12639c4b8474485ee67fe9e4eb33, type: 2}
   - {fileID: 183180, guid: a984cbee55fe9b846890ddb06eb61ebe, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 168744, guid: f39bd5cccd43efb469f2af68405dd6ff, type: 2}
   Armory_DOWN:
   - {fileID: 101070, guid: 17a61486690211148a10e8fd3f6f6b0d, type: 2}
   - {fileID: 161028, guid: f7050493c610053459c3a017fc606bdd, type: 2}
   - {fileID: 184186, guid: 1661a614e2454c34db9c758141201912, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 198732, guid: d6999826216573b42b5f3a31a5c68d76, type: 2}
   Armory_LEFT:
   - {fileID: 173368, guid: 980a5bc2d980174419b5eac98952c42b, type: 2}
   - {fileID: 126884, guid: bdd8e3be7f0149244b1a53c09d8f8633, type: 2}
   - {fileID: 101886, guid: e9e0783e604649d49a5246f2ce644a41, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 159978, guid: f0585ef5a545952428e5708905c9e15b, type: 2}
   Combat_NO_UP:
   - {fileID: 164046, guid: 626dba9e0e8db324c9b195ed42598220, type: 2}
   - {fileID: 164046, guid: 626dba9e0e8db324c9b195ed42598220, type: 2}
   - {fileID: 134704, guid: ffa4eac07c269e14196ca0dce175f18e, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 131280, guid: 96579344cb2507b4fab9df6f3d903a93, type: 2}
   Combat_NO_RIGHT:
   - {fileID: 148604, guid: 3fc8175d2fc77214bb9c860417571c69, type: 2}
   - {fileID: 162948, guid: 289198f6c3a1a90468afea52d55057e5, type: 2}
   - {fileID: 108354, guid: b8a6d50c52b9de044ac52fa2e2c381b7, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 118910, guid: 7b362e5a9f2836f49b5c8f62df4ea3ad, type: 2}
   Combat_NO_DOWN:
   - {fileID: 130846, guid: 01bab857b2000724ba50824e992bcd37, type: 2}
   - {fileID: 133582, guid: 179043619e6a75a4c82a38e79c27e543, type: 2}
@@ -142,7 +142,7 @@ MonoBehaviour:
   - {fileID: 164540, guid: 1f14233420576af428bfaa4dd4edd3ea, type: 2}
   - {fileID: 163384, guid: 5ff59e41e8846c64caee87e6d5f8b4f4, type: 2}
   - {fileID: 102722, guid: 941d65b0dcd16f94c81fe59f75bc8d44, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 198382, guid: 787bdf20cd78aa64ca43ff15e39e1202, type: 2}
   Combat_ALL:
   - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
   - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
@@ -150,9 +150,9 @@ MonoBehaviour:
   - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
   Start_Room: {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
   Boss_Room:
+  - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
   - {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
-  - {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
-  - {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
+  - {fileID: 141648, guid: 4107701a7c5f34b4698cf379851835f6, type: 2}
   - {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
 --- !u!1001 &100100000
 Prefab:

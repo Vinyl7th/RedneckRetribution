@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     bool isSlow;
     float slower;
     GameObject reticule;
+
+    float timmer = 0f;
     // Use this for initialization
     void Start()
     {
@@ -35,9 +37,16 @@ public class Player : MonoBehaviour
         {
             if (!phoenixEgg)
             {
-                Destroy(gameObject);
+               
+                
                 Cursor.visible = true;
-                Application.LoadLevel("Menu_Main");
+                Camera.main.transform.position = new Vector3(-136f, 103f, -10);
+                timmer += Time.deltaTime;
+                if (timmer >= 3f)
+                {
+                    Destroy(gameObject);
+                    Application.LoadLevel("Menu_Main");
+                }
             }
             else
             {
