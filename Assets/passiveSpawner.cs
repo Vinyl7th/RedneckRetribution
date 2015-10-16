@@ -95,8 +95,8 @@ public class passiveSpawner : MonoBehaviour {
             }
 
             
-        }
         Destroy(gameObject);
+        }
     }
 
 }

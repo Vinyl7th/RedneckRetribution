@@ -125,7 +125,7 @@ public class DarkDragon : MonoBehaviour
         {
 
             count = 0;
-                theAnimator.SetBool("moveLeft", true);
+               // theAnimator.SetBool("moveLeft", true);
                 Move();
         }
 

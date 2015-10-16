@@ -233,8 +233,11 @@ public class Player : MonoBehaviour
     }
     public void Slow()
     {
+        if(moveSpeed >= 4)
+        {
         isSlow = true;
         slower = 0;
         moveSpeed = moveSpeed - moveSpeed * 0.15f;
+        }
     }
 }
