@@ -97,7 +97,7 @@ MonoBehaviour:
   - {fileID: 100504, guid: d5dfedec0630a75419d3ad587928e615, type: 2}
   - {fileID: 177062, guid: d949df4b0ba54614cbcf705c8c80139a, type: 2}
   - {fileID: 141460, guid: 74811a5324105b24eb587f1a352d6e96, type: 2}
-  - {fileID: 0}
+  - {fileID: 195658, guid: a06f9049836cd184a923e8a37e05ae63, type: 2}
   Treasure_LEFT:
   - {fileID: 175958, guid: 4203bede93f2acb49a0e1cb64138dcd4, type: 2}
   - {fileID: 187222, guid: cb26f6848dc47b149a1d53a8d32449ae, type: 2}

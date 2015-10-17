@@ -35,6 +35,7 @@ GameObject:
   - 82: {fileID: 8261796}
   - 82: {fileID: 8213528}
   - 95: {fileID: 9506354}
+  - 114: {fileID: 11464878}
   m_Layer: 10
   m_Name: FrostBug
   m_TagString: Enemy
@@ -428,6 +429,21 @@ MonoBehaviour:
   HurtSound: {fileID: 8213528}
   maxHealth: 0
   currHealth: 0
+--- !u!114 &11464878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa3e00de0447034e8183f5b1871238f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potion: {fileID: 103100, guid: 2e655a33f710ed94c80a4877edcb6356, type: 2}
+  passive: {fileID: 149120, guid: b92bcca946753fb4e86f56422384a0b4, type: 2}
+  rune: {fileID: 190528, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
+  gun: {fileID: 128560, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
 --- !u!114 &11469692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -543,6 +559,22 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: potion
+      value: 
+      objectReference: {fileID: 103100, guid: 2e655a33f710ed94c80a4877edcb6356, type: 2}
+    - target: {fileID: 0}
+      propertyPath: passive
+      value: 
+      objectReference: {fileID: 149120, guid: b92bcca946753fb4e86f56422384a0b4, type: 2}
+    - target: {fileID: 0}
+      propertyPath: rune
+      value: 
+      objectReference: {fileID: 190528, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
+    - target: {fileID: 0}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 128560, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 158518}

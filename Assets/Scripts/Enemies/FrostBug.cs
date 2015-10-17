@@ -40,8 +40,11 @@ public class FrostBug : MonoBehaviour
     void Update()
     {
         if (currHealth <= 0)
+        {
+            GetComponent<Drops>().Drop();
             Destroy(gameObject);
-      
+        }
+          
         distance = Vector2.Distance(transform.position, jumpPoint);
         if (!hiding)
         {

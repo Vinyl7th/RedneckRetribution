@@ -24,17 +24,17 @@ public class Drops : MonoBehaviour {
 	}
     public void Drop()
     {
-        if(drop <= 60)
+        if(drop <= 80)
         {
             //potion
             Instantiate(potion,gameObject.transform.position,gameObject.transform.rotation);
         }
-        else if(drop <= 85)
+        else if(drop <= 88)
         {
             //passive
             Instantiate(passive,gameObject.transform.position,gameObject.transform.rotation);
         }
-        else if(drop <= 95)
+        else if(drop <= 96)
         {
             //rune
             Instantiate(rune,gameObject.transform.position,gameObject.transform.rotation);

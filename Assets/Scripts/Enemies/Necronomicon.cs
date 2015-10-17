@@ -56,7 +56,7 @@ public class Necronomicon : MonoBehaviour {
         gameObject.GetComponent<SpriteRenderer>().sprite = sprite_Idle;
         thePlayer = GameObject.FindWithTag("Player");
 
-        bHP_Max = 50000;
+        bHP_Max = 150000;
         bHP_Curr = bHP_Max;
 
         bossFight = false;

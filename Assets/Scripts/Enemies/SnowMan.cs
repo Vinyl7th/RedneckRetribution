@@ -108,6 +108,7 @@ public class SnowMan : MonoBehaviour
         //if the healthpoints are 0 destroy the enemy on screen
         if (currHealth <= 0.0f)
         {
+            GetComponent<Drops>().Drop();
             Destroy(gameObject);
         }
         if (transform.localScale.x >= 2.0f)

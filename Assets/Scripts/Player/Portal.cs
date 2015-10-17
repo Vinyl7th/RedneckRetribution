@@ -21,7 +21,10 @@ public class Portal : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D hi)
     {
-        GameObject.FindGameObjectWithTag("LevelManager").SendMessage("LoadLevel");
-        Destroy(gameObject);
+        if (hi.gameObject.tag == "Player")
+        {
+            GameObject.FindGameObjectWithTag("LevelManager").SendMessage("LoadLevel");
+            Destroy(gameObject);
+        }
     }
 }

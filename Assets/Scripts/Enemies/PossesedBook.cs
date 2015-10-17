@@ -32,7 +32,11 @@ public class PossesedBook : MonoBehaviour
     void Update()
     {
         if (currHealth <= 0)
+        {
+            GetComponent<Drops>().Drop();
             Destroy(gameObject);
+        }
+            
         // Damage color
         if (changeColor == true)
         {

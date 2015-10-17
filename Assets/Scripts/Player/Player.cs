@@ -55,8 +55,10 @@ public class Player : MonoBehaviour
                 phoenixEgg = false;
             }
         }
+
         moveVelocity = new Vector2(0, 0);
         increase = moveSpeed * GetComponent<PlayerStats>().pMoveSpeed;
+
         if(isSlow)
         {
             slower += Time.deltaTime;

@@ -6,6 +6,8 @@ public class WastelandBoss : MonoBehaviour {
     GameObject thePlayer;
     public GameObject HisGun;
     bool isRight;
+    public GameObject thePortal;
+    public bool SpawnPortalBool;
 
     GameObject[] Waypoint;
 
@@ -36,6 +38,8 @@ public class WastelandBoss : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+        if(SpawnPortalBool)
+            GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>().SetMusic(6);
 
 
         bulletShootNoise.volume = shellFallNoise.volume = hurtSound.volume = soundController.sfxValue;
@@ -135,6 +139,9 @@ public class WastelandBoss : MonoBehaviour {
         //if the healthpoints are 0 destroy the enemy on screen
         if (hitPoints < 0.0f)
         {
+            if(SpawnPortalBool)
+                SpawnPortal();
+
             Destroy(HisGun);
             Destroy(gameObject);
         }
@@ -147,6 +154,11 @@ public class WastelandBoss : MonoBehaviour {
         hitPoints -= _dmg;
         changeColor = true;
 
+    }
+
+    public void SpawnPortal()
+    {
+        Instantiate(thePortal, gameObject.transform.position, gameObject.transform.rotation);
     }
 
 

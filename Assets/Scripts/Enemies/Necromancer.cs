@@ -126,6 +126,7 @@ public class Necromancer : MonoBehaviour
         if (hitPoints < 0.0f)
         {
             Destroy(Aura);
+            GetComponent<Drops>().Drop();
             Destroy(gameObject);
         }
 
