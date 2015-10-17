@@ -147,13 +147,13 @@ MonoBehaviour:
   - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
   - {fileID: 160938, guid: fdd0b5a38811b8944b4ff3c8ce962674, type: 2}
   - {fileID: 186074, guid: 9ef2c34ab6f7fb148902da359ac63fb1, type: 2}
-  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
+  - {fileID: 134010, guid: d52c621a534cca6419e11db5bd99afd5, type: 2}
   Start_Room: {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
   Boss_Room:
   - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}
   - {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
   - {fileID: 141648, guid: 4107701a7c5f34b4698cf379851835f6, type: 2}
-  - {fileID: 134010, guid: d52c621a534cca6419e11db5bd99afd5, type: 2}
+  - {fileID: 150418, guid: 2f50d69bfa0b714458ff6abcccfe353b, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
