@@ -9,7 +9,7 @@ public class PoisonDragon : MonoBehaviour
     GameObject[] Waypoint;
     GameObject DragonControl;
     public GameObject fireball;
-    bool _changeonce;
+   
     bool isRight;
     //varibles for the visual feedback when the skeleton takes damage
     Color baseColor, blackColor;
@@ -34,7 +34,7 @@ public class PoisonDragon : MonoBehaviour
     {
         theAnimator = gameObject.GetComponent<Animator>();
 
-        _changeonce = false;
+        
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
 

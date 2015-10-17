@@ -143,7 +143,7 @@ public class Witch : MonoBehaviour {
     {
 
         //Set the player movement every frame to 0x 0y
-        Vector2 moveEnemy = new Vector2(0, 0);
+       
 
         // tracks the distance to the player's position from the Enemy's position
         float DisToPlayer = Vector2.Distance(
@@ -151,10 +151,9 @@ public class Witch : MonoBehaviour {
             gameObject.transform.position);
 
         //temp varibles for the player's and enemies's position
-        float playerX = thePlayer.transform.position.x;
-        float playerY = thePlayer.transform.position.y;
-        float enemyX = gameObject.transform.position.x;
-        float enemyY = gameObject.transform.position.y;
+       
+       
+       
 
         //if player's position is with then the range of the Enemy's aggrorange
         if (DisToPlayer <= aggroRange)

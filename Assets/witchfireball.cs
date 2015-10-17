@@ -13,7 +13,7 @@ public class witchfireball : MonoBehaviour {
  
     Vector3 direction;
 
-    float timer = 0f;
+    
 
     // Use this for initialization
     void Start()
@@ -32,7 +32,7 @@ public class witchfireball : MonoBehaviour {
         float _Speed = fireballSpeed * Time.deltaTime;
          transform.position = Vector2.MoveTowards(gameObject.transform.position, thePlayer.transform.position, _Speed);
 
-        if (selfDestroy >= 3.5f)
+        if (selfDestroy >= 2.0f)
             Destroy(gameObject);
     }
 

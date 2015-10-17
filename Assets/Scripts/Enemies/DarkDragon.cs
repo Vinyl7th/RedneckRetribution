@@ -17,7 +17,7 @@ public class DarkDragon : MonoBehaviour
     Color baseColor, blackColor;
     bool changeColor;
     float delayColorChanger;
-    bool _changeonce;
+   
 
     [SerializeField]
     public bool active;
@@ -38,7 +38,7 @@ public class DarkDragon : MonoBehaviour
         GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>().SetMusic(9);
         theAnimator = gameObject.GetComponent<Animator>();
         
-        _changeonce = false;
+        
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
         changeColor = false;
