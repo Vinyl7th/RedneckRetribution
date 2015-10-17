@@ -17,7 +17,9 @@ public class TextSpawner : MonoBehaviour {
     public void SpawnTheText(int _damage, Vector3 _pos)
     {
         GameObject damageTextObj = (GameObject)Resources.Load("DamageTextPrefab", typeof(GameObject));
-        GameObject temp = Instantiate(damageTextObj, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
+        Vector3 newPos = gameObject.transform.position;
+        newPos.z = -9;
+        GameObject temp = Instantiate(damageTextObj, newPos, gameObject.transform.rotation) as GameObject;
 
         temp.GetComponent<Damage_Text>().SetValue((int)_damage, _pos);
     }

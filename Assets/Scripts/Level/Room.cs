@@ -146,7 +146,7 @@ public class Room : MonoBehaviour
                 leftSpikes[i] = Instantiate(spikes);
                 leftSpikes[i].transform.position = spikePos;
                 spikePos.y -= 1.0f;
-                spikePos.z -= 0.1f;
+                spikePos.z = 4f;
 
                 if (!LeftSpikes)
                 {
@@ -165,7 +165,7 @@ public class Room : MonoBehaviour
                 rightSpikes[i] = Instantiate(spikes);
                 rightSpikes[i].transform.position = spikePos;
                 spikePos.y -= 1.0f;
-                spikePos.z -= 0.1f;
+                spikePos.z = 4f;
 
                 if (!RightSpikes)
                 {
@@ -184,7 +184,7 @@ public class Room : MonoBehaviour
                 topSpikes[i] = Instantiate(spikes);
                 topSpikes[i].transform.position = spikePos;
                 spikePos.x += 1.0f;
-                spikePos.z -= 0.1f;
+                spikePos.z = 4;
 
                 if (!TopSpikes)
                 {
@@ -203,7 +203,7 @@ public class Room : MonoBehaviour
                 bottomSpikes[i] = Instantiate(spikes);
                 bottomSpikes[i].transform.position = spikePos;
                 spikePos.x += 1.0f;
-                spikePos.z -= 0.1f;
+                spikePos.z = 4f;
 
                 if (!BotSpikes)
                 {
