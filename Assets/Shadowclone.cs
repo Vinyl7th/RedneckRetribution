@@ -44,6 +44,7 @@ public class Shadowclone : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>().SetMusic(8);
 
         check1 = true;
         check2 = false;
