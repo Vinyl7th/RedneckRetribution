@@ -35,6 +35,7 @@ public class DarkDragon : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>().SetMusic(9);
         theAnimator = gameObject.GetComponent<Animator>();
         
         _changeonce = false;
@@ -125,7 +126,7 @@ public class DarkDragon : MonoBehaviour
         {
 
             count = 0;
-                theAnimator.SetBool("moveLeft", true);
+               // theAnimator.SetBool("moveLeft", true);
                 Move();
         }
 

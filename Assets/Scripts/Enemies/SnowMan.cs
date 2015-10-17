@@ -35,12 +35,15 @@ public class SnowMan : MonoBehaviour
            fireDelay,
            delayCastFireball;
     int count = 0;
+    bool isRightattack;
+    Animator theAnimator;
 
 
     // Use this for initialization
     void Start()
     {
         thePlayer = GameObject.FindWithTag("Player");
+        theAnimator = GetComponent<Animator>();
         //fireballSound.volume = hitSound.volume = soundController.sfxValue;
         Laugh.volume = Walk.volume = soundController.sfxValue;
         Laugh.Stop();
@@ -105,6 +108,7 @@ public class SnowMan : MonoBehaviour
         //if the healthpoints are 0 destroy the enemy on screen
         if (currHealth <= 0.0f)
         {
+            GetComponent<Drops>().Drop();
             Destroy(gameObject);
         }
         if (transform.localScale.x >= 2.0f)
@@ -127,6 +131,26 @@ public class SnowMan : MonoBehaviour
         float DisToPlayer = Vector2.Distance(
             thePlayer.transform.position,
             gameObject.transform.position);
+        if ((int)gameObject.transform.position.x > (int)thePlayer.transform.position.x)
+        {
+            if (!isRightattack)
+            {
+                theAnimator.transform.localScale = new Vector3(1, 1, 1);
+                isRightattack = true;
+            }
+            else
+                isRightattack = false;
+        }
+        else
+        {
+            if (!isRightattack)
+            {
+                theAnimator.transform.localScale = new Vector3(-1, 1, 1);
+                isRightattack = true;
+            }
+            else
+                isRightattack = false;
+        }
 
         //if player's position is with then the range of the Enemy's aggrorange
         if (DisToPlayer <= aggroRange)
@@ -146,6 +170,7 @@ public class SnowMan : MonoBehaviour
             //then have a cooldown to cast the next volley of fireballs
             if (offCoolDown)
             {
+                theAnimator.SetBool("Attack", true);
                 if (fireDelay >= 0.09f)
                 {
                     //calling the function to fire the fireball
@@ -161,6 +186,7 @@ public class SnowMan : MonoBehaviour
             //When on cooldown necromancer can't cast and has to wait for a period of time.
             else
             {
+                theAnimator.SetBool("Attack", false);
                 if (delayCastFireball >= 3.0f)
                 {
                     offCoolDown = true;

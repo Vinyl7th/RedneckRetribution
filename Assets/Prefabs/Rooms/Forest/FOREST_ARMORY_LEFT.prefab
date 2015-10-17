@@ -803,7 +803,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .703773737, y: -.342864126, z: 0}
+  m_LocalPosition: {x: 0, y: -20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 484446}
@@ -2024,7 +2024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hardCode: 0
   theSMG: {fileID: 127556, guid: e9713754659c2be4bb9d08f23868cad6, type: 2}
-  SMG: 1
+  SMG: 0
   theShotGun: {fileID: 139788, guid: d3210aee694d64d42b0fdf66ad000d57, type: 2}
   ShotGun: 0
   theSniper: {fileID: 106880, guid: 56fcd746f407b3e44a05e33541fe4171, type: 2}
@@ -2050,7 +2050,7 @@ MonoBehaviour:
   theSMG: {fileID: 127556, guid: e9713754659c2be4bb9d08f23868cad6, type: 2}
   SMG: 0
   theShotGun: {fileID: 139788, guid: d3210aee694d64d42b0fdf66ad000d57, type: 2}
-  ShotGun: 1
+  ShotGun: 0
   theSniper: {fileID: 106880, guid: 56fcd746f407b3e44a05e33541fe4171, type: 2}
   Sniper: 0
   theAssaltRifle: {fileID: 116742, guid: 8e0cdea9ba90d9c4991174dcc0fae5f5, type: 2}

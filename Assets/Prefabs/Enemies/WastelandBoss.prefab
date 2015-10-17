@@ -388,6 +388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HisGun: {fileID: 194156, guid: 58061d88f291d6a40b78774df6119a01, type: 2}
+  thePortal: {fileID: 105388, guid: bd2b9e80f17264941b68cf5b0d560c0c, type: 2}
+  SpawnPortalBool: 1
   bulletShootNoise: {fileID: 8268822}
   shellFallNoise: {fileID: 8280938}
   hurtSound: {fileID: 8270614}
@@ -527,6 +529,14 @@ Prefab:
       propertyPath: hurtSound
       value: 
       objectReference: {fileID: 8270614}
+    - target: {fileID: 0}
+      propertyPath: thePortal
+      value: 
+      objectReference: {fileID: 105388, guid: bd2b9e80f17264941b68cf5b0d560c0c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: SpawnPortalBool
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 124564}

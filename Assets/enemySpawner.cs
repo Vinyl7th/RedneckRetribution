@@ -24,5 +24,6 @@ public class enemySpawner : MonoBehaviour {
     public void Spawn()
     {
         Instantiate(enemies[enemyChoice], gameObject.transform.position, gameObject.transform.rotation);
+        Destroy(gameObject);
     }
 }

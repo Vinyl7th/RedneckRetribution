@@ -119,7 +119,10 @@ public class MotherSpider : MonoBehaviour {
         {
             //squishSound.Play();
             SummonSpiderpoint();
+
+            GetComponent<Drops>().Drop();
             Destroy(gameObject);
+            
         }
 
     }

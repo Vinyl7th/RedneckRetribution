@@ -40,8 +40,11 @@ public class FrostBug : MonoBehaviour
     void Update()
     {
         if (currHealth <= 0)
+        {
+            GetComponent<Drops>().Drop();
             Destroy(gameObject);
-      
+        }
+          
         distance = Vector2.Distance(transform.position, jumpPoint);
         if (!hiding)
         {
@@ -140,7 +143,7 @@ public class FrostBug : MonoBehaviour
                 moveEnemy.y = -moveSpeed;
         }
         gameObject.GetComponent<Rigidbody2D>().velocity = moveEnemy;
-        if (currHealth <= tempHealth - tempHealth * 0.1f)
+        if (currHealth <= tempHealth - tempHealth * 0.4f)
         {
             running = true;
             hiding = true;

@@ -32,22 +32,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &109558
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 468936}
-  - 114: {fileID: 11408038}
-  m_Layer: 0
-  m_Name: Spawners (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &114004
 GameObject:
   m_ObjectHideFlags: 1
@@ -883,7 +867,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 434888}
-  - {fileID: 468936}
   - {fileID: 458804}
   - {fileID: 449528}
   m_Father: {fileID: 477798}
@@ -983,7 +966,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 437314}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &450140
 Transform:
   m_ObjectHideFlags: 1
@@ -1031,7 +1014,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 437314}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &460048
 Transform:
   m_ObjectHideFlags: 1
@@ -1080,18 +1063,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 485744}
   m_RootOrder: 24
---- !u!4 &468936
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109558}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.67999983, y: .850000024, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 437314}
-  m_RootOrder: 1
 --- !u!4 &469160
 Transform:
   m_ObjectHideFlags: 1
@@ -1183,7 +1154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32, y: 40, z: 0}
+  m_LocalPosition: {x: -98.864296, y: 1.55395901, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 485744}
@@ -1882,19 +1853,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4, y: 2}
---- !u!114 &11408038
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126325de7b8d1cb41869a4ecd76a4fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 150160, guid: 7f46f0cfe48b69f45a98622c83fb6155, type: 2}
 --- !u!114 &11458970
 MonoBehaviour:
   m_ObjectHideFlags: 1
