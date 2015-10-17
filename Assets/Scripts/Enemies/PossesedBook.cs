@@ -12,14 +12,14 @@ public class PossesedBook : MonoBehaviour
     public float maxHealth;
 
     //varibles for the visual feedback when the enemy takes damage
-    Color baseColor;
+   
     bool changeColor;
     float delayColorChanger;
 
     // Use this for initialization
     void Start()
     {
-        baseColor = gameObject.GetComponent<SpriteRenderer>().color;
+        
         changeColor = false;
         delayColorChanger = 0.0f;
         thePlayer = GameObject.FindGameObjectWithTag("Player");

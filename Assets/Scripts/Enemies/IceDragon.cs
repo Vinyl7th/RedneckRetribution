@@ -17,7 +17,7 @@ public class IceDragon : MonoBehaviour
     Color baseColor, blackColor;
     bool changeColor;
     float delayColorChanger;
-    bool _changeonce;
+    
 
     [SerializeField]
     public bool active;
@@ -37,7 +37,7 @@ public class IceDragon : MonoBehaviour
     {
         theAnimator = gameObject.GetComponent<Animator>();
       
-        _changeonce = false;
+       
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
         changeColor = false;
@@ -63,7 +63,7 @@ public class IceDragon : MonoBehaviour
             
             active = true;
             gameObject.GetComponent<SpriteRenderer>().color = baseColor;
-            _changeonce = false;
+           
             if (changeColor == true)
             {
                 //start the delaytimer and change the enemy's color to red
