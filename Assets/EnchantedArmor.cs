@@ -21,7 +21,7 @@ public class EnchantedArmor : MonoBehaviour {
 
     bool regenHealth;
     bool isRightattack;
-    bool isRight;
+    
 
     //basic varible to hold the skeletons stats
     public float aggroRange,
@@ -54,7 +54,7 @@ public class EnchantedArmor : MonoBehaviour {
         hitPoints = 10000.0f;
         maxHealth = hitPoints;
         isRightattack = false;
-        isRight = false;
+       
         attackrange = 2f;
 
     }

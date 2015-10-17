@@ -16,7 +16,7 @@ public class FireDragon : MonoBehaviour
     Color baseColor, blackColor;
     bool changeColor;
     float delayColorChanger;
-    bool _changeonce;
+    
 
     [SerializeField]
     public bool active;
@@ -36,7 +36,7 @@ public class FireDragon : MonoBehaviour
     {
         theAnimator = gameObject.GetComponent<Animator>();
         theAnimator.transform.localScale = new Vector3(-1, 1, 1);
-        _changeonce = false;
+       
         //save the color of the enemy at start and have a bool set to false
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
         changeColor = false;
