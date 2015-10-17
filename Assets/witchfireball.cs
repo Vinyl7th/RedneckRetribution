@@ -32,7 +32,7 @@ public class witchfireball : MonoBehaviour {
         float _Speed = fireballSpeed * Time.deltaTime;
          transform.position = Vector2.MoveTowards(gameObject.transform.position, thePlayer.transform.position, _Speed);
 
-        if (selfDestroy >= 5)
+        if (selfDestroy >= 3.5f)
             Destroy(gameObject);
     }
 

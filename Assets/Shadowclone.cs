@@ -192,7 +192,7 @@ public class Shadowclone : MonoBehaviour {
             Move();
         }
 
-        if (hitPoints / maxHealth <= 0.66f && hitPoints / maxHealth >= 0.33f)
+        if (hitPoints / maxHealth <= 0.66f && hitPoints / maxHealth >= 0.1f)
         {
             check1 = false;
             check2 = true;
@@ -206,7 +206,7 @@ public class Shadowclone : MonoBehaviour {
                 switch1 = true;
             }
         }
-       else if (hitPoints / maxHealth <= 0.33f && hitPoints / maxHealth > 0f)
+       else if (hitPoints / maxHealth <= 0.1f && hitPoints / maxHealth > 0f)
         {
             check2 = false;
             check3 = true;
