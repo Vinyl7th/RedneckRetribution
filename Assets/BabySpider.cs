@@ -14,6 +14,7 @@ public class BabySpider : MonoBehaviour {
     bool changeColor;
     float delayColorChanger;
     float healthRegenTimer = 0.0f;
+    float deathTimer = 0.0f;
 
     bool regenHealth;
 
@@ -49,6 +50,13 @@ public class BabySpider : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        deathTimer += Time.deltaTime;
+
+        if(deathTimer >= 3.0f)
+        {
+            Destroy(gameObject);
+        }
+
         healthRegenTimer += Time.deltaTime;
 
         if (regenHealth == true && hitPoints < maxHealth)

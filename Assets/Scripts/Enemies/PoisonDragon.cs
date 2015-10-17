@@ -138,8 +138,12 @@ public class PoisonDragon : MonoBehaviour
 
     public void RecieveDamage(float _dmg)
     {
+        if(active)
+        {
+
         hitPoints -= _dmg;
         changeColor = true;
+        }
 
     }
 

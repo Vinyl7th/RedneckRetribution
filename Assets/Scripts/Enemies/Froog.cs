@@ -43,6 +43,7 @@ public class Froog : MonoBehaviour
     {
         if (currHealth <= 0)
         {
+            GetComponent<Drops>().Drop();
             Destroy(gameObject);
             Destroy(theTongue);
         }

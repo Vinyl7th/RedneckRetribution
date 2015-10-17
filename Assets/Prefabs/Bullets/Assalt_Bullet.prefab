@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 153258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.4229107, y: -1.50488544, z: 0}
-  m_LocalScale: {x: .899999976, y: .899999976, z: .899999976}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 0
-  damage: 175
+  damage: 214
 --- !u!212 &21205922
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -134,7 +134,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6a5014121d2a7194496e52f8ddfb3f18, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a6a08257951548418c7a4876cd4b696, type: 3}
   m_Color: {r: .899999976, g: .899999976, b: .899999976, a: 1}
 --- !u!1001 &100100000
 Prefab:

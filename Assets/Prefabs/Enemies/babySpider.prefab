@@ -231,6 +231,22 @@ Prefab:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: potion
+      value: 
+      objectReference: {fileID: 103100, guid: 2e655a33f710ed94c80a4877edcb6356, type: 2}
+    - target: {fileID: 0}
+      propertyPath: passive
+      value: 
+      objectReference: {fileID: 149120, guid: b92bcca946753fb4e86f56422384a0b4, type: 2}
+    - target: {fileID: 0}
+      propertyPath: rune
+      value: 
+      objectReference: {fileID: 190528, guid: 31239a7cce494304786bfc3fd032cae6, type: 2}
+    - target: {fileID: 0}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 128560, guid: b10652d5507676648bb840ed8c10ce8c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 178348}

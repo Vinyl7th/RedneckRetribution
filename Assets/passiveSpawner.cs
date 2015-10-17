@@ -77,7 +77,7 @@ public class passiveSpawner : MonoBehaviour {
 
                     break;
                 case 2:
-                    thePlayer.GetComponent<PlayerStats>().pMoveSpeed += 0.5f;
+                    thePlayer.GetComponent<PlayerStats>().pMoveSpeed += 0.1f;
 
                     break;
                 case 3:
@@ -85,7 +85,7 @@ public class passiveSpawner : MonoBehaviour {
 
                     break;
                 case 4:
-                    thePlayer.GetComponent<PlayerStats>().pLifeSteal += 0.01f;
+                    thePlayer.GetComponent<PlayerStats>().pLifeSteal += 0.001f;
 
                     break;
                 case 5:
@@ -95,8 +95,8 @@ public class passiveSpawner : MonoBehaviour {
             }
 
             
-        }
         Destroy(gameObject);
+        }
     }
 
 }

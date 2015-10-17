@@ -41,6 +41,7 @@ public class SceneManager : MonoBehaviour
             if (btnIndex > 5)
                 btnIndex = 0;
             btnTimer = 0;
+            if(!src.isPlaying)
             src.Play();
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -49,7 +50,8 @@ public class SceneManager : MonoBehaviour
             if (btnIndex < 0)
                 btnIndex = 5;
             btnTimer = 0;
-            src.Play();
+            if (!src.isPlaying)
+                src.Play();
         }
      
         if (Input.GetKeyDown(KeyCode.Return))
