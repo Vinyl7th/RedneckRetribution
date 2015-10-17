@@ -1991,7 +1991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 138214, guid: 95b2356fef9ace94689c62d222ed1b36, type: 2}
+  - {fileID: 175352, guid: 005433b9736de0e41b45dc2399612495, type: 2}
 --- !u!114 &11405840
 MonoBehaviour:
   m_ObjectHideFlags: 1
