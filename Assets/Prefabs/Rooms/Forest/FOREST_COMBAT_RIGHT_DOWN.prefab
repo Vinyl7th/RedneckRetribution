@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 411414}
   - 61: {fileID: 6181314}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 496716}
   - 61: {fileID: 6159544}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 427882}
   - 61: {fileID: 6102870}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 449484}
   - 114: {fileID: 11461830}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spawners (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 443128}
   - 61: {fileID: 6168502}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 404978}
   - 61: {fileID: 6160866}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 453352}
   - 61: {fileID: 6144896}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 421510}
   - 61: {fileID: 6122788}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 472946}
   - 61: {fileID: 6168068}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 436152}
   - 114: {fileID: 11472900}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spawners
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 477814}
   - 61: {fileID: 6142860}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 430768}
   - 114: {fileID: 11471804}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spawners (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 418442}
   - 61: {fileID: 6119050}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 453480}
   - 61: {fileID: 6174862}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 453466}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 447280}
   - 61: {fileID: 6167150}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 415700}
   - 61: {fileID: 6118432}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 480516}
   - 61: {fileID: 6109916}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 405512}
   - 61: {fileID: 6117502}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 422824}
   - 61: {fileID: 6174022}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 482014}
   - 61: {fileID: 6114620}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 455158}
   - 61: {fileID: 6104022}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 488756}
   - 212: {fileID: 21253910}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ForestRoomDoorBottum&Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -705,7 +705,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 453466}
@@ -1078,6 +1078,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: ROOM
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
