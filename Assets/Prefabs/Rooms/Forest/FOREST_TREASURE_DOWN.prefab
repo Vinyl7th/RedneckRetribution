@@ -90,7 +90,7 @@ GameObject:
   - 61: {fileID: 6151866}
   - 114: {fileID: 11402946}
   - 114: {fileID: 11481888}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Room_Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,6 +850,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: ROOM
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -122,7 +122,7 @@ GameObject:
   - 61: {fileID: 6193166}
   - 114: {fileID: 11443216}
   - 114: {fileID: 11487996}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Room_Bounds (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,6 +688,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: weatherStyle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
