@@ -55,7 +55,7 @@ MonoBehaviour:
   Row7: 00000000000000000000000000000000000000000000000000000000
   Combat_UP_RIGHT:
   - {fileID: 121264, guid: 286865ab914bf1e4f8d7a99b95d499c8, type: 2}
-  - {fileID: 121264, guid: 286865ab914bf1e4f8d7a99b95d499c8, type: 2}
+  - {fileID: 160726, guid: 7e3b7ec99e659c34e88a0836e2a3b158, type: 2}
   - {fileID: 159038, guid: 41cda6213be199d4599132202698ad8c, type: 2}
   - {fileID: 151906, guid: 33ba9f8f253ea95439fd214a8f4af687, type: 2}
   Combat_UP_DOWN:
@@ -125,7 +125,7 @@ MonoBehaviour:
   - {fileID: 159978, guid: f0585ef5a545952428e5708905c9e15b, type: 2}
   Combat_NO_UP:
   - {fileID: 164046, guid: 626dba9e0e8db324c9b195ed42598220, type: 2}
-  - {fileID: 164046, guid: 626dba9e0e8db324c9b195ed42598220, type: 2}
+  - {fileID: 171056, guid: 5e578afa85584ad49bd1cb55598ed5f2, type: 2}
   - {fileID: 134704, guid: ffa4eac07c269e14196ca0dce175f18e, type: 2}
   - {fileID: 131280, guid: 96579344cb2507b4fab9df6f3d903a93, type: 2}
   Combat_NO_RIGHT:
@@ -145,9 +145,9 @@ MonoBehaviour:
   - {fileID: 198382, guid: 787bdf20cd78aa64ca43ff15e39e1202, type: 2}
   Combat_ALL:
   - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
-  - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
-  - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
-  - {fileID: 173724, guid: 8c2411bebc0f794439c97200de5ee365, type: 2}
+  - {fileID: 160938, guid: fdd0b5a38811b8944b4ff3c8ce962674, type: 2}
+  - {fileID: 186074, guid: 9ef2c34ab6f7fb148902da359ac63fb1, type: 2}
+  - {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
   Start_Room: {fileID: 166196, guid: 8612685353fc7f24caeaa5c5db2c7890, type: 2}
   Boss_Room:
   - {fileID: 124680, guid: eab6120e32d184149ba10fc8a85427fa, type: 2}

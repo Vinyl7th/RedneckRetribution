@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 0
-  damage: 214
+  damage: 190
 --- !u!212 &21205922
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -256,6 +256,11 @@ Prefab:
       propertyPath: particles.Array.data[3]
       value: 
       objectReference: {fileID: 21300000, guid: ac1e02fd9b5c4f84a94c9abcd237fea7,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d0e5eee153db089459a2d8db5e8728fc,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
