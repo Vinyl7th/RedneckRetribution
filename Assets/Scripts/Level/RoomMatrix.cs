@@ -342,7 +342,7 @@ public class RoomMatrix : MonoBehaviour {
             case 21: // Combat NO LEFT
                 {
                     int num = floorNum - 1;
-                    Instantiate(Combat_ALL[floorNum], _position, gameObject.transform.rotation);
+                    Instantiate(Combat_ALL[num], _position, gameObject.transform.rotation);
                     break;
                 }
         }
