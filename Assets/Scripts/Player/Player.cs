@@ -19,13 +19,20 @@ public class Player : MonoBehaviour
     bool isSlow;
     float slower;
     GameObject reticule;
+    Vector3 pos;
+    Vector3 telepos;
+
 
     float timmer = 0f;
     // Use this for initialization
     void Start()
     {
+        telepos = new Vector3(-150f, -100f, transform.position.z);
+        pos = transform.position;
+        transform.position = telepos;
         theAnimator = gameObject.GetComponent<Animator>();
         reticule = GameObject.FindGameObjectWithTag("Reticule");
+        transform.position = pos;
         //Vector3 newStart = new Vector3(0, 0, 0);
         //gameObject.transform.position = newStart;
     }

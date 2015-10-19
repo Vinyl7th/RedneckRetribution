@@ -15,7 +15,8 @@ public class LevelManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        LoadLevel();
+     
+       LoadLevel();
     }
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class LevelManager : MonoBehaviour
 
         if(_level < 5 && _level > 1)
         {
-            spawn = new Vector3(96, 60, 0);
+            spawn = new Vector3(94.5f, 60, 0);
             thePlayer.transform.position = spawn;
         }
         else
