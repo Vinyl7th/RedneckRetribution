@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &101028
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 452824}
+  - 61: {fileID: 6101344}
+  m_Layer: 0
+  m_Name: Collider (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &103814
 GameObject:
   m_ObjectHideFlags: 1
@@ -154,7 +170,7 @@ GameObject:
   - 4: {fileID: 475464}
   - 61: {fileID: 6134084}
   m_Layer: 0
-  m_Name: Collider (12)
+  m_Name: Collider (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,6 +282,22 @@ GameObject:
   - 114: {fileID: 11437376}
   m_Layer: 0
   m_Name: GunSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &153836
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 457658}
+  - 61: {fileID: 6141742}
+  m_Layer: 0
+  m_Name: Collider (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -582,7 +614,7 @@ Transform:
   - {fileID: 425298}
   - {fileID: 458364}
   - {fileID: 491572}
-  - {fileID: 475464}
+  - {fileID: 452824}
   - {fileID: 484932}
   - {fileID: 433230}
   - {fileID: 434158}
@@ -592,6 +624,8 @@ Transform:
   - {fileID: 423068}
   - {fileID: 404340}
   - {fileID: 432634}
+  - {fileID: 457658}
+  - {fileID: 475464}
   m_Father: {fileID: 445900}
   m_RootOrder: 0
 --- !u!4 &432634
@@ -696,6 +730,18 @@ Transform:
   - {fileID: 444518}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &452824
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.5, y: -2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 430530}
+  m_RootOrder: 12
 --- !u!4 &456856
 Transform:
   m_ObjectHideFlags: 1
@@ -708,6 +754,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430530}
   m_RootOrder: 6
+--- !u!4 &457658
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.5, y: -4.32000017, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 430530}
+  m_RootOrder: 22
 --- !u!4 &458364
 Transform:
   m_ObjectHideFlags: 1
@@ -787,11 +845,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5, y: -2.5, z: 0}
+  m_LocalPosition: {x: 4.17000008, y: -4.31999969, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 430530}
-  m_RootOrder: 12
+  m_RootOrder: 23
 --- !u!4 &476444
 Transform:
   m_ObjectHideFlags: 1
@@ -853,6 +911,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 2, y: 1}
+--- !u!61 &6101344
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101028}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1}
 --- !u!61 &6104944
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -943,7 +1014,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 5, y: 1}
+  m_Size: {x: 2, y: 1}
 --- !u!61 &6134630
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -996,6 +1067,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 8}
+--- !u!61 &6141742
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153836}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1}
 --- !u!61 &6145876
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1289,6 +1373,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: isStatic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

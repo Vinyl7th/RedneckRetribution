@@ -129,5 +129,8 @@ public class LevelManager : MonoBehaviour
                 }
 
         }
+
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>().followPlayer = false;
+
     }
 }
