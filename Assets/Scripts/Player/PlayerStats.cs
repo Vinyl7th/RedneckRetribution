@@ -41,6 +41,10 @@ public class PlayerStats : MonoBehaviour {
     {
         src.Play();
         pHealthCurr -= _damage;
+
+        if (pHealthCurr < 0)
+            pHealthCurr = 0;
+
        // if (pHealthCurr <= 0.0f)
        // {
             

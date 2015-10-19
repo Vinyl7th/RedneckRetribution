@@ -34,12 +34,12 @@ public class CameraFollow : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        
         loading = true;
         loadingscreen = new Vector3(-93.71f, 131.9f, -10);
         transform.position = loadingscreen;
         thePlayer = GameObject.FindWithTag("Player");
         src.volume = soundController.musicValue;
+        followPlayer = false;
 	}
 	
 	// Update is called once per frame
