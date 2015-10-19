@@ -90,6 +90,15 @@ public class LevelManager : MonoBehaviour
             Destroy(thePassives[i]);
         }
 
+        GameObject[] thePortals = GameObject.FindGameObjectsWithTag("PORTAL");
+        int portalSize = thePortals.Length;
+
+        for (int i = 0; i < portalSize; i++)
+        {
+
+            Destroy(thePortals[i]);
+        }
+
 
         switch (_level)
         {

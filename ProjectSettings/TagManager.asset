@@ -29,6 +29,9 @@ TagManager:
   - EmptyText
   - CompletedText
   - LevelManager
+  - PORTAL
+  - shadowwaypoint
+  - Demon
   layers:
   - Default
   - TransparentFX
