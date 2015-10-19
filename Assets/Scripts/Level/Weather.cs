@@ -19,11 +19,11 @@ public class Weather : MonoBehaviour
     float offsetY;
     Vector3 position;
     float timer = 0.0f;
-    float light;
+    float idk;
     // Use this for initialization
     void Start()
     {
-        light = Random.Range(4.0f, 10.0f);
+        idk = Random.Range(4.0f, 10.0f);
         rainSFX.volume = lightningSFX.volume = soundController.sfxValue;
     }
 
@@ -49,9 +49,9 @@ public class Weather : MonoBehaviour
                 position.x += offsetX;
                 position.y += offsetY;
                 Instantiate(rain, position, rain.transform.rotation);
-                if(timer >= light)
+                if(timer >= idk)
                 {
-                    light = Random.Range(4.0f, 10.0f);
+                    idk = Random.Range(4.0f, 10.0f);
                     position = Camera.main.transform.position;
                     position.z = -8;
                     if (!lightningSFX.isPlaying)
