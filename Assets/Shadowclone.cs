@@ -75,6 +75,15 @@ public class Shadowclone : MonoBehaviour {
     {
 
         fireDelay += Time.deltaTime;
+
+        if (hitPoints <= 0.0f)
+        {
+            Destroy(currGun);
+            GameObject.FindGameObjectWithTag("LevelManager").SendMessage("LoadLevel");
+            Instantiate(thePortal, gameObject.transform.position, gameObject.transform.rotation);
+            Destroy(gameObject);
+        }
+
         if (gameObject.transform.position.x > thePlayer.transform.position.x)
         {
             if (!isRight)
@@ -222,7 +231,7 @@ public class Shadowclone : MonoBehaviour {
         }
 
         //if the healthpoints are 0 destroy the enemy on screen
-       else if (hitPoints < 0.0f)
+       else if (hitPoints <= 0.0f)
         {
             Destroy(currGun);
             GameObject.FindGameObjectWithTag("LevelManager").SendMessage("LoadLevel");

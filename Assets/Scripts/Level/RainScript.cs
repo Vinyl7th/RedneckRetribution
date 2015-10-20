@@ -35,6 +35,10 @@ public class RainScript : MonoBehaviour
 
 
         }
+        if (lifeTime >= 5f)
+        {
+            Destroy(gameObject);
+        }
 
     }
     void kill()

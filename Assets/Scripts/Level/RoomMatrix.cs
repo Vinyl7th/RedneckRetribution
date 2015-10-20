@@ -201,7 +201,7 @@ public class RoomMatrix : MonoBehaviour {
         // Set boss room
         SpawnPosition = new Vector3(32.0f * 6.0f, 120.0f, 0);
 
-        Vector3 spawnPos = new Vector3(96, 60, 0);
+        Vector3 spawnPos = new Vector3(94.5f, 60, 0);
         GameObject.FindWithTag("Player").transform.position = spawnPos;
     }
 

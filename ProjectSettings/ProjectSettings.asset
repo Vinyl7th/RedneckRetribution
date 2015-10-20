@@ -9,7 +9,7 @@ PlayerSettings:
   targetDevice: 2
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: AmbitionStudios
   productName: Redneck Remption
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -36,7 +36,7 @@ PlayerSettings:
   use32BitDisplayBuffer: 1
   disableDepthAndStencilBuffers: 0
   defaultIsFullScreen: 0
-  defaultIsNativeResolution: 1
+  defaultIsNativeResolution: 0
   runInBackground: 0
   captureSingleScreen: 0
   Override IPod Music: 0
@@ -55,7 +55,7 @@ PlayerSettings:
   xboxEnableFitness: 0
   visibleInBackground: 0
   macFullscreenMode: 2
-  d3d9FullscreenMode: 1
+  d3d9FullscreenMode: 0
   d3d11FullscreenMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0

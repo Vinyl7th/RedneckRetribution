@@ -25,6 +25,8 @@ public class CameraFollow : MonoBehaviour {
     
     public bool followPlayer = false;
     GameObject thePlayer;
+    Vector3 pos;
+    Vector3 newpos;
 
     [SerializeField]
     AudioSource src;
@@ -38,6 +40,7 @@ public class CameraFollow : MonoBehaviour {
         thePlayer = GameObject.FindWithTag("Player");
         src.volume = soundController.musicValue;
         followPlayer = false;
+       
 	}
 	
 	// Update is called once per frame
@@ -60,6 +63,8 @@ public class CameraFollow : MonoBehaviour {
             if (delay >= 1)
             {
                 loading = false;
+                SetPosition(thePlayer.transform.position);
+
             }
         }
     }
@@ -81,6 +86,7 @@ public class CameraFollow : MonoBehaviour {
             if (delay >= 1)
             {
                 loading = false;
+                SetPosition(thePlayer.transform.position);
             }
         }
      }
