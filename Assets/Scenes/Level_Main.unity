@@ -5070,11 +5070,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 469682, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -136.75
+      value: -136.100006
       objectReference: {fileID: 0}
     - target: {fileID: 469682, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 133.690002
+      value: 101.699997
       objectReference: {fileID: 0}
     - target: {fileID: 469682, guid: 5c39f7deddcb019418066e5347a49a6f, type: 2}
       propertyPath: m_LocalPosition.z

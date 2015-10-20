@@ -40,6 +40,7 @@ public class CameraFollow : MonoBehaviour {
         thePlayer = GameObject.FindWithTag("Player");
         src.volume = soundController.musicValue;
         followPlayer = false;
+       
 	}
 	
 	// Update is called once per frame
