@@ -64,19 +64,10 @@ public class OptionsScript : MonoBehaviour {
     public void FullScreen()
     {
         //gameObject.GetComponent<AudioSource>().Play();
-        if (!Screen.fullScreen)
-        {
-            Screen.SetResolution(1024, 768, true);
-            Cursor.visible = false;
-            
-        }
-        else
-            Screen.SetResolution(1024, 768, false);
-        {
-            Cursor.visible = false;
-        }
+    
+        Screen.fullScreen = !Screen.fullScreen;
+      
 
-        Cursor.visible = true;
     }
 
 
