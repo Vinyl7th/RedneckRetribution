@@ -57,7 +57,7 @@ MonoBehaviour:
   current: 0
   specter: {fileID: 101334, guid: 369eeb850ffd9c6419284a236b5873ef, type: 2}
   demon: {fileID: 143846, guid: 6b9cbeb07cbb4ca4c9e9f6503e0dbd77, type: 2}
-  tier: 2
+  tier: 1
 --- !u!212 &21238518
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -99,6 +99,10 @@ Prefab:
       propertyPath: demon
       value: 
       objectReference: {fileID: 143846, guid: 6b9cbeb07cbb4ca4c9e9f6503e0dbd77, type: 2}
+    - target: {fileID: 0}
+      propertyPath: tier
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 124352}

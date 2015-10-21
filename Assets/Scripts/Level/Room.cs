@@ -125,7 +125,7 @@ public class Room : MonoBehaviour
 
                 if (!spikesSpawned)
                     SpawnSpikes();
-
+                if(thePlayer != null)
                 thePlayer.transform.position = playerPos;
             }
         }
