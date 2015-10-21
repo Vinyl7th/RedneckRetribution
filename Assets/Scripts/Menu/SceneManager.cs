@@ -15,7 +15,9 @@ public class SceneManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        
+        if (GameObject.FindWithTag("TheMusic"))
+            GameObject.FindWithTag("TheMusic").GetComponent<AudioSource>().mute = false;
+
         Cursor.visible = true;
         soundController.sfxValue = PlayerPrefs.GetFloat("sfxVolume");
         soundController.musicValue = PlayerPrefs.GetFloat("musicVolume");
