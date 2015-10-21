@@ -8,6 +8,9 @@ public class Credit_Target : MonoBehaviour {
     bool spin = false;
     bool scored = false;
 
+    float spinTimer = 0.0f;
+    bool reset = true;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -16,16 +19,25 @@ public class Credit_Target : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (hitPoints < 0.0f)
+        
+
+        if(spinTimer >= 2.0f && reset)
+        {
+            Quaternion newrotation = new Quaternion(0, 0, 0, 0);
+            gameObject.transform.rotation = newrotation;
+            reset = false;
+        }
+        else if (hitPoints < 0.0f)
         {
             gameObject.GetComponent<TextMesh>().color = yellow;
         }
 
-        if(spin)
+        if(spin && reset)
         {
-            gameObject.transform.Rotate(new Vector3(1, 0, 0), (Time.deltaTime * 90));
+            gameObject.transform.Rotate(new Vector3(1, 0, 0), (Time.deltaTime * 180));
+            spinTimer += Time.deltaTime;
 
-            if(!scored)
+            if (!scored)
             {
                 GameObject temp = GameObject.FindWithTag("CreditScoreMarker");
                 temp.GetComponent<Credits_Score>().AddScore();
