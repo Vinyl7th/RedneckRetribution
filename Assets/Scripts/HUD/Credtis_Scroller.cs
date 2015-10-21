@@ -4,6 +4,7 @@ using System.Collections;
 public class Credtis_Scroller : MonoBehaviour {
 
     public float scrollSpeed;
+    public float theTimer = 0.0f;
 
 	// Use this for initialization
 	void Start ()
@@ -14,8 +15,13 @@ public class Credtis_Scroller : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        Vector3 pos = gameObject.transform.position;
-        pos.y += (Time.deltaTime * scrollSpeed);
-        gameObject.transform.position = pos;
+        theTimer += Time.deltaTime;
+
+        if (theTimer <= 70.0f)
+        {
+            Vector3 pos = gameObject.transform.position;
+            pos.y += (Time.deltaTime * scrollSpeed);
+            gameObject.transform.position = pos;
+        }
 	}
 }
