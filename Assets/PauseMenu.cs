@@ -51,6 +51,7 @@ public class PauseMenu : MonoBehaviour {
     {
         isPaused = !isPaused;
         Application.LoadLevel("Menu_Main");
+        Cursor.visible = true;
     }
 
    public void resume()
