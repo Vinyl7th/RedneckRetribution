@@ -54,20 +54,23 @@ public class RuneSpawner : MonoBehaviour
             fireRune.GetComponent<FireRune>().tier = tier;
             Instantiate(fireRune, transform.position, transform.rotation);
         }
-        if(ice)
+       else if(ice)
         {
             iceRune.GetComponent<IceRune>().tier = tier;
             Instantiate(iceRune, transform.position, transform.rotation);
+
         }
-        if(poison)
+        else if(poison)
         {
             poisonRune.GetComponent<PoisonRune>().tier = tier;
             Instantiate(poisonRune, transform.position, transform.rotation);
+
         }
-        if (dark)
+        else if (dark)
         {
             darkRune.GetComponent<DarkRune>().tier = tier;
             Instantiate(darkRune, transform.position, transform.rotation);
+
         }
 
     }

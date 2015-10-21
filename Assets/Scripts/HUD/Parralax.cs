@@ -7,8 +7,10 @@ public class Parralax : MonoBehaviour {
     public float theTimer = 0.0f;
 
     // Use this for initialization
-    void Start () {
-	
+    void Start ()
+    {
+        if(GameObject.FindWithTag("TheMusic"))
+            GameObject.FindWithTag("TheMusic").GetComponent<AudioSource>().mute = true;
 	}
 	
 	// Update is called once per frame

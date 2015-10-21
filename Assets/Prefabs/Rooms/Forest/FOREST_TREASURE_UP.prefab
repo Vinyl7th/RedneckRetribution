@@ -1652,7 +1652,7 @@ MonoBehaviour:
   poison: 0
   iceRune: {fileID: 127648, guid: b16046b5b198fca499744c0f5b871719, type: 2}
   ice: 0
-  darkRune: {fileID: 0}
+  darkRune: {fileID: 124352, guid: 4c943ed9d7c4d8d42b63a56be7dc4b6e, type: 2}
   dark: 0
   tier: 1
 --- !u!114 &11483086
@@ -1673,7 +1673,7 @@ MonoBehaviour:
   poison: 0
   iceRune: {fileID: 127648, guid: b16046b5b198fca499744c0f5b871719, type: 2}
   ice: 0
-  darkRune: {fileID: 0}
+  darkRune: {fileID: 124352, guid: 4c943ed9d7c4d8d42b63a56be7dc4b6e, type: 2}
   dark: 0
   tier: 1
 --- !u!114 &11487670

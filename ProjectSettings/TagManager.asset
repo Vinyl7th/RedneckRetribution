@@ -33,6 +33,7 @@ TagManager:
   - shadowwaypoint
   - Demon
   - CreditScoreMarker
+  - TheMusic
   layers:
   - Default
   - TransparentFX
