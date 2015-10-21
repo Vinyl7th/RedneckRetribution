@@ -13,7 +13,7 @@ public class ShotGun : MonoBehaviour
     int element;
     bool isRight;
     public bool currWeapon = false;
-
+    public bool credits = false;
     public int rariety;
     public int damage;
     public float ROF;
@@ -38,7 +38,11 @@ public class ShotGun : MonoBehaviour
         if (currWeapon)
         {
             MoveGun();
+           if(!credits)
+            {
+
             SendStats();
+            }
         }
         fireRate += Time.deltaTime;
         element = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().elementalType;
