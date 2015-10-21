@@ -6,6 +6,7 @@ public class Credit_Target : MonoBehaviour {
     float hitPoints = 1;
     Color yellow = new Color(1, 1, 0, 1);
     bool spin = false;
+    bool scored = false;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,13 @@ public class Credit_Target : MonoBehaviour {
         if(spin)
         {
             gameObject.transform.Rotate(new Vector3(1, 0, 0), (Time.deltaTime * 90));
+
+            if(!scored)
+            {
+                GameObject temp = GameObject.FindWithTag("CreditScoreMarker");
+                temp.GetComponent<Credits_Score>().AddScore();
+                scored = true;
+            }
         }
     }
 

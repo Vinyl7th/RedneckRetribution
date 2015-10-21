@@ -32,6 +32,7 @@ TagManager:
   - PORTAL
   - shadowwaypoint
   - Demon
+  - CreditScoreMarker
   layers:
   - Default
   - TransparentFX

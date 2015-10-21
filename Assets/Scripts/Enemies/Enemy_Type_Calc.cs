@@ -129,7 +129,8 @@ public class Enemy_Type_Calc : MonoBehaviour
         int theDamage = (int)_damage;
 
         GameObject theCanvas = GameObject.FindWithTag("TextSpawner");
-        theCanvas.GetComponent<TextSpawner>().SpawnTheText(theDamage, _pos);
+        if(theCanvas)
+            theCanvas.GetComponent<TextSpawner>().SpawnTheText(theDamage, _pos);
     }
 }
 
