@@ -3677,6 +3677,48 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 40, y: 3}
+--- !u!1001 &1384990653
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 440410, guid: b623f706089c73845a4075fd6831f581, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 96.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 440410, guid: b623f706089c73845a4075fd6831f581, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 60.0699997
+      objectReference: {fileID: 0}
+    - target: {fileID: 440410, guid: b623f706089c73845a4075fd6831f581, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440410, guid: b623f706089c73845a4075fd6831f581, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440410, guid: b623f706089c73845a4075fd6831f581, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440410, guid: b623f706089c73845a4075fd6831f581, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440410, guid: b623f706089c73845a4075fd6831f581, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 440410, guid: b623f706089c73845a4075fd6831f581, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b623f706089c73845a4075fd6831f581, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1415515226
 Prefab:
   m_ObjectHideFlags: 0
