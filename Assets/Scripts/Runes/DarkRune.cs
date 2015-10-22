@@ -7,8 +7,8 @@ public class DarkRune : MonoBehaviour
     GameObject thePlayer;
   public  GameObject specter;
     public GameObject demon;
-    int charges;
-    int element;
+    public int charges;
+   public  int element;
     Vector3 offSet;
     public int tier;
     // Use this for initialization
@@ -27,7 +27,10 @@ public class DarkRune : MonoBehaviour
             transform.position = GameObject.FindWithTag("HUDRune").transform.position;
         }
         if (charges == 0)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().RuneDestroyed();
             Destroy(gameObject);
+        }
     }
     public void ChangeCurrent()
     {

@@ -228,6 +228,11 @@ public class Player : MonoBehaviour
             GameObject temp = GameObject.FindWithTag("Flavor");
             temp.GetComponent<FlavorText>().hCharges.text = currRune.GetComponent<PoisonRune>().charges.ToString();
         }
+        if (elementalType == 4)
+        {
+            GameObject temp = GameObject.FindWithTag("Flavor");
+            temp.GetComponent<FlavorText>().hCharges.text = currRune.GetComponent<DarkRune>().charges.ToString();
+        }
     }
     public void Change()
     {
