@@ -22,6 +22,9 @@ public class Demon : MonoBehaviour
     {
         fireRate += Time.deltaTime;
         deathTimer += Time.deltaTime;
+       
+            transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
+        
         if(deathTimer >= 30.0f)
         {
             GameObject.FindGameObjectWithTag("Player").SendMessage("Change");

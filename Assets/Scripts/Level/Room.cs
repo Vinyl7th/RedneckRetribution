@@ -57,7 +57,7 @@ public class Room : MonoBehaviour
     {
         stopSpawning = false;
 
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Player"  || coll.gameObject.tag == "Demon")
         {
             foreach (Transform child in transform)
             {
