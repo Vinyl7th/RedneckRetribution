@@ -79,7 +79,6 @@ public class Shadowclone : MonoBehaviour {
         if (hitPoints <= 0.0f)
         {
             Destroy(currGun);
-            GameObject.FindGameObjectWithTag("LevelManager").SendMessage("LoadLevel");
             Instantiate(thePortal, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
@@ -234,7 +233,6 @@ public class Shadowclone : MonoBehaviour {
        else if (hitPoints <= 0.0f)
         {
             Destroy(currGun);
-            GameObject.FindGameObjectWithTag("LevelManager").SendMessage("LoadLevel");
             Instantiate(thePortal, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
